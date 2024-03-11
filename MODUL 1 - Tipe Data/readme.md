@@ -201,6 +201,9 @@ Kode di atas digunakan untuk menentukan bilangan. Program tersebut berisi tentan
 **num % 2 == 0** artinya jika bilangan tersebut dibagi 2 sama dengan 0, maka bilangan tersebut adalah bilangan genap. Kemudian, program akan menjalankan **cout << num << " adalah bilangan genap" << endl;** dan akan menghasilkan output **"(bilangan) adalah bilangan genap"**.
 **else** artinya jika bilangan yang diinput adalah 0 dimana bilangan 0 bukan merupakan bilangan ganjil dan bukan bilangan genap. 
 
+##### Kesimpulan tipe data primitif :
+Tipe data primitif dapat berupa int (integer), bool (boolean), float (float), string (string), dan char (character). Masing-masing tipenya dapat digunakan pada operasi sesuai yang dibutuhkan. Pada program di atas, tipe data yang digunakan adalah int. Operasi yang digunakan adalah modulo (%) karena mengembalikan sisa pembagian dari 2 bilangan. Jika sisa pembagian 2 bilangan tersebut adalah 0, maka bilangan tersebut adalah bilangan genap. Sebaliknya, jika sisa pembagian 2 bilangan tersebut bukan 0, maka bilangan tersebut adalah bilangan ganjil. 
+
 #### Full code Screenshot:
 ![240309_10h21m35s_screenshot](https://github.com/ardelialaksita/photo/blob/e4310b9e24bfbc039d23be0af0d5f3d47be707c0/%5BModul%201%5D%20Unguided%201%20Full%20SS.png)
 
@@ -286,7 +289,21 @@ int main()
 #### Output:
 ![240302_00h00m06s_screenshot](https://github.com/ardelialaksita/photo/blob/614339283baac424ce078a4bedd25818e47573b0/%5BModul%201%5D%20Unguided%202%20Output.png)
 
-Kode di atas digunakan untuk mencetak nama, warna, dan rasa suatu buah. Struct memiliki akses default secara public, sedangkan class memiliki akses default private sehingga tidak semua variabel dapat dieksekusi apabila ada kode rivate yang digunakan. 
+Kode di atas digunakan untuk mencetak nama, warna, dan rasa suatu buah. Struct tidak memiliki objek private. Berikut ini merupakan isi dari struct: 
+    **struct Fruit fruit1, fruit2;
+    fruit1.name = "Durian";
+    fruit1.colour = "Kuning";
+    fruit1.taste = "Manis";
+    fruit2.name = "Lemon";
+    fruit2.colour = "Kuning";
+    fruit2.taste = "Asam";**
+Untuk me
+
+##### Struct :
+Fungsi struct yaitu dapat menggabungkan sekumpulan variabel dan memberi nama pada variabel-variabel tersebut. Nama yang digunakan sama seperti tipe variabelnya, misalnya : int atau string. Struct dapat mendeklarasikan variabel baru dan mengakses semua kolom. Struct akan mengelola data yang akan diakses secara langsung. Struct memiliki akses default yang terbuka (secara public). Struct hanya dapat memiliki properti. Struct mendefinisikan tipe data menginstruksikan kepada C++ untuk mengelompokkan koleksi tipe data dasar sebagai kesatuan tipe data sehingga dapat mendefinisikan variabel dan array variabel.
+
+##### Class :
+Class berfungsi untuk mendeskripsikan suatu objek melalui data dan fungsi yang dimiliki. Class memiliki akses default private sehingga tidak semua variabel dapat dieksekusi apabila ada objek yang private. Jika objek anggota dari class tersebut ingin dipublikasikan, maka harus menggunakan **public : .** Class memiliki properti dan metode. Class akan mengelola data yang akan diakses melalui metode (method).
 
 #### Full code Screenshot:
 ![240309_10h21m35s_screenshot](https://github.com/ardelialaksita/photo/blob/614339283baac424ce078a4bedd25818e47573b0/%5BModul%201%5D%20Unguided%202%20Full%20SS.png)
