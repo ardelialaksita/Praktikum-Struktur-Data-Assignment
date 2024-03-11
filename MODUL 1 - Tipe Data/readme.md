@@ -163,6 +163,94 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 #### Full code Screenshot:
 ![240309_10h21m35s_screenshot](https://github.com/ardelialaksita/photo/blob/e4310b9e24bfbc039d23be0af0d5f3d47be707c0/%5BModul%201%5D%20Unguided%201%20Full%20SS.png)
 
+### 1. Buatlah program menggunakan tipe data primitif minimal dua fungsi dan bebas. Menampilkan program, jelaskan program tersebut dan ambil kesimpulan dari materi tipe data primitif!
+
+```C++
+#include <iostream>
+#include <string>
+using namespace std;
+
+//Struct
+struct Fruit {
+    string name;
+    string colour;
+    string taste;
+};
+
+int main() 
+{
+    struct Fruit fruit1, fruit2;
+    fruit1.name = "Durian";
+    fruit1.colour = "Kuning";
+    fruit1.taste = "Manis";
+    fruit2.name = "Lemon";
+    fruit2.colour = "Kuning";
+    fruit2.taste = "Sour";
+
+    cout << "===== BUAH 1 =====" << endl;
+    cout << "Nama Buah : " << fruit1.name << endl;
+    cout << "Warna Buah : " << fruit1.colour << endl;
+    cout << "Rasa Buah: " << fruit1.taste << endl;
+    cout << "===== BUAH 2 =====" << endl;
+    cout << "Nama Buah : " << fruit2.name << endl;
+    cout << "Warna Buah : " << fruit2.colour << endl;
+    cout << "Rasa Buah: " << fruit2.taste << endl;
+    return 0;
+}
+```
+
+```C++
+#include <iostream>
+#include <string>
+using namespace std;
+
+//Class
+class FruitClass {
+    private:
+    string name;
+    string colour;
+    string taste;
+
+    public:
+    string fruit1.name() {return name};
+    string fruit1.colour() {return colour};
+    string fruit1.taste() {return taste};
+    string fruit2.name() {return name};
+    string fruit2.colour() {return colour};
+    string fruit2.taste() {return taste};
+
+};
+
+int main() 
+{
+    struct Fruit fruit1, fruit2;
+    fruit1.name = "Durian";
+    fruit1.colour = "Kuning";
+    fruit1.taste = "Manis";
+    fruit2.name = "Lemon";
+    fruit2.colour = "Kuning";
+    fruit2.taste = "Sour";
+
+    cout << "===== BUAH 1 =====" << endl;
+    cout << "Nama Buah : " << fruit1.name << endl;
+    cout << "Warna Buah : " << fruit1.colour << endl;
+    cout << "Rasa Buah: " << fruit1.taste << endl;
+    cout << "===== BUAH 2 =====" << endl;
+    cout << "Nama Buah : " << fruit2.name << endl;
+    cout << "Warna Buah : " << fruit2.colour << endl;
+    cout << "Rasa Buah: " << fruit2.taste << endl;
+    return 0;
+}
+```
+
+#### Output:
+![240302_00h00m06s_screenshot][(https://github.com/ardelialaksita/photo/blob/e4310b9e24bfbc039d23be0af0d5f3d47be707c0/%5BModul%201%5D%20Unguided%201%20Output.png)]
+
+Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+
+#### Full code Screenshot:
+![240309_10h21m35s_screenshot](https://github.com/ardelialaksita/photo/blob/e4310b9e24bfbc039d23be0af0d5f3d47be707c0/%5BModul%201%5D%20Unguided%201%20Full%20SS.png)
+
 
 ## Kesimpulan
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
