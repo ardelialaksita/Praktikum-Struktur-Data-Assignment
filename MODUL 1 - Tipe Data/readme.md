@@ -136,7 +136,7 @@ int main() {
 Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot]((https://github.com/ardelialaksita/photo/blob/main/ss%20full%20screen%20no%201%20tugas%201.png))
+![240309_10h21m35s_screenshot](https://github.com/ardelialaksita/photo/blob/dad89cdee3ea9748551fcbd669aea985674cd999/ss%20full%20screen%20no%201%20tugas%201.png)
 
 
 ## Kesimpulan
