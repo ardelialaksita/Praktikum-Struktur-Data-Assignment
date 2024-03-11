@@ -119,17 +119,45 @@ int main()
 
 ## Unguided 
 
-### 1. [Soal]
+### 1. Buatlah program menggunakan tipe data primitif minimal dua fungsi dan bebas. 
+Menampilkan program, jelaskan program tersebut dan ambil kesimpulan dari materi tipe data primitif!
 
 ```C++
 #include <iostream>
 using namespace std;
 
+//Fungsi untuk mengecek apakah suatu bilangan adalah bilangan ganjil (odd number)
+bool isOdd(int num) 
+{
+    return num % 2 != 0;
+}
+
+//Fungsi untuk mengecek apakah suatu bilangan adalah bilangan genap (even number)
+bool isEven(int num)
+{
+    return num % 2 == 0;
+}
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
-    return 0;
+    int num;
+    cout << "Masukkan bilangan: ";
+    cin >> num;
+
+    if (isOdd(num)) {
+        cout << num << " adalah bilangan ganjil" << endl;
+    }
+    else if (isEven(num)) {
+        cout << num << " adalah bilangan genap" << endl;
+    }
+    else {
+        cout << num << " adalah bilangan 0 (bukan bilangan ganjil dan genap)" << endl;
+    }
+        
+    return 0; 
+        
 }
 ```
+
 #### Output:
 ![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
 
