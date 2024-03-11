@@ -127,14 +127,12 @@ Menampilkan program, jelaskan program tersebut dan ambil kesimpulan dari materi 
 using namespace std;
 
 //Fungsi untuk mengecek apakah suatu bilangan adalah bilangan ganjil (odd number)
-bool isOdd(int num) 
-{
+bool isOdd(int num) {
     return num % 2 != 0;
 }
 
 //Fungsi untuk mengecek apakah suatu bilangan adalah bilangan genap (even number)
-bool isEven(int num)
-{
+bool isEven(int num){
     return num % 2 == 0;
 }
 
@@ -159,12 +157,12 @@ int main() {
 ```
 
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![240302_00h00m06s_screenshot](https://github.com/ardelialaksita/photo/blob/e4310b9e24bfbc039d23be0af0d5f3d47be707c0/%5BModul%201%5D%20Unguided%201%20Output.png)
 
 Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/ardelialaksita/photo/blob/dad89cdee3ea9748551fcbd669aea985674cd999/ss%20full%20screen%20no%201%20tugas%201.png)
+![240309_10h21m35s_screenshot](https://github.com/ardelialaksita/photo/blob/e4310b9e24bfbc039d23be0af0d5f3d47be707c0/%5BModul%201%5D%20Unguided%201%20Full%20SS.png)
 
 
 ## Kesimpulan
