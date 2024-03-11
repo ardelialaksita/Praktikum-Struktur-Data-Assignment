@@ -6,7 +6,7 @@
 Tipe data merupakan klasifikasi jenis-jenis data yang berfungsi untuk menentukan data serta variabel yang dapat digunakan dalam suatu sistem dan operasi-operasi tertentu. Tipe data adalah semua himpunan yang ada pada semua data tanpa terkecuali[1]. Adanya klasifikasi data juga dapat membantu operasi komputer mengenali nilai data beserta instruksinya. Tipe data dibagi menjadi 3, antara lain :
 
 1. Tipe Data Primitif
-   Tipe data primitif merupakan tipe data yang dapat menyimpan satu nilai dan telah ditentukan oleh sistem. Tipedata primitif adalah tipe yang sederhana sehingga kesulitan menjangkau data kompleks yang tingkat kerumitannya tinggi. Beberapa macam tipe data primitif :
+   Tipe data primitif merupakan tipe data yang dapat menyimpan satu nilai dan telah ditentukan oleh sistem. Tipe data primitif adalah tipe yang sederhana sehingga kesulitan menjangkau data kompleks yang tingkat kerumitannya tinggi. Beberapa macam tipe data primitif :
 a) Boolean (bool) : digunakan untuk menyimpan nilai logika dan hanya memiliki 2 nilai yaitu true dan false.
 b) Integer (int) : digunakan untuk angka tanpa pecahan baik positif maupun negatif. Contoh : 10,11,12.
 c) Float (float) : digunakan untuk angka pecahan. Contoh : 10.1, 11.5, 12.4.
@@ -176,7 +176,7 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 #### Full code Screenshot:
 ![240309_10h21m35s_screenshot](https://github.com/ardelialaksita/photo/blob/e4310b9e24bfbc039d23be0af0d5f3d47be707c0/%5BModul%201%5D%20Unguided%201%20Full%20SS.png)
 
-### 1. Buatlah program menggunakan tipe data primitif minimal dua fungsi dan bebas. Menampilkan program, jelaskan program tersebut dan ambil kesimpulan dari materi tipe data primitif!
+### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya
 
 ```C++
 //CONTOH PROGRAM STRUCT
@@ -261,7 +261,7 @@ int main()
 Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/ardelialaksita/photo/blob/e4310b9e24bfbc039d23be0af0d5f3d47be707c0/%5BModul%201%5D%20Unguided%201%20Full%20SS.png)
+![240309_10h21m35s_screenshot](https://github.com/ardelialaksita/photo/blob/614339283baac424ce078a4bedd25818e47573b0/%5BModul%201%5D%20Unguided%202%20Full%20SS.png)
 
 
 ## Kesimpulan
