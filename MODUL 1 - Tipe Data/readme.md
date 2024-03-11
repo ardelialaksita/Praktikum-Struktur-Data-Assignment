@@ -210,6 +210,13 @@ Tipe data primitif dapat berupa int (integer), bool (boolean), float (float), st
 
 ### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya.
 
+##### Struct :
+Fungsi struct yaitu dapat menggabungkan sekumpulan variabel dan memberi nama pada variabel-variabel tersebut. Nama yang digunakan sama seperti tipe variabelnya, misalnya : int atau string. Struct dapat mendeklarasikan variabel baru dan mengakses semua kolom. Struct akan mengelola data yang akan diakses secara langsung. Struct memiliki akses default yang terbuka (secara public). Struct hanya dapat memiliki properti. Struct mendefinisikan tipe data dan menginstruksikan kepada C++ untuk mengelompokkan koleksi tipe data dasar sebagai kesatuan tipe data sehingga dapat mendefinisikan variabel dan array variabel.
+
+##### Class :
+Class berfungsi untuk mendeskripsikan suatu objek melalui data dan fungsi yang dimiliki. Class memiliki akses default private sehingga tidak semua variabel dapat dieksekusi apabila ada objek yang private. Jika objek anggota dari class tersebut ingin dipublikasikan, maka harus menggunakan **public :**[4]. Class memiliki properti dan metode. Class akan mengelola data yang akan diakses melalui metode (method).
+
+##### Contoh Program :
 ```C++
 //CONTOH PROGRAM STRUCT
 #include <iostream>
@@ -291,12 +298,6 @@ int main()
 ![240302_00h00m06s_screenshot](https://github.com/ardelialaksita/photo/blob/614339283baac424ce078a4bedd25818e47573b0/%5BModul%201%5D%20Unguided%202%20Output.png)
 
 Kode di atas digunakan untuk mencetak nama, warna, dan rasa suatu buah. Struct tidak memiliki objek private. **fruit1.name = "Durian"** merupakan salah satu isi struct dimana jika dieksekusi menggunakan **cout << "Nama Buah : " << fruit1.name << endl;** akan menghasilkan output **Nama Buah : Durian**. 
-
-##### Struct :
-Fungsi struct yaitu dapat menggabungkan sekumpulan variabel dan memberi nama pada variabel-variabel tersebut. Nama yang digunakan sama seperti tipe variabelnya, misalnya : int atau string. Struct dapat mendeklarasikan variabel baru dan mengakses semua kolom. Struct akan mengelola data yang akan diakses secara langsung. Struct memiliki akses default yang terbuka (secara public). Struct hanya dapat memiliki properti. Struct mendefinisikan tipe data dan menginstruksikan kepada C++ untuk mengelompokkan koleksi tipe data dasar sebagai kesatuan tipe data sehingga dapat mendefinisikan variabel dan array variabel.
-
-##### Class :
-Class berfungsi untuk mendeskripsikan suatu objek melalui data dan fungsi yang dimiliki. Class memiliki akses default private sehingga tidak semua variabel dapat dieksekusi apabila ada objek yang private. Jika objek anggota dari class tersebut ingin dipublikasikan, maka harus menggunakan **public :**[4]. Class memiliki properti dan metode. Class akan mengelola data yang akan diakses melalui metode (method).
 
 #### Full code Screenshot:
 ![240309_10h21m35s_screenshot](https://github.com/ardelialaksita/photo/blob/614339283baac424ce078a4bedd25818e47573b0/%5BModul%201%5D%20Unguided%202%20Full%20SS.png)
