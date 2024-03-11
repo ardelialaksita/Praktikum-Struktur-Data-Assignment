@@ -5,16 +5,19 @@
 
 Tipe data merupakan klasifikasi jenis-jenis data yang berfungsi untuk menentukan data serta variabel yang dapat digunakan dalam suatu sistem dan operasi-operasi tertentu. Tipe data adalah semua himpunan yang ada pada semua data tanpa terkecuali[1]. Adanya klasifikasi data juga dapat membantu operasi komputer mengenali nilai data beserta instruksinya. Tipe data dibagi menjadi 3, antara lain :
 
-1. Tipe Data Primitif: merupakan tipe data yang dapat menyimpan satu nilai dan telah ditentukan oleh sistem. Tipe data primitif adalah tipe yang sederhana sehingga kesulitan menjangkau data kompleks yang tingkat kerumitannya tinggi. Beberapa macam tipe data primitif :
+##### 1. Tipe Data Primitif:
+   Tipe data primitif merupakan tipe data yang dapat menyimpan satu nilai dan telah ditentukan oleh sistem. Tipe data primitif adalah tipe yang sederhana sehingga kesulitan menjangkau data kompleks yang tingkat kerumitannya tinggi. Beberapa macam tipe data primitif :
 a) Boolean (bool) : digunakan untuk menyimpan nilai logika dan hanya memiliki 2 nilai yaitu true dan false.
 b) Integer (int) : digunakan untuk angka tanpa pecahan baik positif maupun negatif. Contoh : 10,11,12.
 c) Float (float) : digunakan untuk angka pecahan. Contoh : 10.1, 11.5, 12.4.
 d) Character (char) : digunakan untuk satu karakter. Contoh : 'a','A'.
 e) String (string) : digunakan untuk menyimpan nilai lebih dari 1 karakter. Contoh : 'Apel', 'Strawberry'.
    
-2. Tipe Data Abstrak : merupakan tipe data yang memiliki sistematik serupa dan didefinisikan melalui operasi matematis tertentu. Deklarasi Abstract Data Type (ADT) terdapat pada beberapa bahasa pemrograman dan bentuk deklarasinya mengikat daftar identifikasi terhadap suatu tipe dengan operasi terkait[2].  Fitur yang dapat digunakan dalam tipe data abstrak antara lain : struct (akses defaultnya bersifat public) dan class (akses defaultnya bersifat private).
+##### 2. Tipe Data Abstrak :
+   Tipe data abstrak merupakan tipe data yang memiliki sistematik serupa dan didefinisikan melalui operasi matematis tertentu. Deklarasi Abstract Data Type (ADT) terdapat pada beberapa bahasa pemrograman dan bentuk deklarasinya mengikat daftar identifikasi terhadap suatu tipe dengan operasi terkait[2].  Fitur yang dapat digunakan dalam tipe data abstrak antara lain : struct (akses defaultnya bersifat public) dan class (akses defaultnya bersifat private).
 
-3. Tipe Data Koleksi : merupakan tipe data yang berfungsi mengelompokkan, mengelola, dan mengakses beberapa objek dan nilai secara bersamaan. Tipe data koleksi antara lain : array (untuk menyimpan elemen-elemen dengan tipe data yang sama), vector(untuk menyimpan data dalam bentuk elemen-elemen yang alokasi memorinya dilakukan secara otomatis dan bersebelahan), dan map (untuk menyimpan elemen-elemen dengan tipe data yang sama namun bisa digunakan pula untuk tipe data selain integer pada indeksnya).
+##### 3. Tipe Data Koleksi : 
+   Tipe data koleksi merupakan tipe data yang berfungsi mengelompokkan, mengelola, dan mengakses beberapa objek dan nilai secara bersamaan. Tipe data koleksi antara lain : array (untuk menyimpan elemen-elemen dengan tipe data yang sama), vector(untuk menyimpan data dalam bentuk elemen-elemen yang alokasi memorinya dilakukan secara otomatis dan bersebelahan), dan map (untuk menyimpan elemen-elemen dengan tipe data yang sama namun bisa digunakan pula untuk tipe data selain integer pada indeksnya).
 
 ## Guided 
 
@@ -58,7 +61,18 @@ int main() {
     return 0;
 }
 ```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan untuk melakukan operasi penjumlahan(+), pengurangan(-), perkalian(*), dan pembagian(/) terhadap 2 bilangan. 
+**cout << "Masukkan operator" dan cin >> op** digunakan untuk memasukkan operasi yang ingin digunakan.
+**cout << "Masukkan angka pertama" dan cin >> num1** digunakan untuk memasukkan angka pertama yang ingin dioperasikan.
+**cout << "Masukkan angka kedua" dan cin >> num2** digunakan untuk memasukkan angka kedua yang ingin dioperasikan.
+Untuk melakukan operasi kedua bilangan, maka tentukan masing-masing case terlebih dahulu. 
+Jika operator yang dimasukkan tidak benar, maka akan menghasilkan output "Error! Operator is not correct".
+Jika suatu bilangan memiliki 0 sebagai pembaginya, maka akan menghasilkan output "Error! Nol tidak boleh sebagai pembagi."
+###### Contoh penggunaan program :
+Masukkan operasi : +
+Masukkan bilangan pertama : 11
+Masukkan bilangan kedua : 13
+Hasil penjumlahan : 25
 
 ### 2. Tipe Data Abstrak
 
@@ -102,6 +116,11 @@ int main()
     
 }
 ```
+Kode di atas digunakan untuk menngisi identitas mahasiswa berupa nama, alamat, dan umur menggunakan struct. 
+**// Struct** digunakan untuk menentukan jenis data struct yang digunakan. Pada program tersebut menggunakan char.
+**// Mengisi nilai ke struct** digunakan untuk mengisi apa saja yang akan diinput dalam identitas mahasiswa. Pengetikan kodenya dimulai dari mhs1 kemudian diikuti dengan identitas yang ingin diinput, misalnya mhs1.address untuk menggunakan struct dalam alamat mahasiswa. 
+**// Mencetak isi struct** dilakukan dengan cara printf("Nama: %s\n", mhs1.name) dan seterusnya. Kode \n digunakan untuk membuat 'enter' pada line berikutnya. Kode \n dapat diganti dengan endl;.
+**return 0** digunakan untuk mengakhiri program tersebut.
 
 ### 3. Tipe Data Koleksi
 
@@ -127,6 +146,7 @@ int main()
     return 0;
 }
 ```
+Kode tersebut digunakan untuk deklarasi, inisialisasi, dan mencetak suatu array. Array tersebut berisi 5 nilai yang terdiri atas 4 indeks. Untuk mendeklarasikan dan inisialisasi array dilakukan dengan **int nilai[5]** dimana 5 dalam kode tersebut artinya array terdiri atas 5 nilai. Selanjutnya, isi masing-masing indeks menggunakan nilai[0] untuk indeks ke 0 hingga nilai [4] untuk indeks ke 5. Untuk mencetak array dan mengetahui nilai masing-masing array menggunakan **cout << "Isi array .... :" << nilai[0] << endl;**. Pengetikan masing-masing cout harus sesuai dengan indeks yang diinput dalam [] sehingga tidak ada kesalahan dalam pencetakan isi array.
 
 ## Unguided 
 
@@ -174,7 +194,7 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 #### Full code Screenshot:
 ![240309_10h21m35s_screenshot](https://github.com/ardelialaksita/photo/blob/e4310b9e24bfbc039d23be0af0d5f3d47be707c0/%5BModul%201%5D%20Unguided%201%20Full%20SS.png)
 
-### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya
+### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya.
 
 ```C++
 //CONTOH PROGRAM STRUCT
@@ -261,6 +281,35 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 #### Full code Screenshot:
 ![240309_10h21m35s_screenshot](https://github.com/ardelialaksita/photo/blob/614339283baac424ce078a4bedd25818e47573b0/%5BModul%201%5D%20Unguided%202%20Full%20SS.png)
 
+### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map.
+
+```C++
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main() {
+    // Membuat map dengan integer key
+    map<int, string> animals = {{1, "Kucing"}, {2, "Unicorn"}, {3, "Dinosaurus"}};
+
+    // Menambahkan elemen baru
+    animals.insert(make_pair(4, "Paus"));
+
+    // Mengakses elemen-elemen map
+    cout << animals[1] << endl;
+    cout << animals[2] << endl;
+    cout << animals[3] << endl;
+    cout << animals[4] << endl;
+
+    // Menghapus elemen dari map
+    animals.erase(2);
+
+    // Membersihkan map
+    animals.clear();
+
+    return 0;
+}
+```
 
 ## Kesimpulan
 Ringkasan dan interpretasi pandangan kaliaN dari hasil praktikum dan pembelajaran yang didapat[1].
