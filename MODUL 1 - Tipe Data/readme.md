@@ -121,8 +121,8 @@ int main()
 ```
 Kode di atas digunakan untuk menngisi identitas mahasiswa berupa nama, alamat, dan umur menggunakan struct. 
 **// Struct** digunakan untuk menentukan jenis data struct yang digunakan. Pada program tersebut menggunakan char.
-**// Mengisi nilai ke struct** digunakan untuk mengisi apa saja yang akan diinput dalam identitas mahasiswa. Pengetikan kodenya dimulai dari mhs1 kemudian diikuti dengan identitas yang ingin diinput, misalnya mhs1.address untuk menggunakan struct dalam alamat mahasiswa. 
-**// Mencetak isi struct** dilakukan dengan cara printf("Nama: %s\n", mhs1.name) dan seterusnya. Kode \n digunakan untuk membuat 'enter' pada line berikutnya. Kode \n dapat diganti dengan endl;.
+**// Mengisi nilai ke struct** digunakan untuk mengisi apa saja yang akan diinput dalam identitas mahasiswa. Pengetikan kodenya dimulai dari mhs1 kemudian diikuti dengan identitas yang ingin diinput, misalnya **mhs1.address** untuk menggunakan struct dalam alamat mahasiswa. 
+**// Mencetak isi struct** dilakukan dengan cara **printf("Nama: %s\n", mhs1.name)** dan seterusnya. Kode **\n** digunakan untuk membuat 'enter' pada line berikutnya. Kode **\n** dapat diganti dengan **endl;**.
 **return 0** digunakan untuk mengakhiri program tersebut.
 #### Output Guided 2:
 ![240302_00h00m06s_screenshot](https://github.com/ardelialaksita/photo/blob/4587d9cd4a853ca248386f98fffc24ccf99f9fad/%5BModul%201%5D%20Guided%202.png)
