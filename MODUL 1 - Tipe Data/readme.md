@@ -124,7 +124,7 @@ Kode di atas digunakan untuk menngisi identitas mahasiswa berupa nama, alamat, d
 **// Mengisi nilai ke struct** digunakan untuk mengisi apa saja yang akan diinput dalam identitas mahasiswa. Pengetikan kodenya dimulai dari mhs1 kemudian diikuti dengan identitas yang ingin diinput, misalnya mhs1.address untuk menggunakan struct dalam alamat mahasiswa. 
 **// Mencetak isi struct** dilakukan dengan cara printf("Nama: %s\n", mhs1.name) dan seterusnya. Kode \n digunakan untuk membuat 'enter' pada line berikutnya. Kode \n dapat diganti dengan endl;.
 **return 0** digunakan untuk mengakhiri program tersebut.
-#### Output Guided 1:
+#### Output Guided 2:
 ![240302_00h00m06s_screenshot](https://github.com/ardelialaksita/photo/blob/4587d9cd4a853ca248386f98fffc24ccf99f9fad/%5BModul%201%5D%20Guided%202.png)
 
 ### 3. Tipe Data Koleksi
@@ -152,7 +152,7 @@ int main()
 }
 ```
 Kode tersebut digunakan untuk deklarasi, inisialisasi, dan mencetak suatu array. Array tersebut berisi 5 nilai yang terdiri atas 4 indeks. Untuk mendeklarasikan dan inisialisasi array dilakukan dengan **int nilai[5]** dimana 5 dalam kode tersebut artinya array terdiri atas 5 nilai. Selanjutnya, isi masing-masing indeks menggunakan nilai[0] untuk indeks ke 0 hingga nilai [4] untuk indeks ke 5. Untuk mencetak array dan mengetahui nilai masing-masing array menggunakan **cout << "Isi array .... :" << nilai[0] << endl;**. Pengetikan masing-masing cout harus sesuai dengan indeks yang diinput dalam [] sehingga tidak ada kesalahan dalam pencetakan isi array.
-#### Output Guided 1:
+#### Output Guided 3:
 ![240302_00h00m06s_screenshot](https://github.com/ardelialaksita/photo/blob/4587d9cd4a853ca248386f98fffc24ccf99f9fad/%5BModul%201%5D%20Guided%203.png)
 
 ## Unguided 
