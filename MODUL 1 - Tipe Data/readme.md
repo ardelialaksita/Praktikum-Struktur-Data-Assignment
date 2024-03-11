@@ -281,7 +281,7 @@ int main()
 ```
 
 #### Output:
-![240302_00h00m06s_screenshot][https://github.com/ardelialaksita/photo/blob/614339283baac424ce078a4bedd25818e47573b0/%5BModul%201%5D%20Unguided%202%20Output.png]
+![240302_00h00m06s_screenshot](https://github.com/ardelialaksita/photo/blob/614339283baac424ce078a4bedd25818e47573b0/%5BModul%201%5D%20Unguided%202%20Output.png)
 
 Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
 
@@ -317,10 +317,20 @@ int main() {
     return 0;
 }
 ```
+#### Output:
+![240302_00h00m06s_screenshot](https://github.com/ardelialaksita/photo/blob/4587d9cd4a853ca248386f98fffc24ccf99f9fad/%5BModul%201%5D%20Unguided%203%20Output.png)
+
+Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+
+#### Full code Screenshot:
+![240309_10h21m35s_screenshot](https://github.com/ardelialaksita/photo/blob/4587d9cd4a853ca248386f98fffc24ccf99f9fad/%5BModul%201%5D%20Unguided%203%20Full%20SS.png)
+
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kaliaN dari hasil praktikum dan pembelajaran yang didapat[1].
+Tipe data merupakan klasifikasi atau pengelompokan jenis-jenis data. Variabel merupakan kontainer yang dapat digunakan untuk menyimpan suatu nilai pada sebuah program dengan tipe data tertentu[3]. Untuk menentukan tipe data yang digunakan dalam variabel dapat dilihat melalui klasifikasi tipe-tipe data. Tipe data ada 3: tipe data primitif yaitu sudah ditentukan oleh sistem, tipe data abstrak yaitu dibentuk oleh programer sendiri, dan tipe data koleksi yaitu digunakan untuk mengelompokkan nilai dan objek secara bersamaan. Korelasi antara tipe data tersebut yaitu tipe data abstrak sering digunakan untuk mengimplementasikan tipe data koleksi sehingga memungkinkan pengguna untuk berinteraksi dengan strultur data tanpa perlu mengetahui detail implementasinya. 
 
 ## Referensi
-[1] Litalia (2023, September 30). Pengertian Tipe Data Beserta Fungsi dan Jenis-Jenis Tipe Data [online]. Available: https://www.jurnalponsel.com/pengertian-tipe-data/
+[1] Litalia (2023, September 30). Pengertian Tipe Data Beserta Fungsi dan Jenis-Jenis Tipe Data [online]. Available: https://www.jurnalponsel.com/pengertian-tipe-data/.
 [2] Mitchell, John C.; Plotkin, Gordon (July 1988). "Abstract Types Have Existential Type" (PDF). ACM Transactions on Programming Languages and Systems. 10 (3).
+[3] Tim Dosen Common Laboratory, Modul Praktikum Pemrograman Berorientasi
+Obyek, Common Laboratory, Fakultas Informatika, ITTelkom, Bandung, 2009.
