@@ -5,18 +5,16 @@
 
 Tipe data merupakan klasifikasi jenis-jenis data yang berfungsi untuk menentukan data serta variabel yang dapat digunakan dalam suatu sistem dan operasi-operasi tertentu. Tipe data adalah semua himpunan yang ada pada semua data tanpa terkecuali[1]. Adanya klasifikasi data juga dapat membantu operasi komputer mengenali nilai data beserta instruksinya. Tipe data dibagi menjadi 3, antara lain :
 
-1. Tipe Data Primitif
-   Tipe data primitif merupakan tipe data yang dapat menyimpan satu nilai dan telah ditentukan oleh sistem. Tipe data primitif adalah tipe yang sederhana sehingga kesulitan menjangkau data kompleks yang tingkat kerumitannya tinggi. Beberapa macam tipe data primitif :
+1. Tipe Data Primitif: merupakan tipe data yang dapat menyimpan satu nilai dan telah ditentukan oleh sistem. Tipe data primitif adalah tipe yang sederhana sehingga kesulitan menjangkau data kompleks yang tingkat kerumitannya tinggi. Beberapa macam tipe data primitif :
 a) Boolean (bool) : digunakan untuk menyimpan nilai logika dan hanya memiliki 2 nilai yaitu true dan false.
 b) Integer (int) : digunakan untuk angka tanpa pecahan baik positif maupun negatif. Contoh : 10,11,12.
 c) Float (float) : digunakan untuk angka pecahan. Contoh : 10.1, 11.5, 12.4.
 d) Character (char) : digunakan untuk satu karakter. Contoh : 'a','A'.
 e) String (string) : digunakan untuk menyimpan nilai lebih dari 1 karakter. Contoh : 'Apel', 'Strawberry'.
    
-2. Tipe Data Abstrak
-   Tipe data abstrak merupakan tipe data yang 
+2. Tipe Data Abstrak : merupakan tipe data yang memiliki sistematik serupa dan didefinisikan melalui operasi matematis tertentu. Deklarasi Abstract Data Type (ADT) terdapat pada beberapa bahasa pemrograman dan bentuk deklarasinya mengikat daftar identifikasi terhadap suatu tipe dengan operasi terkait[2].  Fitur yang dapat digunakan dalam tipe data abstrak antara lain : struct (akses defaultnya bersifat public) dan class (akses defaultnya bersifat private).
 
-4. Tipe Data Koleksi
+3. Tipe Data Koleksi : merupakan tipe data yang berfungsi mengelompokkan, mengelola, dan mengakses beberapa objek dan nilai secara bersamaan. Tipe data koleksi antara lain : array (untuk menyimpan elemen-elemen dengan tipe data yang sama), vector(untuk menyimpan data dalam bentuk elemen-elemen yang alokasi memorinya dilakukan secara otomatis dan bersebelahan), dan map (untuk menyimpan elemen-elemen dengan tipe data yang sama namun bisa digunakan pula untuk tipe data selain integer pada indeksnya).
 
 ## Guided 
 
@@ -269,3 +267,4 @@ Ringkasan dan interpretasi pandangan kaliaN dari hasil praktikum dan pembelajara
 
 ## Referensi
 [1] Litalia (2023, September 30). Pengertian Tipe Data Beserta Fungsi dan Jenis-Jenis Tipe Data [online]. Available: https://www.jurnalponsel.com/pengertian-tipe-data/
+[2] Mitchell, John C.; Plotkin, Gordon (July 1988). "Abstract Types Have Existential Type" (PDF). ACM Transactions on Programming Languages and Systems. 10 (3).
