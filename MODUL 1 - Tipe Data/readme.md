@@ -5,7 +5,7 @@
 
 Tipe data merupakan klasifikasi jenis-jenis data yang berfungsi untuk menentukan data serta variabel yang dapat digunakan dalam suatu sistem dan operasi-operasi tertentu. Tipe data adalah semua himpunan yang ada pada semua data tanpa terkecuali[1]. Adanya klasifikasi data juga dapat membantu operasi komputer mengenali nilai data beserta instruksinya. Tipe data dibagi menjadi 3, antara lain :
 
-##### 1. Tipe Data Primitif:
+#### 1. Tipe Data Primitif:
    Tipe data primitif merupakan tipe data yang dapat menyimpan satu nilai dan telah ditentukan oleh sistem. Tipe data primitif adalah tipe yang sederhana sehingga kesulitan menjangkau data kompleks yang tingkat kerumitannya tinggi. Beberapa macam tipe data primitif :
 a) Boolean (bool) : digunakan untuk menyimpan nilai logika dan hanya memiliki 2 nilai yaitu true dan false.
 b) Integer (int) : digunakan untuk angka tanpa pecahan baik positif maupun negatif. Contoh : 10,11,12.
@@ -13,10 +13,10 @@ c) Float (float) : digunakan untuk angka pecahan. Contoh : 10.1, 11.5, 12.4.
 d) Character (char) : digunakan untuk satu karakter. Contoh : 'a','A'.
 e) String (string) : digunakan untuk menyimpan nilai lebih dari 1 karakter. Contoh : 'Apel', 'Strawberry'.
    
-##### 2. Tipe Data Abstrak :
+#### 2. Tipe Data Abstrak :
    Tipe data abstrak merupakan tipe data yang memiliki sistematik serupa dan didefinisikan melalui operasi matematis tertentu. Deklarasi Abstract Data Type (ADT) terdapat pada beberapa bahasa pemrograman dan bentuk deklarasinya mengikat daftar identifikasi terhadap suatu tipe dengan operasi terkait[2].  Fitur yang dapat digunakan dalam tipe data abstrak antara lain : struct (akses defaultnya bersifat public) dan class (akses defaultnya bersifat private).
 
-##### 3. Tipe Data Koleksi : 
+#### 3. Tipe Data Koleksi : 
    Tipe data koleksi merupakan tipe data yang berfungsi mengelompokkan, mengelola, dan mengakses beberapa objek dan nilai secara bersamaan. Tipe data koleksi antara lain : array (untuk menyimpan elemen-elemen dengan tipe data yang sama), vector(untuk menyimpan data dalam bentuk elemen-elemen yang alokasi memorinya dilakukan secara otomatis dan bersebelahan), dan map (untuk menyimpan elemen-elemen dengan tipe data yang sama namun bisa digunakan pula untuk tipe data selain integer pada indeksnya).
 
 ## Guided 
@@ -66,13 +66,16 @@ Kode di atas digunakan untuk melakukan operasi penjumlahan(+), pengurangan(-), p
 **cout << "Masukkan angka pertama" dan cin >> num1** digunakan untuk memasukkan angka pertama yang ingin dioperasikan.
 **cout << "Masukkan angka kedua" dan cin >> num2** digunakan untuk memasukkan angka kedua yang ingin dioperasikan.
 Untuk melakukan operasi kedua bilangan, maka tentukan masing-masing case terlebih dahulu. 
-Jika operator yang dimasukkan tidak benar, maka akan menghasilkan output "Error! Operator is not correct".
-Jika suatu bilangan memiliki 0 sebagai pembaginya, maka akan menghasilkan output "Error! Nol tidak boleh sebagai pembagi."
-###### Contoh penggunaan program :
+Jika operator yang dimasukkan tidak benar, maka akan menghasilkan output **"Error! Operator is not correct."**.
+Jika suatu bilangan memiliki 0 sebagai pembaginya, maka akan menghasilkan output **"Error! Nol tidak boleh sebagai pembagi."**
+##### Contoh penggunaan program :
 Masukkan operasi : +
 Masukkan bilangan pertama : 11
 Masukkan bilangan kedua : 13
-Hasil penjumlahan : 25
+Hasil penjumlahan : 24
+#### Output Guided 1:
+![240302_00h00m06s_screenshot](https://github.com/ardelialaksita/photo/blob/4587d9cd4a853ca248386f98fffc24ccf99f9fad/%5BModul%201%5D%20Guided%201.png)
+
 
 ### 2. Tipe Data Abstrak
 
@@ -121,6 +124,8 @@ Kode di atas digunakan untuk menngisi identitas mahasiswa berupa nama, alamat, d
 **// Mengisi nilai ke struct** digunakan untuk mengisi apa saja yang akan diinput dalam identitas mahasiswa. Pengetikan kodenya dimulai dari mhs1 kemudian diikuti dengan identitas yang ingin diinput, misalnya mhs1.address untuk menggunakan struct dalam alamat mahasiswa. 
 **// Mencetak isi struct** dilakukan dengan cara printf("Nama: %s\n", mhs1.name) dan seterusnya. Kode \n digunakan untuk membuat 'enter' pada line berikutnya. Kode \n dapat diganti dengan endl;.
 **return 0** digunakan untuk mengakhiri program tersebut.
+#### Output Guided 1:
+![240302_00h00m06s_screenshot](https://github.com/ardelialaksita/photo/blob/4587d9cd4a853ca248386f98fffc24ccf99f9fad/%5BModul%201%5D%20Guided%202.png)
 
 ### 3. Tipe Data Koleksi
 
@@ -147,6 +152,8 @@ int main()
 }
 ```
 Kode tersebut digunakan untuk deklarasi, inisialisasi, dan mencetak suatu array. Array tersebut berisi 5 nilai yang terdiri atas 4 indeks. Untuk mendeklarasikan dan inisialisasi array dilakukan dengan **int nilai[5]** dimana 5 dalam kode tersebut artinya array terdiri atas 5 nilai. Selanjutnya, isi masing-masing indeks menggunakan nilai[0] untuk indeks ke 0 hingga nilai [4] untuk indeks ke 5. Untuk mencetak array dan mengetahui nilai masing-masing array menggunakan **cout << "Isi array .... :" << nilai[0] << endl;**. Pengetikan masing-masing cout harus sesuai dengan indeks yang diinput dalam [] sehingga tidak ada kesalahan dalam pencetakan isi array.
+#### Output Guided 1:
+![240302_00h00m06s_screenshot](https://github.com/ardelialaksita/photo/blob/4587d9cd4a853ca248386f98fffc24ccf99f9fad/%5BModul%201%5D%20Guided%203.png)
 
 ## Unguided 
 
