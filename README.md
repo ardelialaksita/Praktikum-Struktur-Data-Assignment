@@ -1,7 +1,7 @@
-## Repository praktikum algoritma dan struktur data
+## Repository Praktikum Algoritma dan Struktur Data
 
 <pre>
-Nama : Arvinanto Bahtiar
-NIM : 2211110014
-Kelas : S1SD03-A
+Nama : Ardelia Rachma Laksita
+NIM : 2311110051
+Kelas : S1SD04-A
 </pre>
