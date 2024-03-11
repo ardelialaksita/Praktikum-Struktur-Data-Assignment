@@ -27,7 +27,7 @@ int main() {
             if (num2 != 0)
                 cout << "Hasil Pembagian: " << num1 / num2;
             else
-                cout << "Error! Nol tidak boleh sebagai pembagi.";
+                cout << "Error! Nol tidak boleh digunakan sebagai pembagi.";
             break;
         default:
             cout << "Error! Operator is not correct";
