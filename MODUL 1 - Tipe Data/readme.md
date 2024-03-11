@@ -3,7 +3,19 @@
 
 ## Dasar Teori
 
-Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
+Tipe data merupakan klasifikasi jenis-jenis data yang berfungsi untuk menentukan data serta variabel yang dapat digunakan dalam suatu sistem dan operasi-operasi tertentu. Adanya klasifikasi data juga dapat membantu operasi komputer mengenali nilai data beserta instruksinya. Tipe data dibagi menjadi 3, antara lain :
+
+1. Tipe Data Primitif
+   Tipe data primitif merupakan tipe data yang dapat menyimpan satu nilai dan telah ditentukan oleh sistem. Tipedata primitif adalah tipe yang sederhana sehingga kesulitan menjangkau data kompleks yang tingkat kerumitannya tinggi. Beberapa macam tipe data primitif :
+   a) Boolean (bool) : digunakan untuk menyimpan nilai logika dan hanya memiliki 2 nilai yaitu true dan false.
+   b) Integer (int) : digunakan untuk angka tanpa pecahan baik positif maupun negatif. Contoh : 10,11,12.
+   c) Float (float) : digunakan untuk angka pecahan. Contoh : 10.1, 11.5, 12.4.
+   d) Character (char) : digunakan untuk satu karakter. Contoh : 'a','A'.
+   e) String (string) : digunakan untuk menyimpan nilai lebih dari 1 karakter. Contoh : 'Apel', 'Strawberry'.
+   
+2. Tipe Data Abstrak
+
+4. Tipe Data Koleksi
 
 ## Guided 
 
@@ -166,6 +178,7 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 ### 1. Buatlah program menggunakan tipe data primitif minimal dua fungsi dan bebas. Menampilkan program, jelaskan program tersebut dan ambil kesimpulan dari materi tipe data primitif!
 
 ```C++
+//CONTOH PROGRAM STRUCT
 #include <iostream>
 #include <string>
 using namespace std;
@@ -185,7 +198,7 @@ int main()
     fruit1.taste = "Manis";
     fruit2.name = "Lemon";
     fruit2.colour = "Kuning";
-    fruit2.taste = "Sour";
+    fruit2.taste = "Asam";
 
     cout << "===== BUAH 1 =====" << endl;
     cout << "Nama Buah : " << fruit1.name << endl;
@@ -200,6 +213,7 @@ int main()
 ```
 
 ```C++
+//CONTOH PROGRAM CLASS
 #include <iostream>
 #include <string>
 using namespace std;
@@ -212,33 +226,30 @@ class FruitClass {
     string taste;
 
     public:
-    string fruit1.name() {return name};
-    string fruit1.colour() {return colour};
-    string fruit1.taste() {return taste};
-    string fruit2.name() {return name};
-    string fruit2.colour() {return colour};
-    string fruit2.taste() {return taste};
+    string getname() {return name};
+    string getcolour() {return colour};
+    string gettaste() {return taste};
 
 };
 
 int main() 
 {
-    struct Fruit fruit1, fruit2;
-    fruit1.name = "Durian";
-    fruit1.colour = "Kuning";
-    fruit1.taste = "Manis";
-    fruit2.name = "Lemon";
-    fruit2.colour = "Kuning";
-    fruit2.taste = "Sour";
+    class FruitClass fruit1, fruit2;
+    fruit1.getname = "Durian";
+    fruit1.getcolour = "Kuning";
+    fruit1.gettaste = "Manis";
+    fruit2.getname = "Lemon";
+    fruit2.getcolour = "Kuning";
+    fruit2.gettaste = "Asam";
 
     cout << "===== BUAH 1 =====" << endl;
-    cout << "Nama Buah : " << fruit1.name << endl;
-    cout << "Warna Buah : " << fruit1.colour << endl;
-    cout << "Rasa Buah: " << fruit1.taste << endl;
+    cout << "Nama Buah : " << fruit1.getname << endl;
+    cout << "Warna Buah : " << fruit1.getcolour << endl;
+    cout << "Rasa Buah: " << fruit1.gettaste << endl;
     cout << "===== BUAH 2 =====" << endl;
-    cout << "Nama Buah : " << fruit2.name << endl;
-    cout << "Warna Buah : " << fruit2.colour << endl;
-    cout << "Rasa Buah: " << fruit2.taste << endl;
+    cout << "Nama Buah : " << fruit2.getname << endl;
+    cout << "Warna Buah : " << fruit2.getcolour << endl;
+    cout << "Rasa Buah: " << fruit2.gettaste << endl;
     return 0;
 }
 ```
