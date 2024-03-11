@@ -68,7 +68,7 @@ Kode di atas digunakan untuk melakukan operasi penjumlahan(+), pengurangan(-), p
 Untuk melakukan operasi kedua bilangan, maka tentukan masing-masing case terlebih dahulu. 
 Jika operator yang dimasukkan tidak benar, maka akan menghasilkan output **"Error! Operator is not correct."**.
 Jika suatu bilangan memiliki 0 sebagai pembaginya, maka akan menghasilkan output **"Error! Nol tidak boleh sebagai pembagi."**
-##### Contoh penggunaan program :
+#### Contoh penggunaan program :
 Masukkan operasi : + ,
 Masukkan bilangan pertama : 11 ,
 Masukkan bilangan kedua : 13 ,
@@ -202,7 +202,7 @@ Kode di atas digunakan untuk menentukan bilangan. Program tersebut berisi tentan
 **num % 2 == 0** artinya jika bilangan tersebut dibagi 2 sama dengan 0, maka bilangan tersebut adalah bilangan genap. Kemudian, program akan menjalankan **cout << num << " adalah bilangan genap" << endl;** dan akan menghasilkan output **"(bilangan) adalah bilangan genap"**.
 **else** artinya jika bilangan yang diinput adalah 0 dimana bilangan 0 bukan merupakan bilangan ganjil dan bukan bilangan genap. 
 
-##### Kesimpulan tipe data primitif :
+#### Kesimpulan tipe data primitif :
 Tipe data primitif dapat berupa int (integer), bool (boolean), float (float), string (string), dan char (character). Masing-masing tipenya dapat digunakan pada operasi sesuai yang dibutuhkan. Pada program di atas, tipe data yang digunakan adalah int. Operasi yang digunakan adalah modulo (%) karena mengembalikan sisa pembagian dari 2 bilangan. Jika sisa pembagian 2 bilangan tersebut adalah 0, maka bilangan tersebut adalah bilangan genap. Sebaliknya, jika sisa pembagian 2 bilangan tersebut bukan 0, maka bilangan tersebut adalah bilangan ganjil. 
 
 #### Full code Screenshot:
@@ -210,13 +210,13 @@ Tipe data primitif dapat berupa int (integer), bool (boolean), float (float), st
 
 ### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya.
 
-##### Struct :
+#### Struct :
 Fungsi struct yaitu dapat menggabungkan sekumpulan variabel dan memberi nama pada variabel-variabel tersebut. Nama yang digunakan sama seperti tipe variabelnya, misalnya : int atau string. Struct dapat mendeklarasikan variabel baru dan mengakses semua kolom. Struct akan mengelola data yang akan diakses secara langsung. Struct memiliki akses default yang terbuka (secara public). Struct hanya dapat memiliki properti. Struct mendefinisikan tipe data dan menginstruksikan kepada C++ untuk mengelompokkan koleksi tipe data dasar sebagai kesatuan tipe data sehingga dapat mendefinisikan variabel dan array variabel.
 
-##### Class :
+#### Class :
 Class berfungsi untuk mendeskripsikan suatu objek melalui data dan fungsi yang dimiliki. Class memiliki akses default private sehingga tidak semua variabel dapat dieksekusi apabila ada objek yang private. Jika objek anggota dari class tersebut ingin dipublikasikan, maka harus menggunakan **public :**[4]. Class memiliki properti dan metode. Class akan mengelola data yang akan diakses melalui metode (method).
 
-##### Contoh Program :
+#### Contoh Program :
 ```C++
 //CONTOH PROGRAM STRUCT
 #include <iostream>
@@ -336,7 +336,7 @@ int main() {
 
 Kode di atas digunakan untuk mengisi animals pada masing-masing indeks menggunakan fungsi map. **animals[1]** berisi Kucing, **animals[2]** berisi Unicorn, dan **animals[3]** berisi Dinosaurus. Untuk menambahkan elemen baru pada map tersebut dapat menggunakan **animals.insert(make_pair(4, "Paus"));**. Kemudian, Paus akan ditambahkan pada **animals[4]**. Untuk menghapus elemen dari map dapat menggunakan **animals.erase(2)** dimana kode ini akan menghapus Unicorn. Sedangkan untuk membersihkan map dapat menggunakan **animals.clear()**.
 
-##### Perbedaan array dan map :
+#### Perbedaan array dan map :
 **Array** merupakan sekumpulan data dengan tipe yang sama dan disimpan dalam satu variabel saja. Array menyimpan data yang memiliki urutan dan dapat diakses menggunakan indeks. Indeks dalam array digunakan untuk mengakses data.
 **Map** merupakan sekumpulan key-value yang disimpan dalam satu variabel. Map menyimpan data yang memiliki hubungan key-value dan dapat diakses menggunakan key. Key dalam map digunakan untuk mengakses data. 
 Dengan demikian, array menggunakan indeks untuk mengakses data, sedangkan map menggunakan key. Array dapat menyimpan data dengan tipe yang sama, sedangkan map dapat menyimpan key dan value dengan tipe yang berbeda. 
