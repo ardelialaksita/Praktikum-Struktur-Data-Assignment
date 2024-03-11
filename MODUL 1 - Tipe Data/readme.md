@@ -331,5 +331,5 @@ Tipe data merupakan klasifikasi atau pengelompokan jenis-jenis data. Variabel me
 
 ## Referensi
 [1] Litalia (2023, September 30). Pengertian Tipe Data Beserta Fungsi dan Jenis-Jenis Tipe Data [online]. Available: https://www.jurnalponsel.com/pengertian-tipe-data/.
-[2] Mitchell, John C.; Plotkin, Gordon (July 1988). "Abstract Types Have Existential Type" (PDF). ACM Transactions on Programming Languages and Systems. 10 (3).
+[2] Mitchell, John C.; Plotkin, Gordon. "Abstract Types Have Existential Type" ACM Transactions on Programming Languages and Systems. 10 (3). 1988.
 [3] Tim Dosen Common Laboratory. "Modul Praktikum Pemrograman Berorientasi Obyek". 2009.
