@@ -14,7 +14,7 @@ d) Character (char) : digunakan untuk satu karakter. Contoh : 'a','A'.
 e) String (string) : digunakan untuk menyimpan nilai lebih dari 1 karakter. Contoh : 'Apel', 'Strawberry'.
    
 #### 2. Tipe Data Abstrak :
-   Tipe data abstrak merupakan tipe data yang memiliki sistematik serupa dan didefinisikan melalui operasi matematis tertentu. Deklarasi Abstract Data Type (ADT) terdapat pada beberapa bahasa pemrograman dan bentuk deklarasinya mengikat daftar identifikasi terhadap suatu tipe dengan operasi terkait[2].  Fitur yang dapat digunakan dalam tipe data abstrak antara lain : struct (akses defaultnya bersifat public) dan class (akses defaultnya bersifat private).
+   Tipe data abstrak merupakan tipe data yang memiliki sistematik serupa dan didefinisikan melalui operasi matematis tertentu. Deklarasi Abstract Data Type (ADT) terdapat pada beberapa bahasa pemrograman dan bentuk deklarasinya mengikat daftar identifikasi terhadap suatu tipe dengan operasi terkait[2]. Ide dasar dari ADT adalah bahwa implementasi himpunan operasi ditulis satu kali dalam program dan bagian dari program yang perlu melakukan suatu operasi diselesaikan oleh ADT dengan menjalankan operasi yang diperlukan[3]. Fitur yang dapat digunakan dalam tipe data abstrak antara lain : struct (akses defaultnya bersifat public) dan class (akses defaultnya bersifat private).
 
 #### 3. Tipe Data Koleksi : 
    Tipe data koleksi merupakan tipe data yang berfungsi mengelompokkan, mengelola, dan mengakses beberapa objek dan nilai secara bersamaan. Tipe data koleksi antara lain : array (untuk menyimpan elemen-elemen dengan tipe data yang sama), vector(untuk menyimpan data dalam bentuk elemen-elemen yang alokasi memorinya dilakukan secara otomatis dan bersebelahan), dan map (untuk menyimpan elemen-elemen dengan tipe data yang sama namun bisa digunakan pula untuk tipe data selain integer pada indeksnya).
@@ -69,10 +69,10 @@ Untuk melakukan operasi kedua bilangan, maka tentukan masing-masing case terlebi
 Jika operator yang dimasukkan tidak benar, maka akan menghasilkan output **"Error! Operator is not correct."**.
 Jika suatu bilangan memiliki 0 sebagai pembaginya, maka akan menghasilkan output **"Error! Nol tidak boleh sebagai pembagi."**
 ##### Contoh penggunaan program :
-Masukkan operasi : +
-Masukkan bilangan pertama : 11
-Masukkan bilangan kedua : 13
-Hasil penjumlahan : 24
+Masukkan operasi : + ,
+Masukkan bilangan pertama : 11 ,
+Masukkan bilangan kedua : 13 ,
+Hasil penjumlahan : 24 ,
 #### Output Guided 1:
 ![240302_00h00m06s_screenshot](https://github.com/ardelialaksita/photo/blob/4587d9cd4a853ca248386f98fffc24ccf99f9fad/%5BModul%201%5D%20Guided%201.png)
 
@@ -194,7 +194,7 @@ int main() {
 ```
 
 #### Output:
-![240302_00h00m06s_screenshot][(https://github.com/ardelialaksita/photo/blob/e4310b9e24bfbc039d23be0af0d5f3d47be707c0/%5BModul%201%5D%20Unguided%201%20Output.png)]
+![240302_00h00m06s_screenshot](https://github.com/ardelialaksita/photo/blob/e4310b9e24bfbc039d23be0af0d5f3d47be707c0/%5BModul%201%5D%20Unguided%201%20Output.png)
 
 Kode di atas digunakan untuk menentukan bilangan. Program tersebut berisi tentang fungsi untuk menentukan apakah suatu bilangan termasuk bilangan ganjil, bilangan genap, atau bilangan 0 (bukan ganjil dan bukan genap). Terdapat 2 fungsi yaitu fungsi untuk mengecek apakah suatu bilangan termasuk bilangan ganjil dan fungsi untuk mengecek apakah apakah suatu bilangan termasuk bilangan genap. Tipe data primitif yang digunakan dalam program tersebut yaitu integer atau int dimana cara menentukan suatu bilangan ganjil atau genap dilakukan dengan cara membagi bilangan tersebut dengan 2. 
 **num % 2 != 0** artinya jika bilangan tersebut dibagi 2 tidak sama dengan 0, maka bilangan tersebut adalah bilangan ganjil. Kemudian, program akan menjalankan **cout << num << " adalah bilangan ganjil" << endl;** dan akan menghasilkan output **"(bilangan) adalah bilangan ganjil"**.
@@ -289,21 +289,13 @@ int main()
 #### Output:
 ![240302_00h00m06s_screenshot](https://github.com/ardelialaksita/photo/blob/614339283baac424ce078a4bedd25818e47573b0/%5BModul%201%5D%20Unguided%202%20Output.png)
 
-Kode di atas digunakan untuk mencetak nama, warna, dan rasa suatu buah. Struct tidak memiliki objek private. Berikut ini merupakan isi dari struct: 
-    **struct Fruit fruit1, fruit2;
-    fruit1.name = "Durian";
-    fruit1.colour = "Kuning";
-    fruit1.taste = "Manis";
-    fruit2.name = "Lemon";
-    fruit2.colour = "Kuning";
-    fruit2.taste = "Asam";**
-Untuk me
+Kode di atas digunakan untuk mencetak nama, warna, dan rasa suatu buah. Struct tidak memiliki objek private. **fruit1.name = "Durian"** merupakan salah satu isi struct dimana jika dieksekusi menggunakan **cout << "Nama Buah : " << fruit1.name << endl;** akan menghasilkan output **Nama Buah : Durian**. 
 
 ##### Struct :
-Fungsi struct yaitu dapat menggabungkan sekumpulan variabel dan memberi nama pada variabel-variabel tersebut. Nama yang digunakan sama seperti tipe variabelnya, misalnya : int atau string. Struct dapat mendeklarasikan variabel baru dan mengakses semua kolom. Struct akan mengelola data yang akan diakses secara langsung. Struct memiliki akses default yang terbuka (secara public). Struct hanya dapat memiliki properti. Struct mendefinisikan tipe data menginstruksikan kepada C++ untuk mengelompokkan koleksi tipe data dasar sebagai kesatuan tipe data sehingga dapat mendefinisikan variabel dan array variabel.
+Fungsi struct yaitu dapat menggabungkan sekumpulan variabel dan memberi nama pada variabel-variabel tersebut. Nama yang digunakan sama seperti tipe variabelnya, misalnya : int atau string. Struct dapat mendeklarasikan variabel baru dan mengakses semua kolom. Struct akan mengelola data yang akan diakses secara langsung. Struct memiliki akses default yang terbuka (secara public). Struct hanya dapat memiliki properti. Struct mendefinisikan tipe data dan menginstruksikan kepada C++ untuk mengelompokkan koleksi tipe data dasar sebagai kesatuan tipe data sehingga dapat mendefinisikan variabel dan array variabel.
 
 ##### Class :
-Class berfungsi untuk mendeskripsikan suatu objek melalui data dan fungsi yang dimiliki. Class memiliki akses default private sehingga tidak semua variabel dapat dieksekusi apabila ada objek yang private. Jika objek anggota dari class tersebut ingin dipublikasikan, maka harus menggunakan **public : .** Class memiliki properti dan metode. Class akan mengelola data yang akan diakses melalui metode (method).
+Class berfungsi untuk mendeskripsikan suatu objek melalui data dan fungsi yang dimiliki. Class memiliki akses default private sehingga tidak semua variabel dapat dieksekusi apabila ada objek yang private. Jika objek anggota dari class tersebut ingin dipublikasikan, maka harus menggunakan **public :**[4]. Class memiliki properti dan metode. Class akan mengelola data yang akan diakses melalui metode (method).
 
 #### Full code Screenshot:
 ![240309_10h21m35s_screenshot](https://github.com/ardelialaksita/photo/blob/614339283baac424ce078a4bedd25818e47573b0/%5BModul%201%5D%20Unguided%202%20Full%20SS.png)
@@ -340,16 +332,22 @@ int main() {
 #### Output:
 ![240302_00h00m06s_screenshot](https://github.com/ardelialaksita/photo/blob/4587d9cd4a853ca248386f98fffc24ccf99f9fad/%5BModul%201%5D%20Unguided%203%20Output.png)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan untuk mengisi animals pada masing-masing indeks menggunakan fungsi map. **animals[1]** berisi Kucing, **animals[2]** berisi Unicorn, dan **animals[3]** berisi Dinosaurus. Untuk menambahkan elemen baru pada map tersebut dapat menggunakan **animals.insert(make_pair(4, "Paus"));**. Kemudian, Paus akan ditambahkan pada **animals[4]**. Untuk menghapus elemen dari map dapat menggunakan **animals.erase(2)** dimana kode ini akan menghapus Unicorn. Sedangkan untuk membersihkan map dapat menggunakan **animals.clear()**.
+
+##### Perbedaan array dan map :
+**Array** merupakan sekumpulan data dengan tipe yang sama dan disimpan dalam satu variabel saja. Array menyimpan data yang memiliki urutan dan dapat diakses menggunakan indeks. Indeks dalam array digunakan untuk mengakses data.
+**Map** merupakan sekumpulan key-value yang disimpan dalam satu variabel. Map menyimpan data yang memiliki hubungan key-value dan dapat diakses menggunakan key. Key dalam map digunakan untuk mengakses data. Dengan demikian, array menggunakan indeks untuk mengakses data, sedangkan map menggunakan key. Array dapat menyimpan data dengan tipe yang sama, sedangkan map dapat menyimpan key dan value dengan tipe yang berbeda. 
 
 #### Full code Screenshot:
 ![240309_10h21m35s_screenshot](https://github.com/ardelialaksita/photo/blob/4587d9cd4a853ca248386f98fffc24ccf99f9fad/%5BModul%201%5D%20Unguided%203%20Full%20SS.png)
 
 
 ## Kesimpulan
-Tipe data merupakan klasifikasi atau pengelompokan jenis-jenis data. Variabel merupakan kontainer yang dapat digunakan untuk menyimpan suatu nilai pada sebuah program dengan tipe data tertentu[3]. Untuk menentukan tipe data yang digunakan dalam variabel dapat dilihat melalui klasifikasi tipe-tipe data. Tipe data ada 3: tipe data primitif yaitu sudah ditentukan oleh sistem, tipe data abstrak yaitu dibentuk oleh programer sendiri, dan tipe data koleksi yaitu digunakan untuk mengelompokkan nilai dan objek secara bersamaan. Korelasi antara tipe data tersebut yaitu tipe data abstrak sering digunakan untuk mengimplementasikan tipe data koleksi sehingga memungkinkan pengguna untuk berinteraksi dengan strultur data tanpa perlu mengetahui detail implementasinya. 
+Tipe data merupakan klasifikasi atau pengelompokan jenis-jenis data. Variabel merupakan kontainer yang dapat digunakan untuk menyimpan suatu nilai pada sebuah program dengan tipe data tertentu[5]. Untuk menentukan tipe data yang digunakan dalam variabel dapat dilihat melalui klasifikasi tipe-tipe data. Tipe data ada 3: tipe data primitif yaitu sudah ditentukan oleh sistem, tipe data abstrak yaitu dibentuk oleh programer sendiri, dan tipe data koleksi yaitu digunakan untuk mengelompokkan nilai dan objek secara bersamaan. Korelasi antara tipe data tersebut yaitu tipe data abstrak sering digunakan untuk mengimplementasikan tipe data koleksi sehingga memungkinkan pengguna untuk berinteraksi dengan strultur data tanpa perlu mengetahui detail implementasinya. 
 
 ## Referensi
-[1] Litalia (2023, September 30). Pengertian Tipe Data Beserta Fungsi dan Jenis-Jenis Tipe Data [online]. Available: https://www.jurnalponsel.com/pengertian-tipe-data/.
+[1] Litalia. (2023, September 30). _Pengertian Tipe Data Beserta Fungsi dan Jenis-Jenis Tipe Data_ [online]. Available: https://www.jurnalponsel.com/pengertian-tipe-data/.
 [2] Mitchell, John C.; Plotkin, Gordon. "Abstract Types Have Existential Type" ACM Transactions on Programming Languages and Systems. 10 (3). 1988.
-[3] Tim Dosen Common Laboratory. "Modul Praktikum Pemrograman Berorientasi Obyek". 2009.
+[3] Rohit, K, Data Structures and Object Oriented Programming with C++. New Delhi : Vikas Publishing House Pvt Limited, 2010.
+[4] Tecom. (2010, Mei 24). _Struct dan Class pada C++_ [online]. Available: https://ainkhina.blogspot.com/2010/05/struct-pada-c.html?m=1.
+[5] Tim Dosen Common Laboratory. "Modul Praktikum Pemrograman Berorientasi Obyek". 2009.
