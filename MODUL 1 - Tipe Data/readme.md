@@ -136,7 +136,7 @@ int main() {
 Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
+![240309_10h21m35s_screenshot]((https://github.com/ardelialaksita/photo/blob/main/ss%20full%20screen%20no%201%20tugas%201.png))
 
 
 ## Kesimpulan
