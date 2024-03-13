@@ -255,8 +255,8 @@ int main()
     frt.colour = "Red";
     frt.taste = "Sweet";
 
-    frt1.name = "Orange";
-    frt1.colour = "Orange";
+    frt1.name = "Lemon";
+    frt1.colour = "Yellow";
     frt1.taste = "Sour";
 
     cout << "===== BUAH 1 =====" << endl;
