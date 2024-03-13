@@ -219,78 +219,56 @@ Class berfungsi untuk mendeskripsikan suatu objek melalui data dan fungsi yang d
 
 #### Contoh Program :
 ```C++
-//CONTOH PROGRAM STRUCT
 #include <iostream>
 #include <string>
 using namespace std;
 
-//Struct
-struct Fruit {
+// Struct
+struct Fruit
+{
     string name;
     string colour;
     string taste;
 };
 
-int main() 
+class FruitClass
 {
-    struct Fruit fruit1, fruit2;
-    fruit1.name = "Durian";
-    fruit1.colour = "Kuning";
-    fruit1.taste = "Manis";
-    fruit2.name = "Lemon";
-    fruit2.colour = "Kuning";
-    fruit2.taste = "Asam";
-
-    cout << "===== BUAH 1 =====" << endl;
-    cout << "Nama Buah : " << fruit1.name << endl;
-    cout << "Warna Buah : " << fruit1.colour << endl;
-    cout << "Rasa Buah: " << fruit1.taste << endl;
-    cout << "===== BUAH 2 =====" << endl;
-    cout << "Nama Buah : " << fruit2.name << endl;
-    cout << "Warna Buah : " << fruit2.colour << endl;
-    cout << "Rasa Buah: " << fruit2.taste << endl;
-    return 0;
-}
-```
-
-```C++
-//CONTOH PROGRAM CLASS
-#include <iostream>
-#include <string>
-using namespace std;
-
-//Class
-class FruitClass {
-    private:
     string name;
     string colour;
     string taste;
-
-    public:
-    string getname() {return name};
-    string getcolour() {return colour};
-    string gettaste() {return taste};
-
 };
 
-int main() 
+class FruitClass1
 {
-    class FruitClass fruit1, fruit2;
-    fruit1.getname = "Durian";
-    fruit1.getcolour = "Kuning";
-    fruit1.gettaste = "Manis";
-    fruit2.getname = "Lemon";
-    fruit2.getcolour = "Kuning";
-    fruit2.gettaste = "Asam";
+public:
+    string name;
+    string colour;
+    string taste;
+};
+
+int main()
+{
+    Fruit frt;
+    FruitClass1 frt1;
+
+    frt.name = "Apple";
+    frt.colour = "Red";
+    frt.taste = "Sweet";
+
+    frt1.name = "Orange";
+    frt1.colour = "Orange";
+    frt1.taste = "Sour";
 
     cout << "===== BUAH 1 =====" << endl;
-    cout << "Nama Buah : " << fruit1.getname << endl;
-    cout << "Warna Buah : " << fruit1.getcolour << endl;
-    cout << "Rasa Buah: " << fruit1.gettaste << endl;
-    cout << "===== BUAH 2 =====" << endl;
-    cout << "Nama Buah : " << fruit2.getname << endl;
-    cout << "Warna Buah : " << fruit2.getcolour << endl;
-    cout << "Rasa Buah: " << fruit2.gettaste << endl;
+    cout << "Nama Buah : " << frt.name << endl;
+    cout << "Warna Buah : " << frt.colour << endl;
+    cout << "Rasa Buah: " << frt.taste << endl;
+
+    cout << "\n===== BUAH 2 =====" << endl;
+    cout << "Nama Buah : " << frt1.name << endl;
+    cout << "Warna Buah : " << frt1.colour << endl;
+    cout << "Rasa Buah: " << frt1.taste << endl;
+
     return 0;
 }
 ```
