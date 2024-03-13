@@ -3,10 +3,11 @@
 
 ## Dasar Teori
 
-Tipe data merupakan klasifikasi jenis-jenis data yang berfungsi untuk menentukan data serta variabel yang dapat digunakan dalam suatu sistem dan operasi-operasi tertentu. Tipe data adalah semua himpunan yang ada pada semua data tanpa terkecuali[1]. Adanya klasifikasi data juga dapat membantu operasi komputer mengenali nilai data beserta instruksinya. Tipe data dibagi menjadi 3, antara lain :
+Tipe data merupakan klasifikasi jenis-jenis data yang berfungsi untuk menentukan data serta variabel yang dapat digunakan dalam suatu sistem dan operasi-operasi tertentu. Tipe data adalah semua himpunan yang ada pada semua data tanpa terkecuali. Adanya klasifikasi data juga dapat membantu operasi komputer mengenali nilai data beserta instruksinya. Tipe data dibagi menjadi 3, antara lain :
 
 #### 1. Tipe Data Primitif:
-   Tipe data primitif merupakan tipe data yang dapat menyimpan satu nilai dan telah ditentukan oleh sistem. Tipe data primitif adalah tipe yang sederhana sehingga kesulitan menjangkau data kompleks yang tingkat kerumitannya tinggi. Beberapa macam tipe data primitif :
+   Tipe data primitif merupakan tipe data yang dapat menyimpan satu nilai dan telah ditentukan oleh sistem. Tipe data primitif adalah tipe yang sederhana sehingga kesulitan menjangkau data kompleks yang tingkat kerumitannya tinggi. Tipe data sederhana merupakan tipe data fundamental dalam C++ karena menjadi blok pembangun untuk tipe data terstruktur[2].
+Beberapa macam tipe data primitif :
 a) Boolean (bool) : digunakan untuk menyimpan nilai logika dan hanya memiliki 2 nilai yaitu true dan false.
 b) Integer (int) : digunakan untuk angka tanpa pecahan baik positif maupun negatif. Contoh : 10,11,12.
 c) Float (float) : digunakan untuk angka pecahan. Contoh : 10.1, 11.5, 12.4.
@@ -14,7 +15,7 @@ d) Character (char) : digunakan untuk satu karakter. Contoh : 'a','A'.
 e) String (string) : digunakan untuk menyimpan nilai lebih dari 1 karakter. Contoh : 'Apel', 'Strawberry'.
    
 #### 2. Tipe Data Abstrak :
-   Tipe data abstrak merupakan tipe data yang memiliki sistematik serupa dan didefinisikan melalui operasi matematis tertentu. Deklarasi Abstract Data Type (ADT) terdapat pada beberapa bahasa pemrograman dan bentuk deklarasinya mengikat daftar identifikasi terhadap suatu tipe dengan operasi terkait[2]. Ide dasar dari ADT adalah bahwa implementasi himpunan operasi ditulis satu kali dalam program dan bagian dari program yang perlu melakukan suatu operasi diselesaikan oleh ADT dengan menjalankan operasi yang diperlukan[3]. Fitur yang dapat digunakan dalam tipe data abstrak antara lain : struct (akses defaultnya bersifat public) dan class (akses defaultnya bersifat private).
+   Tipe data abstrak merupakan tipe data yang memiliki sistematik serupa dan didefinisikan melalui operasi matematis tertentu. Deklarasi Abstract Data Type (ADT) terdapat pada beberapa bahasa pemrograman dan bentuk deklarasinya mengikat daftar identifikasi terhadap suatu tipe dengan operasi terkait. Ide dasar dari ADT adalah bahwa implementasi himpunan operasi ditulis satu kali dalam program dan bagian dari program yang perlu melakukan suatu operasi diselesaikan oleh ADT dengan menjalankan operasi yang diperlukan. Fitur yang dapat digunakan dalam tipe data abstrak antara lain : struct (akses defaultnya bersifat public) dan class (akses defaultnya bersifat private).
 
 #### 3. Tipe Data Koleksi : 
    Tipe data koleksi merupakan tipe data yang berfungsi mengelompokkan, mengelola, dan mengakses beberapa objek dan nilai secara bersamaan. Tipe data koleksi antara lain : array (untuk menyimpan elemen-elemen dengan tipe data yang sama), vector (untuk menyimpan data dalam bentuk elemen-elemen yang alokasi memorinya dilakukan secara otomatis dan bersebelahan), dan map (untuk menyimpan elemen-elemen dengan tipe data yang sama namun bisa digunakan pula untuk tipe data selain integer pada indeksnya).
@@ -69,9 +70,9 @@ Untuk melakukan operasi kedua bilangan, maka tentukan masing-masing case terlebi
 Jika operator yang dimasukkan tidak benar, maka akan menghasilkan output **"Error! Operator is not correct."**.
 Jika suatu bilangan memiliki 0 sebagai pembaginya, maka akan menghasilkan output **"Error! Nol tidak boleh sebagai pembagi."**
 #### Contoh penggunaan program :
-Masukkan operasi : + ,
-Masukkan bilangan pertama : 11 ,
-Masukkan bilangan kedua : 13 ,
+Masukkan operasi : + 
+Masukkan bilangan pertama : 11 
+Masukkan bilangan kedua : 13 
 Hasil penjumlahan : 24 ,
 #### Output Guided 1:
 ![Modul 1  Guided 1](https://github.com/ardelialaksita/photo/assets/157208713/25ecd0c6-295b-4c6f-b05e-e001d73e9651)
@@ -199,8 +200,11 @@ int main() {
 ![Modul 1  Unguided 1 Output](https://github.com/ardelialaksita/photo/assets/157208713/80cc20ec-4da5-4405-9b1b-729e0809374b)
 
 Kode di atas digunakan untuk menentukan bilangan. Program tersebut berisi tentang fungsi untuk menentukan apakah suatu bilangan termasuk bilangan ganjil, bilangan genap, atau bilangan 0 (bukan ganjil dan bukan genap). Terdapat 2 fungsi yaitu fungsi untuk mengecek apakah suatu bilangan termasuk bilangan ganjil dan fungsi untuk mengecek apakah apakah suatu bilangan termasuk bilangan genap. Tipe data primitif yang digunakan dalam program tersebut yaitu integer atau int dimana cara menentukan suatu bilangan ganjil atau genap dilakukan dengan cara membagi bilangan tersebut dengan 2. 
-**num % 2 != 0** artinya jika bilangan tersebut dibagi 2 tidak sama dengan 0, maka bilangan tersebut adalah bilangan ganjil. Kemudian, program akan menjalankan **cout << num << " adalah bilangan ganjil" << endl;** dan akan menghasilkan output **"(bilangan) adalah bilangan ganjil"**.
-**num % 2 == 0** artinya jika bilangan tersebut dibagi 2 sama dengan 0, maka bilangan tersebut adalah bilangan genap. Kemudian, program akan menjalankan **cout << num << " adalah bilangan genap" << endl;** dan akan menghasilkan output **"(bilangan) adalah bilangan genap"**.
+**num % 2 != 0** artinya jika bilangan tersebut dibagi 2 tidak sama dengan 0, maka bilangan tersebut adalah bilangan ganjil. Kemudian, program akan menjalankan
+**cout << num << " adalah bilangan ganjil" << endl;** dan akan menghasilkan output **"(bilangan) adalah bilangan ganjil"**.
+**num % 2 == 0** artinya jika bilangan tersebut dibagi 2 sama dengan 0, maka bilangan tersebut adalah bilangan genap. Kemudian, program akan menjalankan
+**cout << num << " adalah bilangan genap" << endl;** dan akan menghasilkan output
+**"(bilangan) adalah bilangan genap"**.
 **else** artinya jika bilangan yang diinput adalah 0 dimana bilangan 0 bukan merupakan bilangan ganjil dan bukan bilangan genap. 
 
 #### Kesimpulan tipe data primitif :
@@ -212,10 +216,11 @@ Tipe data primitif dapat berupa int (integer), bool (boolean), float (float), st
 ### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya.
 
 #### Struct :
-Fungsi struct yaitu dapat menggabungkan sekumpulan variabel dan memberi nama pada variabel-variabel tersebut. Nama yang digunakan sama seperti tipe variabelnya, misalnya : int atau string. Struct dapat mendeklarasikan variabel baru dan mengakses semua kolom. Struct akan mengelola data yang akan diakses secara langsung. Struct memiliki akses default yang terbuka (secara public). Struct hanya dapat memiliki properti. Struct mendefinisikan tipe data dan menginstruksikan kepada C++ untuk mengelompokkan koleksi tipe data dasar sebagai kesatuan tipe data sehingga dapat mendefinisikan variabel dan array variabel.
+Fungsi struct yaitu dapat menggabungkan sekumpulan variabel dan memberi nama pada variabel-variabel tersebut. Nama yang digunakan sama seperti tipe variabelnya, misalnya : int atau string. Struct dapat mendeklarasikan variabel baru dan mengakses semua kolom. Struct akan mengelola data yang akan diakses secara langsung. Struct memiliki akses default yang terbuka (secara public). Struct hanya dapat memiliki properti. Struct mendefinisikan tipe data dan menginstruksikan kepada C++ untuk mengelompokkan koleksi tipe data dasar sebagai kesatuan tipe data sehingga dapat mendefinisikan variabel dan array variabel.Kata kunci struct mengindikasikan bahwa suatu kode mendefinisikan suatu struktur[3]. Deklarasi suatu struktur adalah pendefinisian suatu tipe baru[3].
+
 
 #### Class :
-Class berfungsi untuk mendeskripsikan suatu objek melalui data dan fungsi yang dimiliki. Class memiliki akses default private sehingga tidak semua variabel dapat dieksekusi apabila ada objek yang private. Jika objek anggota dari class tersebut ingin dipublikasikan, maka harus menggunakan **public :**[4]. Class memiliki properti dan metode. Class akan mengelola data yang akan diakses melalui metode (method).
+Class berfungsi untuk mendeskripsikan suatu objek melalui data dan fungsi yang dimiliki. Class memiliki akses default private sehingga tidak semua variabel dapat dieksekusi apabila ada objek yang private. Jika objek anggota dari class tersebut ingin dipublikasikan, maka harus menggunakan **public :**. Class memiliki properti dan metode. Class akan mengelola data yang akan diakses melalui metode (method).
 
 #### Contoh Program :
 ```C++
@@ -325,11 +330,10 @@ Dengan demikian, array menggunakan indeks untuk mengakses data, sedangkan map me
 
 
 ## Kesimpulan
-Tipe data merupakan klasifikasi atau pengelompokan jenis-jenis data. Variabel merupakan kontainer yang dapat digunakan untuk menyimpan suatu nilai pada sebuah program dengan tipe data tertentu[5]. Untuk menentukan tipe data yang digunakan dalam variabel dapat dilihat melalui klasifikasi tipe-tipe data. Tipe data ada 3: tipe data primitif yaitu sudah ditentukan oleh sistem, tipe data abstrak yaitu dibentuk oleh programer sendiri, dan tipe data koleksi yaitu digunakan untuk mengelompokkan nilai dan objek secara bersamaan. Korelasi antara tipe data tersebut yaitu tipe data abstrak sering digunakan untuk mengimplementasikan tipe data koleksi sehingga memungkinkan pengguna untuk berinteraksi dengan struktur data tanpa perlu mengetahui detail implementasinya. 
+Tipe data merupakan klasifikasi atau pengelompokan jenis-jenis data. Variabel merupakan kontainer yang dapat digunakan untuk menyimpan suatu nilai pada sebuah program dengan tipe data tertentu. Nilai yang ditugaskan ke variabel dapat berubah selama eksekusi program[4]. Untuk menentukan tipe data yang digunakan dalam variabel dapat dilihat melalui klasifikasi tipe-tipe data. Tipe data ada 3: tipe data primitif yaitu sudah ditentukan oleh sistem, tipe data abstrak yaitu dibentuk oleh programer sendiri, dan tipe data koleksi yaitu digunakan untuk mengelompokkan nilai dan objek secara bersamaan. Korelasi antara tipe data tersebut yaitu tipe data abstrak sering digunakan untuk mengimplementasikan tipe data koleksi sehingga memungkinkan pengguna untuk berinteraksi dengan struktur data tanpa perlu mengetahui detail implementasinya. 
 
 ## Referensi
 [1] Litalia. (2023, September 30). _Pengertian Tipe Data Beserta Fungsi dan Jenis-Jenis Tipe Data_ [online]. Available: https://www.jurnalponsel.com/pengertian-tipe-data/.
-[2] Mitchell, John C.; Plotkin, Gordon. "Abstract Types Have Existential Type" ACM Transactions on Programming Languages and Systems. 10 (3). 1988.
-[3] Rohit, K, Data Structures and Object Oriented Programming with C++. New Delhi : Vikas Publishing House Pvt Limited, 2010.
-[4] Tecom. (2010, Mei 24). _Struct dan Class pada C++_ [online]. Available: https://ainkhina.blogspot.com/2010/05/struct-pada-c.html?m=1.
-[5] Tim Dosen Common Laboratory. "Modul Praktikum Pemrograman Berorientasi Obyek". 2009.
+[2] Satrio, E. dan Pakpahan, S., Pemrograman C++ untuk Pembelajar Mandiri. Jakarta : Penerbit CAHAYA INFORMATIKA, 2019. 
+[3] Siahaan, V. dan Sianipar, R.H., Buku Pintar Pemrograman C++. Sumatra Utara : Balige Publishing, 2020. 
+[4] Siahaan, V. dan Sianipar, R.H., THREE COOKBOOKS IN ONE: Visual C++, Visual Basic, Visual C#. Sumatra Utara : Balige Publishing, 2020.
