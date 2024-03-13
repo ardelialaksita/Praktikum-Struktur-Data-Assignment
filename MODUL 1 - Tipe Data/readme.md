@@ -3,7 +3,7 @@
 
 ## Dasar Teori
 
-Tipe data merupakan klasifikasi jenis-jenis data yang berfungsi untuk menentukan data serta variabel yang dapat digunakan dalam suatu sistem dan operasi-operasi tertentu. Tipe data adalah semua himpunan yang ada pada semua data tanpa terkecuali. Adanya klasifikasi data juga dapat membantu operasi komputer mengenali nilai data beserta instruksinya. Tipe data dibagi menjadi 3, antara lain :
+Tipe data merupakan klasifikasi jenis-jenis data yang berfungsi untuk menentukan data serta variabel yang dapat digunakan dalam suatu sistem dan operasi-operasi tertentu. Tipe data adalah semua himpunan yang ada pada semua data tanpa terkecuali[1]. Adanya klasifikasi data juga dapat membantu operasi komputer mengenali nilai data beserta instruksinya. Tipe data dibagi menjadi 3, antara lain :
 
 #### 1. Tipe Data Primitif:
    Tipe data primitif merupakan tipe data yang dapat menyimpan satu nilai dan telah ditentukan oleh sistem. Tipe data primitif adalah tipe yang sederhana sehingga kesulitan menjangkau data kompleks yang tingkat kerumitannya tinggi. Tipe data sederhana merupakan tipe data fundamental dalam C++ karena menjadi blok pembangun untuk tipe data terstruktur[2].
@@ -70,10 +70,10 @@ Untuk melakukan operasi kedua bilangan, maka tentukan masing-masing case terlebi
 Jika operator yang dimasukkan tidak benar, maka akan menghasilkan output **"Error! Operator is not correct."**.
 Jika suatu bilangan memiliki 0 sebagai pembaginya, maka akan menghasilkan output **"Error! Nol tidak boleh sebagai pembagi."**
 #### Contoh penggunaan program :
-Masukkan operasi : + 
-Masukkan bilangan pertama : 11 
-Masukkan bilangan kedua : 13 
-Hasil penjumlahan : 24 
+Masukkan operasi : + , 
+Masukkan bilangan pertama : 11 , 
+Masukkan bilangan kedua : 13 , 
+Hasil penjumlahan : 24 , 
 #### Output Guided 1:
 ![Modul 1  Guided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/38799ae5-1b50-4acf-8d8a-f4620f755a52)
 
@@ -218,7 +218,7 @@ Fungsi struct yaitu dapat menggabungkan sekumpulan variabel dan memberi nama pad
 
 
 #### Class :
-Class berfungsi untuk mendeskripsikan suatu objek melalui data dan fungsi yang dimiliki. Class memiliki akses default private sehingga tidak semua variabel dapat dieksekusi apabila ada objek yang private. Jika objek anggota dari class tersebut ingin dipublikasikan, maka harus menggunakan **public :**. Class memiliki properti dan metode. Class akan mengelola data yang akan diakses melalui metode (method).
+Class berfungsi untuk mendeskripsikan suatu objek melalui data dan fungsi yang dimiliki. Class memiliki akses default private sehingga tidak semua variabel dapat dieksekusi apabila ada objek yang private. Jika objek anggota dari class tersebut ingin dipublikasikan, maka harus menggunakan **public :** . Class memiliki properti dan metode. Class akan mengelola data yang akan diakses melalui metode (method).
 
 #### Contoh Program :
 ```C++
