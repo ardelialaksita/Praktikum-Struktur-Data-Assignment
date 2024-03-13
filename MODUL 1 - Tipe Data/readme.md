@@ -73,10 +73,9 @@ Jika suatu bilangan memiliki 0 sebagai pembaginya, maka akan menghasilkan output
 Masukkan operasi : + 
 Masukkan bilangan pertama : 11 
 Masukkan bilangan kedua : 13 
-Hasil penjumlahan : 24 ,
+Hasil penjumlahan : 24 
 #### Output Guided 1:
-![Modul 1  Guided 1](https://github.com/ardelialaksita/photo/assets/157208713/25ecd0c6-295b-4c6f-b05e-e001d73e9651)
-
+![Modul 1  Guided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/38799ae5-1b50-4acf-8d8a-f4620f755a52)
 
 ### 2. Tipe Data Abstrak
 
@@ -126,7 +125,7 @@ Kode di atas digunakan untuk menngisi identitas mahasiswa berupa nama, alamat, d
 **// Mencetak isi struct** dilakukan dengan cara **printf("Nama: %s\n", mhs1.name)** dan seterusnya. Kode **\n** digunakan untuk membuat 'enter' pada line berikutnya. Kode **\n** dapat diganti dengan **endl;**.
 **return 0** digunakan untuk mengakhiri program tersebut.
 #### Output Guided 2:
-![Modul 1  Guided 2](https://github.com/ardelialaksita/photo/assets/157208713/a021e9ca-2fda-4396-a9b7-8c442b72bcad)
+![Modul 1  Guided 2](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/1d210f89-7eaf-44b2-b24c-f960850f9af4)
 
 ### 3. Tipe Data Koleksi
 
@@ -154,8 +153,7 @@ int main()
 ```
 Kode tersebut digunakan untuk deklarasi, inisialisasi, dan mencetak suatu array. Array tersebut berisi 5 nilai yang terdiri atas 4 indeks. Untuk mendeklarasikan dan inisialisasi array dilakukan dengan **int nilai[5]** dimana 5 dalam kode tersebut artinya array terdiri atas 5 nilai. Selanjutnya, isi masing-masing indeks menggunakan nilai[0] untuk indeks ke 0 hingga nilai [4] untuk indeks ke 5. Untuk mencetak array dan mengetahui nilai masing-masing array menggunakan **cout << "Isi array .... :" << nilai[0] << endl;**. Pengetikan masing-masing cout harus sesuai dengan indeks yang diinput dalam [] sehingga tidak ada kesalahan dalam pencetakan isi array.
 #### Output Guided 3:
-![Modul 1  Guided 3](https://github.com/ardelialaksita/photo/assets/157208713/f3b9997b-742f-4945-ad22-0d865035d822)
-
+![Modul 1  Guided 3](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/778c700f-c6ea-4bb9-8066-bd3e7c5e7897)
 
 
 ## Unguided 
@@ -197,7 +195,7 @@ int main() {
 ```
 
 #### Output:
-![Modul 1  Unguided 1 Output](https://github.com/ardelialaksita/photo/assets/157208713/80cc20ec-4da5-4405-9b1b-729e0809374b)
+![Modul 1  Unguided 1 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/3cd54b3b-a355-492c-8f74-ef1e6fd30254)
 
 Kode di atas digunakan untuk menentukan bilangan. Program tersebut berisi tentang fungsi untuk menentukan apakah suatu bilangan termasuk bilangan ganjil, bilangan genap, atau bilangan 0 (bukan ganjil dan bukan genap). Terdapat 2 fungsi yaitu fungsi untuk mengecek apakah suatu bilangan termasuk bilangan ganjil dan fungsi untuk mengecek apakah apakah suatu bilangan termasuk bilangan genap. Tipe data primitif yang digunakan dalam program tersebut yaitu integer atau int dimana cara menentukan suatu bilangan ganjil atau genap dilakukan dengan cara membagi bilangan tersebut dengan 2. 
 **num % 2 != 0** artinya jika bilangan tersebut dibagi 2 tidak sama dengan 0, maka bilangan tersebut adalah bilangan ganjil. Kemudian, program akan menjalankan
@@ -211,7 +209,7 @@ Kode di atas digunakan untuk menentukan bilangan. Program tersebut berisi tentan
 Tipe data primitif dapat berupa int (integer), bool (boolean), float (float), string (string), dan char (character). Masing-masing tipenya dapat digunakan pada operasi sesuai yang dibutuhkan. Pada program di atas, tipe data yang digunakan adalah int. Operasi yang digunakan adalah modulo (%) karena mengembalikan sisa pembagian dari 2 bilangan. Jika sisa pembagian 2 bilangan tersebut adalah 0, maka bilangan tersebut adalah bilangan genap. Sebaliknya, jika sisa pembagian 2 bilangan tersebut bukan 0, maka bilangan tersebut adalah bilangan ganjil. 
 
 #### Full code Screenshot:
-![Modul 1  Unguided 1 Full SS](https://github.com/ardelialaksita/photo/assets/157208713/77ec809a-b255-45c6-8eba-08c018fd7c6a)
+![Modul 1  Unguided 1 Full SS](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/cb85080c-6bda-4fce-8696-93bc08dc7345)
 
 ### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya.
 
@@ -279,12 +277,12 @@ int main()
 ```
 
 #### Output:
-![Modul 1  Unguided 2 Output](https://github.com/ardelialaksita/photo/assets/157208713/dcf9bd16-67ba-4953-b5f1-d1ddbcea6469)
+![Modul 1  Unguided 2 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a71cc3db-092a-4fd3-a0b4-8189e9d51388)
 
 Kode di atas digunakan untuk mencetak nama, warna, dan rasa suatu buah. Struct tidak memiliki objek private. **fruit1.name = "Durian"** merupakan salah satu isi struct dimana jika dieksekusi menggunakan **cout << "Nama Buah : " << fruit1.name << endl;** akan menghasilkan output **Nama Buah : Durian**. 
 
 #### Full code Screenshot:
-![Modul 1  Unguided 2 Full SS](https://github.com/ardelialaksita/photo/assets/157208713/bdd9618d-1752-4fa4-8279-92b56c167f58)
+![Modul 1  Unguided 2 Full SS](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/0614dbd7-d3d9-48b4-b260-46da51148817)
 
 ### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map.
 
@@ -316,7 +314,7 @@ int main() {
 }
 ```
 #### Output:
-![Modul 1  Unguided 3 Output](https://github.com/ardelialaksita/photo/assets/157208713/e0bcfb41-291a-41e1-b5b5-dd5daf693a5b)
+![Modul 1  Unguided 3 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/9c4cc71f-8ade-42a7-acc7-1d85d6313327)
 
 Kode di atas digunakan untuk mengisi animals pada masing-masing indeks menggunakan fungsi map. **animals[1]** berisi Kucing, **animals[2]** berisi Unicorn, dan **animals[3]** berisi Dinosaurus. Untuk menambahkan elemen baru pada map tersebut dapat menggunakan **animals.insert(make_pair(4, "Paus"));**. Kemudian, Paus akan ditambahkan pada **animals[4]**. Untuk menghapus elemen dari map dapat menggunakan **animals.erase(2)** dimana kode ini akan menghapus Unicorn. Sedangkan untuk membersihkan map dapat menggunakan **animals.clear()**.
 
@@ -326,8 +324,7 @@ Kode di atas digunakan untuk mengisi animals pada masing-masing indeks menggunak
 Dengan demikian, array menggunakan indeks untuk mengakses data, sedangkan map menggunakan key. Array dapat menyimpan data dengan tipe yang sama, sedangkan map dapat menyimpan key dan value dengan tipe yang berbeda. 
 
 #### Full code Screenshot:
-![Modul 1  Unguided 3 Full SS](https://github.com/ardelialaksita/photo/assets/157208713/2ea9e93e-8f55-4803-984c-c51ea97772ed)
-
+![Modul 1  Unguided 3 Full SS](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/bb1a51b0-91cd-400a-a360-3b5b350d26f0)
 
 ## Kesimpulan
 Tipe data merupakan klasifikasi atau pengelompokan jenis-jenis data. Variabel merupakan kontainer yang dapat digunakan untuk menyimpan suatu nilai pada sebuah program dengan tipe data tertentu. Nilai yang ditugaskan ke variabel dapat berubah selama eksekusi program[4]. Untuk menentukan tipe data yang digunakan dalam variabel dapat dilihat melalui klasifikasi tipe-tipe data. Tipe data ada 3: tipe data primitif yaitu sudah ditentukan oleh sistem, tipe data abstrak yaitu dibentuk oleh programer sendiri, dan tipe data koleksi yaitu digunakan untuk mengelompokkan nilai dan objek secara bersamaan. Korelasi antara tipe data tersebut yaitu tipe data abstrak sering digunakan untuk mengimplementasikan tipe data koleksi sehingga memungkinkan pengguna untuk berinteraksi dengan struktur data tanpa perlu mengetahui detail implementasinya. 
