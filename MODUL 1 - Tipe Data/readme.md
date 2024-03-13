@@ -277,12 +277,12 @@ int main()
 ```
 
 #### Output:
-![Modul 1  Unguided 2 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a71cc3db-092a-4fd3-a0b4-8189e9d51388)
+![Modul 1  Unguided 2 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/65579231-a656-4598-8f97-6a272c5ea9af)
 
 Kode di atas digunakan untuk mencetak nama, warna, dan rasa suatu buah. Struct tidak memiliki objek private. **fruit1.name = "Durian"** merupakan salah satu isi struct dimana jika dieksekusi menggunakan **cout << "Nama Buah : " << fruit1.name << endl;** akan menghasilkan output **Nama Buah : Durian**. 
 
 #### Full code Screenshot:
-![Modul 1  Unguided 2 Full SS](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/0614dbd7-d3d9-48b4-b260-46da51148817)
+![Modul 1  Unguided 2 Full SS](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/b100da37-a2d0-441e-bebf-f831af3ca37c)
 
 ### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map.
 
