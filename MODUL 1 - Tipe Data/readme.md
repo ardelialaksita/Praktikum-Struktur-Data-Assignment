@@ -80,10 +80,10 @@ Untuk melakukan operasi kedua bilangan, maka tentukan masing-masing case terlebi
 Jika operator yang dimasukkan tidak benar, maka akan menghasilkan output **"Error! Operator is not correct."**.
 Jika suatu bilangan memiliki 0 sebagai pembaginya, maka akan menghasilkan output **"Error! Nol tidak boleh sebagai pembagi."**
 #### Contoh penggunaan program :
--Masukkan operasi : + , 
--Masukkan bilangan pertama : 11 , 
--Masukkan bilangan kedua : 13 , 
--Hasil penjumlahan : 24 , 
+- Masukkan operasi : + , 
+- Masukkan bilangan pertama : 11 , 
+- Masukkan bilangan kedua : 13 , 
+- Hasil penjumlahan : 24 , 
 #### Output Guided 1:
 ![Modul 1  Guided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/38799ae5-1b50-4acf-8d8a-f4620f755a52)
 
@@ -130,10 +130,10 @@ int main()
 }
 ```
 Kode di atas digunakan untuk menngisi identitas mahasiswa berupa nama, alamat, dan umur menggunakan struct. 
-**// Struct** digunakan untuk menentukan jenis data struct yang digunakan. Pada program tersebut menggunakan char.
-**// Mengisi nilai ke struct** digunakan untuk mengisi apa saja yang akan diinput dalam identitas mahasiswa. Pengetikan kodenya dimulai dari mhs1 kemudian diikuti dengan identitas yang ingin diinput, misalnya **mhs1.address** untuk menggunakan struct dalam alamat mahasiswa. 
-**// Mencetak isi struct** dilakukan dengan cara **printf("Nama: %s\n", mhs1.name)** dan seterusnya. Kode **\n** digunakan untuk membuat 'enter' pada line berikutnya. Kode **\n** dapat diganti dengan **endl;**.
-**return 0** digunakan untuk mengakhiri program tersebut.
+- **// Struct** digunakan untuk menentukan jenis data struct yang digunakan. Pada program tersebut menggunakan char.
+- **// Mengisi nilai ke struct** digunakan untuk mengisi apa saja yang akan diinput dalam identitas mahasiswa. Pengetikan kodenya dimulai dari mhs1 kemudian diikuti dengan identitas yang ingin diinput, misalnya **mhs1.address** untuk menggunakan struct dalam alamat mahasiswa. 
+- **// Mencetak isi struct** dilakukan dengan cara **printf("Nama: %s\n", mhs1.name)** dan seterusnya. Kode **\n** digunakan untuk membuat 'enter' pada line berikutnya. Kode **\n** dapat diganti dengan **endl;**.
+- **return 0** digunakan untuk mengakhiri program tersebut.
 #### Output Guided 2:
 ![Modul 1  Guided 2](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/1d210f89-7eaf-44b2-b24c-f960850f9af4)
 
@@ -208,12 +208,7 @@ int main() {
 ![Modul 1  Unguided 1 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/3cd54b3b-a355-492c-8f74-ef1e6fd30254)
 
 Kode di atas digunakan untuk menentukan bilangan. Program tersebut berisi tentang fungsi untuk menentukan apakah suatu bilangan termasuk bilangan ganjil, bilangan genap, atau bilangan 0 (bukan ganjil dan bukan genap). Terdapat 2 fungsi yaitu fungsi untuk mengecek apakah suatu bilangan termasuk bilangan ganjil dan fungsi untuk mengecek apakah apakah suatu bilangan termasuk bilangan genap. Tipe data primitif yang digunakan dalam program tersebut yaitu integer atau int dimana cara menentukan suatu bilangan ganjil atau genap dilakukan dengan cara membagi bilangan tersebut dengan 2. 
-**num % 2 != 0** artinya jika bilangan tersebut dibagi 2 tidak sama dengan 0, maka bilangan tersebut adalah bilangan ganjil. Kemudian, program akan menjalankan
-**cout << num << " adalah bilangan ganjil" << endl;** dan akan menghasilkan output **"(bilangan) adalah bilangan ganjil"**.
-**num % 2 == 0** artinya jika bilangan tersebut dibagi 2 sama dengan 0, maka bilangan tersebut adalah bilangan genap. Kemudian, program akan menjalankan
-**cout << num << " adalah bilangan genap" << endl;** dan akan menghasilkan output
-**"(bilangan) adalah bilangan genap"**.
-**else** artinya jika bilangan yang diinput adalah 0 dimana bilangan 0 bukan merupakan bilangan ganjil dan bukan bilangan genap. 
+- **num % 2 != 0** artinya jika bilangan tersebut dibagi 2 tidak sama dengan 0, maka bilangan tersebut adalah bilangan ganjil. Kemudian, program akan menjalankan **cout << num << " adalah bilangan ganjil" << endl;** dan akan menghasilkan output **"(bilangan) adalah bilangan ganjil"**. **num % 2 == 0** artinya jika bilangan tersebut dibagi 2 sama dengan 0, maka bilangan tersebut adalah bilangan genap. Kemudian, program akan menjalankan **cout << num << " adalah bilangan genap" << endl;** dan akan menghasilkan output **"(bilangan) adalah bilangan genap"**. **else** artinya jika bilangan yang diinput adalah 0 dimana bilangan 0 bukan merupakan bilangan ganjil dan bukan bilangan genap. 
 
 #### Kesimpulan tipe data primitif :
 Tipe data primitif dapat berupa int (integer), bool (boolean), float (float), string (string), dan char (character). Masing-masing tipenya dapat digunakan pada operasi sesuai yang dibutuhkan. Pada program di atas, tipe data yang digunakan adalah int. Operasi yang digunakan adalah modulo (%) karena mengembalikan sisa pembagian dari 2 bilangan. Jika sisa pembagian 2 bilangan tersebut adalah 0, maka bilangan tersebut adalah bilangan genap. Sebaliknya, jika sisa pembagian 2 bilangan tersebut bukan 0, maka bilangan tersebut adalah bilangan ganjil. 
@@ -289,7 +284,7 @@ int main()
 #### Output:
 ![Modul 1  Unguided 2 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/65579231-a656-4598-8f97-6a272c5ea9af)
 
-Kode di atas digunakan untuk mencetak nama, warna, dan rasa suatu buah. Struct tidak memiliki objek private. **fruit1.name = "Durian"** merupakan salah satu isi struct dimana jika dieksekusi menggunakan **cout << "Nama Buah : " << fruit1.name << endl;** akan menghasilkan output **Nama Buah : Durian**. 
+Kode di atas digunakan untuk mencetak nama, warna, dan rasa suatu buah. Struct tidak memiliki objek private. **frt1.name = "Lemon"** merupakan salah satu isi struct dimana jika dieksekusi menggunakan **cout << "Nama Buah : " << fruit1.name << endl;** akan menghasilkan output **Nama Buah : Lemon**. 
 
 #### Full code Screenshot:
 ![Modul 1  Unguided 2 Full SS](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/b100da37-a2d0-441e-bebf-f831af3ca37c)
@@ -329,9 +324,9 @@ int main() {
 Kode di atas digunakan untuk mengisi animals pada masing-masing indeks menggunakan fungsi map. **animals[1]** berisi Kucing, **animals[2]** berisi Unicorn, dan **animals[3]** berisi Dinosaurus. Untuk menambahkan elemen baru pada map tersebut dapat menggunakan **animals.insert(make_pair(4, "Paus"));**. Kemudian, Paus akan ditambahkan pada **animals[4]**. Untuk menghapus elemen dari map dapat menggunakan **animals.erase(2)** dimana kode ini akan menghapus Unicorn. Sedangkan untuk membersihkan map dapat menggunakan **animals.clear()**.
 
 #### Perbedaan array dan map :
-**Array** merupakan sekumpulan data dengan tipe yang sama dan disimpan dalam satu variabel saja. Array menyimpan data yang memiliki urutan dan dapat diakses menggunakan indeks. Indeks dalam array digunakan untuk mengakses data.
-**Map** merupakan sekumpulan key-value yang disimpan dalam satu variabel. Map menyimpan data yang memiliki hubungan key-value dan dapat diakses menggunakan key. Key dalam map digunakan untuk mengakses data. 
-Dengan demikian, array menggunakan indeks untuk mengakses data, sedangkan map menggunakan key. Array dapat menyimpan data dengan tipe yang sama, sedangkan map dapat menyimpan key dan value dengan tipe yang berbeda. 
+- **Array** merupakan sekumpulan data dengan tipe yang sama dan disimpan dalam satu variabel saja. Array menyimpan data yang memiliki urutan dan dapat diakses menggunakan indeks. Indeks dalam array digunakan untuk mengakses data.
+- **Map** merupakan sekumpulan key-value yang disimpan dalam satu variabel. Map menyimpan data yang memiliki hubungan key-value dan dapat diakses menggunakan key. Key dalam map digunakan untuk mengakses data. 
+- Dengan demikian, array menggunakan indeks untuk mengakses data, sedangkan map menggunakan key. Array dapat menyimpan data dengan tipe yang sama, sedangkan map dapat menyimpan key dan value dengan tipe yang berbeda. 
 
 #### Full code Screenshot:
 ![Modul 1  Unguided 3 Full SS](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/bb1a51b0-91cd-400a-a360-3b5b350d26f0)
@@ -340,7 +335,7 @@ Dengan demikian, array menggunakan indeks untuk mengakses data, sedangkan map me
 Tipe data merupakan klasifikasi atau pengelompokan jenis-jenis data. Variabel merupakan kontainer yang dapat digunakan untuk menyimpan suatu nilai pada sebuah program dengan tipe data tertentu. Nilai yang ditugaskan ke variabel dapat berubah selama eksekusi program[4]. Untuk menentukan tipe data yang digunakan dalam variabel dapat dilihat melalui klasifikasi tipe-tipe data. Tipe data ada 3: tipe data primitif yaitu sudah ditentukan oleh sistem, tipe data abstrak yaitu dibentuk oleh programer sendiri, dan tipe data koleksi yaitu digunakan untuk mengelompokkan nilai dan objek secara bersamaan. Korelasi antara tipe data tersebut yaitu tipe data abstrak sering digunakan untuk mengimplementasikan tipe data koleksi sehingga memungkinkan pengguna untuk berinteraksi dengan struktur data tanpa perlu mengetahui detail implementasinya. 
 
 ## Referensi
-[1] Litalia. (2023, September 30). _Pengertian Tipe Data Beserta Fungsi dan Jenis-Jenis Tipe Data_ [online]. Available: https://www.jurnalponsel.com/pengertian-tipe-data/.
-[2] Satrio, E. dan Pakpahan, S., Pemrograman C++ untuk Pembelajar Mandiri. Jakarta : Penerbit CAHAYA INFORMATIKA, 2019. 
-[3] Siahaan, V. dan Sianipar, R.H., Buku Pintar Pemrograman C++. Sumatra Utara : Balige Publishing, 2020. 
-[4] Siahaan, V. dan Sianipar, R.H., THREE COOKBOOKS IN ONE: Visual C++, Visual Basic, Visual C#. Sumatra Utara : Balige Publishing, 2020.
+- [1] Litalia. (2023, September 30). _Pengertian Tipe Data Beserta Fungsi dan Jenis-Jenis Tipe Data_ [online]. Available: https://www.jurnalponsel.com/pengertian-tipe-data/.
+- [2] Satrio, E. dan Pakpahan, S., Pemrograman C++ untuk Pembelajar Mandiri. Jakarta : Penerbit CAHAYA INFORMATIKA, 2019. 
+- [3] Siahaan, V. dan Sianipar, R.H., Buku Pintar Pemrograman C++. Sumatra Utara : Balige Publishing, 2020. 
+- [4] Siahaan, V. dan Sianipar, R.H., THREE COOKBOOKS IN ONE: Visual C++, Visual Basic, Visual C#. Sumatra Utara : Balige Publishing, 2020.
