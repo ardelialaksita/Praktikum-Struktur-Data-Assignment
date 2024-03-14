@@ -28,36 +28,46 @@ Beberapa macam tipe data primitif :
 #include <iostream> 
 using namespace std;
 
+//Main program
 int main() {
     char op;
     float num1, num2;
-    
+    //It allows user to enter operator i.e, +, -, *, /    
     cout << "Masukkan operator (+, -, *, /): ";
     cin >> op;
-    
+    //It allow user to enter the operands
     cout << "Masukkan angka pertama: ";
     cin >> num1;
     cout << "Masukkan angka kedua: ";
     cin >> num2;
+    //Switch statement begins
 
-    switch (op) {
+    switch (op) 
+    {
+        //If user enter +
         case '+':
             cout << "Hasil Penjumlahan: " << num1 + num2;
             break;
+        //If user enter -
         case '-':
             cout << "Hasil Pengurangan: " << num1 - num2;
             break;
+        //If user enter *
         case '*':
             cout << "Hasil Perkalian: " << num1 * num2;
             break;
+        //If user enter /
         case '/':
             if (num2 != 0)
                 cout << "Hasil Pembagian: " << num1 / num2;
             else
-                cout << "Error! Nol tidak boleh sebagai pembagi.";
+                cout << "Error! Nol tidak boleh digunakan sebagai pembagi.";
             break;
+        //If the operator is other than +,-,*, or /,
+        //error message will display
         default:
             cout << "Error! Operator is not correct";
+        //Switch statement ends
     } 
     return 0;
 }
@@ -70,10 +80,10 @@ Untuk melakukan operasi kedua bilangan, maka tentukan masing-masing case terlebi
 Jika operator yang dimasukkan tidak benar, maka akan menghasilkan output **"Error! Operator is not correct."**.
 Jika suatu bilangan memiliki 0 sebagai pembaginya, maka akan menghasilkan output **"Error! Nol tidak boleh sebagai pembagi."**
 #### Contoh penggunaan program :
-Masukkan operasi : + , 
-Masukkan bilangan pertama : 11 , 
-Masukkan bilangan kedua : 13 , 
-Hasil penjumlahan : 24 , 
+-Masukkan operasi : + , 
+-Masukkan bilangan pertama : 11 , 
+-Masukkan bilangan kedua : 13 , 
+-Hasil penjumlahan : 24 , 
 #### Output Guided 1:
 ![Modul 1  Guided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/38799ae5-1b50-4acf-8d8a-f4620f755a52)
 
