@@ -8,11 +8,11 @@ Tipe data merupakan klasifikasi jenis-jenis data yang berfungsi untuk menentukan
 #### 1. Tipe Data Primitif:
    Tipe data primitif merupakan tipe data yang dapat menyimpan satu nilai dan telah ditentukan oleh sistem. Tipe data primitif adalah tipe yang sederhana sehingga kesulitan menjangkau data kompleks yang tingkat kerumitannya tinggi. Tipe data sederhana merupakan tipe data fundamental dalam C++ karena menjadi blok pembangun untuk tipe data terstruktur[2].
 Beberapa macam tipe data primitif :
-a) Boolean (bool) : digunakan untuk menyimpan nilai logika dan hanya memiliki 2 nilai yaitu true dan false.
-b) Integer (int) : digunakan untuk angka tanpa pecahan baik positif maupun negatif. Contoh : 10,11,12.
-c) Float (float) : digunakan untuk angka pecahan. Contoh : 10.1, 11.5, 12.4.
-d) Character (char) : digunakan untuk satu karakter. Contoh : 'a','A'.
-e) String (string) : digunakan untuk menyimpan nilai lebih dari 1 karakter. Contoh : 'Apel', 'Strawberry'.
+- a) Boolean (bool) : digunakan untuk menyimpan nilai logika dan hanya memiliki 2 nilai yaitu true dan false.
+- b) Integer (int) : digunakan untuk angka tanpa pecahan baik positif maupun negatif. Contoh : 10,11,12.
+- c) Float (float) : digunakan untuk angka pecahan. Contoh : 10.1, 11.5, 12.4.
+- d) Character (char) : digunakan untuk satu karakter. Contoh : 'a','A'.
+- e) String (string) : digunakan untuk menyimpan nilai lebih dari 1 karakter. Contoh : 'Apel', 'Strawberry'.
    
 #### 2. Tipe Data Abstrak :
    Tipe data abstrak merupakan tipe data yang memiliki sistematik serupa dan didefinisikan melalui operasi matematis tertentu. Deklarasi Abstract Data Type (ADT) terdapat pada beberapa bahasa pemrograman dan bentuk deklarasinya mengikat daftar identifikasi terhadap suatu tipe dengan operasi terkait. Ide dasar dari ADT adalah bahwa implementasi himpunan operasi ditulis satu kali dalam program dan bagian dari program yang perlu melakukan suatu operasi diselesaikan oleh ADT dengan menjalankan operasi yang diperlukan. Fitur yang dapat digunakan dalam tipe data abstrak antara lain : struct (akses defaultnya bersifat public) dan class (akses defaultnya bersifat private).
