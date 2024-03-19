@@ -17,4 +17,8 @@ int main()
     cout << "Isi array keempat : " << nilai[3] << endl;
     cout << "Isi array kelima : " << nilai[4] << endl;
     return 0;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3ccde11d7af4eda7d86130696f3e22238abe300b
