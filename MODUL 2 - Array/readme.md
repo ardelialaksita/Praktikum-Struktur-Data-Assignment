@@ -73,7 +73,7 @@ int main()
     cout << "Masukkan panjang array : ";
     cin >> a;
     int array[a];
-    cout << "Masukkan " << a << "angka\n";
+    cout << "Masukkan " << a << " angka\n";
     for (i = 0; i < a; i++)
     {
         cout << "Array ke-" << (i) << ": ";
