@@ -406,12 +406,12 @@ int main()
 Kode di atas digunakan untuk mencari nilai maksimujm, nilai minimum, dan nilai rata-rata pada array menggunakan program menu. 
 
 Saat program dijalankan, maka user akan diminta untuk memasukkan panjang array. 
--'maks' merupakan variabel dari nilai maksimum. 
--'lokasiMaks' digunakan untuk mengetahui posisi nilai maksimum terdapat pada array ke berapa. 
--'min' merupakan varibel dari nilai minimum. 
--'lokasiMin' digunakan untuk mengetahui posisi nilai minimum terdapat pada array ke berapa. 
--'mean' merupakan variabel dari nilai rata-rata.
--'total = 0' dan 'static_cast<double>(total) / a' digunakan untuk mencari nilai rata-rata.
+'maks' merupakan variabel dari nilai maksimum. 
+'lokasiMaks' digunakan untuk mengetahui posisi nilai maksimum terdapat pada array ke berapa. 
+'min' merupakan varibel dari nilai minimum. 
+'lokasiMin' digunakan untuk mengetahui posisi nilai minimum terdapat pada array ke berapa. 
+'mean' merupakan variabel dari nilai rata-rata.
+'total = 0' dan 'static_cast<double>(total) / a' digunakan untuk mencari nilai rata-rata.
 
 #### Perbedaan array dan map :
 - **Array** merupakan sekumpulan data dengan tipe yang sama dan disimpan dalam satu variabel saja. Array menyimpan data yang memiliki urutan dan dapat diakses menggunakan indeks. Indeks dalam array digunakan untuk mengakses data.
