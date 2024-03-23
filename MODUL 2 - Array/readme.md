@@ -8,51 +8,51 @@
 ### 1. Input Array Tiga Dimensi
 
 ```C++
-#include <iostream> 
+#include <iostream>
 using namespace std;
-
-//Main program
-int main() {
-    char op;
-    float num1, num2;
-    //It allows user to enter operator i.e, +, -, *, /    
-    cout << "Masukkan operator (+, -, *, /): ";
-    cin >> op;
-    //It allow user to enter the operands
-    cout << "Masukkan angka pertama: ";
-    cin >> num1;
-    cout << "Masukkan angka kedua: ";
-    cin >> num2;
-    //Switch statement begins
-
-    switch (op) 
+// PROGRAM INPUT ARRAY 3 DIMENSI
+int main()
+{
+  // Deklarasi array
+  int arr[2][3][3];
+  // Input elemen
+  for (int x = 0; x < 2; x++)
+  {
+    for (int y = 0; y < 3; y++)
     {
-        //If user enter +
-        case '+':
-            cout << "Hasil Penjumlahan: " << num1 + num2;
-            break;
-        //If user enter -
-        case '-':
-            cout << "Hasil Pengurangan: " << num1 - num2;
-            break;
-        //If user enter *
-        case '*':
-            cout << "Hasil Perkalian: " << num1 * num2;
-            break;
-        //If user enter /
-        case '/':
-            if (num2 != 0)
-                cout << "Hasil Pembagian: " << num1 / num2;
-            else
-                cout << "Error! Nol tidak boleh digunakan sebagai pembagi.";
-            break;
-        //If the operator is other than +,-,*, or /,
-        //error message will display
-        default:
-            cout << "Error! Operator is not correct";
-        //Switch statement ends
-    } 
-    return 0;
+      for (int z = 0; z < 3; z++)
+      {
+        cout << "Input Array[" << x << "][" << y << "][" << z << "] = ";
+        cin >> arr[x][y][z];
+      }
+    }
+    cout << endl;
+  }
+  // Output Array
+  for (int x = 0; x < 2; x++)
+  {
+    for (int y = 0; y < 3; y++)
+    {
+      for (int z = 0; z < 3; z++)
+      {
+        cout << "Data Array[" << x << "][" << y << "][" << z << "] = " << arr[x][y][z] << endl;
+      }
+    }
+  }
+  cout << endl;
+  // Tampilan array
+  for (int x = 0; x < 2; x++)
+  {
+    for (int y = 0; y < 3; y++)
+    {
+      for (int z = 0; z < 3; z++)
+      {
+        cout << arr[x][y][z] << ends;
+      }
+      cout << endl;
+    }
+    cout << endl;
+  }
 }
 ```
 Kode di atas digunakan untuk 
