@@ -59,7 +59,7 @@ Kode di atas digunakan untuk
 #### Contoh penggunaan program :
  
 #### Output Guided 1:
-
+![Modul 2  Guided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/92024af0-e2b3-486d-8ad7-4c8e8b6be26b)
 
 ### 2. Mencari Nilai Maksimal
 
@@ -93,7 +93,8 @@ int main()
 ```
 Kode tersebut digunakan untuk mencari nilai maksimal pada array. Program harus memuat deklarasi, inisialisasi, dan mencetak suatu array. 
 #### Output Guided 2:
-
+![Modul 2  Guided 2 (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/eb10431c-a00a-4b5c-9ef1-28b397b8ae5c)
+![Modul 2  Guided 2 (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/d5be7ae8-3f7f-4cdb-91a7-a775f45e0e33)
 
 
 ## Unguided 
