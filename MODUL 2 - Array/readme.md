@@ -99,7 +99,8 @@ Kode tersebut digunakan untuk mencari nilai maksimal pada array. Program harus m
 
 ## Unguided 
 
-### 1. Buatlah program menggunakan tipe data primitif minimal dua fungsi dan bebas. Menampilkan program, jelaskan program tersebut dan ambil kesimpulan dari materi tipe data primitif!
+### 1. Buatlah program untuk menampilkan output seperti berikut dengan data yang diinputkan oleh user!
+![output program soal unguided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/72955f95-c87c-4b10-bd5d-81c0e6011cf5)
 
 ```C++
 
@@ -111,8 +112,7 @@ Kode tersebut digunakan untuk mencari nilai maksimal pada array. Program harus m
 #### Full code Screenshot:
 
 
-### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya.
-
+### 2. Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
 
 #### Contoh Program :
 ```C++
@@ -127,7 +127,7 @@ Kode di atas digunakan untuk
 #### Full code Screenshot:
 
 
-### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map.
+### 3. Buatlah program menu untuk mencari nilai Maksimum, Minimum, dan Nilai rata-rata dari suatu array dengan input yang dimasukkan oleh user!
 
 ```C++
 #include <iostream>
