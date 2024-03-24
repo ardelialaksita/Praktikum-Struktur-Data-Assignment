@@ -114,6 +114,23 @@ Kode tersebut digunakan untuk mencari nilai maksimal pada array. Program harus m
 
 #### Output:
 
+Kode tersebut digunakan untuk mengetahui value array yang termasuk dalam nomor ganjil dan nomor genap menggunakan data yang diinputkan oleh user. Pertama-tama, user akan diminta memasukkan panjang array. Selanjutnya, user akan diminta memasukkan value array sesuai panjang array. Saat memasukkan value array, `cout << "Array ke-" << (i) << ": ";` akan membuat program menampilkan lokasi array sehingga user mengetahui value yang dimasukkan akan terletak pada array ke berapa. Kemudian, `cout << "Data Array: ";` dan perulangan for akan membuat program menampilkan semua data array yang telah diinputkan oleh user. 
+- **Program menampilkan nomor genap pada elemen :** Untuk menampilkan nomor genap pada elemen, maka menggunakan perulangan for dan fungsi if `array[i] % 2 == 0` yang artinya jika bilangan tersebut dibagi 2 dapat menghasilkan 0, maka bilangan tersebut termasuk nomor genap. Program akan melakukan iterasi hingga ke value array terakhir dan hingga semua bilangan genap ditemukan.
+- **Program menampilkan nomor ganjil pada elemen :** Untuk menampilkan nomor ganjil pada elemen, maka menggunakan perulangan for dan fungsi if `array[i] % 2 == 0` yang artinya jika bilangan tersebut dibagi 2 menghasilkan angka tidak sama dengan 0, maka bilangan tersebut termasuk nomor ganji. Program akan melakukan iterasi hingga ke value array terakhir dan hingga semua bilangan ganjil ditemukan.
+
+**##### Input Panjang Array dan Value Array oleh user :**
+- Masukkan panjang array : 10
+- Masukkan value array :
+- Array ke-0: 1
+- Array ke-1: 2
+- Array ke-2: 3
+- Array ke-3: 4
+- Array ke-4: 5
+- Array ke-5: 6
+- Array ke-6: 7
+- Array ke-7: 8
+- Array ke-8: 9
+- Array ke-9: 10
 
 #### Full code Screenshot:
 
