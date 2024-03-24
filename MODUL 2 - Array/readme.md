@@ -58,7 +58,8 @@ int main()
 Kode di atas digunakan untuk input dan cetak array tiga dimensi. Array 3 dimensi memiliki deklarasi `int arr[x][y][z];` yang artinya terdapat 2 kelompok array dengan masing-masing kelompok memiliki panjang dan lebar 3 x 3. Program pada **// Input elemen** digunakan untuk memasukkan nilai pada masing-masing indeks array. Program **// Output Array** digunakan untuk menampilkan data array yang telah diinputkan. **// Tampilan array** digunakan untuk menampilkan semua array yang telah diinput sebelumnya dalam bentuk seperti matriks. 
  
 #### Output Guided 1:
-![Modul 2  Guided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/92024af0-e2b3-486d-8ad7-4c8e8b6be26b)
+![Modul 2  Guided 1 (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/0c1d5895-7356-41a1-be0d-51171c3dbfca)
+![Modul 2  Guided 1 (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/8057f8c8-52ec-494e-9b2e-38b342486700)
 
 ### 2. Mencari Nilai Maksimal
 
@@ -92,8 +93,7 @@ int main()
 ```
 Kode tersebut digunakan untuk mencari nilai maksimal pada array. Program harus memuat deklarasi, inisialisasi, dan mencetak suatu array. 
 #### Output Guided 2:
-![Modul 2  Guided 2 (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/eb10431c-a00a-4b5c-9ef1-28b397b8ae5c)
-![Modul 2  Guided 2 (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/d5be7ae8-3f7f-4cdb-91a7-a775f45e0e33)
+![Modul 2  Guided 2](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/b2cbaa3d-9e86-475f-8c97-800e5c97204b)
 
 
 ## Unguided 
