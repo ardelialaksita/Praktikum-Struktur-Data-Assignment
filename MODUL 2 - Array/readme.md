@@ -118,7 +118,7 @@ Kode tersebut digunakan untuk mengetahui value array yang termasuk dalam nomor g
 - **Program menampilkan nomor genap pada elemen :** Untuk menampilkan nomor genap pada elemen, maka menggunakan perulangan for dan fungsi if `array[i] % 2 == 0` yang artinya jika bilangan tersebut dibagi 2 dapat menghasilkan 0, maka bilangan tersebut termasuk nomor genap. Program akan melakukan iterasi hingga ke value array terakhir dan hingga semua bilangan genap ditemukan.
 - **Program menampilkan nomor ganjil pada elemen :** Untuk menampilkan nomor ganjil pada elemen, maka menggunakan perulangan for dan fungsi if `array[i] % 2 == 0` yang artinya jika bilangan tersebut dibagi 2 menghasilkan angka tidak sama dengan 0, maka bilangan tersebut termasuk nomor ganji. Program akan melakukan iterasi hingga ke value array terakhir dan hingga semua bilangan ganjil ditemukan.
 
-**##### Input Panjang Array dan Value Array oleh user :**
+**Input Panjang Array dan Value Array oleh user :**
 - Masukkan panjang array : 10
 - Masukkan value array :
 - Array ke-0: 1
