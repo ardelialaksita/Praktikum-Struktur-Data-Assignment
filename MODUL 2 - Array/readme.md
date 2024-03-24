@@ -55,8 +55,7 @@ int main()
   }
 }
 ```
-Kode di atas digunakan untuk 
-#### Contoh penggunaan program :
+Kode di atas digunakan untuk input dan cetak array tiga dimensi. Array 3 dimensi memiliki deklarasi `int arr[x][y][z];` yang artinya terdapat 2 kelompok array dengan masing-masing kelompok memiliki panjang dan lebar 3 x 3. Program pada **// Input elemen** digunakan untuk memasukkan nilai pada masing-masing indeks array. Program **// Output Array** digunakan untuk menampilkan data array yang telah diinputkan. **// Tampilan array** digunakan untuk menampilkan semua array yang telah diinput sebelumnya dalam bentuk seperti matriks. 
  
 #### Output Guided 1:
 ![Modul 2  Guided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/92024af0-e2b3-486d-8ad7-4c8e8b6be26b)
@@ -100,7 +99,7 @@ Kode tersebut digunakan untuk mencari nilai maksimal pada array. Program harus m
 ## Unguided 
 
 ### 1. Buatlah program untuk menampilkan output seperti berikut dengan data yang diinputkan oleh user!
-![output program soal unguided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/72955f95-c87c-4b10-bd5d-81c0e6011cf5)
+![output soal unguided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/06318e08-f1c9-411c-9d33-0c81dfcd7ae8)
 
 ```C++
 
