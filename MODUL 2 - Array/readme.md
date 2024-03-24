@@ -55,7 +55,10 @@ int main()
   }
 }
 ```
-Kode di atas digunakan untuk input dan cetak array tiga dimensi. Array 3 dimensi memiliki deklarasi `int arr[x][y][z];` yang artinya terdapat 2 kelompok array dengan masing-masing kelompok memiliki panjang dan lebar 3 x 3. Program pada **// Input elemen** digunakan untuk memasukkan nilai pada masing-masing indeks array. Program **// Output Array** digunakan untuk menampilkan data array yang telah diinputkan. **// Tampilan array** digunakan untuk menampilkan semua array yang telah diinput sebelumnya dalam bentuk seperti matriks. 
+Kode di atas digunakan untuk input dan cetak array tiga dimensi. Array 3 dimensi memiliki deklarasi `int arr[x][y][z];` yang artinya terdapat 2 kelompok array dengan masing-masing kelompok memiliki panjang dan lebar 3 x 3. Dimensi yang paling menjorok merupakan dimensi yang paling rendah sehingga tidak bisa melihat dimensi yang lebih tinggi
+- Program pada **// Input elemen** digunakan untuk memasukkan nilai pada masing-masing indeks array.
+- Program pada **// Output Array** digunakan untuk menampilkan data array yang telah diinputkan.
+- Program pada **// Tampilan array** digunakan untuk menampilkan semua array yang telah diinput sebelumnya dalam bentuk seperti matriks. 
  
 #### Output Guided 1:
 ![Modul 2  Guided 1 (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/0c1d5895-7356-41a1-be0d-51171c3dbfca)
@@ -91,7 +94,11 @@ int main()
     cout << "Nilai maksimum adalah " << maks << " berada di Array ke " << lokasi << endl;
 }
 ```
-Kode tersebut digunakan untuk mencari nilai maksimal pada array. Program harus memuat deklarasi, inisialisasi, dan mencetak suatu array. 
+Kode tersebut digunakan untuk mencari nilai maksimal pada array. Program harus memuat deklarasi, inisialisasi, dan mencetak suatu array. `int array[a];` merupakan deklarasi array. 
+- `cout << "Masukkan panjang array : ";` dan `cin >> a;` digunakan untuk memasukkan panjang array. Contoh : User memasukkan 5 sebagai panjang array, maka array yang akan ditampilkan juga ada 5 mulai dari Array ke-0 hingga Array ke-4.
+- `cout << "Masukkan " << a << " angka\n";` digunakan untuk input nilai array sesuai panjang array yang telah diinputkan sebelumnya. Selanjutnya, program akan menjalankan perulangan for untuk mencetak `"Array ke-"` sesuai panjang array.
+- Perulangan for dan fungsi if digunakan untuk mencari nilai maksimum dan lokasi nilai maksimum pada array. Program akan terus melakukan iterasi hingga menemukan nilai dan lokasi nilai maksimum array. Kemudian, program akan mencetak `"Nilai maksimum adalah ... berada di Array ke ... "`.
+
 #### Output Guided 2:
 ![Modul 2  Guided 2](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/b2cbaa3d-9e86-475f-8c97-800e5c97204b)
 
