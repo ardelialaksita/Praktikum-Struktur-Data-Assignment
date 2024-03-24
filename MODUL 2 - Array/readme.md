@@ -113,7 +113,7 @@ Kode tersebut digunakan untuk mencari nilai maksimal pada array. Program harus m
 ```
 
 #### Output:
-
+![Modul 2  Unguided 1 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/0783e4b6-264e-4358-bf51-094bcf4d1e50)
 Kode tersebut digunakan untuk mengetahui value array yang termasuk dalam nomor ganjil dan nomor genap menggunakan data yang diinputkan oleh user. Pertama-tama, user akan diminta memasukkan panjang array. Selanjutnya, user akan diminta memasukkan value array sesuai panjang array. Saat memasukkan value array, `cout << "Array ke-" << (i) << ": ";` akan membuat program menampilkan lokasi array sehingga user mengetahui value yang dimasukkan akan terletak pada array ke berapa. Kemudian, `cout << "Data Array: ";` dan perulangan for akan membuat program menampilkan semua data array yang telah diinputkan oleh user. 
 - **Program menampilkan nomor genap pada elemen :** Untuk menampilkan nomor genap pada elemen, maka menggunakan perulangan for dan fungsi if `array[i] % 2 == 0` yang artinya jika bilangan tersebut dibagi 2 dapat menghasilkan 0, maka bilangan tersebut termasuk nomor genap. Program akan melakukan iterasi hingga ke value array terakhir dan hingga semua bilangan genap ditemukan.
 - **Program menampilkan nomor ganjil pada elemen :** Untuk menampilkan nomor ganjil pada elemen, maka menggunakan perulangan for dan fungsi if `array[i] % 2 != 0` yang artinya jika bilangan tersebut dibagi 2 menghasilkan angka tidak sama dengan 0, maka bilangan tersebut termasuk nomor ganji. Program akan melakukan iterasi hingga ke value array terakhir dan hingga semua bilangan ganjil ditemukan.
@@ -133,7 +133,7 @@ Kode tersebut digunakan untuk mengetahui value array yang termasuk dalam nomor g
 - Array ke-9: 10
 
 #### Full code Screenshot:
-
+![Modul 2  Unguided 1 Full SS](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/dbd75787-37c7-42dd-96e3-5167441aa18a)
 
 ### 2. Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
 
