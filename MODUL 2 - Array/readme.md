@@ -257,7 +257,7 @@ int main()
 #### Output:
 
 
-Kode di atas digunakan untuk mencari nilai maksimujm, nilai minimum, dan nilai rata-rata pada array menggunakan program menu. `maks` merupakan variabel dari nilai maksimum. `lokasiMaks` digunakan untuk mengetahui posisi nilai maksimum terdapat pada array ke berapa. `min` merupakan varibel dari nilai minimum. `lokasiMin` digunakan untuk mengetahui posisi nilai minimum terdapat pada array ke berapa. `mean` merupakan variabel dari nilai rata-rata. `total = 0` dan `static_cast<double>(total) / a` digunakan untuk mencari nilai rata-rata.
+Kode di atas digunakan untuk mencari nilai maksimum, nilai minimum, dan nilai rata-rata pada array menggunakan program menu. `maks` merupakan variabel dari nilai maksimum. `lokasiMaks` digunakan untuk mengetahui posisi nilai maksimum terdapat pada array ke berapa. `min` merupakan varibel dari nilai minimum. `lokasiMin` digunakan untuk mengetahui posisi nilai minimum terdapat pada array ke berapa. `mean` merupakan variabel dari nilai rata-rata. `total = 0` dan `static_cast<double>(total) / a` digunakan untuk mencari nilai rata-rata.
 
 Saat program dijalankan, maka user akan diminta untuk memasukkan panjang array. 
 
