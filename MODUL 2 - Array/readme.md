@@ -64,7 +64,7 @@ Kode di atas digunakan untuk input dan cetak array tiga dimensi. Array 3 dimensi
 ![Modul 2  Guided 1 (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/0c1d5895-7356-41a1-be0d-51171c3dbfca)
 ![Modul 2  Guided 1 (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/8057f8c8-52ec-494e-9b2e-38b342486700)
 
-### 2. Mencari Nilai Maksimal
+### 2. Mencari Nilai Maksimal Array
 
 ```C++
 #include <iostream>
