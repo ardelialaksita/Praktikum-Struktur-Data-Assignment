@@ -133,7 +133,8 @@ Kode tersebut digunakan untuk mengetahui value array yang termasuk dalam nomor g
 - Array ke-9: 10
 
 #### Full code Screenshot:
-![Modul 2  Unguided 1 Full SS](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/dbd75787-37c7-42dd-96e3-5167441aa18a)
+![Modul 2  Unguided 1 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/4a17f608-b3a2-4a82-9c4b-43dd8972ae09)
+![Modul 2  Unguided 1 Full SS (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/b0db847f-0870-4298-960c-46a74960ac5e)
 
 ### 2. Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
 
