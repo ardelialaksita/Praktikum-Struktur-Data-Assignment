@@ -255,7 +255,8 @@ int main()
 }
 ```
 #### Output:
-
+![Modul 2  Unguided 3 Output (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/759457ae-7d71-41c9-b17b-dd8e7d5f5343)
+![Modul 2  Unguided 3 Output (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a8d35a95-01ae-47a1-803e-97dca8da84ae)
 
 Kode di atas digunakan untuk mencari nilai maksimum, nilai minimum, dan nilai rata-rata pada array menggunakan program menu. `maks` merupakan variabel dari nilai maksimum. `lokasiMaks` digunakan untuk mengetahui posisi nilai maksimum terdapat pada array ke berapa. `min` merupakan varibel dari nilai minimum. `lokasiMin` digunakan untuk mengetahui posisi nilai minimum terdapat pada array ke berapa. `mean` merupakan variabel dari nilai rata-rata. `total = 0` dan `static_cast<double>(total) / a` digunakan untuk mencari nilai rata-rata.
 
@@ -265,11 +266,14 @@ Saat program dijalankan, maka user akan diminta untuk memasukkan panjang array. 
 - `case 1` : jika user memasukkan angka 1, maka program akan menjalankan case 1 yaitu pencarian nilai maksimum pada `maks` dan lokasi nilai tersebut pada `lokasiMaks`. Kemudian, program akan mencetak **"Nilai maksimum adalah ... berada pada Array ke ..."**
 - `case 2` : jika user memasukkan angka 2, maka program akan menjalankan case 2 yaitu pencarian nilai minimum pada `min` dan lokasi nilai tersebut pada `lokasiMin`. Kemudian, program akan mencetak **"Nilai minimum adalah ... berada pada Array ke ..."**
 - `case 3` : jika user memasukkan angka 3, maka program akan menjalankan case 3 yaitu pencarian nilai maksimum pada `mean`. Kemudian, program akan mencetak **"Nilai rata-rata adalah adalah ... "**. Pada pencarian nilai rata-rata, program tidak akan menampilkan lokasinya terletak pada Array ke berapa karena terdapat formula sendiri untuk mencari nilai rata-rata dimana tidak ada korelasinya dengan lokasi array. 
-- `case 4` : jika user memasukkan angka 4, maka program akan menjalankan case 4 yaitu keluar dari program menu dan mencetak "Program pencarian selesai. Terima kasih!".
-- Apabila user menginputkan angka selain 1, 2, 3, dan 4, maka program akan error dan mencetak "Error! Pilihan tidak valid. Silakan pilih menu lainnya." karena pilihannya hanya sampai 4. 
+- `case 4` : jika user memasukkan angka 4, maka program akan menjalankan case 4 yaitu keluar dari program menu dan mencetak **"Program pencarian selesai. Terima kasih!"**.
+- Apabila user menginputkan angka selain 1, 2, 3, dan 4, maka program akan error dan mencetak **"Error! Pilihan tidak valid. Silakan pilih menu lainnya."** karena pilihannya hanya sampai 4. 
 
 #### Full code Screenshot:
-
+![Modul 2  Unguided 3 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/41c04754-b271-4fdf-b7d8-c1ddc65d6916)
+![Modul 2  Unguided 3 Full SS (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/056d37a6-2429-4165-a6c5-017bb80749bb)
+![Modul 2  Unguided 3 Full SS (3)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/189eb1e6-5d44-469a-812b-c2f6e90789bd)
+![Modul 2  Unguided 3 Full SS (4)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/88f26838-dc87-422d-903d-773d03232172)
 
 ## Kesimpulan
  
