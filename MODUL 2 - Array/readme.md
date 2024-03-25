@@ -436,4 +436,8 @@ Saat program dijalankan, maka user akan diminta untuk memasukkan panjang array. 
 Array (larik) adalah sekumpulan variabel yang menyimpan sekumpulan data dengan tipe sama. Elemen array dapat diakses dengan menggunakan indeks yang terdapat di dalamnya. Array memiliki 3 jenis yaitu array satu dimensi, array dua dimensi, dan array multidimensi. Inisialisasi array hanya boleh dilakukan hanya jika array sudah dideklarasikan. Bentuk umum pendeklarasian masing-masing jenis array berbeda-beda. Pada array satu dimensi hanya memuat satu subskrip (indeks). Pada array dua dimensi memiliki dua subskrip (indeks) yaitu baris dan kolom. Sedangkan array multidimensi memiliki subskrip (indeks) lebih dari dua.
 
 ## Referensi
+<<<<<<< HEAD
 - [1] Siahaan, V. dan Sianipar, R.H., Buku Pintar Pemrograman C++. Sumatera Utara : Balige Publishing, 2020.
+=======
+- [1] Siahaan, V. dan Sianipar, R.H., Buku Pintar Pemrograman C++. Sumatera Utara : Balige Publishing, 2020.
+>>>>>>> 97396b3ab68990093c500f6c4e92f17666fa8dd9
