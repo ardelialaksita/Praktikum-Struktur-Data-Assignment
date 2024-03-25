@@ -9,7 +9,7 @@
 5. [Referensi](#referensi)
 
 ## Dasar Teori
-Array merupakan sekumpulan variabel yang menyimpan sekumpulan data dengan tipe sama. Data yang diinput memiliki alamat atau lokasi dan memori yang berbeda-beda. Hal ini disebut dengan elemen array. Array dapat digunakan untuk mengakses elemen secara individual melalui penomoran indeks [2]. Untuk mengakses elemen array dapat menggunakan indeks yang terdapat di dalamnya. Penulisan indeks array menggunakan [2]. Pada saat sebuah array dideklarasikan, kita dapat langsung melakukan inisialisasi nilai terhadap elemen-elemen array di dalamnya. Melalui deklarai array, program dapat mendeklarasikan banyak variabel sekaligus dan setip variabel dapat diakses menggunakan indeks [2]. Inisiasialisasi array hanya boleh dilakukan ketika mendefinisikan suatu array [1]. Untuk menampilkan nilai yang terdapat pada array dapat menggunakan perulangan. Array dari karakter disebut dengan string. 
+Array merupakan sekumpulan variabel yang menyimpan sekumpulan data dengan tipe sama. Data yang diinput memiliki alamat atau lokasi dan memori yang berbeda-beda. Hal ini disebut dengan elemen array. Array dapat digunakan untuk mengakses elemen secara individual melalui penomoran indeks [2]. Untuk mengakses elemen array dapat menggunakan indeks yang terdapat di dalamnya. Penulisan indeks array menggunakan [2]. Pada saat sebuah array dideklarasikan, kita dapat langsung melakukan inisialisasi nilai terhadap elemen-elemen array di dalamnya. Melalui deklarasi array, program dapat mendeklarasikan banyak variabel sekaligus dan setip variabel dapat diakses menggunakan indeks [2]. Inisiasialisasi array hanya boleh dilakukan ketika mendefinisikan suatu array [1]. Untuk menampilkan nilai yang terdapat pada array dapat menggunakan perulangan. Array dari karakter disebut dengan string. 
 
 ### Karakteristik Array :
 Berikut merupakan karakteristik array :
@@ -433,7 +433,7 @@ Saat program dijalankan, maka user akan diminta untuk memasukkan panjang array. 
 ![Modul 2  Unguided 3 Full SS (4)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/88f26838-dc87-422d-903d-773d03232172)
 
 ## Kesimpulan
- 
+Array (larik) adalah sekumpulan variabel yang menyimpan sekumpulan data dengan tipe sama. Elemen array dapat diakses dengan menggunakan indeks yang terdapat di dalamnya. Array memiliki 3 jenis yaitu array satu dimensi, array dua dimensi, dan array multidimensi. Inisialisasi array hanya boleh dilakukan hanya jika array sudah dideklarasikan. Bentuk umum pendeklarasian masing-masing jenis array berbeda-beda. Pada array satu dimensi hanya memuat satu subskrip (indeks). Pada array dua dimensi memiliki dua subskrip (indeks) yaitu baris dan kolom. Sedangkan array multidimensi memiliki subskrip (indeks) lebih dari dua.
 
 ## Referensi
 - [1] Siahaan, V. dan Sianipar, R.H., Buku Pintar Pemrograman C++. Sumatera Utara : Balige Publishing, 2020.
