@@ -259,10 +259,14 @@ int main()
 
 Kode di atas digunakan untuk mencari nilai maksimum, nilai minimum, dan nilai rata-rata pada array menggunakan program menu. `maks` merupakan variabel dari nilai maksimum. `lokasiMaks` digunakan untuk mengetahui posisi nilai maksimum terdapat pada array ke berapa. `min` merupakan varibel dari nilai minimum. `lokasiMin` digunakan untuk mengetahui posisi nilai minimum terdapat pada array ke berapa. `mean` merupakan variabel dari nilai rata-rata. `total = 0` dan `static_cast<double>(total) / a` digunakan untuk mencari nilai rata-rata.
 
-Saat program dijalankan, maka user akan diminta untuk memasukkan panjang array. 
+Saat program dijalankan, maka user akan diminta untuk memasukkan panjang array. Selanjutnya, user akan diminta untuk memasukkan value array sesuai pada lokasinya masing-masing. User akan mengetahui lokasi value yang mereka inputkan terletak pada Array ke berapa. Setelah itu, program akan mencetak program menu dan menjalankan switch statement sesuai case. User memilih apakah mereka akan mencari nilai maksimum dengan menginputkan angka 1, milai minimum dengan menginputkan angka 2, nilai rata-rata dengan menginputkan angka 3, dan keluar dari program menu dengan menginputkan angka 4. 
 
 **switch statement:**
-
+- `case 1` : jika user memasukkan angka 1, maka program akan menjalankan case 1 yaitu pencarian nilai maksimum pada `maks` dan lokasi nilai tersebut pada `lokasiMaks`. Kemudian, program akan mencetak **"Nilai maksimum adalah ... berada pada Array ke ..."**
+- `case 2` : jika user memasukkan angka 2, maka program akan menjalankan case 2 yaitu pencarian nilai minimum pada `min` dan lokasi nilai tersebut pada `lokasiMin`. Kemudian, program akan mencetak **"Nilai minimum adalah ... berada pada Array ke ..."**
+- `case 3` : jika user memasukkan angka 3, maka program akan menjalankan case 3 yaitu pencarian nilai maksimum pada `mean`. Kemudian, program akan mencetak **"Nilai rata-rata adalah adalah ... "**. Pada pencarian nilai rata-rata, program tidak akan menampilkan lokasinya terletak pada Array ke berapa karena terdapat formula sendiri untuk mencari nilai rata-rata dimana tidak ada korelasinya dengan lokasi array. 
+- `case 4` : jika user memasukkan angka 4, maka program akan menjalankan case 4 yaitu keluar dari program menu dan mencetak "Program pencarian selesai. Terima kasih!".
+- Apabila user menginputkan angka selain 1, 2, 3, dan 4, maka program akan error dan mencetak "Error! Pilihan tidak valid. Silakan pilih menu lainnya." karena pilihannya hanya sampai 4. 
 
 #### Full code Screenshot:
 
