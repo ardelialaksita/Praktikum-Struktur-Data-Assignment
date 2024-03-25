@@ -9,8 +9,13 @@
 5. [Referensi](#referensi)
 
 ## Dasar Teori
-Array merupakan sekumpulan variabel yang menyimpan sekumpulan data dengan tipe sama. Data yang diinput memiliki alamat atau lokasi dan memori yang berbeda-beda. Hal ini disebut dengan elemen array. Array dapat digunakan untuk mengakses elemen secara individual melalui penomoran indeks [1]. Untuk mengakses elemen array dapat menggunakan indeks yang terdapat di dalamnya. Penulisan indeks array menggunakan `[]`. Pada saat sebuah array dideklarasikan, kita dapat langsung melakukan inisialisasi nilai terhadap elemen-elemen array di dalamnya. Melalui deklarai array, program dapat mendeklarasikan banyak variabel sekaligus dan setip variabel dapat diakses menggunakan indeks [1]. Inisiasialisasi array hanya boleh dilakukan ketika mendefinisikan suatu array [1]. Untuk menampilkan nilai yang terdapat pada array dapat menggunakan perulangan. Array dari karakter disebut dengan string. Berikut jenis-jenis array :
-- 
+Array merupakan sekumpulan variabel yang menyimpan sekumpulan data dengan tipe sama. Data yang diinput memiliki alamat atau lokasi dan memori yang berbeda-beda. Hal ini disebut dengan elemen array. Array dapat digunakan untuk mengakses elemen secara individual melalui penomoran indeks [2]. Untuk mengakses elemen array dapat menggunakan indeks yang terdapat di dalamnya. Penulisan indeks array menggunakan [2]. Pada saat sebuah array dideklarasikan, kita dapat langsung melakukan inisialisasi nilai terhadap elemen-elemen array di dalamnya. Melalui deklarai array, program dapat mendeklarasikan banyak variabel sekaligus dan setip variabel dapat diakses menggunakan indeks [2]. Inisiasialisasi array hanya boleh dilakukan ketika mendefinisikan suatu array [1]. Untuk menampilkan nilai yang terdapat pada array dapat menggunakan perulangan. Array dari karakter disebut dengan string. Berikut jenis-jenis array :
+#### 1. Array Satu Dimensi
+Array satu dimensi adalah array yang hanya terdiri atas n kolom atau satu subskrip array [1]. Setiap elemennya dapat diakss melalui indeks yang terdapat di dalamnya [1]. Indeks harus berupa integer atau ekspresi integer. Bentuk umum pendeklarasiannya yaitu `tipe_namaArray_array[ukuran];`.
+####2. Array Dua Dimensi
+Array dua dimensi adalah array yang terdiri atas m buah baris dan n buah kolom [1]. Array dua dimensi memiliki dua buah subskrip atau indeks yaitu baris dan kolom. Bentuk umum pendeklarasiannya yaitu `tipe_namaArray_array[jumlah_elemen-baris][jumlah_elemen_kolom];`
+#####3. Array Multidimensi 
+Array multidimensi adalah array yang memiliki ukuran lebih dari dua dimensi [1]. Subskrip atau indeks yang dimiliki juga lebih dari 2. Bentuk umum pendeklarasiannya yaitu `tipe_namaArray_array[ukuran1][ukuran2]...[ukuranN];`
 
 ## Guided 
 
