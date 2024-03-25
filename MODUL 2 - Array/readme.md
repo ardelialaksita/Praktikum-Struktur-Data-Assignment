@@ -194,16 +194,84 @@ Kode tersebut digunakan untuk mengetahui value array yang termasuk dalam nomor g
 
 #### Contoh Program :
 ```C++
+#include <iostream>
+using namespace std;
 
+int main()
+{
+  int rows, columns, cubes;
+
+  // input ukuran array 3 dimensi oleh user
+  cout << "Masukkan dimensi pertama array: ";
+  cin >> rows;
+  cout << "Masukkan dimensi kedua array: ";
+  cin >> columns;
+  cout << "Masukkan dimensi ketiga array: ";
+  cin >> cubes;
+
+  // deklarasi array
+  int arr[rows][columns][cubes];
+
+  // inisialisasi dan input elemen array tiga dimensi
+  for (int x = 0; x < rows; x++)
+  {
+    for (int y = 0; y < columns; y++)
+    {
+      for (int z = 0; z < cubes; z++)
+      {
+        cout << "Input Array[" << x << "][" << y << "][" << z << "] = ";
+        cin >> arr[x][y][z];
+      }
+    }
+    cout << endl;
+  }
+  // output elemen array yang telah diinput
+  cout << "\nArray elements: \n";
+  for (int x = 0; x < rows; x++)
+  {
+    for (int y = 0; y < columns; y++)
+    {
+      for (int z = 0; z < cubes; z++)
+      {
+        cout << "Data Array[" << x << "][" << y << "][" << z << "] = " << arr[x][y][z] << endl;
+      }
+    }
+  }
+  cout << endl;
+
+  // tampilan array
+  for (int x = 0; x < rows; x++)
+  {
+    for (int y = 0; y < columns; y++)
+    {
+      for (int z = 0; z < cubes; z++)
+      {
+        cout << arr[x][y][z] << ends;
+      }
+      cout << endl;
+    }
+    cout << endl;
+  }
+}
 ```
 
 #### Output:
+![Modul 2  Unguided 2 Output (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/b2402bae-c84b-4b65-9bf6-992fab9afc18)
+![Modul 2  Unguided 2 Output (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/79ab1093-6fd7-4323-a4b4-2ec556042bc9)
 
+Kode di atas digunakan untuk menampilkan array tiga dimensi menggunakan data yang telah diinputkan oleh user. Array tiga dimensi terdiri atas rows, columns, dan cubes. Pada program harus terdapat deklarasi dan inisialisasi array. `int arr[rows][columns][cubes];` merupakan deklarasi array. 
+- **// input ukuran array 3 dimensi oleh user** digunakan untuk menginputkan ukuran array yaitu [x] untuk rows, [y] untuk columns, dan [z] untuk cubes. Pada `cout << "Masukkan dimensi pertama array: ";` dan `cin >> rows;`, user akan memasukkan dimensi pertama array yaitu banyak sekelompok array yang diinginkan. Pada `cout << "Masukkan dimensi kedua array: ";` dan `cin >> columns;`, user akan memasukkan dimensi kedua array yaitu panjang array yang diinginkan. Pada `cout << "Masukkan dimensi ketiga array: ";` dan `cin >> cubes;`, user akan memasukkan dimensi ketiga array yaitu lebar array yang diinginkan. 
+- **// inisialisasi dan input elemen array tiga dimensi** digunakan untuk melakukan inisialisasi pada array. Program akan melakukan inisialisasi secara urut mulai dari dimensi pertaqma hingga ketiga yaitu [x][y][z] menggunakan perulangan for, `cout << "Input Array[" << x << "][" << y << "][" << z << "] = ";` dan `cin >> arr[x][y][z];`. Pada bagian ini, user akan menginputkan value array sesuai dengan dimensi yang telah diinputkan sebelumnya.
+- **// output elemen array yang telah diinput** digunakan untuk menampilkan semua array yang telah diinput menggunakan perulangan for dan `cout << "Data Array[" << x << "][" << y << "][" << z << "] = " << arr[x][y][z] << endl;`.
+- Untuk menampilkan seluruh array dalam bentuk seperti matriks, program akan kembali menjalankan perulangan for dan mencetak tampilan array menggunakan `cout << arr[x][y][z] << ends;`.
 
-Kode di atas digunakan untuk  
+**Penjelasan Input dan Output sesuai data yang telah diinputkan oleh user :**
+Array 3 dimensi memiliki deklarasi `int arr[x][y][z];`. Pada output di atas, user menginputkan [2][3][3] yang artinya terdapat 2 kelompok array dengan masing-masing kelompok memiliki panjang dan lebar 3 x 3. Angka yang dimasukkan pada masing-masing dimensi yaitu sebanyak 9 angka. Pada dimensi pertama, user memasukkan angka 1,2,3,4,5,6,7,8,9 secara berurutan dari terkecil ke terbesar. Pada dimensi kedua, user memasukkan angka 9,8,7,6,5,4,3,2,1 secara berurutan dari terbesar ke terkecil. Selanjutnyam program akan menampilkan data array yang telah diinputkan sebelumnya. Kemudian, program akan menampilkan array dalam bentuk seperti matriks.
 
 #### Full code Screenshot:
-
+![Modul 2  Unguided 2 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/104848ee-f6a2-435c-8438-93a484de62ea)
+![Modul 2  Unguided 2 Full SS (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/b30976de-d9c5-4bd8-a96b-81594dccdd9d)
+![Modul 2  Unguided 2 Full SS (3)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/cac33dd2-59d3-419d-a8b2-eafc38e87af1)
 
 ### 3. Buatlah program menu untuk mencari nilai Maksimum, Minimum, dan Nilai rata-rata dari suatu array dengan input yang dimasukkan oleh user!
 
