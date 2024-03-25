@@ -80,10 +80,10 @@ Untuk melakukan operasi kedua bilangan, maka tentukan masing-masing case terlebi
 Jika operator yang dimasukkan tidak benar, maka akan menghasilkan output **"Error! Operator is not correct."**.
 Jika suatu bilangan memiliki 0 sebagai pembaginya, maka akan menghasilkan output **"Error! Nol tidak boleh sebagai pembagi."**
 #### Contoh penggunaan program :
-- Masukkan operasi : + , 
-- Masukkan bilangan pertama : 11 , 
-- Masukkan bilangan kedua : 13 , 
-- Hasil penjumlahan : 24 , 
+- Masukkan operasi : +  
+- Masukkan bilangan pertama : 11  
+- Masukkan bilangan kedua : 13  
+- Hasil penjumlahan : 24  
 #### Output Guided 1:
 ![Modul 1  Guided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/38799ae5-1b50-4acf-8d8a-f4620f755a52)
 
