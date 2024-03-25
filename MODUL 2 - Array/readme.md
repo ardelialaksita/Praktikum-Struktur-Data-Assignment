@@ -11,19 +11,19 @@
 ## Dasar Teori
 Array merupakan sekumpulan variabel yang menyimpan sekumpulan data dengan tipe sama. Data yang diinput memiliki alamat atau lokasi dan memori yang berbeda-beda. Hal ini disebut dengan elemen array. Array dapat digunakan untuk mengakses elemen secara individual melalui penomoran indeks [2]. Untuk mengakses elemen array dapat menggunakan indeks yang terdapat di dalamnya. Penulisan indeks array menggunakan [ ]. Pada saat sebuah array dideklarasikan, kita dapat langsung melakukan inisialisasi nilai terhadap elemen-elemen array di dalamnya. Melalui deklarasi array, program dapat mendeklarasikan banyak variabel sekaligus dan setip variabel dapat diakses menggunakan indeks [2]. Inisiasialisasi array hanya boleh dilakukan ketika mendefinisikan suatu array [1]. Untuk menampilkan nilai yang terdapat pada array dapat menggunakan perulangan. Array dari karakter disebut dengan string. 
 
-### Karakteristik Array :
+### Karakteristik Array 
 Berikut merupakan karakteristik array :
 - Mempunyai batasan dari pemesanan alokasi memori (bersifat statis).
 - Mempunyai tipe data sama.
 - Dapat diakses secara acak.
 
-### Deklarasi Array :
+### Deklarasi Array 
 Pendeklarasian array memuat hal-hal berikut.
 - Tipe data array.
 - Nama variable array.
 - Subskrip atau indeks array.
 
-### Penggunaan Array :
+### Penggunaan Array 
 Berikut merupakan contoh-contoh penggunaan array.
 - Untuk suatu database.
 - Untuk suatu operasi matematika.
