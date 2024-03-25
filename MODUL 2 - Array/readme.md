@@ -2,6 +2,11 @@
 <p align="center">Ardelia Rachma Laksita</p>
 
 ## Table of Contents
+1. [Dasar Teori](#dasar-teori)
+2. [Guided](#guided)
+3. [Unguided](#unguided)
+4. [Kesimpulan](#kesimpulan)
+5. [Referensi](#referensi)
 
 ## Dasar Teori
 
