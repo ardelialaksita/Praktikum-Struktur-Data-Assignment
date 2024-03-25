@@ -1,6 +1,8 @@
 # <h1 align="center">Laporan Praktikum Modul Array</h1>
 <p align="center">Ardelia Rachma Laksita</p>
 
+## Table of Contents
+
 ## Dasar Teori
 
 ## Guided 
