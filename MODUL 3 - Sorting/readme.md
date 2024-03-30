@@ -128,7 +128,7 @@ int main() {
 Kode tersebut digunakan untuk 
 
 #### Output Guided 2:
-![Modul 2  Guided 2](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/b2cbaa3d-9e86-475f-8c97-800e5c97204b)
+![Modul 3  Guided 2 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a9899ac1-ba81-41a3-9338-ffc0f0e78ac7)
 
 
 ## Unguided 
