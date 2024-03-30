@@ -142,24 +142,24 @@ using namespace std;
 // selection sort secara descending menggunakan fungsi void 
 void selection_sort(double array[], int n) {
 
-    // deklarasi pos_maks dan temp
-    int pos_maks; 
+    // deklarasi posisiMaks dan temp
+    int posisiMaks; 
     double temp;
 
     // perulangan for untuk menjalankan proses sorting secara descending (terbesar ke terkecil)
     for (int i=0; i < n-1; i++) {
-        pos_maks = i;
+        posisiMaks = i;
         for (int j=i+1; j < n; j++) {
             // array[j] lebih besar daripada array[post_maks] karena sorting dilakukan secara descending (menurun)
-            if (array[j] > array[pos_maks]) {
-                pos_maks = j;
+            if (array[j] > array[posisiMaks]) {
+                posisiMaks = j;
             } // end of if
         } // end of for loop
 
-        if (pos_maks != i) {
+        if (posisiMaks != i) {
                 temp = array[i];
-                array[i] = array[pos_maks];
-                array[pos_maks] = temp;
+                array[i] = array[posisiMaks];
+                array[posisiMaks] = temp;
         } // end of if
     } // end of for loop
 }
@@ -189,7 +189,7 @@ int main() {
     selection_sort(a, length);
 
     // menampilkan data Indeks Prestasi Semester Mahasiswa setelah diurutkan secara descending (dari terbesar ke terkecil)
-    cout << "\nIndeks Prestasi Semester (IPS) Mahasiswa dari terbesar ke terkecil: " << endl;
+    cout << "\nIndeks Prestasi Semester (IPS) Mahasiswa setelah sorting dari terbesar ke terkecil: " << endl;
     print_array(a, length);
 
 }
