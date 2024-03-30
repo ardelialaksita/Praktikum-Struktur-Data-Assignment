@@ -356,7 +356,7 @@ int main() {
     cout << "Urutan karakter sebelum sorting: " << endl;
     print_array(a, length);
 
-    // memanggil fungsi untuk mengurutkan karakter secara asscending
+    // memanggil fungsi untuk mengurutkan karakter secara ascending
     insertion_sort_ascending(a, length);
 
     // menampilkan karakter setelah diurutkan secara ascending
