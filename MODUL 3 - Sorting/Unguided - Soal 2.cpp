@@ -13,7 +13,7 @@ void bubble_sort(string array[], int length) {
         before_sorted = false;
         j++;
         
-        // for loop untuk membandingkan antar elemen dan menukar po 
+        // for loop untuk membandingkan antar elemen dan menukar posisi 
         for (int i = 0; i < length - j; i++) {
             if (array[i] > array[i+1]) {
                 tmp = array[i];
