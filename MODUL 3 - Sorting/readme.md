@@ -68,9 +68,17 @@ int main() {
     print_array(a, length);
 }
 ```
-Kode di atas digunakan untuk mengurutkan bilangan secara ascending (dari terkecil ke terbesar) menggunakan algoritma bubble sort. Pertama-tama, buatlah fungsi menggunakan void untuk proses sorting secara ascending terlebih dahulu. Fungsi tersebut akan dipanggil pada _main program_. Pada program tersebut, j akan melakukan scan hingga bilangan terakhir dahulu, kemudian j baru akan melakukan _switch_ (tukar) bilangan apabila diperlukan. Jadi, j tidak harus hanya mengecek bilangan di sampingnya saja. `bool not_sorted = true;`, `int j=0;`, `double tmp;` merupakan deklarasi **j**, **tmp**, dan **not_sorted** dimana array belum diurutkan. 
+Kode di atas digunakan untuk mengurutkan bilangan secara ascending (dari terkecil ke terbesar) menggunakan algoritma bubble sort. Pertama-tama, buatlah fungsi menggunakan void untuk proses bubble sort secara ascending terlebih dahulu. Fungsi tersebut akan dipanggil pada _main program_. Pada program tersebut, j akan melakukan scan hingga bilangan terakhir dahulu, kemudian j baru akan melakukan _switch_ (tukar) bilangan apabila diperlukan. Jadi, j tidak harus hanya mengecek bilangan di sampingnya saja. `bool not_sorted = true;`, `int j=0;`, `double tmp;` merupakan deklarasi **j**, **tmp**, dan **not_sorted** dimana array belum diurutkan. 
 - **While Loop** digunakan untuk melakukan iterasi selama proses sorting.
 - **For Loop** digunakan untuk membandingkan antar elemen dan menukar posisi apabila diperlukan.
+Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunakan fungsi void pada `void print_array(double a[], int length)`.
+
+**Penjelasan main program :**
+- `int length = 5;` merupakan deklarasi panjang array. 5 merupakan panjang array tersebut, artinya terdapat 5 bilangan pada array tersebut.
+- `double a[] = {22.1, 15.3, 8.2, 33.21, 99.99};` merupakan bilangan-bilangan dalam array tersebut.
+- `cout << "Urutan bilangan sebelum sorting: " << endl;` dan `print_array(a, length);` digunakan untuk menampilkan urutan bilangan sebelum disorting (diurutkan) yaitu 22.1, 15.3, 8.2, 33.21, 99.99.
+- `bubble_sort(a, length);` merupakan kode untuk memanggil fungsi u.ntuk menjalankan proses sorting menggunakan algoritma bubble sort.
+- `cout << "\nUrutan bilangan setelah sorting: " << endl;` dan `print_array(a, length);` digunakan untuk menampilkan urutan bilangan setelah disorting (diurutkan) secara ascending (dari terkecil ke terbesar) yaitu 8.2, 15.3, 22.1, 33.21, 99.99.
  
 #### Output Guided 1:
 ![Modul 3  Guided 1 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/7689ac29-9156-4f33-98d6-05e68fe2420b)
