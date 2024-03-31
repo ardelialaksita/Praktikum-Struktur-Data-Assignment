@@ -9,6 +9,16 @@
 5. [Referensi](#referensi)
 
 ## Dasar Teori
+Sorting merupakan proses pengurutan data yang sebelumnya disusun secara acak sehingga tersusun secara teratur menurut aturan tertentu [1]. Aturan atau kondisi yang menentukan pengurutan data tersebut ada 2 yaitu ascending (menaik) dan descending (menurun). Algoritma sorting berfungsi untuk mengurutkan data berdasarkan kondisi tertentu, misalnya dari abjad A sampai Z atau jumlah angka terbesar ke terkecil [1]. Hal ini dapat diterapkan untuk mengurutkan alfabet, mengurutkan karakter, mengurutkan angka dari terkecil ke terbesar atau dari terbesar ke terkecil, dan lain-lain. Kode yang digunakan pada proses sorting ascending dan descending berbeda. 
+
+##### Penerapan Algoritma Sorting :
+**Selection Sort** merupakan
+**Insertion Sort** merupakan
+**Bubble Sort** merupakan 
+
+##### Metode atau Teknik Sorting :
+**Ascending (menaik)** yaitu proses sorting atau pengurutan yang dilakukan mulai dari data yang terkecil menuju ke data yang terbesar.
+**Descending (menurun)** yaitu proses sorting atau pengurutan yang dilakukan mulai dari data yang terbesar menuju ke data yang terkecil.
 
 
 ## Guided 
@@ -69,6 +79,9 @@ int main() {
 }
 ```
 Kode di atas digunakan untuk mengurutkan bilangan secara ascending (dari terkecil ke terbesar) menggunakan algoritma bubble sort. Pertama-tama, buatlah fungsi menggunakan void untuk proses bubble sort secara ascending terlebih dahulu. Fungsi tersebut akan dipanggil pada _main program_. Pada program tersebut, j akan melakukan scan hingga bilangan terakhir dahulu, kemudian j baru akan melakukan _switch_ (tukar) bilangan apabila diperlukan. Jadi, j tidak harus hanya mengecek bilangan di sampingnya saja. `bool not_sorted = true;`, `int j=0;`, `double tmp;` merupakan deklarasi **j**, **tmp**, dan **not_sorted** dimana array belum diurutkan. 
+
+- `not_sorted` digunakan untuk menentukan kapan proses iterasi berhenti.
+- `arr[i] = arr[i+1]` merupakan perbandingan untuk menentukan apakah pertukaran posisi diperlukan atau tidak. Selain itu, kode tersebut juga akan melanjutkan iterasi dan proses sorting jika tidak ada pertukaran posisi lagi yang dilakukan.
 - **While Loop** digunakan untuk melakukan iterasi selama proses sorting.
 - **For Loop** digunakan untuk membandingkan antar elemen dan menukar posisi apabila diperlukan.
 Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunakan fungsi void pada `void print_array(double a[], int length)`.
@@ -135,7 +148,7 @@ int main() {
     print_array(a, length);
 }
 ```
-Kode tersebut digunakan untuk 
+Kode tersebut digunakan untuk mengurutkan karakter secara descending (menurun, dari terbesar ke terkecil) menggunakan algoritma insertion sort. 
 
 #### Output Guided 2:
 ![Modul 3  Guided 2 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a9899ac1-ba81-41a3-9338-ffc0f0e78ac7)
@@ -399,5 +412,4 @@ Saat program dijalankan, maka user akan diminta untuk memasukkan panjang array. 
 
 
 ## Referensi
-- [1] 
-- [2] 
+- [1] Pasaribu, S.A., Algoritma dan Pemrograman dalam Bahasa Pascal dan C++. Edisi Pertama. Yogyakarta : Deepublish, 2023.
