@@ -68,12 +68,14 @@ int main() {
     print_array(a, length);
 }
 ```
-Kode di atas digunakan untuk  
+Kode di atas digunakan untuk mengurutkan bilangan secara ascending (dari terkecil ke terbesar) menggunakan algoritma bubble sort. Pertama-tama, buatlah fungsi menggunakan void untuk proses sorting secara ascending terlebih dahulu. Fungsi tersebut akan dipanggil pada _main program_. Pada program tersebut, j akan melakukan scan hingga bilangan terakhir dahulu, kemudian j baru akan melakukan _switch_ (tukar) bilangan apabila diperlukan. Jadi, j tidak harus hanya mengecek bilangan di sampingnya saja. `bool not_sorted = true;`, `int j=0;`, `double tmp;` merupakan deklarasi **j**, **tmp**, dan **not_sorted** dimana array belum diurutkan. 
+- **While Loop** digunakan untuk melakukan iterasi selama proses sorting.
+- **For Loop** digunakan untuk membandingkan antar elemen dan menukar posisi apabila diperlukan.
  
 #### Output Guided 1:
 ![Modul 3  Guided 1 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/7689ac29-9156-4f33-98d6-05e68fe2420b)
 
-### 2. Mengurutkan karakter secara descending (dari terbesar hingga terkecil) menggunakan Algoritma Insertion Sort)
+### 2. Mengurutkan karakter secara descending (dari terbesar hingga terkecil) menggunakan Algoritma Insertion Sort
 
 ```C++
 #include <iostream>
@@ -221,7 +223,7 @@ void bubble_sort(string array[], int length) {
         before_sorted = false;
         j++;
         
-        // for loop untuk membandingkan antar elemen dan menukar po 
+        // for loop untuk membandingkan antar elemen dan menukar posisi 
         for (int i = 0; i < length - j; i++) {
             if (array[i] > array[i+1]) {
                 tmp = array[i];
