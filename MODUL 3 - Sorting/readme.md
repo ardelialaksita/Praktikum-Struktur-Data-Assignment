@@ -90,7 +90,7 @@ Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunak
 - `int length = 5;` merupakan deklarasi panjang array. 5 merupakan panjang array tersebut, artinya terdapat 5 bilangan pada array tersebut.
 - `double a[] = {22.1, 15.3, 8.2, 33.21, 99.99};` merupakan bilangan-bilangan dalam array tersebut.
 - `cout << "Urutan bilangan sebelum sorting: " << endl;` dan `print_array(a, length);` digunakan untuk menampilkan urutan bilangan sebelum disorting (diurutkan) yaitu 22.1, 15.3, 8.2, 33.21, 99.99.
-- `bubble_sort(a, length);` merupakan kode untuk memanggil fungsi u.ntuk menjalankan proses sorting menggunakan algoritma bubble sort.
+- `bubble_sort(a, length);` merupakan kode untuk memanggil fungsi untuk menjalankan proses sorting menggunakan algoritma bubble sort.
 - `cout << "\nUrutan bilangan setelah sorting: " << endl;` dan `print_array(a, length);` digunakan untuk menampilkan urutan bilangan setelah disorting (diurutkan) secara ascending (dari terkecil ke terbesar) yaitu 8.2, 15.3, 22.1, 33.21, 99.99.
  
 #### Output Guided 1:
@@ -148,7 +148,19 @@ int main() {
     print_array(a, length);
 }
 ```
-Kode tersebut digunakan untuk mengurutkan karakter secara descending (menurun, dari terbesar ke terkecil) menggunakan algoritma insertion sort. 
+Kode tersebut digunakan untuk mengurutkan karakter secara descending (menurun, dari terbesar ke terkecil) menggunakan algoritma insertion sort. Pertama-tama, buatlah fungsi menggunakan void untuk proses bubble sort secara ascending terlebih dahulu. Fungsi tersebut akan dipanggil pada _main program_. Selanjutnya, buatlah kode untuk mencetak dan menampilkan isi array.Terakhir, buatlah main program untuk menjalankan proses sorting dan mencetak data yang belum diurutkan dan sudah diurutkan. 
+
+- `arr[i] = arr[j-1]` merupakan perbandingan untuk menentukan apakah pertukaran posisi diperlukan atau tidak. Selain itu, kode tersebut juga akan melanjutkan iterasi dan proses sorting jika tidak ada pertukaran posisi lagi yang dilakukan.
+- **While Loop** digunakan untuk melakukan iterasi selama proses sorting.
+- **For Loop** digunakan untuk membandingkan antar elemen dan menukar posisi apabila diperlukan.
+Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunakan fungsi void pada `void print_array(char a[], int length)`. Tipe datanya menggunakan `char` karena termasuk dalam tipe karakter.
+
+**Penjelasan main program :**
+- `int length = 6;` merupakan deklarasi panjang array. 6 merupakan panjang array tersebut, artinya terdapat 6 bilangan pada array tersebut.
+- `char a[length] = {'c', 'f', 'a', 'z', 'd', 'p'};` merupakan karakter-karakter dalam array tersebut.
+- `cout << "Urutan karakter sebelum sorting: " << endl;` dan `print_array(a, length);` digunakan untuk menampilkan urutan karakter sebelum disorting yaitu c, f, a, z, d, p.
+- `insertion_sort(a, length);` merupakan kode untuk memanggil fungsi untuk menjalankan proses sorting menggunakan algoritma insertion sort.
+- `cout << "\nUrutan karakter setelah sorting: " << endl;` dan `print_array(a, length);` digunakan untuk menampilkan urutan karakter setelah disorting (diurutkan) secara descending (dari tterbesar ke terkecil) yaitu z, p, f, d, c, a.
 
 #### Output Guided 2:
 ![Modul 3  Guided 2 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a9899ac1-ba81-41a3-9338-ffc0f0e78ac7)
