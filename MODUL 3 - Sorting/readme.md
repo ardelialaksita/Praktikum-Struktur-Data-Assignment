@@ -263,7 +263,7 @@ Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunak
 - `cout << "\nIndeks Prestasi Semester (IPS) Mahasiswa setelah sorting dari terbesar ke terkecil: " << endl;` dan `print_array(a, length);` digunakan untuk menampilkan urutan karakter setelah disorting (diurutkan) secara descending (dari terbesar ke terkecil) yaitu 4.0, 3.8, 3.3, 2.9, 2.4.
 
 ### Analisis kompleksitas waktu dan ruang :
-Pada program tersebut, selection sort memiliki perulangan for di dalam perulangan for sehingga terdapat 2 pengulangan yaitu `for (int i=0; i < n-1; i++)` dan `for (int j=i+1; j < n; j++)` di dalam perulangan for sebelumnya.
+Pada program tersebut, selection sort memiliki perulangan for di dalam perulangan for sehingga terdapat 2 perulangan yaitu `for (int i=0; i < n-1; i++)` dan `for (int j=i+1; j < n; j++)` di dalam perulangan for sebelumnya.
 1. `for (int i=0; i < n-1; i++)` melakukan iterasi sebanyak `n-1` kali.
 2. `for (int j=i+1; j < n; j++)` melakukan iterasi sebanyak `n-1` kali pada iterasi pertama, dan `n-2` pada iterasi kedua.
 
@@ -346,7 +346,7 @@ int main() {
 
 Kode tersebut digunakan untuk mengurutkan nama-nama 10 warga sesuai dengan alfabet mulai A hingga Z dengan menggunakan algoritma Bubble Sort. Pertama-tama, buatlah fungsi menggunakan void untuk proses bubble sort secara ascending terlebih dahulu. Fungsi tersebut akan dipanggil pada _main program_. Selanjutnya, buatlah kode untuk mencetak dan menampilkan isi array. Terakhir, buatlah main program untuk menjalankan proses sorting dan mencetak data yang belum diurutkan dan sudah diurutkan. 
 
-- `bool before_sorted = true;`, `int j=0;` dan `string tmp;` digunakan untuk mendeklarasikan array sebelum diurutkan, j, da tmp.
+- `bool before_sorted = true;`, `int j=0;` dan `string tmp;` digunakan untuk mendeklarasikan array sebelum diurutkan, j, dan tmp.
 - `if (array[i] > array[i+1])` merupakan perbandingan untuk menentukan apakah pertukaran posisi diperlukan atau tidak. Selain itu, kode tersebut juga akan melanjutkan iterasi dan proses sorting jika tidak ada pertukaran posisi lagi yang dilakukan. **array[i] lebih kecil daripada array[i+1]** karena sorting dilakukan secara ascending (menaik).
 - **While Loop** digunakan untuk melakukan iterasi selama proses sorting.
 - **For Loop** digunakan untuk membandingkan antar elemen dan menukar posisi apabila diperlukan.
@@ -356,14 +356,14 @@ Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunak
 **Penjelasan main program :**
 - `int length = 10;` merupakan deklarasi panjang array. 10 merupakan panjang array tersebut, artinya terdapat 10 nama warga pada array tersebut.
 - `string nama_warga[] = {"siti", "situ", "sana", "ana", "ani", "caca", "cici", "dida", "dodo", "dadi"};` merupakan isi dari array yaitu nama-nama warga yang akan diurutkan sesuai alfabet. 
-- `ccout << "Urutan nama warga sebelum sorting: " << endl;` dan `print_array(nama_warga, length);` digunakan untuk menampilkan nama-nama warga sebelum sorting.  
+- `cout << "Urutan nama warga sebelum sorting: " << endl;` dan `print_array(nama_warga, length);` digunakan untuk menampilkan nama-nama warga sebelum sorting.  
 - `bubble_sort(nama_warga, length);` merupakan kode untuk memanggil fungsi untuk menjalankan proses sorting menggunakan algoritma bubble sort yang telah dibuat programnya sebelumnya menggunakan void. 
 - `cout << "\nUrutan nama warga sesuai alfabet (A-Z): " << endl;` dan `print_array(nama_warga, length);` digunakan untuk menampilkan urutan nama warga setela disorting secara ascending.
 
 ### Analisis kompleksitas waktu dan ruang :
-Pada program tersebut, selection sort memiliki perulangan for di dalam perulangan while sehingga terdapat 2 pengulangan yaitu `while (before_sorted)` dan `for (int i = 0; i < length - j; i++)` di dalam perulangan sebelumnya.
+Pada program tersebut, selection sort memiliki perulangan for di dalam perulangan while sehingga terdapat 2 perulangan yaitu `while (before_sorted)` dan `for (int i = 0; i < length - j; i++)` di dalam perulangan sebelumnya.
 
-Jika hanya terdapat 1 perulangan, maka kompleksitas waktunya adalah **O(n)**. Namun, jika terdapat perulangan di dalam perulangan, maka kompleksitas waktunya adalah **O(n²)**. Operasi dasar pada algoritma tersebut dilakukan secara konstan sehingga kompleksitas waktu algoritma selection sort tersebut adalah `O(n²)`. Sedangkan kompleksitas ruangnya adalah `O(1)`. Kompleksitas waktunya bergantung secara kuadratik. Sedangkan kompleksitas ruangnya tidak bergantung pada ukuran array yang diurutkan. Total operasinya sebagai berikut.
+Jika hanya terdapat 1 perulangan, maka kompleksitas waktunya adalah **O(n)**. Namun, jika terdapat perulangan di dalam perulangan, maka kompleksitas waktunya adalah **O(n²)**. Operasi dasar pada algoritma tersebut dilakukan secara konstan sehingga kompleksitas waktu algoritma bubble sort tersebut adalah `O(n²)`. Sedangkan kompleksitas ruangnya adalah `O(1)`. Kompleksitas waktunya bergantung secara kuadratik. Sedangkan kompleksitas ruangnya tidak bergantung pada ukuran array yang diurutkan. Total operasinya sebagai berikut.
 
 `(n-1) + (n-2) + ... + n + 2 + 1`
 
@@ -491,7 +491,7 @@ Kode tersebut digunakan untuk melakukan sorting secara menaik (ascending) dan me
 Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunakan fungsi void pada `void print_array(char a[], int length)` dimana `char` merupakan tipe data yaitu karakter, sedangkan `a` sebagai nama variabel array tersebut.
 
 **Penjelasan main program :**
-- `int length;` merupakan deklarasi panjang array. Panjang array tidak langsung disebutkan (hanya dideklarasikan) karena nantinya akan diinput oleh user. 
+- `int length;` merupakan deklarasi panjang array. Panjang array tidak langsung disebutkan (hanya dideklarasikan) karena nantinya akan diinputkan oleh user. 
 - `cout << "input (n) = ";` dan `cin >> length;` akan meminta user untuk memasukkan (input) panjang array. 
 - `char a[length];` merupakan deklarasi tipe data yang akan diinputkan oleh user sesuai dengan length (panjang) yang telah diinputkan sebelumnya. 
 - `cout << "Masukkan " << length << " karakter: " << endl;` akan menampilkan jumlah karakter yang akan diinputkan oleh user. Selanjutnya, program akan meminta user untuk memasukkan karakter sesuai posisi array menggunakan perulangan for `for (int i = 0; i < length; i++)`, `cout << "Karakter ke-" << i + 1 << ": ";` dan `cin >> a[i];`.
@@ -502,7 +502,7 @@ Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunak
 - `cout << "Urutan karakter setelah descending sort: " << endl;` dan `print_array(a, length);` akan menampilkan urutan karakter setelah diurutkan secara descending (menurun).
 
 ### Analisis kompleksitas waktu dan ruang :
-Pada program tersebut, insertion sort memiliki perulangan while di dalam perulangan for sehingga terdapat 2 pengulangan pada masing-masing algoritma insertion sort ascending dan algoritma insertion sort descending. 
+Pada program tersebut, insertion sort memiliki perulangan while di dalam perulangan for sehingga terdapat 2 perulangan pada masing-masing algoritma insertion sort ascending dan algoritma insertion sort descending. 
 
 - **Insertion Sort Ascending** : setiap elemen array harus ditempatkan pada posisi dari terkecil ke terbesar (naik). Worse casenya adalah saat setiap elemen harus dipindahkan ke posisi awal sehingga setiap operasi dalam perulangan for akan memerlukan i operasi. Oleh karena itu, kompleksitas waktunya adalah `O(n²)`dan kompleksitas ruangnya adalah `O(1)`.
 - **Insertion Sort Descending** : setiap elemen array harus ditempatkan pada posisi dari terbesar ke terkecil (turun). Worse casenya adalah saat setiap elemen harus dipindahkan ke posisi awal sehingga setiap operasi dalam perulangan for akan memerlukan i operasi. Oleh karena itu, kompleksitas waktunya adalah `O(n²)`dan kompleksitas ruangnya adalah `O(1)`. Ini serupa dengan konsep insertion sortascending.
@@ -518,11 +518,11 @@ Saat program dijalankan, maka user akan diminta untuk memasukkan panjang array. 
 **Penjelasan Input dan Output sesuai data yang telah diinputkan oleh user :**
 - `input (n) = 5` artinya user memasukkan 5 sebagai panjang array.
 - `Masukkan 5 karakter` artinya user diminta memasukkan sebanyak 5 karakter sesuai panjang yang telah diinputkan sebelumnya.
-- `Karakter ke-1: a' artinya a merupakan karakter pertama yang diinputkan oleh user.
-- `Karakter ke-2: c' artinya c merupakan karakter kedua yang diinputkan oleh user.
-- `Karakter ke-3: b' artinya b merupakan karakter ketiga yang diinputkan oleh user.
-- `Karakter ke-4: e' artinya e merupakan karakter keempat yang diinputkan oleh user.
-- `Karakter ke-5: d' artinya d merupakan karakter kelima yang diinputkan oleh user.
+- `Karakter ke-1: a` artinya a merupakan karakter pertama yang diinputkan oleh user.
+- `Karakter ke-2: c` artinya c merupakan karakter kedua yang diinputkan oleh user.
+- `Karakter ke-3: b` artinya b merupakan karakter ketiga yang diinputkan oleh user.
+- `Karakter ke-4: e` artinya e merupakan karakter keempat yang diinputkan oleh user.
+- `Karakter ke-5: d` artinya d merupakan karakter kelima yang diinputkan oleh user.
 
 #### Full code Screenshot:
 ![Modul 3  Unguided 3 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a6f7f1f3-b0c5-4556-924b-4116ae431461)
