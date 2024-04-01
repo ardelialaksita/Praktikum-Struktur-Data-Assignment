@@ -9,16 +9,16 @@
 5. [Referensi](#referensi)
 
 ## Dasar Teori
-Sorting merupakan proses pengurutan data yang sebelumnya disusun secara acak sehingga tersusun secara teratur menurut aturan tertentu [1]. Aturan atau kondisi yang menentukan pengurutan data tersebut ada 2 yaitu ascending (menaik) dan descending (menurun). Algoritma sorting berfungsi untuk mengurutkan data berdasarkan kondisi tertentu, misalnya dari abjad A sampai Z atau jumlah angka terbesar ke terkecil [1]. Hal ini dapat diterapkan untuk mengurutkan alfabet, mengurutkan karakter, mengurutkan angka dari terkecil ke terbesar atau dari terbesar ke terkecil, dan lain-lain. Kode yang digunakan pada proses sorting ascending dan descending berbeda. 
+Sorting merupakan proses pengurutan data yang sebelumnya disusun secara acak sehingga tersusun secara teratur menurut aturan tertentu[1]. Aturan atau kondisi yang menentukan pengurutan data tersebut ada 2 yaitu ascending (menaik) dan descending (menurun). Algoritma sorting berfungsi untuk mengurutkan data berdasarkan kondisi tertentu, misalnya dari abjad A sampai Z atau jumlah angka terbesar ke terkecil[1]. Hal ini dapat diterapkan untuk mengurutkan alfabet, mengurutkan karakter, mengurutkan angka dari terkecil ke terbesar atau dari terbesar ke terkecil, dan lain-lain. Kode yang digunakan pada proses sorting ascending dan descending berbeda. 
 
-##### Penerapan Algoritma Sorting :
-**Selection Sort** merupakan
-**Insertion Sort** merupakan
-**Bubble Sort** merupakan 
+#### Penerapan Algoritma Sorting :
+1. **Selection Sort** merupakan
+2. **Insertion Sort** merupakan
+3. **Bubble Sort** merupakan salah satu algoritma pengurutan data dengan menerapkan konsep ascending atau descending secara sederhana[3]. Skema prosesnya dengan cara membandingkan elemen yang berdekatan, kemudian menukarnya 
 
-##### Metode atau Teknik Sorting :
-**Ascending (menaik)** yaitu proses sorting atau pengurutan yang dilakukan mulai dari data yang terkecil menuju ke data yang terbesar.
-**Descending (menurun)** yaitu proses sorting atau pengurutan yang dilakukan mulai dari data yang terbesar menuju ke data yang terkecil.
+#### Metode atau Teknik Sorting :
+- **Ascending (menaik)** yaitu proses sorting atau pengurutan yang dilakukan mulai dari data yang terkecil menuju ke data yang terbesar.
+- **Descending (menurun)** yaitu proses sorting atau pengurutan yang dilakukan mulai dari data yang terbesar menuju ke data yang terkecil.
 
 
 ## Guided 
