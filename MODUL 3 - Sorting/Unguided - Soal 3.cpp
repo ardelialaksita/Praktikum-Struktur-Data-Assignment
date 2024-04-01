@@ -12,7 +12,7 @@ void insertion_sort_ascending(char arr[], int length) {
     for (i = 1; i < length; i++) {
         j = i;
 
-        while (j > 0 && arr[j - 1] < arr[j]) {
+        while (j > 0 && arr[j - 1] > arr[j]) {
             tmp = arr[j];
             arr[j] = arr[j - 1];
             arr[j - 1] = tmp;
@@ -32,7 +32,7 @@ void insertion_sort_descending(char arr[], int length) {
     for (i = 1; i < length; i++) {
         j = i;
 
-        while (j > 0 && arr[j - 1] > arr[j]) {
+        while (j > 0 && arr[j - 1] < arr[j]) {
             tmp = arr[j];
             arr[j] = arr[j - 1];
             arr[j - 1] = tmp;
