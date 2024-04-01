@@ -256,6 +256,7 @@ Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunak
 - `cout << "\nIndeks Prestasi Semester (IPS) Mahasiswa setelah sorting dari terbesar ke terkecil: " << endl;` dan `print_array(a, length);` digunakan untuk menampilkan urutan karakter setelah disorting (diurutkan) secara descending (dari terbesar ke terkecil) yaitu 4.0, 3.8, 3.3, 2.9, 2.4.
 
 **Analisis kompleksitas waktu dan ruang :**
+
 Pada program tersebut, selection sort memiliki perulangan for di dalam perulangan for sehingga terdapat 2 pengulangan yaitu `for (int i=0; i < n-1; i++)` dan `for (int j=i+1; j < n; j++)` di dalam perulangan for sebelumnya.
 1. `for (int i=0; i < n-1; i++)` melakukan iterasi sebanyak `n-1` kali.
 2. `for (int j=i+1; j < n; j++)` melakukan iterasi sebanyak `n-1` kali pada iterasi pertama, dan `n-2` pada iterasi kedua.
