@@ -9,12 +9,12 @@
 5. [Referensi](#referensi)
 
 ## Dasar Teori
-Sorting merupakan proses pengurutan data yang sebelumnya disusun secara acak sehingga tersusun secara teratur menurut aturan tertentu[1]. Aturan atau kondisi yang menentukan pengurutan data tersebut ada 2 yaitu ascending (menaik) dan descending (menurun). Algoritma sorting berfungsi untuk mengurutkan data berdasarkan kondisi tertentu, misalnya dari abjad A sampai Z atau jumlah angka terbesar ke terkecil[1]. Hal ini dapat diterapkan untuk mengurutkan alfabet, mengurutkan karakter, mengurutkan angka dari terkecil ke terbesar atau dari terbesar ke terkecil, dan lain-lain. Kode yang digunakan pada proses sorting ascending dan descending berbeda. 
+Sorting merupakan proses pengurutan data yang sebelumnya disusun secara acak sehingga tersusun secara teratur menurut aturan tertentu[3]. Aturan atau kondisi yang menentukan pengurutan data tersebut ada 2 yaitu ascending (menaik) dan descending (menurun). Algoritma sorting berfungsi untuk mengurutkan data berdasarkan kondisi tertentu, misalnya dari abjad A sampai Z atau jumlah angka terbesar ke terkecil[3]. Hal ini dapat diterapkan untuk mengurutkan alfabet, mengurutkan karakter, mengurutkan angka dari terkecil ke terbesar atau dari terbesar ke terkecil, dan lain-lain. Kode yang digunakan pada proses sorting ascending dan descending berbeda. 
 
 #### Penerapan Algoritma Sorting :
-1. **Selection Sort** merupakan
-2. **Insertion Sort** merupakan
-3. **Bubble Sort** merupakan salah satu algoritma pengurutan data dengan menerapkan konsep ascending atau descending secara sederhana[3]. Skema prosesnya dengan cara membandingkan elemen yang berdekatan, kemudian menukarnya 
+1. **Selection Sort** merupakan teknik pengurutan elemen-elemen dengan cara mencari nilai tertinggi atau terendah pada array tersebut, kemudian ditempatkan sesuai posisinya. Selection sort akan membandingkan suatu array dengan array di sampingnya. Apabila diurutkan secara ascending, maka akan terjadi penukaran posisi jika elemen di sampingnya lebih kecil dibanding elemen sebelumnya. Apabila diurutkan secara descending, maka akan terjadi penukaran posisi jika elemen di sampingnya lebih besar dibanding elemen sebelumnya. Iterasi akan terus berlangsung hingga seluruh elemen diurutkan. 
+2. **Insertion Sort** merupakan algoritma pengurutan sederhana yang mempunyai proses hampir sama seperti cara mengurutkan kartu remi[32]. Proses sorting algoritma ini yaitu dengan cara memecah elemen menjadi dua bagian yaitu diurutkan dan tidak diurutkan. Insertion Sort efisien untuk nilai data kecil[2]. Pada Insertion Sort, semua elemen akan terkena scan terlebih dahulu sehingga penukaran posisi dilakukan hanya jika terdapat suatu elemen yang posisinya tidak tepat. 
+3. **Bubble Sort** merupakan salah satu algoritma pengurutan data dengan menerapkan konsep ascending atau descending secara sederhana[1]. Skema prosesnya dengan cara membandingkan elemen yang berdekatan, kemudian menukarnya apabila hasil urutannya tidak sesuai. Bubble sort merupakan gabungan dari selection sort dan insertion sort.
 
 #### Metode atau Teknik Sorting :
 - **Ascending (menaik)** yaitu proses sorting atau pengurutan yang dilakukan mulai dari data yang terkecil menuju ke data yang terbesar.
@@ -409,7 +409,9 @@ Saat program dijalankan, maka user akan diminta untuk memasukkan panjang array. 
 
 
 ## Kesimpulan
-
+Sorting merupakan cara atau proses mengurutkan elemen-elemen baik itu dalam bentuk alfabet, karakter, maupun numerik sesuai dengan kondisi tertentu. Penerapan algoritma sorting ada 3 yaitu Selection Sort, Insertion Sort, dan Bubble Sort. Bubble Sort merupakan penggabungan antara algoritma Selection Sort dan Insertion Sort sehingga proses yang dijalankan lebih cepat. Kondisi yang menentukan pengurutan elemen-elemen ada dua yaitu secara ascending (menaik) dimana diurutkan dari terkecil ke terbesar, serta secara descending (menurun) dimana diurutkan dari terbesar ke terkecil.
 
 ## Referensi
-- [1] Pasaribu, S.A., Algoritma dan Pemrograman dalam Bahasa Pascal dan C++. Edisi Pertama. Yogyakarta : Deepublish, 2023.
+- [1] Fakhruzzaman, M.N., et al., Buku Ajar Algoritma Pemrograman. Edisi Pertama. Surabaya : Airlangga University Press, 2023.
+- [2] Nengsih, Y.G., et al., Konsep Algoritma dan Pemrograman : Mengenal Konsep Dasar dan Praktis dalam Bahasa Pascal dan C. Edisi
+- [3] Pasaribu, S.A., Algoritma dan Pemrograman dalam Bahasa Pascal dan C++. Edisi Pertama. Yogyakarta : Deepublish, 2023.Pertama. Bandung : INDIE PRESS, 2022.
