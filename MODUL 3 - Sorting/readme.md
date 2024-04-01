@@ -93,6 +93,9 @@ Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunak
 - `bubble_sort(a, length);` merupakan kode untuk memanggil fungsi untuk menjalankan proses sorting menggunakan algoritma bubble sort.
 - `cout << "\nUrutan bilangan setelah sorting: " << endl;` dan `print_array(a, length);` digunakan untuk menampilkan urutan bilangan setelah disorting (diurutkan) secara ascending (dari terkecil ke terbesar) yaitu 8.2, 15.3, 22.1, 33.21, 99.99.
  
+### Analisis kompleksitas waktu dan ruang :
+Algoritma bubble sort memiliki kompleksitas waktu `O(n²)`dan kompleksitas ruang adalah `O(1)`.
+
 #### Output Guided 1:
 ![Modul 3  Guided 1 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/7689ac29-9156-4f33-98d6-05e68fe2420b)
 
@@ -161,6 +164,9 @@ Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunak
 - `cout << "Urutan karakter sebelum sorting: " << endl;` dan `print_array(a, length);` digunakan untuk menampilkan urutan karakter sebelum disorting yaitu c, f, a, z, d, p.
 - `insertion_sort(a, length);` merupakan kode untuk memanggil fungsi untuk menjalankan proses sorting menggunakan algoritma insertion sort.
 - `cout << "\nUrutan karakter setelah sorting: " << endl;` dan `print_array(a, length);` digunakan untuk menampilkan urutan karakter setelah disorting (diurutkan) secara descending (dari terbesar ke terkecil) yaitu z, p, f, d, c, a.
+
+### Analisis kompleksitas waktu dan ruang :
+Algoritma insertion sort memiliki kompleksitas waktu `O(n²)`dan kompleksitas ruang adalah `O(1)`.
 
 #### Output Guided 2:
 ![Modul 3  Guided 2 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a9899ac1-ba81-41a3-9338-ffc0f0e78ac7)
