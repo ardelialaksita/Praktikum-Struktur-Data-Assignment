@@ -236,7 +236,7 @@ int main() {
 Kode tersebut digunakan untuk mengurutkan IPS mahasiswa tersebut dari yang terbesar hingga terkecil (descending) dengan menggunakan algoritma Selection Sort. Pertama-tama, buatlah fungsi menggunakan void untuk proses bubble sort secara ascending terlebih dahulu. Fungsi tersebut akan dipanggil pada _main program_. Selanjutnya, buatlah kode untuk mencetak dan menampilkan isi array. Terakhir, buatlah main program untuk menjalankan proses sorting dan mencetak data yang belum diurutkan dan sudah diurutkan. 
 
 - `int posisiMaks;` dan `double temp;` digunakan untuk mendeklarasikan posisi maksimal suatu array dan temp.
-- `if (array[j] > array[posisiMaks])` merupakan perbandingan untuk menentukan apakah pertukaran posisi diperlukan atau tidak. Selain itu, kode tersebut juga akan melanjutkan iterasi dan proses sorting jika tidak ada pertukaran posisi lagi yang dilakukan. array[j] lebih besar daripada array[post_maks] karena sorting dilakukan secara descending (menurun).
+- `if (array[j] > array[posisiMaks])` merupakan perbandingan untuk menentukan apakah pertukaran posisi diperlukan atau tidak. Selain itu, kode tersebut juga akan melanjutkan iterasi dan proses sorting jika tidak ada pertukaran posisi lagi yang dilakukan. **array[j] lebih besar daripada array[post_maks]** karena sorting dilakukan secara descending (menurun).
 - **While Loop** digunakan untuk melakukan iterasi selama proses sorting.
 - **For Loop** digunakan untuk membandingkan antar elemen dan menukar posisi apabila diperlukan.
 Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunakan fungsi void pada `void print_array(double a[], int length)`. Pada selection sort, program akan membandingkan suatu array dengan array di sampingnya. Apabila diurutkan secara descending, maka akan terjadi penukaran posisi jika elemen di sampingnya lebih besar dibanding elemen sebelumnya. Iterasi akan terus berlangsung hingga seluruh elemen diurutkan.
@@ -255,10 +255,19 @@ Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunak
 - `selection_sort(a, length);` merupakan kode untuk memanggil fungsi untuk menjalankan proses sorting menggunakan algoritma selection sort yang telah dibuat programnya sebelumnya menggunakan void. 
 - `cout << "\nIndeks Prestasi Semester (IPS) Mahasiswa setelah sorting dari terbesar ke terkecil: " << endl;` dan `print_array(a, length);` digunakan untuk menampilkan urutan karakter setelah disorting (diurutkan) secara descending (dari terbesar ke terkecil) yaitu 4.0, 3.8, 3.3, 2.9, 2.4.
 
+**Analisis kompleksitas waktu dan ruang :**
+Pada program tersebut, selection sort memiliki perulangan for di dalam perulangan for sehingga terdapat 2 pengulangan yaitu `for (int i=0; i < n-1; i++)` dan `for (int j=i+1; j < n; j++)` di dalam perulangan for sebelumnya.
+1. `for (int i=0; i < n-1; i++)` melakukan iterasi sebanyak `n-1` kali.
+2. `for (int j=i+1; j < n; j++)` melakukan iterasi sebanyak `n-1` kali pada iterasi pertama, dan `n-2` pada iterasi kedua.
+Jika hanya terdapat 1 perulangan, maka kompleksitas waktunya adalah **O(n)**. Namun, jika terdapat perulangan di dalam perulangan, maka kompleksitas waktunya adalah **O(n²)**. Operasi dasar pada algoritma tersebut dilakukan secara konstan sehingga kompleksitas waktu algoritma selection sort tersebut adalah `O(n²)`. Sedangkan kompleksitas ruangnya adalah O(1). Kompleksitas waktunya bergantung secara kuadratik. Sedangkan kompleksitas ruangnya tidak bergantung pada ukuran array yang diurutkan. Total operasinya sebagai berikut.
+
+`(n-1) + (n-2) + ... + n + 2 + 1`
+
+Worse case dalam kompleksitas waktu algoritma terebut terjadi ketika setiap elemen harus ditukar posisi secara berulang sehingga setiap elemen akan memerlukan iterasi penuh dari perulangan yang ada di dalam suatu perulangan. 
+
 #### Full code Screenshot:
 ![Modul 3  Unguided 1 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e9d6049a-1abd-4d6c-ac75-86c98b4d19ee)
 ![Modul 3  Unguided 1 Full SS (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/90c869ed-5552-4440-976a-ea251566d0ce)
-
 
 
 ### 2. Pak RT memiliki 10 warga dengan nama: siti, situ, sana, ana, ani, caca, cici, dida, dodo, dan dadi. Supaya mudah dalam melakukan pencarian, Pak RT akan mengurutkan nama nama tersebut sesuai dengan alfabet. Buatlah program untuk membantu Pak RT dengan menggunakan algoritma Bubble Sort! (Score: 30)
