@@ -242,11 +242,11 @@ Kode tersebut digunakan untuk mengurutkan IPS mahasiswa tersebut dari yang terbe
 Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunakan fungsi void pada `void print_array(double a[], int length)`. Pada selection sort, program akan membandingkan suatu array dengan array di sampingnya. Apabila diurutkan secara descending, maka akan terjadi penukaran posisi jika elemen di sampingnya lebih besar dibanding elemen sebelumnya. Iterasi akan terus berlangsung hingga seluruh elemen diurutkan.
 
 **Proses Sorting :**
-3.8, 2.9, 3.3, 4.0, 2.4
-3.8, 3.3, 2.9, 4.0, 2.4
-3.8, 3.3, 4.0, 2.9, 2.4
-3.8, 4.0, 3.3, 2.9, 2.4
-4.0, 3.8, 3.3, 2.9, 2.4
+- 3.8, 2.9, 3.3, 4.0, 2.4
+- 3.8, 3.3, 2.9, 4.0, 2.4
+- 3.8, 3.3, 4.0, 2.9, 2.4
+- 3.8, 4.0, 3.3, 2.9, 2.4
+- 4.0, 3.8, 3.3, 2.9, 2.4
 
 **Penjelasan main program :**
 - `int length = 5;` merupakan deklarasi panjang array. 5 merupakan panjang array tersebut, artinya terdapat 5 nilai Indeks Prestasi Semester Mahasiswa pada array tersebut.
