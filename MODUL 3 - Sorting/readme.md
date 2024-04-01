@@ -148,7 +148,7 @@ int main() {
     print_array(a, length);
 }
 ```
-Kode tersebut digunakan untuk mengurutkan karakter secara descending (menurun, dari terbesar ke terkecil) menggunakan algoritma insertion sort. Pertama-tama, buatlah fungsi menggunakan void untuk proses bubble sort secara ascending terlebih dahulu. Fungsi tersebut akan dipanggil pada _main program_. Selanjutnya, buatlah kode untuk mencetak dan menampilkan isi array.Terakhir, buatlah main program untuk menjalankan proses sorting dan mencetak data yang belum diurutkan dan sudah diurutkan. 
+Kode tersebut digunakan untuk mengurutkan karakter secara descending (menurun, dari terbesar ke terkecil) menggunakan algoritma insertion sort. Pertama-tama, buatlah fungsi menggunakan void untuk proses bubble sort secara ascending terlebih dahulu. Fungsi tersebut akan dipanggil pada _main program_. Selanjutnya, buatlah kode untuk mencetak dan menampilkan isi array. Terakhir, buatlah main program untuk menjalankan proses sorting dan mencetak data yang belum diurutkan dan sudah diurutkan. 
 
 - `arr[i] = arr[j-1]` merupakan perbandingan untuk menentukan apakah pertukaran posisi diperlukan atau tidak. Selain itu, kode tersebut juga akan melanjutkan iterasi dan proses sorting jika tidak ada pertukaran posisi lagi yang dilakukan.
 - **While Loop** digunakan untuk melakukan iterasi selama proses sorting.
@@ -156,11 +156,11 @@ Kode tersebut digunakan untuk mengurutkan karakter secara descending (menurun, d
 Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunakan fungsi void pada `void print_array(char a[], int length)`. Tipe datanya menggunakan `char` karena termasuk dalam tipe karakter.
 
 **Penjelasan main program :**
-- `int length = 6;` merupakan deklarasi panjang array. 6 merupakan panjang array tersebut, artinya terdapat 6 bilangan pada array tersebut.
+- `int length = 6;` merupakan deklarasi panjang array. 6 merupakan panjang array tersebut, artinya terdapat 6 karakter pada array tersebut.
 - `char a[length] = {'c', 'f', 'a', 'z', 'd', 'p'};` merupakan karakter-karakter dalam array tersebut.
 - `cout << "Urutan karakter sebelum sorting: " << endl;` dan `print_array(a, length);` digunakan untuk menampilkan urutan karakter sebelum disorting yaitu c, f, a, z, d, p.
 - `insertion_sort(a, length);` merupakan kode untuk memanggil fungsi untuk menjalankan proses sorting menggunakan algoritma insertion sort.
-- `cout << "\nUrutan karakter setelah sorting: " << endl;` dan `print_array(a, length);` digunakan untuk menampilkan urutan karakter setelah disorting (diurutkan) secara descending (dari tterbesar ke terkecil) yaitu z, p, f, d, c, a.
+- `cout << "\nUrutan karakter setelah sorting: " << endl;` dan `print_array(a, length);` digunakan untuk menampilkan urutan karakter setelah disorting (diurutkan) secara descending (dari terbesar ke terkecil) yaitu z, p, f, d, c, a.
 
 #### Output Guided 2:
 ![Modul 3  Guided 2 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a9899ac1-ba81-41a3-9338-ffc0f0e78ac7)
@@ -233,7 +233,27 @@ int main() {
 #### Output:
 ![Modul 3  Unguided 1 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/84f140f5-e92d-4688-be3a-c91353bf0d04)
 
-Kode tersebut digunakan untuk 
+Kode tersebut digunakan untuk mengurutkan IPS mahasiswa tersebut dari yang terbesar hingga terkecil (descending) dengan menggunakan algoritma Selection Sort. Pertama-tama, buatlah fungsi menggunakan void untuk proses bubble sort secara ascending terlebih dahulu. Fungsi tersebut akan dipanggil pada _main program_. Selanjutnya, buatlah kode untuk mencetak dan menampilkan isi array. Terakhir, buatlah main program untuk menjalankan proses sorting dan mencetak data yang belum diurutkan dan sudah diurutkan. 
+
+- `int posisiMaks;` dan `double temp;` digunakan untuk mendeklarasikan posisi maksimal suatu array dan temp.
+- `if (array[j] > array[posisiMaks])` merupakan perbandingan untuk menentukan apakah pertukaran posisi diperlukan atau tidak. Selain itu, kode tersebut juga akan melanjutkan iterasi dan proses sorting jika tidak ada pertukaran posisi lagi yang dilakukan. array[j] lebih besar daripada array[post_maks] karena sorting dilakukan secara descending (menurun).
+- **While Loop** digunakan untuk melakukan iterasi selama proses sorting.
+- **For Loop** digunakan untuk membandingkan antar elemen dan menukar posisi apabila diperlukan.
+Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunakan fungsi void pada `void print_array(double a[], int length)`. Pada selection sort, program akan membandingkan suatu array dengan array di sampingnya. Apabila diurutkan secara descending, maka akan terjadi penukaran posisi jika elemen di sampingnya lebih besar dibanding elemen sebelumnya. Iterasi akan terus berlangsung hingga seluruh elemen diurutkan.
+
+**Proses Sorting :**
+3.8, 2.9, 3.3, 4.0, 2.4
+3.8, 3.3, 2.9, 4.0, 2.4
+3.8, 3.3, 4.0, 2.9, 2.4
+3.8, 4.0, 3.3, 2.9, 2.4
+4.0, 3.8, 3.3, 2.9, 2.4
+
+**Penjelasan main program :**
+- `int length = 5;` merupakan deklarasi panjang array. 5 merupakan panjang array tersebut, artinya terdapat 5 nilai Indeks Prestasi Semester Mahasiswa pada array tersebut.
+- `cdouble a[length] = {3.8, 2.9, 3.3, 4.0, 2.4};` merupakan nilai-nilai Indeks Prestasi Semester Mahasiswa dalam array tersebut.
+- `cout << "Indeks Prestasi Semester (IPS) Mahasiswa sebelum sorting: " << endl;` dan `print_array(a, length);` digunakan untuk menampilkan urutan IPS Mahasiswa sebelum diurutkan yaitu 3.8, 2.9, 3.3, 4.0, 2.4. 
+- `selection_sort(a, length);` merupakan kode untuk memanggil fungsi untuk menjalankan proses sorting menggunakan algoritma selection sort yang telah dibuat programnya sebelumnya menggunakan void. 
+- `cout << "\nIndeks Prestasi Semester (IPS) Mahasiswa setelah sorting dari terbesar ke terkecil: " << endl;` dan `print_array(a, length);` digunakan untuk menampilkan urutan karakter setelah disorting (diurutkan) secara descending (dari terbesar ke terkecil) yaitu 4.0, 3.8, 3.3, 2.9, 2.4.
 
 #### Full code Screenshot:
 ![Modul 3  Unguided 1 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e9d6049a-1abd-4d6c-ac75-86c98b4d19ee)
