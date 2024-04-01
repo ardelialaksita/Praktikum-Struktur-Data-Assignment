@@ -265,7 +265,7 @@ Jika hanya terdapat 1 perulangan, maka kompleksitas waktunya adalah **O(n)**. Na
 
 `(n-1) + (n-2) + ... + n + 2 + 1`
 
-Worse case dalam kompleksitas waktu algoritma terebut terjadi ketika setiap elemen harus ditukar posisi secara berulang sehingga setiap elemen akan memerlukan iterasi penuh dari perulangan yang ada di dalam suatu perulangan. 
+Worse case dalam kompleksitas waktu algoritma tersebut terjadi ketika setiap elemen harus ditukar posisi secara berulang sehingga setiap elemen akan memerlukan iterasi penuh dari perulangan yang ada di dalam suatu perulangan. 
 
 Jadi, algoritma selection sort memiliki kompleksitas waktu `O(n²)`dan kompleksitas ruang adalah `O(1)`.
 
@@ -361,7 +361,7 @@ Jika hanya terdapat 1 perulangan, maka kompleksitas waktunya adalah **O(n)**. Na
 
 `(n-1) + (n-2) + ... + n + 2 + 1`
 
-Worse case dalam kompleksitas waktu algoritma terebut terjadi ketika setiap elemen harus ditukar posisi secara berulang sehingga setiap elemen akan memerlukan iterasi penuh dari perulangan yang ada di dalam suatu perulangan.  
+Worse case dalam kompleksitas waktu algoritma tersebut terjadi ketika setiap elemen harus ditukar posisi secara berulang sehingga setiap elemen akan memerlukan iterasi penuh dari perulangan yang ada di dalam suatu perulangan.  
 
 Jadi, algoritma bubble sort memiliki kompleksitas waktu `O(n²)`dan kompleksitas ruang adalah `O(1)`.
 
@@ -496,22 +496,27 @@ Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunak
 - `cout << "Urutan karakter setelah descending sort: " << endl;` dan `print_array(a, length);` akan menampilkan urutan karakter setelah diurutkan secara descending (menurun).
 
 ### Analisis kompleksitas waktu dan ruang :
-Pada program tersebut, selection sort memiliki perulangan for di dalam perulangan for sehingga terdapat 2 pengulangan yaitu `for (int i=0; i < n-1; i++)` dan `for (int j=i+1; j < n; j++)` di dalam perulangan for sebelumnya.
-1. `for (int i=0; i < n-1; i++)` melakukan iterasi sebanyak `n-1` kali.
-2. `for (int j=i+1; j < n; j++)` melakukan iterasi sebanyak `n-1` kali pada iterasi pertama, dan `n-2` pada iterasi kedua.
+Pada program tersebut, insertion sort memiliki perulangan while di dalam perulangan for sehingga terdapat 2 pengulangan pada masing-masing algoritma insertion sort ascending dan algoritma insertion sort descending. 
 
-Jika hanya terdapat 1 perulangan, maka kompleksitas waktunya adalah **O(n)**. Namun, jika terdapat perulangan di dalam perulangan, maka kompleksitas waktunya adalah **O(n²)**. Operasi dasar pada algoritma tersebut dilakukan secara konstan sehingga kompleksitas waktu algoritma selection sort tersebut adalah `O(n²)`. Sedangkan kompleksitas ruangnya adalah `O(1)`. Kompleksitas waktunya bergantung secara kuadratik. Sedangkan kompleksitas ruangnya tidak bergantung pada ukuran array yang diurutkan. Total operasinya sebagai berikut.
+- **Insertion Sort Ascending** : setiap elemen array harus ditempatkan pada posisi dari terkecil ke terbesar (naik). Worse casenya adalah saat setiap elemen harus dipindahkan ke posisi awal sehingga setiap operasi dalam perulangan for akan memerlukan i operasi. Oleh karena itu, kompleksitas waktunya adalah `O(n²)`dan kompleksitas ruangnya adalah `O(1)`.
+- **Insertion Sort Descending** : setiap elemen array harus ditempatkan pada posisi dari terbesar ke terkecil (turun). Worse casenya adalah saat setiap elemen harus dipindahkan ke posisi awal sehingga setiap operasi dalam perulangan for akan memerlukan i operasi. Oleh karena itu, kompleksitas waktunya adalah `O(n²)`dan kompleksitas ruangnya adalah `O(1)`. Ini serupa dengan konsep insertion sortascending.
+
+Jika hanya terdapat 1 perulangan, maka kompleksitas waktunya adalah **O(n)**. Namun, jika terdapat perulangan di dalam perulangan, maka kompleksitas waktunya adalah **O(n²)**. Operasi dasar pada algoritma tersebut dilakukan secara konstan sehingga kompleksitas waktu algoritma insertion sort tersebut adalah `O(n²)`. Sedangkan kompleksitas ruangnya adalah `O(1)`. Kompleksitas waktunya bergantung secara kuadratik. Sedangkan kompleksitas ruangnya tidak bergantung pada ukuran array yang diurutkan. Total operasinya sebagai berikut.
 
 `(n-1) + (n-2) + ... + n + 2 + 1`
 
-Worse case dalam kompleksitas waktu algoritma terebut terjadi ketika setiap elemen harus ditukar posisi secara berulang sehingga setiap elemen akan memerlukan iterasi penuh dari perulangan yang ada di dalam suatu perulangan. 
+Jadi, kedua algoritma insertion sort tersebut memiliki kompleksitas waktu `O(n²)`dan kompleksitas ruang adalah `O(1)`. 
 
-Jadi, algoritma selection sort memiliki kompleksitas waktu `O(n²)`dan kompleksitas ruang adalah `O(1)`. 
-
-Saat program dijalankan, maka user akan diminta untuk memasukkan panjang array. Selanjutnya, user akan diminta untuk memasukkan value array sesuai pada lokasinya masing-masing. User akan mengetahui lokasi value yang mereka inputkan terletak pada Array ke berapa.
+Saat program dijalankan, maka user akan diminta untuk memasukkan panjang array. Selanjutnya, user akan diminta untuk memasukkan value array sesuai pada lokasinya masing-masing. User akan mengetahui lokasi value yang mereka inputkan terletak pada karakter ke berapa.
 
 **Penjelasan Input dan Output sesuai data yang telah diinputkan oleh user :**
-
+- `input (n) = 5` artinya user memasukkan 5 sebagai panjang array.
+- `Masukkan 5 karakter` artinya user diminta memasukkan sebanyak 5 karakter sesuai panjang yang telah diinputkan sebelumnya.
+- `Karakter ke-1: a' artinya a merupakan karakter pertama yang diinputkan oleh user.
+- `Karakter ke-2: c' artinya c merupakan karakter kedua yang diinputkan oleh user.
+- `Karakter ke-3: b' artinya b merupakan karakter ketiga yang diinputkan oleh user.
+- `Karakter ke-4: e' artinya e merupakan karakter keempat yang diinputkan oleh user.
+- `Karakter ke-5: d' artinya d merupakan karakter kelima yang diinputkan oleh user.
 
 #### Full code Screenshot:
 ![Modul 3  Unguided 3 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a6f7f1f3-b0c5-4556-924b-4116ae431461)
