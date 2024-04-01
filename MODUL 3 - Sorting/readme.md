@@ -219,10 +219,14 @@ int main() {
 ```
 
 #### Output:
+![Modul 3  Unguided 1 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/84f140f5-e92d-4688-be3a-c91353bf0d04)
 
 Kode tersebut digunakan untuk 
 
 #### Full code Screenshot:
+![Modul 3  Unguided 1 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e9d6049a-1abd-4d6c-ac75-86c98b4d19ee)
+![Modul 3  Unguided 1 Full SS (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/90c869ed-5552-4440-976a-ea251566d0ce)
+
 
 
 ### 2. Pak RT memiliki 10 warga dengan nama: siti, situ, sana, ana, ani, caca, cici, dida, dodo, dan dadi. Supaya mudah dalam melakukan pencarian, Pak RT akan mengurutkan nama nama tersebut sesuai dengan alfabet. Buatlah program untuk membantu Pak RT dengan menggunakan algoritma Bubble Sort! (Score: 30)
@@ -287,12 +291,14 @@ int main() {
 ```
 
 #### Output:
-
+![Modul 3  Unguided 2 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/7b214466-211c-48fb-93ae-b1c9ce6a244b)
 
 Kode di atas digunakan untuk 
 
 
 #### Full code Screenshot:
+![Modul 3  Unguided 2 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/d77feaa4-7f88-4321-9ab3-6ae5b35b6603)
+![Modul 3  Unguided 2 Full SS (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/d91d0a24-1c55-40ae-9e2d-080ac726889b)
 
 
 ### 3. Buatlah program yang meminta user menginputkan suatu bilangan n dan meminta user untuk menginputkan sejumlah n karakter. Kemudian program akan melakukan sorting secara menaik (ascending) dan menurun (descending)! (Score: 40)
@@ -396,7 +402,7 @@ int main() {
 }
 ```
 #### Output:
-
+![Modul 3  Unguided 3 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/fb1f296c-f033-400e-b596-545d43c0cb57)
 
 Kode di atas digunakan untuk 
 
@@ -406,6 +412,10 @@ Saat program dijalankan, maka user akan diminta untuk memasukkan panjang array. 
 
 
 #### Full code Screenshot:
+![Modul 3  Unguided 3 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a6f7f1f3-b0c5-4556-924b-4116ae431461)
+![Modul 3  Unguided 3 Full SS (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/81715938-8326-4566-99c4-5c33e2e08750)
+![Modul 3  Unguided 3 Full SS (3)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/d91fa308-8b4d-4384-a424-8018d803952c)
+![Modul 3  Unguided 3 Full SS (4)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/9585a3e0-3389-4dd2-b3f1-c22653fe4d82)
 
 
 ## Kesimpulan
