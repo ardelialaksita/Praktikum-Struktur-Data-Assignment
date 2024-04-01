@@ -395,7 +395,7 @@ void insertion_sort_ascending(char arr[], int length) {
     for (i = 1; i < length; i++) {
         j = i;
 
-        while (j > 0 && arr[j - 1] < arr[j]) {
+        while (j > 0 && arr[j - 1] > arr[j]) {
             tmp = arr[j];
             arr[j] = arr[j - 1];
             arr[j - 1] = tmp;
@@ -415,7 +415,7 @@ void insertion_sort_descending(char arr[], int length) {
     for (i = 1; i < length; i++) {
         j = i;
 
-        while (j > 0 && arr[j - 1] > arr[j]) {
+        while (j > 0 && arr[j - 1] < arr[j]) {
             tmp = arr[j];
             arr[j] = arr[j - 1];
             arr[j - 1] = tmp;
@@ -477,14 +477,14 @@ int main() {
 }
 ```
 #### Output:
-![Modul 3  Unguided 3 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/fb1f296c-f033-400e-b596-545d43c0cb57)
+![Modul 3  Unguided 3 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/2ce3705b-2137-4b9e-804e-3110d62a1adc)
 
 Kode tersebut digunakan untuk melakukan sorting secara menaik (ascending) dan menurun (descending) dengan bilangan dan karakter yang diinputkan oleh user. Algoritma sorting yang digunakan adalah insertion sort. Pertama-tama, buatlah fungsi menggunakan void untuk proses insertion sort secara ascending dan descending terlebih dahulu. Fungsi tersebut akan dipanggil pada _main program_. Selanjutnya, buatlah kode untuk mencetak dan menampilkan isi array. Terakhir, buatlah main program untuk menjalankan proses sorting dan mencetak data yang belum diurutkan dan sudah diurutkan. 
 
 - `int i, j;` dan `char tmp;` digunakan untuk mendeklarasikan i, j, dan tmp. 
 - `while (j > 0 && arr[j - 1] < arr[j])` dan `while (j > 0 && arr[j - 1] > arr[j])` merupakan perbandingan untuk menentukan apakah pertukaran posisi diperlukan atau tidak. Selain itu, kode tersebut juga akan melanjutkan iterasi dan proses sorting jika tidak ada pertukaran posisi lagi yang dilakukan.
-1. `j > 0 && arr[j - 1] < arr[j]` untuk sorting yang dilakukan secara ascending (menaik).
-2. `j > 0 && arr[j - 1] > arr[j]` untuk sorting yang dilakukan secara descending (menurun).
+1. `j > 0 && arr[j - 1] > arr[j]` untuk sorting yang dilakukan secara ascending (menaik).
+2. `j > 0 && arr[j - 1] < arr[j]` untuk sorting yang dilakukan secara descending (menurun).
 - **While Loop** digunakan untuk melakukan iterasi selama proses sorting.
 - **For Loop** digunakan untuk membandingkan antar elemen dan menukar posisi apabila diperlukan.
 
