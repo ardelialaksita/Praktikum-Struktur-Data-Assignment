@@ -536,5 +536,5 @@ Sorting merupakan cara atau proses mengurutkan elemen-elemen baik itu dalam bent
 
 ## Referensi
 - [1] Fakhruzzaman, M.N., et al., Buku Ajar Algoritma Pemrograman. Edisi Pertama. Surabaya : Airlangga University Press, 2023.
-- [2] Nengsih, Y.G., et al., Konsep Algoritma dan Pemrograman : Mengenal Konsep Dasar dan Praktis dalam Bahasa Pascal dan C. Edisi
-- [3] Pasaribu, S.A., Algoritma dan Pemrograman dalam Bahasa Pascal dan C++. Edisi Pertama. Yogyakarta : Deepublish, 2023.Pertama. Bandung : INDIE PRESS, 2022.
+- [2] Nengsih, Y.G., et al., Konsep Algoritma dan Pemrograman : Mengenal Konsep Dasar dan Praktis dalam Bahasa Pascal dan C. Edisi Pertama. Bandung : INDIE PRESS, 2022.
+- [3] Pasaribu, S.A., Algoritma dan Pemrograman dalam Bahasa Pascal dan C++. Edisi Pertama. Yogyakarta : Deepublish, 2023.
