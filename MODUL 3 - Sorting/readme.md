@@ -185,7 +185,7 @@ void selection_sort(double array[], int n) {
     for (int i=0; i < n-1; i++) {
         posisiMaks = i;
         for (int j=i+1; j < n; j++) {
-            // array[j] lebih besar daripada array[post_maks] karena sorting dilakukan secara descending (menurun)
+            // array[j] lebih besar daripada array[posisiMaks] karena sorting dilakukan secara descending (menurun)
             if (array[j] > array[posisiMaks]) {
                 posisiMaks = j;
             } // end of if
@@ -233,12 +233,13 @@ int main() {
 #### Output:
 ![Modul 3  Unguided 1 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/84f140f5-e92d-4688-be3a-c91353bf0d04)
 
-Kode tersebut digunakan untuk mengurutkan IPS mahasiswa tersebut dari yang terbesar hingga terkecil (descending) dengan menggunakan algoritma Selection Sort. Pertama-tama, buatlah fungsi menggunakan void untuk proses bubble sort secara ascending terlebih dahulu. Fungsi tersebut akan dipanggil pada _main program_. Selanjutnya, buatlah kode untuk mencetak dan menampilkan isi array. Terakhir, buatlah main program untuk menjalankan proses sorting dan mencetak data yang belum diurutkan dan sudah diurutkan. 
+Kode tersebut digunakan untuk mengurutkan IPS mahasiswa tersebut dari yang terbesar hingga terkecil (descending) dengan menggunakan algoritma Selection Sort. Pertama-tama, buatlah fungsi menggunakan void untuk proses selection sort secara descending terlebih dahulu. Fungsi tersebut akan dipanggil pada _main program_. Selanjutnya, buatlah kode untuk mencetak dan menampilkan isi array. Terakhir, buatlah main program untuk menjalankan proses sorting dan mencetak data yang belum diurutkan dan sudah diurutkan. 
 
 - `int posisiMaks;` dan `double temp;` digunakan untuk mendeklarasikan posisi maksimal suatu array dan temp.
-- `if (array[j] > array[posisiMaks])` merupakan perbandingan untuk menentukan apakah pertukaran posisi diperlukan atau tidak. Selain itu, kode tersebut juga akan melanjutkan iterasi dan proses sorting jika tidak ada pertukaran posisi lagi yang dilakukan. **array[j] lebih besar daripada array[post_maks]** karena sorting dilakukan secara descending (menurun).
+- `if (array[j] > array[posisiMaks])` merupakan perbandingan untuk menentukan apakah pertukaran posisi diperlukan atau tidak. Selain itu, kode tersebut juga akan melanjutkan iterasi dan proses sorting jika tidak ada pertukaran posisi lagi yang dilakukan. **array[j] lebih besar daripada array[posisiMaks]** karena sorting dilakukan secara descending (menurun).
 - **While Loop** digunakan untuk melakukan iterasi selama proses sorting.
 - **For Loop** digunakan untuk membandingkan antar elemen dan menukar posisi apabila diperlukan.
+
 Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunakan fungsi void pada `void print_array(double a[], int length)`. Pada selection sort, program akan membandingkan suatu array dengan array di sampingnya. Apabila diurutkan secara descending, maka akan terjadi penukaran posisi jika elemen di sampingnya lebih besar dibanding elemen sebelumnya. Iterasi akan terus berlangsung hingga seluruh elemen diurutkan.
 
 **Proses Sorting :**
@@ -250,21 +251,23 @@ Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunak
 
 **Penjelasan main program :**
 - `int length = 5;` merupakan deklarasi panjang array. 5 merupakan panjang array tersebut, artinya terdapat 5 nilai Indeks Prestasi Semester Mahasiswa pada array tersebut.
-- `cdouble a[length] = {3.8, 2.9, 3.3, 4.0, 2.4};` merupakan nilai-nilai Indeks Prestasi Semester Mahasiswa dalam array tersebut.
+- `double a[length] = {3.8, 2.9, 3.3, 4.0, 2.4};` merupakan nilai-nilai Indeks Prestasi Semester Mahasiswa dalam array tersebut.
 - `cout << "Indeks Prestasi Semester (IPS) Mahasiswa sebelum sorting: " << endl;` dan `print_array(a, length);` digunakan untuk menampilkan urutan IPS Mahasiswa sebelum diurutkan yaitu 3.8, 2.9, 3.3, 4.0, 2.4. 
 - `selection_sort(a, length);` merupakan kode untuk memanggil fungsi untuk menjalankan proses sorting menggunakan algoritma selection sort yang telah dibuat programnya sebelumnya menggunakan void. 
 - `cout << "\nIndeks Prestasi Semester (IPS) Mahasiswa setelah sorting dari terbesar ke terkecil: " << endl;` dan `print_array(a, length);` digunakan untuk menampilkan urutan karakter setelah disorting (diurutkan) secara descending (dari terbesar ke terkecil) yaitu 4.0, 3.8, 3.3, 2.9, 2.4.
 
-**Analisis kompleksitas waktu dan ruang :**
-
+### Analisis kompleksitas waktu dan ruang :
 Pada program tersebut, selection sort memiliki perulangan for di dalam perulangan for sehingga terdapat 2 pengulangan yaitu `for (int i=0; i < n-1; i++)` dan `for (int j=i+1; j < n; j++)` di dalam perulangan for sebelumnya.
 1. `for (int i=0; i < n-1; i++)` melakukan iterasi sebanyak `n-1` kali.
 2. `for (int j=i+1; j < n; j++)` melakukan iterasi sebanyak `n-1` kali pada iterasi pertama, dan `n-2` pada iterasi kedua.
-Jika hanya terdapat 1 perulangan, maka kompleksitas waktunya adalah **O(n)**. Namun, jika terdapat perulangan di dalam perulangan, maka kompleksitas waktunya adalah **O(n²)**. Operasi dasar pada algoritma tersebut dilakukan secara konstan sehingga kompleksitas waktu algoritma selection sort tersebut adalah `O(n²)`. Sedangkan kompleksitas ruangnya adalah O(1). Kompleksitas waktunya bergantung secara kuadratik. Sedangkan kompleksitas ruangnya tidak bergantung pada ukuran array yang diurutkan. Total operasinya sebagai berikut.
+
+Jika hanya terdapat 1 perulangan, maka kompleksitas waktunya adalah **O(n)**. Namun, jika terdapat perulangan di dalam perulangan, maka kompleksitas waktunya adalah **O(n²)**. Operasi dasar pada algoritma tersebut dilakukan secara konstan sehingga kompleksitas waktu algoritma selection sort tersebut adalah `O(n²)`. Sedangkan kompleksitas ruangnya adalah `O(1)`. Kompleksitas waktunya bergantung secara kuadratik. Sedangkan kompleksitas ruangnya tidak bergantung pada ukuran array yang diurutkan. Total operasinya sebagai berikut.
 
 `(n-1) + (n-2) + ... + n + 2 + 1`
 
 Worse case dalam kompleksitas waktu algoritma terebut terjadi ketika setiap elemen harus ditukar posisi secara berulang sehingga setiap elemen akan memerlukan iterasi penuh dari perulangan yang ada di dalam suatu perulangan. 
+
+Jadi, algoritma selection sort memiliki kompleksitas waktu `O(n²)`dan kompleksitas ruang adalah `O(1)`.
 
 #### Full code Screenshot:
 ![Modul 3  Unguided 1 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e9d6049a-1abd-4d6c-ac75-86c98b4d19ee)
@@ -335,8 +338,32 @@ int main() {
 #### Output:
 ![Modul 3  Unguided 2 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/7b214466-211c-48fb-93ae-b1c9ce6a244b)
 
-Kode di atas digunakan untuk 
+Kode tersebut digunakan untuk mengurutkan nama-nama 10 warga sesuai dengan alfabet mulai A hingga Z dengan menggunakan algoritma Bubble Sort. Pertama-tama, buatlah fungsi menggunakan void untuk proses bubble sort secara ascending terlebih dahulu. Fungsi tersebut akan dipanggil pada _main program_. Selanjutnya, buatlah kode untuk mencetak dan menampilkan isi array. Terakhir, buatlah main program untuk menjalankan proses sorting dan mencetak data yang belum diurutkan dan sudah diurutkan. 
 
+- `bool before_sorted = true;`, `int j=0;` dan `string tmp;` digunakan untuk mendeklarasikan array sebelum diurutkan, j, da tmp.
+- `if (array[i] > array[i+1])` merupakan perbandingan untuk menentukan apakah pertukaran posisi diperlukan atau tidak. Selain itu, kode tersebut juga akan melanjutkan iterasi dan proses sorting jika tidak ada pertukaran posisi lagi yang dilakukan. **array[i] lebih kecil daripada array[i+1]** karena sorting dilakukan secara ascending (menaik).
+- **While Loop** digunakan untuk melakukan iterasi selama proses sorting.
+- **For Loop** digunakan untuk membandingkan antar elemen dan menukar posisi apabila diperlukan.
+  
+Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunakan fungsi void pada `void print_array(string nama_warga[], int length)`. `string` merupakan tipe data tersebut, sedangkan `nama_warga` merupakan nama variabel array.
+
+**Penjelasan main program :**
+- `int length = 10;` merupakan deklarasi panjang array. 10 merupakan panjang array tersebut, artinya terdapat 10 nama warga pada array tersebut.
+- `string nama_warga[] = {"siti", "situ", "sana", "ana", "ani", "caca", "cici", "dida", "dodo", "dadi"};` merupakan isi dari array yaitu nama-nama warga yang akan diurutkan sesuai alfabet. 
+- `ccout << "Urutan nama warga sebelum sorting: " << endl;` dan `print_array(nama_warga, length);` digunakan untuk menampilkan nama-nama warga sebelum sorting.  
+- `bubble_sort(nama_warga, length);` merupakan kode untuk memanggil fungsi untuk menjalankan proses sorting menggunakan algoritma bubble sort yang telah dibuat programnya sebelumnya menggunakan void. 
+- `cout << "\nUrutan nama warga sesuai alfabet (A-Z): " << endl;` dan `print_array(nama_warga, length);` digunakan untuk menampilkan urutan nama warga setela disorting secara ascending.
+
+### Analisis kompleksitas waktu dan ruang :
+Pada program tersebut, selection sort memiliki perulangan for di dalam perulangan while sehingga terdapat 2 pengulangan yaitu `while (before_sorted)` dan `for (int i = 0; i < length - j; i++)` di dalam perulangan sebelumnya.
+
+Jika hanya terdapat 1 perulangan, maka kompleksitas waktunya adalah **O(n)**. Namun, jika terdapat perulangan di dalam perulangan, maka kompleksitas waktunya adalah **O(n²)**. Operasi dasar pada algoritma tersebut dilakukan secara konstan sehingga kompleksitas waktu algoritma selection sort tersebut adalah `O(n²)`. Sedangkan kompleksitas ruangnya adalah `O(1)`. Kompleksitas waktunya bergantung secara kuadratik. Sedangkan kompleksitas ruangnya tidak bergantung pada ukuran array yang diurutkan. Total operasinya sebagai berikut.
+
+`(n-1) + (n-2) + ... + n + 2 + 1`
+
+Worse case dalam kompleksitas waktu algoritma terebut terjadi ketika setiap elemen harus ditukar posisi secara berulang sehingga setiap elemen akan memerlukan iterasi penuh dari perulangan yang ada di dalam suatu perulangan.  
+
+Jadi, algoritma bubble sort memiliki kompleksitas waktu `O(n²)`dan kompleksitas ruang adalah `O(1)`.
 
 #### Full code Screenshot:
 ![Modul 3  Unguided 2 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/d77feaa4-7f88-4321-9ab3-6ae5b35b6603)
@@ -446,7 +473,40 @@ int main() {
 #### Output:
 ![Modul 3  Unguided 3 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/fb1f296c-f033-400e-b596-545d43c0cb57)
 
-Kode di atas digunakan untuk 
+Kode tersebut digunakan untuk melakukan sorting secara menaik (ascending) dan menurun (descending) dengan bilangan dan karakter yang diinputkan oleh user. Algoritma sorting yang digunakan adalah insertion sort. Pertama-tama, buatlah fungsi menggunakan void untuk proses insertion sort secara ascending dan descending terlebih dahulu. Fungsi tersebut akan dipanggil pada _main program_. Selanjutnya, buatlah kode untuk mencetak dan menampilkan isi array. Terakhir, buatlah main program untuk menjalankan proses sorting dan mencetak data yang belum diurutkan dan sudah diurutkan. 
+
+- `int i, j;` dan `char tmp;` digunakan untuk mendeklarasikan i, j, dan tmp. 
+- `while (j > 0 && arr[j - 1] < arr[j])` dan `while (j > 0 && arr[j - 1] > arr[j])` merupakan perbandingan untuk menentukan apakah pertukaran posisi diperlukan atau tidak. Selain itu, kode tersebut juga akan melanjutkan iterasi dan proses sorting jika tidak ada pertukaran posisi lagi yang dilakukan.
+1. `j > 0 && arr[j - 1] < arr[j]` untuk sorting yang dilakukan secara ascending (menaik).
+2. `j > 0 && arr[j - 1] > arr[j]` untuk sorting yang dilakukan secara descending (menurun).
+- **While Loop** digunakan untuk melakukan iterasi selama proses sorting.
+- **For Loop** digunakan untuk membandingkan antar elemen dan menukar posisi apabila diperlukan.
+
+Selanjutnya, terdapat program untuk mencetak dan menampilkan isi array menggunakan fungsi void pada `void print_array(char a[], int length)` dimana `char` merupakan tipe data yaitu karakter, sedangkan `a` sebagai nama variabel array tersebut.
+
+**Penjelasan main program :**
+- `int length;` merupakan deklarasi panjang array. Panjang array tidak langsung disebutkan (hanya dideklarasikan) karena nantinya akan diinput oleh user. 
+- `cout << "input (n) = ";` dan `cin >> length;` akan meminta user untuk memasukkan (input) panjang array. 
+- `char a[length];` merupakan deklarasi tipe data yang akan diinputkan oleh user sesuai dengan length (panjang) yang telah diinputkan sebelumnya. 
+- `cout << "Masukkan " << length << " karakter: " << endl;` akan menampilkan jumlah karakter yang akan diinputkan oleh user. Selanjutnya, program akan meminta user untuk memasukkan karakter sesuai posisi array menggunakan perulangan for `for (int i = 0; i < length; i++)`, `cout << "Karakter ke-" << i + 1 << ": ";` dan `cin >> a[i];`.
+- `cout << "Urutan karakter sebelum sorting: " << endl;` dan `print_array(a, length);` akan menampilkan urutan karakter sebelum diurutkan.
+- `insertion_sort_ascending(a, length);` akan memanggil fungsi untuk melakukan proses insertion sort secara ascending.
+- `cout << "Urutan karakter setelah ascending sort: " << endl;` dan `print_array(a, length);` akan menampilkan urutan karakter setelah diurutkan secara ascending (menaik).
+- `insertion_sort_descending(a, length);` akan memanggil fungsi untuk melakukan proses insertion sort secara descending.
+- `cout << "Urutan karakter setelah descending sort: " << endl;` dan `print_array(a, length);` akan menampilkan urutan karakter setelah diurutkan secara descending (menurun).
+
+### Analisis kompleksitas waktu dan ruang :
+Pada program tersebut, selection sort memiliki perulangan for di dalam perulangan for sehingga terdapat 2 pengulangan yaitu `for (int i=0; i < n-1; i++)` dan `for (int j=i+1; j < n; j++)` di dalam perulangan for sebelumnya.
+1. `for (int i=0; i < n-1; i++)` melakukan iterasi sebanyak `n-1` kali.
+2. `for (int j=i+1; j < n; j++)` melakukan iterasi sebanyak `n-1` kali pada iterasi pertama, dan `n-2` pada iterasi kedua.
+
+Jika hanya terdapat 1 perulangan, maka kompleksitas waktunya adalah **O(n)**. Namun, jika terdapat perulangan di dalam perulangan, maka kompleksitas waktunya adalah **O(n²)**. Operasi dasar pada algoritma tersebut dilakukan secara konstan sehingga kompleksitas waktu algoritma selection sort tersebut adalah `O(n²)`. Sedangkan kompleksitas ruangnya adalah `O(1)`. Kompleksitas waktunya bergantung secara kuadratik. Sedangkan kompleksitas ruangnya tidak bergantung pada ukuran array yang diurutkan. Total operasinya sebagai berikut.
+
+`(n-1) + (n-2) + ... + n + 2 + 1`
+
+Worse case dalam kompleksitas waktu algoritma terebut terjadi ketika setiap elemen harus ditukar posisi secara berulang sehingga setiap elemen akan memerlukan iterasi penuh dari perulangan yang ada di dalam suatu perulangan. 
+
+Jadi, algoritma selection sort memiliki kompleksitas waktu `O(n²)`dan kompleksitas ruang adalah `O(1)`. 
 
 Saat program dijalankan, maka user akan diminta untuk memasukkan panjang array. Selanjutnya, user akan diminta untuk memasukkan value array sesuai pada lokasinya masing-masing. User akan mengetahui lokasi value yang mereka inputkan terletak pada Array ke berapa.
 
