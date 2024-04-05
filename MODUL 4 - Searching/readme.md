@@ -142,12 +142,6 @@ Kode tersebut digunakan untuk ...
 ## Unguided 
 
 ### 1. Buatlah sebuah program untuk mencari sebuah huruf pada sebuah kalimat yang sudah diinput dengan menggunakan Binary Search!
-#### Program tanpa komentar penjelasan
-```C++
-
-```
-
-#### Program dengan komentar penjelasan
 ```C++
 
 ```
@@ -161,12 +155,6 @@ Kode tersebut digunakan untuk ...
 
 
 ### 2. Buatlah sebuah program yang dapat menghitung banyaknya huruf vocal dalam sebuah kalimat!
-#### Program tanpa komentar penjelasan
-```C++
-
-```
-
-#### Program dengan komentar penjelasan
 ```C++
 
 ```
@@ -180,77 +168,8 @@ Kode tersebut digunakan untuk ...
 
 
 ### 3. Diketahui data = 9, 4, 1, 4, 7, 10, 5, 4, 12, 4. Hitunglah berapa banyak angka 4 dengan menggunakan algoritma Sequential Search!
-
-#### Program tanpa komentar penjelasan
 ```C++
-#include <iostream>
-#include <string>
-using namespace std;
 
-int sequential_search(int arrData[], int panjangArray, int count_number) {
-    int count = 0; 
-    for (int i = 0; i < panjangArray; i++) {
-        if (arrData[i] == count_number) {
-            count++;
-        }
-    }
-    return count;
-}
-
-int main () {
-    int n = 10;
-    int arrData[n] = {9, 4, 1, 4, 7, 10, 5, 4, 12, 4};
-    int count_number = 4;
-    
-    int panjangArray = sizeof(arrData) / sizeof(arrData[0]);
-    int count = sequential_search(arrData, panjangArray, count_number);
-
-    cout << "Angka " << count_number << " pada data tersebut muncul sebanyak " << count << " kali." << endl;
-    return 0;
-}
-```
-
-#### Program dengan komentar penjelasan
-```C++
-#include <iostream>
-#include <string>
-using namespace std;
-
-// fungsi untuk melakukan proses pencarian menggunakan sequential search untuk menghitung berapa kali suatu angka muncul pada array
-int sequential_search(int arrData[], int panjangArray, int count_number) {
-    // deklarasi inisialisasi variabel untuk menghitung berapa kali suatu angka dalam array muncul 
-    // count 0 artinya inisialisasi dimulai dari indeks ke-0
-    int count = 0; 
-    // for loop untuk melakukan inisialisasi dan memeriksa apakah suatu elemen sama seperti angka yang dihitung banyak kemunculannya atau tidak
-    for (int i = 0; i < panjangArray; i++) {
-        // melakukan pengecekan elemen (apakah sama seperti angka yang ingin dihitiung banyak kemunculannya atau tidak)
-        if (arrData[i] == count_number) {
-            count++;
-        }
-    }
-    // return count untuk mengembalikan jumlah kemunculan suatu angka yang dihitung banyak kemunculannya
-    return count;
-}
-
-// main program
-int main () {
-    // deklarasi untuk inisalisasi angka yang ingin dihitung banyak kemunculannya
-    int n = 10;
-    // data array bilangan
-    int arrData[n] = {9, 4, 1, 4, 7, 10, 5, 4, 12, 4};
-    // masukkan angka yang ingin dihitung banyak kemunculannya 
-    int count_number = 4;
-    
-    // menghitung panjang array
-    int panjangArray = sizeof(arrData) / sizeof(arrData[0]);
-    // memanggil fungsi sequential search 
-    int count = sequential_search(arrData, panjangArray, count_number);
-
-    // menampilkan angka dan banyaknya kemunculan angka tersebut 
-    cout << "Angka " << count_number << " pada data tersebut muncul sebanyak " << count << " kali." << endl;
-    // return 0 sebagai kode bahwa program telah selesai dan berhasil 
-    return 0;
-}
 ```
 
 #### Output:
