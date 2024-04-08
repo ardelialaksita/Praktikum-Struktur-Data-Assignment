@@ -12,8 +12,8 @@
 Searching merupakan proses pencarian suatu elemen tertentu. Pada dasarnya, algoritma searching pada C++ adalah algoritma untuk mencari elemen tertentu dalam sebuah array atau struktur data lainnya [1]. Algoritma pencarian (searching algorithm) adalah algoritma yang menerima sebuah argumen kunci dan dengan langkah-langkah tertentu akan mencari rekaman dengan kunci tersebut [3]. Setelah dilakukan proses pencarian, maka akan diperoleh salah satu dari dua kemungkinan yaitu data yang dicari ditemukan (successful) atau data yang dicari tidak ditemukan (unsuccessful) [3]. Algoritma searching ada 2 yaitu sequential atau linear search dan binary search. Algoritma searching digunakan untuk mencari suatu data, baik yang sudah disortir maupun belum, menggunakan query yang spesifik [2]. 
 
 ### Penerapan Algoritma Searching :
-**1. Sequential Search** yaitu pencarian yang dilakukan dengan cara melakukan pengecekan terhadap seluruh elemen yang ada secara berurutan. Waktu yang dibutuhkan untuk sequential search lebih lama dibanding binary search karena pengecekan dilakukan secara satu persatu hingga elemen yang dicari ditemukan. 
-**2. Binary Search** yaitu pencarian yang dilakukan dengan cara membagi data menjadi 2 yaitu data sisi kanan dan data sisi kiri. Sebelumnya, ditentukan indeks awal, tengah, dan akhir terlebih dahulu. Kemudian pencarian dilakukan dengan cara mengecek nilai tengah. Apabila elemen yang dicari lebih kecil daripada nilai tengah, maka pencarian akan dilakukan pada sisi kiri (indeks awal - tengah). Sebaliknya, apabila elemen yang dicari lebih besar daripada nilai tengah, maka pencarian akan dilakukan pada sisi kanan (indeks tengah - akhir). Hal tersebut akan membuat nilai tengah menyesuaikan posisi indeks yang terbaru. Iterasi dan inisialisasi akan terus berjalan hingga nilai tengah sama seperti data yang dicari. Pada binary search harus dilakukan sorting terlebih dahulu supaya datanya sudah dalam keadaan urut.  
+- **1. Sequential Search** yaitu pencarian yang dilakukan dengan cara melakukan pengecekan terhadap seluruh elemen yang ada secara berurutan. Waktu yang dibutuhkan untuk sequential search lebih lama dibanding binary search karena pengecekan dilakukan secara satu persatu hingga elemen yang dicari ditemukan.
+- **2. Binary Search** yaitu pencarian yang dilakukan dengan cara membagi data menjadi 2 yaitu data sisi kanan dan data sisi kiri. Sebelumnya, ditentukan indeks awal, tengah, dan akhir terlebih dahulu. Kemudian pencarian dilakukan dengan cara mengecek nilai tengah. Apabila elemen yang dicari lebih kecil daripada nilai tengah, maka pencarian akan dilakukan pada sisi kiri (indeks awal - tengah). Sebaliknya, apabila elemen yang dicari lebih besar daripada nilai tengah, maka pencarian akan dilakukan pada sisi kanan (indeks tengah - akhir). Hal tersebut akan membuat nilai tengah menyesuaikan posisi indeks yang terbaru. Iterasi dan inisialisasi akan terus berjalan hingga nilai tengah sama seperti data yang dicari. Pada binary search harus dilakukan sorting terlebih dahulu supaya datanya sudah dalam keadaan urut.  
 
 
 ## Guided 
@@ -49,10 +49,10 @@ int main() {
     return 0;
 }
 ```
-Kode di atas digunakan untuk ...
+Kode di atas digunakan untuk melakukan pencarian suatu angka dan posisinya terletak pada indeks ke berapa menggunakan sequential search. Program akan melakukan pengecekan secara satu persatu (setiap elemen) hingga angka yang dicari ditemukan beserta indeksnya. `cout << " data : {9, 4, 1, 7, 5, 12, 4, 13, 4, 10}" << endl;` merupakan data array. Angka yang ingin dicari adalah angka 10, maka `int n = 10;`. Tidak perlu dilakukan sorting sebelum pencarian dilakukan. Apabila angka 10 terdapat pada data, maka output yang dihasilkan adalah **angka ... ditemukan pada indeks ke-...**. Apabila tidak ditemukan pada data, maka output yang dihasilkan adalah **... tidak dapat ditemukan pada data**. Karena angka 10 terdapat pada data, maka output yang dihasilkan adalah **angka 10 ditemukan pada indeks ke-9** dimana angka 10 merupakan elemen ke 10 dan terletak pada indeks ke-9. 
 
 #### Output Guided 1:
-
+![Modul 4  Guided 1 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e493d317-568f-433e-9fee-3395ab21f888)
 
 ### 2. Buatlah sebuah project untuk melakukan pencarian data dengan menggunakan Binary Search.
 
@@ -135,9 +135,7 @@ int main () {
     return EXIT_SUCCESS;
 }
 ```
-Kode tersebut digunakan untuk ...
-
-#### Output Guided 2:
+Kode tersebut digunakan untuk melakukan pencarian data dengan menggunakan Binary Search. Sebelumnya, ditentukan indeks awal, tengah, dan akhir terlebih dahulu. Kemudian pencarian dilakukan dengan cara mengecek nilai tengah. Apabila elemen yang dicari lebih kecil daripada nilai tengah, maka pencarian akan dilakukan pada sisi kiri (indeks awal - tengah). Sebaliknya, apabila elemen yang dicari lebih besar daripada nilai tengah, maka pencarian akan dilakukan pada sisi kanan (indeks tengah - akhir). Hal tersebut akan membuat nilai tengah menyesuaikan posisi indeks yang terbaru. Iterasi dan inisialisasi akan terus berjalan hingga nilai tengah sama seperti data yang dicari. Pada binary search harus dilakukan sorting terlebih dahulu supaya datanya sudah dalam keadaan urut. `cout << "\n Masukkan data yang ingin Anda cari : ";` akan meminta user untuk memasukkan data yang ingin dicari. Contohnya, user ingin mencari angka 1. Maka, program akan melakukan sorting untuk mengurutkan data tersebut terlebih dahulu. Setelah itu, program melakukan pencarian menggunakan binary search dan dihasilkan output "Data ditemukan pada index ke-0" karena setelah melalui sorting, angka 1 berada pada indekes ke-0.
 
 
 ## Unguided 
