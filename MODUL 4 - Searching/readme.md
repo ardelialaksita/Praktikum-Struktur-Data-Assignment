@@ -9,11 +9,11 @@
 5. [Referensi](#referensi)
 
 ## Dasar Teori
-Searching merupakan ... 
+Searching merupakan proses pencarian suatu elemen tertentu. Pada dasarnya, algoritma searching pada C++ adalah algoritma untuk mencari elemen tertentu dalam sebuah array atau struktur data lainnya [1]. Algoritma pencarian (searching algorithm) adalah algoritma yang menerima sebuah argumen kunci dan dengan langkah-langkah tertentu akan mencari rekaman dengan kunci tersebut [3]. Setelah dilakukan proses pencarian, maka akan diperoleh salah satu dari dua kemungkinan yaitu data yang dicari ditemukan (successful) atau data yang dicari tidak ditemukan (unsuccessful) [3]. Algoritma searching ada 2 yaitu sequential atau linear search dan binary search. Algoritma searching digunakan untuk mencari suatu data, baik yang sudah disortir maupun belum, menggunakan query yang spesifik [2]. 
 
 ### Penerapan Algoritma Searching :
-**1. Sequential Search** yaitu pencarian yang dilakukan dengan cara melakukan pengecekan terhadap data-data yang ada secara berurutan. Waktu yang dibutuhkan untuk sequential search lebih lama dibanding binary search karena pengecekan dilakukan secara satu persatu hingga data yang dicari ditemukan. 
-**2. Binary Search** yaitu pencarian yang dilakukan dengan cara membagi data menjadi 2 yaitu data sisi kanan dan data sisi kiri. Sebelumnya, ditentukan indeks awal, tengah, dan akhir terlebih dahulu. Kemudian pencarian dilakukan dengan cara mengecek nilai tengah. Apabila data yang dicari lebih kecil daripada nilai tengah, maka pencarian akan dilakukan pada sisi kiri (indeks awal - tengah). Sebaliknya, apabila data yang dicari lebih besar daripada nilai tengah, maka pencarian akan dilakukan pada sisi kanan (indeks tengah - akhir). Hal tersebut akan membuat nilai tengah menyesuaikan posisi indeks yang terbaru. Iterasi dan inisialisasi akan terus berjalan hingga nilai tengah sama seperti data yang dicari. 
+**1. Sequential Search** yaitu pencarian yang dilakukan dengan cara melakukan pengecekan terhadap seluruh elemen yang ada secara berurutan. Waktu yang dibutuhkan untuk sequential search lebih lama dibanding binary search karena pengecekan dilakukan secara satu persatu hingga elemen yang dicari ditemukan. 
+**2. Binary Search** yaitu pencarian yang dilakukan dengan cara membagi data menjadi 2 yaitu data sisi kanan dan data sisi kiri. Sebelumnya, ditentukan indeks awal, tengah, dan akhir terlebih dahulu. Kemudian pencarian dilakukan dengan cara mengecek nilai tengah. Apabila elemen yang dicari lebih kecil daripada nilai tengah, maka pencarian akan dilakukan pada sisi kiri (indeks awal - tengah). Sebaliknya, apabila elemen yang dicari lebih besar daripada nilai tengah, maka pencarian akan dilakukan pada sisi kanan (indeks tengah - akhir). Hal tersebut akan membuat nilai tengah menyesuaikan posisi indeks yang terbaru. Iterasi dan inisialisasi akan terus berjalan hingga nilai tengah sama seperti data yang dicari. Pada binary search harus dilakukan sorting terlebih dahulu supaya datanya sudah dalam keadaan urut.  
 
 
 ## Guided 
@@ -430,8 +430,9 @@ Kode tersebut digunakan untuk mengetahui berapa banyak angka 4 pada data menggun
 
 
 ## Kesimpulan
-
+Searching merupakan algoritma untuk mencari elemen tertentu dalam sebuah array atau struktur data lainnya. Algoritma searching ada 2 yaitu sequential atau linear search dan binary search. Pada sequential search, pencarian dilakukan dengan cara memeriksa seluruh elemen secara satu persatu hingga elemen yang dicari ditemukan. Pada binary search, pencarian dilakukan dengan cara membagi data menjadi dua yaitu indeks awal - tengah dan indeks tengah - akhir. Selanjutnya, pencarian dilakukan dengan cara mengecek apakah elemen yang dicari lebih kecil atau lebih besar daripada nilai tengah. Pada sequential search, data tidak perlu diurutkan terlebih dahulu. Sedangkan pada binary search, data harus disorting terlebih dahulu supaya saat pencarian dilakukan, data sudah dalam keadaan urut. 
 
 ## Referensi
-- [1] 
-- [2] 
+- [1] Guntara, R.G., Algoritma dan Pemrograman Dasar : Menggunakan Bahasa Pemrograman C++ dengan Contoh Kasus Aplikasi untuk Bisnis dan Manajemen. Edisi Pertama. Sulawesi Selatan : CV. Ruang Tentor, 2023.
+- [2] Pasaribu, S.A., Algoritma dan Pemrograman dalam Bahasa Pascal dan C++. Edisi Pertama. Yogyakarta : Deepublish, 2023.
+- [3] Putro, S.S. et al., Algoritma Pemrograman. Edisi Pertama. Malang : Media Nusa Creative (MNC Publishing), 2019.
