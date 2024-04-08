@@ -12,8 +12,8 @@
 Searching merupakan ... 
 
 ### Penerapan Algoritma Searching :
-**1. Sequential Search** yaitu 
-**2. Binary Search** yaitu
+**1. Sequential Search** yaitu pencarian yang dilakukan dengan cara melakukan pengecekan terhadap data-data yang ada secara berurutan. Waktu yang dibutuhkan untuk sequential search lebih lama dibanding binary search karena pengecekan dilakukan secara satu persatu hingga data yang dicari ditemukan. 
+**2. Binary Search** yaitu pencarian yang dilakukan dengan cara membagi data menjadi 2 yaitu data sisi kanan dan data sisi kiri. Sebelumnya, ditentukan indeks awal, tengah, dan akhir terlebih dahulu. Kemudian pencarian dilakukan dengan cara mengecek nilai tengah. Apabila data yang dicari lebih kecil daripada nilai tengah, maka pencarian akan dilakukan pada sisi kiri (indeks awal - tengah). Sebaliknya, apabila data yang dicari lebih besar daripada nilai tengah, maka pencarian akan dilakukan pada sisi kanan (indeks tengah - akhir). Hal tersebut akan membuat nilai tengah menyesuaikan posisi indeks yang terbaru. Iterasi dan inisialisasi akan terus berjalan hingga nilai tengah sama seperti data yang dicari. 
 
 
 ## Guided 
