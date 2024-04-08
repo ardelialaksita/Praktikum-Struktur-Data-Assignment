@@ -254,7 +254,7 @@ Kode tersebut digunakan untuk mencari sebuah huruf pada sebuah kalimat yang suda
 - Apabila ditemukan huruf vokal pada kalimat yang diinputkan oleh user, maka program akan menjalankan if dimana terdapat `vokal++;`. Artinya, iterasi akan terus berjalan hingga huruf vokal dalam kalimat tersebut sudah ditemukan semua.
 - Apabila ditemukan huruf konsonan pada kalimat yang diinputkan oleh user, maka program akan menjalankan else dimana terdapat `konsonan++;`. Artinya, iterasi akan terus berjalan hingga huruf konsonan dalam kalimat tersebut sudah ditemukan semua.
 
-##### Penjelasan main program:
+#### Penjelasan main program:
 - `cout << "Masukkan kalimat (tanpa kapital): ";` dan `getline(cin, kalimat);` merupakan kode dimana user dapat memasukkan kalimat untuk dilakukan pencarian suatu huruf.
 - `cout << "Masukkan huruf yang ingin Anda cari : ";` dan `cin >> huruf;` merupakan kode dimana user diminta untuk memasukkan suatu huruf yang ingin dicari.
 - `bool ketemu = binarysearch();` akan membuat program melakukan pencarian huruf menggunakan binary search pada kalimat yang telah diinput.
@@ -264,7 +264,7 @@ Kode tersebut digunakan untuk mencari sebuah huruf pada sebuah kalimat yang suda
 
 Pertama-tama, user akan diminta untuk memasukkan kalimat dengan huruf kecil pada semua karakternya. Selanjutnya, user diminta untuk memasukkan huruf yang ingin dicari. Huruf yang dicari bebas sesuai keinginan user, boleh terdapat pada kalimat, boleh juga yang tidak ada pada kalimat. Selanjutnya, program akan menjalankan pencarian menggunakan binary search untuk memproses apakah huruf yang dicari oleh user ditemukan pada kalimat atau tidak. 
 
-##### Penjelasan input oleh user:
+#### Penjelasan input oleh user:
 - **Masukkan kalimat (tanpa kapital): arra is a cat miaw** artinya user memasukkan kalimat "arra is a cat miaw".
 - **Masukkan huruf yang ingin Anda cari : a** artinya user ingin mencari huruf a pada kalimat tersebut.
 - **Huruf 'a' ditemukan dalam kalimat.** artinya huruf 'a' ada pada kalimat "arra is a cat miaw".
@@ -349,12 +349,12 @@ Kode tersebut digunakan untuk menghitung banyaknya huruf vocal dalam sebuah kali
 - Apabila huruf vokal ditemukan pada kalimat tersebut atau `if (vokal > 0)`, maka program akan menjalankan `cout << "Jumlah huruf vokal = " << vokal;` dan menampilkan output **Jumlah huruf vokal = ...**.
 - Apabila huruf vokal tidak ditemukan pada kalimat tersebut, maka program akan menjalankan `cout << "Huruf vokal tidak ditemukan pada kalimat tersebut.";` dan menampilkan output **Huruf vokal tidak ditemukan pada kalimat tersebut.**
 
-##### Penjelasan main program:
+#### Penjelasan main program:
 - `cout << "Masukkan kata atau kalimat: ";` dan `getline(cin, kalimat);` akan meminta user untuk memasukkan kalimat yang ingin dilakukan pengecekan huruf vokalnya.
 - `search_vokal();` akan memanggil fungsi untuk mencari dan menghitung jumlah huruf vokal pada kalimat yang telah diinput.
 - `print_array();` akan memanggil fungsi untuk menampilkan hasil pencarian dan peghitungan huruf vokal pada kalimat yang telah diinput.
 
-##### Penjelasan input oleh user:
+#### Penjelasan input oleh user:
 - **Masukkan kata atau kalimat: Ini hari sabtu** artinya user memasukkan "Ini hari sabtu" sebagai kalimat yang akan dilakukan pengecekan huruf vokalnya.
 - **Jumlah huruf vokal = 6** artinya terdapat 6 huruf vokal pada kalimat tersebut setelah dilakukan pencarian dan penghitungan oleh program. Huruf vokalnya yaitu i, i, a, i, a, u.
 
@@ -408,7 +408,21 @@ int main () {
 #### Output:
 ![Modul 4  Unguided 3 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/637724ac-d59f-4890-98f6-ab2332a27a5c)
 
-Kode tersebut digunakan untuk ...
+Kode tersebut digunakan untuk mengetahui berapa banyak angka 4 pada data menggunakan pencarian dengan algoritma Sequential Search. 
+- `int sequential_search(int arrData[], int panjangArray, int count_number)` digunakan untuk melakukan pencarian menggunakan sequential search. `int arrData[]` merupakan deklarasi untuk tipe data array yaitu integer. `int panjangArray` merupakan deklarasi untuk panjang array yaitu berupa data integer. `int count_number` merupakan deklarasi variabel untuk angka yang ingin dihitung jumlahnya pada suatu data. 
+- `int count = 0;` artinya inisialisasi dimulai dari indeks ke 0.
+- `for (int i = 0; i < panjangArray; i++)` merupakan perulangan yang digunakan untuk melakukan inisialisasi dan memeriksa apakah suatu elemen sama seperti angka yang dihitung banyak kemunculannya atau tidak. Sedangkan `if (arrData[i] == count_number)` digunakan untuk melakukan pengecekan elemen (apakah sama seperti angka yang ingin dihitiung banyak kemunculannya atau tidak). `count++` merupakan kode yang akan membuat program terus melakukan pe.ncarian karena angka yang dihitun jumlahnya masih ditemukan pada data array (`arrData[i] == count_number`).
+
+#### Penjelasan Main Program:
+- `int n = 10;` merupakan deklarasi dari banyaknya data tersebut. artinya banyak data tersebut sejumlah 10. Oleh karena itu nilai n adalah 10.
+- `int arrData[n] = {9, 4, 1, 4, 7, 10, 5, 4, 12, 4};` merupakan data bilangannya.
+- `int count_number = 4;` artinya angka 4 merupakan angka yang ingin dihitung banyak kemunculannya pada data tersebut.
+- `int panjangArray = sizeof(arrData) / sizeof(arrData[0]);` digunakan untuk menghitung panjang array.
+- `int count = sequential_search(arrData, panjangArray, count_number);` akan memanggil fungsi sequential search dan pencarian angka 4 akan dilakukan.
+- `cout << "Angka " << count_number << " pada data tersebut muncul sebanyak " << count << " kali." << endl;` digunakan untuk menampilkan banyaknya kemunculan angka 4 pada data tersebut.
+
+#### Penjelasan Output:
+- **Angka 4 pada data tersebut muncul sebanyak 4 kali** merupakan hasil dari pencarian dan penghitungan jumlah kemunculan angka 4 pada data tersebut yaitu sebanyak 4 kali. Terdapat 4 angka 4 pada data tersebut.
 
 #### Full code Screenshot:
 ![Modul 4  Unguided 3 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/dfc85afc-8241-49e8-aa6a-84220d09ef05)
