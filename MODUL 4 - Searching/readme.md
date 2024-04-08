@@ -216,12 +216,14 @@ int main () {
 ```
 
 #### Output:
-
+![Modul 4  Unguided 2 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/2c63a954-702d-4983-a8f2-871376b9f83f)
 
 Kode tersebut digunakan untuk ...
 
 #### Full code Screenshot:
-
+![Modul 4  Unguided 2 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/bcd88b54-088c-4097-a38b-17cc08daf88b)
+![Modul 4  Unguided 2 Full SS (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/20c1d71b-6a92-40d2-9730-f2370a40f35f)
+![Modul 4  Unguided 2 Full SS (3)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/d6fa7db4-94b8-4b42-91bf-ce48e1bb96ea)
 
 ### 3. Diketahui data = 9, 4, 1, 4, 7, 10, 5, 4, 12, 4. Hitunglah berapa banyak angka 4 dengan menggunakan algoritma Sequential Search!
 ```C++
@@ -266,12 +268,13 @@ int main () {
 ```
 
 #### Output:
-
+![Modul 4  Unguided 3 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/637724ac-d59f-4890-98f6-ab2332a27a5c)
 
 Kode tersebut digunakan untuk ...
 
 #### Full code Screenshot:
-
+![Modul 4  Unguided 3 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/dfc85afc-8241-49e8-aa6a-84220d09ef05)
+![Modul 4  Unguided 3 Full SS (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e2902ee4-1af2-467c-8e27-397a6f05ebaa)
 
 
 ## Kesimpulan
