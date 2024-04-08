@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul Sorting</h1>
+# <h1 align="center">Laporan Praktikum Modul Searching</h1>
 <p align="center">Ardelia Rachma Laksita</p>
 
 ## Table of Contents
@@ -13,7 +13,7 @@ Searching merupakan ...
 
 ### Penerapan Algoritma Searching :
 **1. Sequential Search** yaitu 
-2. Binary Search
+**2. Binary Search** yaitu
 
 
 ## Guided 
@@ -248,10 +248,13 @@ int main()
 ![Modul 4  Unguided 1 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/f1058331-ab5c-4560-969f-aea9cf5fd6a8)
 
 Kode tersebut digunakan untuk mencari sebuah huruf pada sebuah kalimat yang sudah diinput dengan menggunakan Binary Search. Program tersebut juga akan menampilkan jumlah huruf vokal dan konsonan pada kalimat yang diinputkan oleh user. Pencarian menggunakan binary search dilakukan dengan mencari dan mendeklarasikan indeks awal, tengah, dan akhir. Kemudian, data array dibagi menjadi 2 dengan indeks tengah sebagai **midlle** atau patokan untuk melakukan pengecekan data. Kodenya yaitu `tengah = (awal + akhir) / 2;`. Apabila data atau huruf yang dicari lebih kecil dari indeks tengah, maka pencarian akan dilakukan pada data sebelum nilai tengah dengan menjalankan kode `awal = tengah + 1;`. Apabila data atau huruf yang dicari lebih besar dari indeks tengah, maka pencarian akan dilakukan pada data setelah nilai tengah dengan menjalankan kode `akhir = tengah - 1;`.
+
 - `string kalimat;` merupakan deklarasi untuk tipe data kalimat yaitu string. `int vokal = 0;` merupakan deklarasi untuk huruf vokal dimana inisialisasinya dimulai dari indeks ke 0. `int konsonan = 0;` merupakan deklarasi untuk huruf konsonan dimana inisialisasinya dimulai dari indeks ke -. `char huruf;` merupakan deklarasi untuk tipe data dari huruf yang dicari yaitu berupa char (karakter) dimana user hanya dapat menginputkan 1 jenis huruf.
 - `void search_vokalkonsonan()` merupakan fungsi untuk melakukan pencarian dan penghitungan jumlah huruf vokal dan konsonan pada suatu kalimat. Karena dalam suatu kalimat yang diinputkan bisa jadi terdapat huruf kapital, maka `tolower` perlu digunakan untuk mengkonversi semua huruf menjadi huruf kecil (tanpa kapital) supaya dapat dideteksi oleh program. `if (huruf == 'a' || huruf == 'i' || huruf == 'u' || huruf == 'e' || huruf == 'o')` merupakan contoh manfaat dari penggunaan tolower karena huruf yang dapat dideteksi oleh program hanyalah huruf kecil.
 - Apabila ditemukan huruf vokal pada kalimat yang diinputkan oleh user, maka program akan menjalankan if dimana terdapat `vokal++;`. Artinya, iterasi akan terus berjalan hingga huruf vokal dalam kalimat tersebut sudah ditemukan semua.
 - Apabila ditemukan huruf konsonan pada kalimat yang diinputkan oleh user, maka program akan menjalankan else dimana terdapat `konsonan++;`. Artinya, iterasi akan terus berjalan hingga huruf konsonan dalam kalimat tersebut sudah ditemukan semua.
+
+##### Penjelasan main program:
 - `cout << "Masukkan kalimat (tanpa kapital): ";` dan `getline(cin, kalimat);` merupakan kode dimana user dapat memasukkan kalimat untuk dilakukan pencarian suatu huruf.
 - `cout << "Masukkan huruf yang ingin Anda cari : ";` dan `cin >> huruf;` merupakan kode dimana user diminta untuk memasukkan suatu huruf yang ingin dicari.
 - `bool ketemu = binarysearch();` akan membuat program melakukan pencarian huruf menggunakan binary search pada kalimat yang telah diinput.
@@ -337,7 +340,23 @@ int main () {
 #### Output:
 ![Modul 4  Unguided 2 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/2c63a954-702d-4983-a8f2-871376b9f83f)
 
-Kode tersebut digunakan untuk ...
+Kode tersebut digunakan untuk menghitung banyaknya huruf vocal dalam sebuah kalimat. Pertama-tama, user akan diminta untuk memasukkan kalimat bebas menggunakan huruf kapital maupun huruf kecil. `char huruf = tolower(kalimat[i]);` akan digunakan untuk mengkonversi seluruh huruf menjadi huruf kecil. Selanjutnya, program akan menjalankan pencarian menggunakan binary search untuk memproses jumlah huruf vokal pada kalimat tersebut.  
+
+- `string kalimat;` merupakan deklarasi untuk tipe data kalimat yaitu string. `int vokal = 0;` merupakan deklarasi untuk huruf vokal dimana inisialisasinya dimulai dari indeks ke 0.
+- `void search_vokal()` merupakan fungsi untuk melakukan pencarian huruf vokal pada suatu kalimat yang diinputkan oleh user.
+- `if (huruf == 'a'|| huruf == 'i' || huruf == 'u' || huruf == 'e' || huruf == 'o')` merupakan huruf vokal. Apabila ditemukan huruf-huruf tersebut dalam kalimat, maka program akan melakukan pencarian atau iterasi selanjutnya menggunakan `vokal++;` hingga semua huruf vokal pada kalimat tersebut ditemukan.
+- `void print_array()` akan mencetak jumlah huruf vokal yang ditemukan pada kalimat.
+- Apabila huruf vokal ditemukan pada kalimat tersebut atau `if (vokal > 0)`, maka program akan menjalankan `cout << "Jumlah huruf vokal = " << vokal;` dan menampilkan output **Jumlah huruf vokal = ...**.
+- Apabila huruf vokal tidak ditemukan pada kalimat tersebut, maka program akan menjalankan `cout << "Huruf vokal tidak ditemukan pada kalimat tersebut.";` dan menampilkan output **Huruf vokal tidak ditemukan pada kalimat tersebut.**
+
+##### Penjelasan main program:
+- `cout << "Masukkan kata atau kalimat: ";` dan `getline(cin, kalimat);` akan meminta user untuk memasukkan kalimat yang ingin dilakukan pengecekan huruf vokalnya.
+- `search_vokal();` akan memanggil fungsi untuk mencari dan menghitung jumlah huruf vokal pada kalimat yang telah diinput.
+- `print_array();` akan memanggil fungsi untuk menampilkan hasil pencarian dan peghitungan huruf vokal pada kalimat yang telah diinput.
+
+##### Penjelasan input oleh user:
+- **Masukkan kata atau kalimat: Ini hari sabtu** artinya user memasukkan "Ini hari sabtu" sebagai kalimat yang akan dilakukan pengecekan huruf vokalnya.
+- **Jumlah huruf vokal = 6** artinya terdapat 6 huruf vokal pada kalimat tersebut setelah dilakukan pencarian dan penghitungan oleh program. Huruf vokalnya yaitu i, i, a, i, a, u.
 
 #### Full code Screenshot:
 ![Modul 4  Unguided 2 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/bcd88b54-088c-4097-a38b-17cc08daf88b)
