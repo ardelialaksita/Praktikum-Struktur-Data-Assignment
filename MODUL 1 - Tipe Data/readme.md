@@ -345,8 +345,5 @@ Tipe data merupakan klasifikasi atau pengelompokan jenis-jenis data. Variabel me
 - [1] Litalia. (2023, September 30). _Pengertian Tipe Data Beserta Fungsi dan Jenis-Jenis Tipe Data_ [online]. Available: https://www.jurnalponsel.com/pengertian-tipe-data/.
 - [2] Satrio, E. dan Pakpahan, S., Pemrograman C++ untuk Pembelajar Mandiri. Jakarta : Penerbit CAHAYA INFORMATIKA, 2019. 
 - [3] Siahaan, V. dan Sianipar, R.H., Buku Pintar Pemrograman C++. Sumatra Utara : Balige Publishing, 2020. 
-<<<<<<< HEAD
 - [4] Siahaan, V. dan Sianipar, R.H., THREE COOKBOOKS IN ONE: Visual C++, Visual Basic, Visual C#. Sumatra Utara : Balige Publishing, 2020.
-=======
 - [4] Siahaan, V. dan Sianipar, R.H., THREE COOKBOOKS IN ONE: Visual C++, Visual Basic, Visual C#. Sumatra Utara : Balige Publishing, 2020.
->>>>>>> 3ccde11d7af4eda7d86130696f3e22238abe300b

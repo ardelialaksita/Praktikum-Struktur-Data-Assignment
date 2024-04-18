@@ -37,7 +37,7 @@ bool binarysearch()
     return false;
 }
 
-// menlakukan pencarian dan penghitungan jumlah huruf vokal dan huruf konsonan
+// melakukan pencarian dan penghitungan jumlah huruf vokal dan huruf konsonan
 void search_vokalkonsonan()
 {
     for (int i = 0; i < kalimat.length(); i++)

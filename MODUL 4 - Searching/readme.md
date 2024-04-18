@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul Sorting</h1>
+# <h1 align="center">Laporan Praktikum Modul Searching</h1>
 <p align="center">Ardelia Rachma Laksita</p>
 
 ## Table of Contents
@@ -9,11 +9,11 @@
 5. [Referensi](#referensi)
 
 ## Dasar Teori
-Searching merupakan ... 
+Searching merupakan proses pencarian suatu elemen tertentu. Pada dasarnya, algoritma searching pada C++ adalah algoritma untuk mencari elemen tertentu dalam sebuah array atau struktur data lainnya [1]. Algoritma pencarian (searching algorithm) adalah algoritma yang menerima sebuah argumen kunci dan dengan langkah-langkah tertentu akan mencari rekaman dengan kunci tersebut [3]. Setelah dilakukan proses pencarian, maka akan diperoleh salah satu dari dua kemungkinan yaitu data yang dicari ditemukan (successful) atau data yang dicari tidak ditemukan (unsuccessful) [3]. Algoritma searching ada 2 yaitu sequential atau linear search dan binary search. Algoritma searching digunakan untuk mencari suatu data, baik yang sudah disortir maupun belum, menggunakan query yang spesifik [2]. 
 
 ### Penerapan Algoritma Searching :
-**1. Sequential Search** yaitu 
-2. Binary Search
+- **1. Sequential Search** yaitu pencarian yang dilakukan dengan cara melakukan pengecekan terhadap seluruh elemen yang ada secara berurutan. Waktu yang dibutuhkan untuk sequential search lebih lama dibanding binary search karena pengecekan dilakukan secara satu persatu hingga elemen yang dicari ditemukan.
+- **2. Binary Search** yaitu pencarian yang dilakukan dengan cara membagi data menjadi 2 yaitu data sisi kanan dan data sisi kiri. Sebelumnya, ditentukan indeks awal, tengah, dan akhir terlebih dahulu. Kemudian pencarian dilakukan dengan cara mengecek nilai tengah. Apabila elemen yang dicari lebih kecil daripada nilai tengah, maka pencarian akan dilakukan pada sisi kiri (indeks awal - tengah). Sebaliknya, apabila elemen yang dicari lebih besar daripada nilai tengah, maka pencarian akan dilakukan pada sisi kanan (indeks tengah - akhir). Hal tersebut akan membuat nilai tengah menyesuaikan posisi indeks yang terbaru. Iterasi dan inisialisasi akan terus berjalan hingga nilai tengah sama seperti data yang dicari. Pada binary search harus dilakukan sorting terlebih dahulu supaya datanya sudah dalam keadaan urut.  
 
 
 ## Guided 
@@ -49,10 +49,10 @@ int main() {
     return 0;
 }
 ```
-Kode di atas digunakan untuk ...
+Kode di atas digunakan untuk melakukan pencarian suatu angka dan posisinya terletak pada indeks ke berapa menggunakan sequential search. Program akan melakukan pengecekan secara satu persatu (setiap elemen) hingga angka yang dicari ditemukan beserta indeksnya. `cout << " data : {9, 4, 1, 7, 5, 12, 4, 13, 4, 10}" << endl;` merupakan data array. Angka yang ingin dicari adalah angka 10, maka `int n = 10;`. Tidak perlu dilakukan sorting sebelum pencarian dilakukan. Apabila angka 10 terdapat pada data, maka output yang dihasilkan adalah **angka ... ditemukan pada indeks ke-...**. Apabila tidak ditemukan pada data, maka output yang dihasilkan adalah **... tidak dapat ditemukan pada data**. Karena angka 10 terdapat pada data, maka output yang dihasilkan adalah **angka 10 ditemukan pada indeks ke-9** dimana angka 10 merupakan elemen ke 10 dan terletak pada indeks ke-9. 
 
 #### Output Guided 1:
-
+![Modul 4  Guided 1 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e493d317-568f-433e-9fee-3395ab21f888)
 
 ### 2. Buatlah sebuah project untuk melakukan pencarian data dengan menggunakan Binary Search.
 
@@ -135,9 +135,7 @@ int main () {
     return EXIT_SUCCESS;
 }
 ```
-Kode tersebut digunakan untuk ...
-
-#### Output Guided 2:
+Kode tersebut digunakan untuk melakukan pencarian data dengan menggunakan Binary Search. Sebelumnya, ditentukan indeks awal, tengah, dan akhir terlebih dahulu. Kemudian pencarian dilakukan dengan cara mengecek nilai tengah. Apabila elemen yang dicari lebih kecil daripada nilai tengah, maka pencarian akan dilakukan pada sisi kiri (indeks awal - tengah). Sebaliknya, apabila elemen yang dicari lebih besar daripada nilai tengah, maka pencarian akan dilakukan pada sisi kanan (indeks tengah - akhir). Hal tersebut akan membuat nilai tengah menyesuaikan posisi indeks yang terbaru. Iterasi dan inisialisasi akan terus berjalan hingga nilai tengah sama seperti data yang dicari. Pada binary search harus dilakukan sorting terlebih dahulu supaya datanya sudah dalam keadaan urut. `cout << "\n Masukkan data yang ingin Anda cari : ";` akan meminta user untuk memasukkan data yang ingin dicari. Contohnya, user ingin mencari angka 1. Maka, program akan melakukan sorting untuk mengurutkan data tersebut terlebih dahulu. Setelah itu, program melakukan pencarian menggunakan binary search dan dihasilkan output "Data ditemukan pada index ke-0" karena setelah melalui sorting, angka 1 berada pada indekes ke-0.
 
 
 ## Unguided 
@@ -183,7 +181,7 @@ bool binarysearch()
     return false;
 }
 
-// menlakukan pencarian dan penghitungan jumlah huruf vokal dan huruf konsonan
+// melakukan pencarian dan penghitungan jumlah huruf vokal dan huruf konsonan
 void search_vokalkonsonan()
 {
     for (int i = 0; i < kalimat.length(); i++)
@@ -245,12 +243,36 @@ int main()
 ```
 
 #### Output:
+![Modul 4  Unguided 1 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/f1058331-ab5c-4560-969f-aea9cf5fd6a8)
 
+Kode tersebut digunakan untuk mencari sebuah huruf pada sebuah kalimat yang sudah diinput dengan menggunakan Binary Search. Program tersebut juga akan menampilkan jumlah huruf vokal dan konsonan pada kalimat yang diinputkan oleh user. Pencarian menggunakan binary search dilakukan dengan mencari dan mendeklarasikan indeks awal, tengah, dan akhir. Kemudian, data array dibagi menjadi 2 dengan indeks tengah sebagai **midlle** atau patokan untuk melakukan pengecekan data. Kodenya yaitu `tengah = (awal + akhir) / 2;`. Apabila data atau huruf yang dicari lebih kecil dari indeks tengah, maka pencarian akan dilakukan pada data sebelum nilai tengah dengan menjalankan kode `awal = tengah + 1;`. Apabila data atau huruf yang dicari lebih besar dari indeks tengah, maka pencarian akan dilakukan pada data setelah nilai tengah dengan menjalankan kode `akhir = tengah - 1;`.
 
-Kode tersebut digunakan untuk ...
+- `string kalimat;` merupakan deklarasi untuk tipe data kalimat yaitu string. `int vokal = 0;` merupakan deklarasi untuk huruf vokal dimana inisialisasinya dimulai dari indeks ke 0. `int konsonan = 0;` merupakan deklarasi untuk huruf konsonan dimana inisialisasinya dimulai dari indeks ke -. `char huruf;` merupakan deklarasi untuk tipe data dari huruf yang dicari yaitu berupa char (karakter) dimana user hanya dapat menginputkan 1 jenis huruf.
+- `void search_vokalkonsonan()` merupakan fungsi untuk melakukan pencarian dan penghitungan jumlah huruf vokal dan konsonan pada suatu kalimat. Karena dalam suatu kalimat yang diinputkan bisa jadi terdapat huruf kapital, maka `tolower` perlu digunakan untuk mengkonversi semua huruf menjadi huruf kecil (tanpa kapital) supaya dapat dideteksi oleh program. `if (huruf == 'a' || huruf == 'i' || huruf == 'u' || huruf == 'e' || huruf == 'o')` merupakan contoh manfaat dari penggunaan tolower karena huruf yang dapat dideteksi oleh program hanyalah huruf kecil.
+- Apabila ditemukan huruf vokal pada kalimat yang diinputkan oleh user, maka program akan menjalankan if dimana terdapat `vokal++;`. Artinya, iterasi akan terus berjalan hingga huruf vokal dalam kalimat tersebut sudah ditemukan semua.
+- Apabila ditemukan huruf konsonan pada kalimat yang diinputkan oleh user, maka program akan menjalankan else dimana terdapat `konsonan++;`. Artinya, iterasi akan terus berjalan hingga huruf konsonan dalam kalimat tersebut sudah ditemukan semua.
+
+#### Penjelasan main program:
+- `cout << "Masukkan kalimat (tanpa kapital): ";` dan `getline(cin, kalimat);` merupakan kode dimana user dapat memasukkan kalimat untuk dilakukan pencarian suatu huruf.
+- `cout << "Masukkan huruf yang ingin Anda cari : ";` dan `cin >> huruf;` merupakan kode dimana user diminta untuk memasukkan suatu huruf yang ingin dicari.
+- `bool ketemu = binarysearch();` akan membuat program melakukan pencarian huruf menggunakan binary search pada kalimat yang telah diinput.
+- `search_vokalkonsonan();` akan membuat program melakukan pencarian dan penhitungan jumlah huruf vokal dan konsonan pada kalimat yang telah diinput.
+- Apabila huruf yang dicari ditemukan pada kalimat, maka program akan menampilkan hasil menggunakan `cout << "Huruf '" << huruf << "' ditemukan dalam kalimat." << endl;` dan menghasilkan output **Huruf '...' ditemukan dalam kalimat.**. Program juga akan mencetak banyaknya huruf vokal dan huruf konsonan pada kalimat tersebut.
+- Apabila huruf yang dicari tidak ditemukan pada kalimat, maka program akan menampilkan hasil menggunakan `out << "Huruf '" << huruf << "' tidak ditemukan dalam kalimat." << endl;` dan menghasilkan output **Huruf '...' tidak ditemukan dalam kalimat.**.. Program juga tetap akan mencetak banyaknya huruf vokal dan huruf konsonan pada kalimat tersebut.
+
+Pertama-tama, user akan diminta untuk memasukkan kalimat dengan huruf kecil pada semua karakternya. Selanjutnya, user diminta untuk memasukkan huruf yang ingin dicari. Huruf yang dicari bebas sesuai keinginan user, boleh terdapat pada kalimat, boleh juga yang tidak ada pada kalimat. Selanjutnya, program akan menjalankan pencarian menggunakan binary search untuk memproses apakah huruf yang dicari oleh user ditemukan pada kalimat atau tidak. 
+
+#### Penjelasan input oleh user:
+- **Masukkan kalimat (tanpa kapital): arra is a cat miaw** artinya user memasukkan kalimat "arra is a cat miaw".
+- **Masukkan huruf yang ingin Anda cari : a** artinya user ingin mencari huruf a pada kalimat tersebut.
+- **Huruf 'a' ditemukan dalam kalimat.** artinya huruf 'a' ada pada kalimat "arra is a cat miaw".
+- **Jumlah huruf vokal dalam kalimat: 7** artinya terdapat 7 huruf vokal pada kalimat tersebut yaitu a, a, i, a, a, i, a.
+- **Jumlah huruf konsonan dalam kalimat: 7** artinya terdapat 7 huruf konsonan pada kalimat tersebut yaitu r, r, s, c, t, m, w.
 
 #### Full code Screenshot:
-
+![Modul 4  Unguided 1 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/726e6ea3-a817-4aa0-b935-c0efc4bbfb2e)
+![Modul 4  Unguided 1 Full SS (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/1c79d7b8-4bb1-4fdb-8377-4ffaba48fc01)
+![Modul 4  Unguided 1 Full SS (3)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a7d1ba4c-5e8a-4161-b6b8-75c01890000d)
 
 ### 2. Buatlah sebuah program yang dapat menghitung banyaknya huruf vocal dalam sebuah kalimat!
 ```C++
@@ -316,7 +338,23 @@ int main () {
 #### Output:
 ![Modul 4  Unguided 2 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/2c63a954-702d-4983-a8f2-871376b9f83f)
 
-Kode tersebut digunakan untuk ...
+Kode tersebut digunakan untuk menghitung banyaknya huruf vocal dalam sebuah kalimat. Pertama-tama, user akan diminta untuk memasukkan kalimat bebas menggunakan huruf kapital maupun huruf kecil. `char huruf = tolower(kalimat[i]);` akan digunakan untuk mengkonversi seluruh huruf menjadi huruf kecil. Selanjutnya, program akan menjalankan pencarian menggunakan binary search untuk memproses jumlah huruf vokal pada kalimat tersebut.  
+
+- `string kalimat;` merupakan deklarasi untuk tipe data kalimat yaitu string. `int vokal = 0;` merupakan deklarasi untuk huruf vokal dimana inisialisasinya dimulai dari indeks ke 0.
+- `void search_vokal()` merupakan fungsi untuk melakukan pencarian huruf vokal pada suatu kalimat yang diinputkan oleh user.
+- `if (huruf == 'a'|| huruf == 'i' || huruf == 'u' || huruf == 'e' || huruf == 'o')` merupakan huruf vokal. Apabila ditemukan huruf-huruf tersebut dalam kalimat, maka program akan melakukan pencarian atau iterasi selanjutnya menggunakan `vokal++;` hingga semua huruf vokal pada kalimat tersebut ditemukan.
+- `void print_array()` akan mencetak jumlah huruf vokal yang ditemukan pada kalimat.
+- Apabila huruf vokal ditemukan pada kalimat tersebut atau `if (vokal > 0)`, maka program akan menjalankan `cout << "Jumlah huruf vokal = " << vokal;` dan menampilkan output **Jumlah huruf vokal = ...**.
+- Apabila huruf vokal tidak ditemukan pada kalimat tersebut, maka program akan menjalankan `cout << "Huruf vokal tidak ditemukan pada kalimat tersebut.";` dan menampilkan output **Huruf vokal tidak ditemukan pada kalimat tersebut.**
+
+#### Penjelasan main program:
+- `cout << "Masukkan kata atau kalimat: ";` dan `getline(cin, kalimat);` akan meminta user untuk memasukkan kalimat yang ingin dilakukan pengecekan huruf vokalnya.
+- `search_vokal();` akan memanggil fungsi untuk mencari dan menghitung jumlah huruf vokal pada kalimat yang telah diinput.
+- `print_array();` akan memanggil fungsi untuk menampilkan hasil pencarian dan peghitungan huruf vokal pada kalimat yang telah diinput.
+
+#### Penjelasan input oleh user:
+- **Masukkan kata atau kalimat: Ini hari sabtu** artinya user memasukkan "Ini hari sabtu" sebagai kalimat yang akan dilakukan pengecekan huruf vokalnya.
+- **Jumlah huruf vokal = 6** artinya terdapat 6 huruf vokal pada kalimat tersebut setelah dilakukan pencarian dan penghitungan oleh program. Huruf vokalnya yaitu i, i, a, i, a, u.
 
 #### Full code Screenshot:
 ![Modul 4  Unguided 2 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/bcd88b54-088c-4097-a38b-17cc08daf88b)
@@ -368,7 +406,21 @@ int main () {
 #### Output:
 ![Modul 4  Unguided 3 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/637724ac-d59f-4890-98f6-ab2332a27a5c)
 
-Kode tersebut digunakan untuk ...
+Kode tersebut digunakan untuk mengetahui berapa banyak angka 4 pada data menggunakan pencarian dengan algoritma Sequential Search. 
+- `int sequential_search(int arrData[], int panjangArray, int count_number)` digunakan untuk melakukan pencarian menggunakan sequential search. `int arrData[]` merupakan deklarasi untuk tipe data array yaitu integer. `int panjangArray` merupakan deklarasi untuk panjang array yaitu berupa data integer. `int count_number` merupakan deklarasi variabel untuk angka yang ingin dihitung jumlahnya pada suatu data. 
+- `int count = 0;` artinya inisialisasi dimulai dari indeks ke 0.
+- `for (int i = 0; i < panjangArray; i++)` merupakan perulangan yang digunakan untuk melakukan inisialisasi dan memeriksa apakah suatu elemen sama seperti angka yang dihitung banyak kemunculannya atau tidak. Sedangkan `if (arrData[i] == count_number)` digunakan untuk melakukan pengecekan elemen (apakah sama seperti angka yang ingin dihitiung banyak kemunculannya atau tidak). `count++` merupakan kode yang akan membuat program terus melakukan pe.ncarian karena angka yang dihitun jumlahnya masih ditemukan pada data array (`arrData[i] == count_number`).
+
+#### Penjelasan Main Program:
+- `int n = 10;` merupakan deklarasi dari banyaknya data tersebut. artinya banyak data tersebut sejumlah 10. Oleh karena itu nilai n adalah 10.
+- `int arrData[n] = {9, 4, 1, 4, 7, 10, 5, 4, 12, 4};` merupakan data bilangannya.
+- `int count_number = 4;` artinya angka 4 merupakan angka yang ingin dihitung banyak kemunculannya pada data tersebut.
+- `int panjangArray = sizeof(arrData) / sizeof(arrData[0]);` digunakan untuk menghitung panjang array.
+- `int count = sequential_search(arrData, panjangArray, count_number);` akan memanggil fungsi sequential search dan pencarian angka 4 akan dilakukan.
+- `cout << "Angka " << count_number << " pada data tersebut muncul sebanyak " << count << " kali." << endl;` digunakan untuk menampilkan banyaknya kemunculan angka 4 pada data tersebut.
+
+#### Penjelasan Output:
+- **Angka 4 pada data tersebut muncul sebanyak 4 kali** merupakan hasil dari pencarian dan penghitungan jumlah kemunculan angka 4 pada data tersebut yaitu sebanyak 4 kali. Terdapat 4 angka 4 pada data tersebut.
 
 #### Full code Screenshot:
 ![Modul 4  Unguided 3 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/dfc85afc-8241-49e8-aa6a-84220d09ef05)
@@ -376,8 +428,9 @@ Kode tersebut digunakan untuk ...
 
 
 ## Kesimpulan
-
+Searching merupakan algoritma untuk mencari elemen tertentu dalam sebuah array atau struktur data lainnya. Algoritma searching ada 2 yaitu sequential atau linear search dan binary search. Pada sequential search, pencarian dilakukan dengan cara memeriksa seluruh elemen secara satu persatu hingga elemen yang dicari ditemukan. Pada binary search, pencarian dilakukan dengan cara membagi data menjadi dua yaitu indeks awal - tengah dan indeks tengah - akhir. Selanjutnya, pencarian dilakukan dengan cara mengecek apakah elemen yang dicari lebih kecil atau lebih besar daripada nilai tengah. Pada sequential search, data tidak perlu diurutkan terlebih dahulu. Sedangkan pada binary search, data harus disorting terlebih dahulu supaya saat pencarian dilakukan, data sudah dalam keadaan urut. 
 
 ## Referensi
-- [1] 
-- [2] 
+- [1] Guntara, R.G., Algoritma dan Pemrograman Dasar : Menggunakan Bahasa Pemrograman C++ dengan Contoh Kasus Aplikasi untuk Bisnis dan Manajemen. Edisi Pertama. Sulawesi Selatan : CV. Ruang Tentor, 2023.
+- [2] Pasaribu, S.A., Algoritma dan Pemrograman dalam Bahasa Pascal dan C++. Edisi Pertama. Yogyakarta : Deepublish, 2023.
+- [3] Putro, S.S. et al., Algoritma Pemrograman. Edisi Pertama. Malang : Media Nusa Creative (MNC Publishing), 2019.
