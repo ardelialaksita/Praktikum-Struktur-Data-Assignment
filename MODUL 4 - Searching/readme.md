@@ -433,4 +433,8 @@ Searching merupakan algoritma untuk mencari elemen tertentu dalam sebuah array a
 ## Referensi
 - [1] Guntara, R.G., Algoritma dan Pemrograman Dasar : Menggunakan Bahasa Pemrograman C++ dengan Contoh Kasus Aplikasi untuk Bisnis dan Manajemen. Edisi Pertama. Sulawesi Selatan : CV. Ruang Tentor, 2023.
 - [2] Pasaribu, S.A., Algoritma dan Pemrograman dalam Bahasa Pascal dan C++. Edisi Pertama. Yogyakarta : Deepublish, 2023.
+<<<<<<< HEAD
 - [3] Putro, S.S. et al., Algoritma Pemrograman. Edisi Pertama. Malang : Media Nusa Creative (MNC Publishing), 2019.
+=======
+- [3] Putro, S.S. et al., Algoritma Pemrograman. Edisi Pertama. Malang : Media Nusa Creative (MNC Publishing), 2019.
+>>>>>>> 787b68aa519adcfdac2a26cf6d7c621b308d420e
