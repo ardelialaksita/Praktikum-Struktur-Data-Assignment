@@ -23,7 +23,7 @@ Sebuah semikolon (yang berada setelah kurung kurawal kanan) sangat penting untuk
 
 ## Guided 
 
-### 1. 
+### 1. Buatlah sebuah struktur dengan nama buku yang berisi judul_buku, pengarang, penerbit, tebal_halaman, harga_buku. Isi dengan nilai kemudian tampilkan.
 
 ```C++
 #include <iostream>
@@ -67,7 +67,7 @@ Kode di atas digunakan untuk
 #### Output Guided 1:
 
 
-### 2. 
+### 2. Buatlah sebuah struktur dengan skema seperti di bawah, isi dengan nilai kemudian jalankan. 
 
 ```C++
 #include <iostream>
