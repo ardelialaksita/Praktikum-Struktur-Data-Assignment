@@ -62,7 +62,25 @@ int main() {
 }
 
 ```
-Kode di atas digunakan untuk 
+Kode di atas digunakan untuk menampilkan struktur dengan nama buku yang berisi judul_buku, pengarang, penerbit, tebal_halaman, dan harga_buku. Struct buku tersebut digunakan untuk membuat suatu struktur data yang mewakili suatu buku. judul_buku, pengarang, penerbit, tebal_halaman, dan harga_buku merupakan field struct tersebut yang digunakan untuk menyimpan data buku tersebut. Program tersebut tidak menggunakan _input user_ karena datanya langsung diisi pada kode program. 
+
+Pada isi kode `struct buku { };` merupakan deklarasi struct buku tersebut yaitu judul buku, pengarang, dan penerbit yang bertipe data string, serta tebal halaman dan harga buku yang bertipe integer. `string judulBuku;`, `string pengarang;`, `string penerbit;`, `int tebalHalaman;`, `int hargaBuku;` merupakan bentuk deklarasinya. 
+
+Pada main program, terdapat variabel favorit yang digunakan untuk menyimpan data tentang suatu buku favorit. Variabel favorit dideklarasikan dengan `buku favorit;`. Setelah dideklarasikan, variabel tersebut diisi dengan data suatu buku menggunakan kode `favorit.(namaField): "...";`. 
+- `favorit.judulBuku = "The Alpha Girl's Guide";` artinya judul dari buku tersebut adalah The Alpha Girl's Guide.
+- `favorit.pengarang = "Henry Manampiring";` artinya pengarang dari buku tersebut adalah Henry Manampiring.
+- `favorit.penerbit = "Gagas Media";` artinya buku tersebut diterbitkan oleh Penerbit Gagas Media.
+- `favorit.tebalHalaman = 253;` artinya buku tersebut terdiri atas 253 halaman.
+- `favorit.hargaBuku = 79000;` artinya harga buku tersebut adalah Rp79.000,00.
+
+Untuk menampilkan informasi dari data buku yang telah diisi datanya yaitu dengan cara menggunakan cout yang menggunakan data-data pada isi dari favorit seperti berikut.
+- `cout << "\tBuku Favorit Saya" << endl;` digunakan untuk menampilkan _head of the information_ atau judul dari informasi tersebut yaitu "Buku Favorit Saya".
+- `cout << "\tJudul Buku : " << favorit.judulBuku << endl;` digunakan untuk menampilkan judul buku tersebut yaitu The Alpha Girl's Guide.
+- `cout << "\tPengarang : " << favorit.pengarang << endl;` digunakan untuk menampilkan pengarang buku tersebu yaitu Henry Manampiring.
+- `cout << "\tPenerbit : " << favorit.penerbit << endl;` digunakan untuk menampilkan penerbit buku tersebut yaitu Gagas Media.
+- `cout << "\tTebal Halaman: " << favorit.tebalHalaman << " halaman" << endl;` digunakan untuk menampilkan tebal halaman buku tersebut dimana `favorit.tebalHalaman` merupakan variabel yang akan menampilkan tebal halamannya.
+- `cout << "\tHarga Buku : Rp " << favorit.hargaBuku << endl;` digunakan untuk menampilkan harga buku dalam nominal rupiah.
+- - `/t` digunakan untuk membuat indentasi atau _space_ kosong pada suatu kode sehingga dapat dibaca dengan lebih terstruktur. 
 
 #### Output Guided 1:
 
@@ -134,7 +152,7 @@ int main() {
 }
 
 ```
-Kode tersebut digunakan untuk 
+Kode tersebut digunakan untuk menampilkan struktur dengan nama buku yang berisi judul_buku, pengarang, penerbit, tebal_halaman, harga_buku. 
 
 
 ## Unguided 
