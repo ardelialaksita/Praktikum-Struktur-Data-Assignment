@@ -64,7 +64,7 @@ int main() {
 ```
 Kode di atas digunakan untuk menampilkan struktur dengan nama buku yang berisi judul_buku, pengarang, penerbit, tebal_halaman, dan harga_buku. Struct buku tersebut digunakan untuk membuat suatu struktur data yang mewakili suatu buku. judul_buku, pengarang, penerbit, tebal_halaman, dan harga_buku merupakan field struct tersebut yang digunakan untuk menyimpan data buku tersebut. Program tersebut tidak menggunakan _input user_ karena datanya langsung diisi pada kode program. 
 
-Pada isi kode `struct buku { };` merupakan deklarasi struct buku tersebut yaitu judul buku, pengarang, dan penerbit yang bertipe data string, serta tebal halaman dan harga buku yang bertipe integer. `string judulBuku;`, `string pengarang;`, `string penerbit;`, `int tebalHalaman;`, `int hargaBuku;` merupakan bentuk deklarasinya. 
+Pada `struct buku { };` berisi kode-kode deklarasi struct buku tersebut yaitu judul buku, pengarang, dan penerbit yang bertipe data string, serta tebal halaman dan harga buku yang bertipe integer. `string judulBuku;`, `string pengarang;`, `string penerbit;`, `int tebalHalaman;`, `int hargaBuku;` merupakan bentuk deklarasinya. 
 
 Pada main program, terdapat variabel favorit yang digunakan untuk menyimpan data tentang suatu buku favorit. Variabel favorit dideklarasikan dengan `buku favorit;`. Setelah dideklarasikan, variabel tersebut diisi dengan data suatu buku menggunakan kode `favorit.(namaField): "...";`. 
 - `favorit.judulBuku = "The Alpha Girl's Guide";` artinya judul dari buku tersebut adalah The Alpha Girl's Guide.
