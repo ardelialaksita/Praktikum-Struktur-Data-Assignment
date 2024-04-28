@@ -19,7 +19,7 @@ Sebuah semikolon (yang berada setelah kurung kurawal kanan) sangat penting untuk
 - Struct memungkinkan anggota digunakan secara bersamaan.
 - Anggota atau elemen struct dapat didefinisikan dengan tipe yang berbeda.
 - Tipe struct yang telah didefinisikan dapat digunakan untuk mendeklarasikan variabel.
-- Pada akhir statement struct harus menggunakan sebuah semikolon. 
+- Pada akhir statement struct harus menggunakan sebuah semikolon (;).
 
 ## Guided 
 
