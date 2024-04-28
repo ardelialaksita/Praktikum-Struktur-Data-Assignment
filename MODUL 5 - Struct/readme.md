@@ -139,7 +139,8 @@ Kode tersebut digunakan untuk
 
 ## Unguided 
 
-### 1. 
+### 1. Modifikasi tugas guided pertama sehingga setiap item yang terdapat pada _struct_ buku berupa array yang berukuran 5. Isi dengan data, kemudian tampilkan.
+
 ```C++
 
 ```
@@ -158,7 +159,7 @@ Kode tersebut digunakan untuk
 #### Full code Screenshot:
 
 
-### 2. Buatlah sebuah program yang dapat menghitung banyaknya huruf vocal dalam sebuah kalimat!
+### 2. Apa yang terjadi jika deklarasi variabel _struct_ yang dibuat pada tugas guided I berjenis _Array_. Bagaimana cara mengisi data dan menampilkannya?
 ```C++
 
 ```
@@ -172,25 +173,6 @@ Kode tersebut digunakan untuk
 
 
 #### Penjelasan input oleh user:
-
-
-#### Full code Screenshot:
-
-
-### 3. 
-```C++
-
-```
-
-#### Output:
-
-
-Kode tersebut digunakan untuk 
-
-#### Penjelasan Main Program:
-
-
-#### Penjelasan Output:
 
 
 #### Full code Screenshot:
