@@ -156,7 +156,7 @@ Kode tersebut digunakan untuk menampilkan hewan dan kategorinya menggunakan stru
 
 **1) `struct hewan`**
   
-Field pada `struct hewan` yaitu namaHewan, jenisKelamin, caraBerkembangbiak, alatPernapasan, tempatHidup, dan termasuk karnivora atau tidak. Tipe data namaHewan, jenisKelamin, caraBerkembangbiak, alatPernapasan, dan tempatHidup adalah string karena terdapat lebih dari 1 karakter. Sedangkan karnivora menggunakan `bool Karnivora;` dimana tipe datanya adalah boolean karena kategori tersebut memiliki output true or false yang digunakan untuk menentukan apakah hewan tersebut termasuk karnivora atau tidak.
+Field pada `struct hewan` yaitu namaHewan, jenisKelamin, caraBerkembangbiak, alatPernapasan, tempatHidup, dan termasuk karnivora atau tidak. Tipe data namaHewan, jenisKelamin, caraBerkembangbiak, alatPernapasan, dan tempatHidup adalah string karena terdapat lebih dari 1 karakter. Sedangkan karnivora menggunakan `bool Karnivora;` dimana tipe datanya adalah boolean karena kategori tersebut memiliki output true or false yang digunakan untuk menentukan apakah hewan tersebut termasuk karnivora atau tidak. 
 
 **2) `struct hewanDarat`**
 
@@ -166,7 +166,20 @@ Field pada `struct hewan` yaitu jumlahKaki, menyusui, dan suara. Tipe data varia
 
 Field pada `struct hewanLaut` yaitu bentukSirip dan bentukPertahananDiri. Kedua variabel tesebut memiliki tipe data string karena data yang dimasukkan memiliki lebih dari 1 karakter. 
 
+#### Main Program:
+Pada main program, isi data pada struct. Pertama-tama, tentukan terlebih dahulu struct yang ingin digunakan dan nama hewannya. Penulisan kodenya yaitu `nama_struct nama_hewan;`. Selanjutnya, isi data dengan cara menuliskan kembali nama hewan dan _field_ struct yang digunakan dengan kode `nama_hewan.field`. Setelah itu, tampilkan seluruh data yang telah dimasukkan dengan menggunakan cout. Terakhir, kode return digunakan sebagai tanda bahwa program telah selesai dan berhasil. 
 
+`hewanDarat kelinci;`
+
+Jenis hewan yang akan dimasukkan datanya pada struct hewanDarat adalah kelinci. Isi datanya yaitu jumlahKaki, menyusui, dan suara. Ketik nama hewan terlebih dahulu sebelum menuliskan fieldnya. Data yang dimasukkan pada jumlahKaki kelinci adalah 4 yaitu pada kode `kelinci.jumlahKaki = 4;`. Untuk menampilkan data apakah kelinci menyusui atau tidak yaitu dengan kode `kelinci.menyusui = true;` yang artinya kelinci menyusui. Citcit merupakan data yang dimasukkan pada suara kelinci yaitu `kelinci.suara = "Citcit";`.
+
+`hewanLaut ikan;`
+
+Jenis hewan yang akan dimasukkan datanya pada struct hewanLaut adalah ikan. Isi datanya yaitu bentukSirip dan bentukPertahananDiri. `ikan.bentukSirip = "Sirip ekor";` digunakan untuk memasukkan data bentuk sirip ikan yaitu sirip ekor. Sedangkan `ikan.bentukPertahananDiri = "Sisik";` digunakan untuk memasukkan bentuk pertahanan diri ikan yaitu menggunakan sisik mereka.
+
+`hewan serigala;`
+
+Jenis hewan yang akan dimasukkan datanya pada struct hewan adalah serigala. Isi datanya memiliki cukup banyak kategori, antara lain namaHewan, jenisKelamin, caraBerkembangbiak, alatPernapasan, tempatHidup, dan termasuk karnivora atau tidak. `serigala.namaHewan = "Serigala";` untuk memasukkan data namaHewan yaitu serigala. `serigala.jenisKelamin = "Jantan";` untuk memasukkan data jenisKelamin serigala yaitu jantan. `serigala.caraBerkembangbiak = "Melahirkan";` untuk memasukkan data cara serigala berkembang biak yaitu dengan cara melahirkan. `serigala.alatPernafasan = "Paru-paru";` untuk memasukkan data alat pernapasan serigala yaitu paru-paru. `serigala.tempatHidup = "Hutan terbuka";` untuk memasukkan data tempat hidup serigala yaitu di hutan terbuka. `serigala.Karnivora = true;` untuk menampilkan data apakah serigala merupakan karnivora atau tidak. True artinya serigala merupakan karnivora. 
 
 #### Output Guided 2:
 ![Modul 5  Guided 2 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/267bcfff-2231-4bf4-a324-320923cfaf81)
