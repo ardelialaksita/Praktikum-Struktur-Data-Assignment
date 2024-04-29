@@ -160,11 +160,78 @@ Kode tersebut digunakan untuk menampilkan struktur dengan nama buku yang berisi 
 ### 1. Modifikasi tugas guided pertama sehingga setiap item yang terdapat pada _struct_ buku berupa array yang berukuran 5. Isi dengan data, kemudian tampilkan.
 
 ```C++
+#include <iostream>
+using namespace std;
+
+// mendefinisikan struktur buku dengan panjang array sebanyak 5 pada masing-masing kategori
+struct buku {
+    string judulBuku[5]; // deklarasi tipe data judulBuku dan banyak datanya
+    string pengarang[5]; // deklarasi tipe data pengarang dan banyak datanya
+    string penerbit[5]; // deklarasi tipe data penerbit dan banyak datanya
+    int tebalHalaman[5]; // deklarasi tipe data tebalHalaman dan banyak datanya
+    int hargaBuku[5]; // deklarasi tipe data hargaBuku dan banyak datanya
+};
+
+int main() {
+    // deklarasi variabel favorit dengan tipe buku
+    buku favorit;
+
+    // mengisi data ke dalam variabel favorit
+    // data buku pertama
+    favorit.judulBuku[0] = "Overthinking is My Hobby";
+    favorit.pengarang[0] = "Alvi Syahrin";
+    favorit.penerbit[0] = "Kawah Media";
+    favorit.tebalHalaman[0] = 268;
+    favorit.hargaBuku[0] = 99000;
+
+    //data buku kedua
+    favorit.judulBuku[1] = "Insecurity is My Middle Name";
+    favorit.pengarang[1] = "Alvi Syahrin";
+    favorit.penerbit[1] = "Kawah Media";
+    favorit.tebalHalaman[1] = 264;
+    favorit.hargaBuku[1] = 99000;
+
+    // data buku ketiga
+    favorit.judulBuku[2] = "Autumn in Paris";
+    favorit.pengarang[2] = "Ilana Tan";
+    favorit.penerbit[2] = "Gramedia Pustaka Utama";
+    favorit.tebalHalaman[2] = 260;
+    favorit.hargaBuku[2] = 79000;
+
+    // data buku keempat
+    favorit.judulBuku[3] = "The Star and I";
+    favorit.pengarang[3] = "Ilana Tan";
+    favorit.penerbit[3] = "Gramedia Pustaka Utama";
+    favorit.tebalHalaman[3] = 344;
+    favorit.hargaBuku[3] = 99000;
+
+    // data buku kelima
+    favorit.judulBuku[4] = "Teluk Alaska";
+    favorit.pengarang[4] = "Eka Aryani";
+    favorit.penerbit[4] = "Bumi Semesta Media";
+    favorit.tebalHalaman[4] = 408;
+    favorit.hargaBuku[4] = 99000;
+
+    // menampilkan seluruh informasi buku favorit
+    cout << "============ DAFTAR BUKU FAVORIT SAYA ============" << endl;
+    // perulangan for untuk menampilkan data masing-masing buku
+    for (int i=0; i < 5; i++) {
+        cout << "\n \tBuku ke-" << i+1 << endl;
+        cout << "\tJudul Buku    : " << favorit.judulBuku[i] << endl;
+        cout << "\tPengarang     : " << favorit.pengarang[i] << endl;
+        cout << "\tPenerbit      : " << favorit.penerbit[i] << endl;
+        cout << "\tTebal Halaman : " << favorit.tebalHalaman[i] << " halaman" << endl;
+        cout << "\tHarga Buku    : Rp " << favorit.hargaBuku[i] << endl;
+    }
+    // return sebagai kode bahwa program telah selesai dan berhasil
+    return 0;
+}
 
 ```
 
 #### Output:
-
+![Modul 5  Unguided 1 Output (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/14b4dbe3-8dc7-4ca2-a457-c9f0d828d6cc)
+![Modul 5  Unguided 1 Output (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/837fccf9-3914-4f2f-bcc6-01b751ccf0a8)
 
 Kode tersebut digunakan untuk 
 
@@ -175,7 +242,9 @@ Kode tersebut digunakan untuk
 
 
 #### Full code Screenshot:
-
+![Modul 5  Unguided 1 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/ebfc75c5-d0b4-4712-8d4b-793187798e47)
+![Modul 5  Unguided 1 Full SS (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/2f875429-a487-47b6-9893-58645292b72e)
+![Modul 5  Unguided 1 Full SS (3)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/9d684310-313e-4590-9f7f-0efb1271b7fd)
 
 ### 2. Apa yang terjadi jika deklarasi variabel _struct_ yang dibuat pada tugas guided I berjenis _Array_. Bagaimana cara mengisi data dan menampilkannya?
 ```C++
