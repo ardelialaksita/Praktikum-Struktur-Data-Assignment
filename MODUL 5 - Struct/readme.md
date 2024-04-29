@@ -262,13 +262,32 @@ int main() {
 ![Modul 5  Unguided 1 Output (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/14b4dbe3-8dc7-4ca2-a457-c9f0d828d6cc)
 ![Modul 5  Unguided 1 Output (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/837fccf9-3914-4f2f-bcc6-01b751ccf0a8)
 
-Kode tersebut digunakan untuk 
+Kode tersebut digunakan untuk menampilkan data tentang buku favorit dengan panjang 5 array sehingga terdapat 5 buku favorit. Kategori buku terdiri atas judulBuku, pengarang, penerbit, tebalHalaman, dan hargaBuku. Program tersebut tidak menggunakan _input user_ karena datanya langsung diisi pada kode program. 
+
+Pada `struct buku { };` berisi kode-kode deklarasi struct buku tersebut yaitu judul buku, pengarang, dan penerbit yang bertipe data string, serta tebal halaman dan harga buku yang bertipe integer. `string judulBuku;`, `string pengarang;`, `string penerbit;`, `int tebalHalaman;`, `int hargaBuku;` merupakan bentuk deklarasinya. 
 
 #### Penjelasan main program:
- 
+- `favorit.judulBuku[i]` digunakan untuk memasukkan data judul buku. 
+- `favorit.pengarang[i]` digunakan untuk memasukkan data pengarang buku.
+- `favorit.penerbit[i]` digunakan untuk memasukkan data penerbit buku.
+- `favorit.tebalHalaman[i]` digunakan untuk memasukkan data tebal halaman buku.
+- `favorit.hargaBuku[i]` digunakan untuk memasukkan data harga buku.
 
-#### Penjelasan input oleh user:
+`[i]` artinya indeks, digunakan untuk mengetahui posisi buku ke berapa yang datanya sedang dimasukkan. Karena panjang arraynya adalah 5, maka i-nya terdiri atas 0-4. Berikut penjelasan singkatnya.
 
+- `favorit.judulBuku[1] = "Insecurity is My Middle Name";` merupakan judul buku yang terletak pada indeks ke-1 yaitu "Insecurity is My Middle name".
+- `favorit.pengarang[1] = "Alvi Syahrin";` merupakan pengarang buku yang terletak pada indeks ke-1 yaitu Alvi Syahrin.
+- `favorit.penerbit[1] = "Kawah Media";` merupakan penerbit buku yang terletak pada indeks ke-1 yaitu Kawah Media.
+- `favorit.tebalHalaman[1] = 264;` merupakan tebal halaman buku yang terletak pada indeks ke-1 yaitu sebanyak 264 halaman.
+- `favorit.hargaBuku[1] = 99000;` merupakan harga buku yang terletak pada indeks ke-1 yaitu Rp99.000,00.
+
+Setelah data dimasukkan pada kode-kode di atas, buatlah kode untuk menampilkan data-data tersebut yaitu dengan menggunakan cout. `cout << "============ DAFTAR BUKU FAVORIT SAYA ============" << endl;` akan menampilkan _head_ atau _title of the program_ yaitu Daftar Buku Favorit Saya. 
+- `cout << "\tJudul Buku : " << favorit.judulBuku[i] << endl;` digunakan untuk menampilkan judul buku dengan memanggil kode `favorit.judulBuku[i]` untuk menampilkan data buku pada suatu indeks tertentu pada [i].
+- `cout << "\tPengarang : " << favorit.pengarang[i] << endl;` digunakan untuk menampilkan pengarang buku dengan memanggil kode `favorit.pengarang[i]` untuk menampilkan data buku pada suatu indeks tertentu pada [i].
+- `cout << "\tPenerbit : " << favorit.penerbit[i] << endl;` digunakan untuk menampilkan penerbit buku dengan memanggil kode `favorit.penerbit[i]` untuk menampilkan data buku pada suatu indeks tertentu pada [i].
+- `cout << "\tTebal Halaman: " << favorit.tebalHalaman[i] << " halaman" << endl;`digunakan untuk menampilkan tebal halaman buku dengan memanggil kode `favorit.tebalHalaman[i]` untuk menampilkan data buku pada suatu indeks tertentu pada [i].
+- `cout << "\tHarga Buku : Rp " << favorit.hargaBuku[i] << endl;` digunakan untuk menampilkan harga buku dengan memanggil kode `favorit.hargaBuku[i]` untuk menampilkan data buku pada suatu indeks tertentu pada [i].
+- - `/t` digunakan untuk membuat indentasi atau _space_ kosong pada suatu kode sehingga dapat dibaca dengan lebih terstruktur, fungsinya hampir sama seperti tab (membuat data lebih memiliki awalan yang agak menjorok).
 
 #### Full code Screenshot:
 ![Modul 5  Unguided 1 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/ebfc75c5-d0b4-4712-8d4b-793187798e47)
