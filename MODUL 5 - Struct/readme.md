@@ -83,7 +83,7 @@ Untuk menampilkan informasi dari data buku yang telah diisi datanya yaitu dengan
 - - `/t` digunakan untuk membuat indentasi atau _space_ kosong pada suatu kode sehingga dapat dibaca dengan lebih terstruktur. 
 
 #### Output Guided 1:
-
+![Modul 5  Guided 1 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/6354dcb2-ac68-46c9-8678-fad849bc978b)
 
 ### 2. Buatlah sebuah struktur dengan skema seperti di bawah, isi dengan nilai kemudian jalankan. 
 
@@ -152,8 +152,24 @@ int main() {
 }
 
 ```
-Kode tersebut digunakan untuk menampilkan struktur dengan nama buku yang berisi judul_buku, pengarang, penerbit, tebal_halaman, harga_buku. 
+Kode tersebut digunakan untuk menampilkan hewan dan kategorinya menggunakan struct yang memiliki _field_ yang berbeda-beda. Terdapat 3 struct pada program tersebut yaitu `struct hewan`, `struct hewanDarat`, dan `struct hewanLaut`. 
 
+**1) `struct hewan`**
+  
+Field pada `struct hewan` yaitu namaHewan, jenisKelamin, caraBerkembangbiak, alatPernapasan, tempatHidup, dan termasuk karnivora atau tidak. Tipe data namaHewan, jenisKelamin, caraBerkembangbiak, alatPernapasan, dan tempatHidup adalah string karena terdapat lebih dari 1 karakter. Sedangkan karnivora menggunakan `bool Karnivora;` dimana tipe datanya adalah boolean karena kategori tersebut memiliki output true or false yang digunakan untuk menentukan apakah hewan tersebut termasuk karnivora atau tidak.
+
+**2) `struct hewanDarat`**
+
+Field pada `struct hewan` yaitu jumlahKaki, menyusui, dan suara. Tipe data variabel jumlahKaki adalah integer karena jumlah kaki yang dimasukkan berbentuk numerik (angka). Variabel menyusui memiliki tipe data bool karena kategori tersebut memiliki output true atau false yang digunakan untuk menentukan apakah hewan tersebut menyusui atau tidak. Variabel suara memiliki tipe data string karena terdapat lebih dari 1 karakter. 
+
+**3) `struct hewanLaut`**
+
+Field pada `struct hewanLaut` yaitu bentukSirip dan bentukPertahananDiri. Kedua variabel tesebut memiliki tipe data string karena data yang dimasukkan memiliki lebih dari 1 karakter. 
+
+
+
+#### Output Guided 2:
+![Modul 5  Guided 2 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/267bcfff-2231-4bf4-a324-320923cfaf81)
 
 ## Unguided 
 
