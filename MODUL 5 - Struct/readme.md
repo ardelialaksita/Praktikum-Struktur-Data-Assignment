@@ -309,11 +309,11 @@ using namespace std;
 
 // mendefinisikan struktur buku dengan panjang array sebanyak 5 pada masing-masing kategori
 struct buku {
-    string judulBuku[5]; // deklarasi tipe data judulBuku dan banyak datanya
-    string pengarang[5]; // deklarasi tipe data pengarang dan banyak datanya
-    string penerbit[5]; // deklarasi tipe data penerbit dan banyak datanya
-    int tebalHalaman[5]; // deklarasi tipe data tebalHalaman dan banyak datanya
-    int hargaBuku[5]; // deklarasi tipe data hargaBuku dan banyak datanya
+    string judulBuku[3]; // deklarasi tipe data judulBuku dan banyak datanya
+    string pengarang[3]; // deklarasi tipe data pengarang dan banyak datanya
+    string penerbit[3]; // deklarasi tipe data penerbit dan banyak datanya
+    int tebalHalaman[3]; // deklarasi tipe data tebalHalaman dan banyak datanya
+    int hargaBuku[3]; // deklarasi tipe data hargaBuku dan banyak datanya
 };
 
 int main() {
@@ -342,24 +342,10 @@ int main() {
     favorit.tebalHalaman[2] = 260;
     favorit.hargaBuku[2] = 79000;
 
-    // data buku keempat
-    favorit.judulBuku[3] = "The Star and I";
-    favorit.pengarang[3] = "Ilana Tan";
-    favorit.penerbit[3] = "Gramedia Pustaka Utama";
-    favorit.tebalHalaman[3] = 344;
-    favorit.hargaBuku[3] = 99000;
-
-    // data buku kelima
-    favorit.judulBuku[4] = "Teluk Alaska";
-    favorit.pengarang[4] = "Eka Aryani";
-    favorit.penerbit[4] = "Bumi Semesta Media";
-    favorit.tebalHalaman[4] = 408;
-    favorit.hargaBuku[4] = 99000;
-
     // menampilkan seluruh informasi buku favorit
     cout << "============ DAFTAR BUKU FAVORIT SAYA ============" << endl;
     // perulangan for untuk menampilkan data masing-masing buku
-    for (int i=0; i < 5; i++) {
+    for (int i=0; i < 3; i++) {
         cout << "\n \tBuku ke-" << i+1 << endl;
         cout << "\tJudul Buku    : " << favorit.judulBuku[i] << endl;
         cout << "\tPengarang     : " << favorit.pengarang[i] << endl;
@@ -374,9 +360,8 @@ int main() {
 ```
 #### Output:
 ![Modul 5  Unguided 1 Output (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/14b4dbe3-8dc7-4ca2-a457-c9f0d828d6cc)
-![Modul 5  Unguided 1 Output (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/837fccf9-3914-4f2f-bcc6-01b751ccf0a8)
 
-Program tersebut sama seperti yang telah dijelaskan pada unguided 1. Pada deklarasi tipe data anggota struct, kita masukkan terlebih dahulu panjang dari array yang diinginkan. Program tersebut memiliki 5 sebagai panjang arraynya. Buatlah main program yang berisi deklarasi dari penggunaan struct. Selanjutnya isilah data sesuai anggota struct yang telah dibuat. Banyak data yang dimasukkan menyesuaikan [i] pada panjang arraynya. Karena 5 adalah panjang arraynya, maka data buku yang dimasukkan ada 5. Untuk menampilkan seluruh informasi dari seluruh data yang dimasukkan yaitu dengan menggunakan perulangan for (for loop) seperti pada `for (int i=0; i < 5; i++)`. 
+Program tersebut sama seperti yang telah dijelaskan pada unguided 1. Pada deklarasi tipe data anggota struct, kita masukkan terlebih dahulu panjang dari array yang diinginkan. Program tersebut memiliki 3 sebagai panjang arraynya. Buatlah main program yang berisi deklarasi dari penggunaan struct. Selanjutnya isilah data sesuai anggota struct yang telah dibuat. Banyak data yang dimasukkan menyesuaikan [i] pada panjang arraynya. Karena 5 adalah panjang arraynya, maka data buku yang dimasukkan ada 3. Untuk menampilkan seluruh informasi dari seluruh data yang dimasukkan yaitu dengan menggunakan perulangan for (for loop) seperti pada `for (int i=0; i < 3; i++)`. 
 
 #### Full code Screenshot:
 ![Modul 5  Unguided 1 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/ebfc75c5-d0b4-4712-8d4b-793187798e47)
