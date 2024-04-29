@@ -86,6 +86,7 @@ Untuk menampilkan informasi dari data buku yang telah diisi datanya yaitu dengan
 ![Modul 5  Guided 1 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/6354dcb2-ac68-46c9-8678-fad849bc978b)
 
 ### 2. Buatlah sebuah struktur dengan skema seperti di bawah, isi dengan nilai kemudian jalankan. 
+![output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/4ae54a83-6dae-4d1f-943c-d545be252d5e)
 
 ```C++
 #include <iostream>
@@ -293,6 +294,7 @@ Setelah data dimasukkan pada kode-kode di atas, buatlah kode untuk menampilkan d
 ![Modul 5  Unguided 1 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/ebfc75c5-d0b4-4712-8d4b-793187798e47)
 ![Modul 5  Unguided 1 Full SS (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/2f875429-a487-47b6-9893-58645292b72e)
 ![Modul 5  Unguided 1 Full SS (3)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/9d684310-313e-4590-9f7f-0efb1271b7fd)
+
 
 ### 2. Apa yang terjadi jika deklarasi variabel _struct_ yang dibuat pada tugas guided I berjenis _Array_. Bagaimana cara mengisi data dan menampilkannya?
 Jika deklarasi variabel _struct_ yang dibuat pada tugas guided I berjenis _Array_, maka data-data yang dimasukkan akan menyesuaikan posisi indeks[i] setiap elemen array terlebih dahulu. Variabel favorit dideklarasikan sebagai array dari struct buku pada program berikut. Struct akan dideklarasikan terlebih dahulu dengan menyesuaikan panjang array yang diinginkan. Panjang array diisikan pada [i].
