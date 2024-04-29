@@ -295,33 +295,102 @@ Setelah data dimasukkan pada kode-kode di atas, buatlah kode untuk menampilkan d
 ![Modul 5  Unguided 1 Full SS (3)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/9d684310-313e-4590-9f7f-0efb1271b7fd)
 
 ### 2. Apa yang terjadi jika deklarasi variabel _struct_ yang dibuat pada tugas guided I berjenis _Array_. Bagaimana cara mengisi data dan menampilkannya?
-Jika deklarasi variabel _struct_ yang dibuat pada tugas guided I berjenis _Array_, maka data-data yang dimasukkan akan menyesuaikan posisi indeks[i] setiap elemen array terlebih dahulu. Variabel favorit dideklarasikan sebagai array dari struct buku pada program berikut. 
+Jika deklarasi variabel _struct_ yang dibuat pada tugas guided I berjenis _Array_, maka data-data yang dimasukkan akan menyesuaikan posisi indeks[i] setiap elemen array terlebih dahulu. Variabel favorit dideklarasikan sebagai array dari struct buku pada program berikut. Struct akan dideklarasikan terlebih dahulu dengan menyesuaikan panjang array yang diinginkan. Panjang array diisikan pada [i].
 
-Cara mengisi data dan menampilkannya yaitu dengan menggunakan perulangan for (loop for) sehingga apabila `i=0; i< jumlahBuku; i++`, maka program akan mencetak data menggunakan cout yang memanggil `favorit.judulBuku[i]`, `favorit.pengarang[i]`, `favorit.penerbit[i]`, `favorit.tebalHalaman[i]`, dan `favorit.hargaBuku[i]` dimana data telah dimasukkan sebelumnya dengan menyesuaikan indeks masing-masing elemen array. `[i]` artinya indeks, digunakan untuk mengetahui posisi buku ke berapa yang datanya sedang dimasukkan. Karena panjang arraynya adalah 5, maka i-nya terdiri atas 0-4. Berikut penjelasan singkatnya.
+Cara mengisi datanya yaitu dengan menggunakan `nama_variabel.anggota_struct[i]`. Pengisiannya akan menyesuaikan [i] pada setiap elemen array. 
 
-Berikut kode programnya.
+Cara menampilkan datanya yaitu dengan menggunakan perulangan for (loop for) sehingga apabila `i=0; i< jumlahBuku; i++`, maka program akan mencetak data menggunakan cout yang memanggil `favorit.judulBuku[i]`, `favorit.pengarang[i]`, `favorit.penerbit[i]`, `favorit.tebalHalaman[i]`, dan `favorit.hargaBuku[i]` dimana data telah dimasukkan sebelumnya dengan menyesuaikan indeks masing-masing elemen array. `[i]` artinya indeks, digunakan untuk mengetahui posisi buku ke berapa yang datanya sedang dimasukkan. Karena panjang arraynya adalah 5, maka i-nya terdiri atas 0-4. Berikut penjelasan singkatnya.
+
+Berikut contoh kode programnya.
 
 ```C++
+#include <iostream>
+using namespace std;
+
+// mendefinisikan struktur buku dengan panjang array sebanyak 5 pada masing-masing kategori
+struct buku {
+    string judulBuku[5]; // deklarasi tipe data judulBuku dan banyak datanya
+    string pengarang[5]; // deklarasi tipe data pengarang dan banyak datanya
+    string penerbit[5]; // deklarasi tipe data penerbit dan banyak datanya
+    int tebalHalaman[5]; // deklarasi tipe data tebalHalaman dan banyak datanya
+    int hargaBuku[5]; // deklarasi tipe data hargaBuku dan banyak datanya
+};
+
+int main() {
+    // deklarasi variabel favorit dengan tipe buku
+    buku favorit;
+
+    // mengisi data ke dalam variabel favorit
+    // data buku pertama
+    favorit.judulBuku[0] = "Overthinking is My Hobby";
+    favorit.pengarang[0] = "Alvi Syahrin";
+    favorit.penerbit[0] = "Kawah Media";
+    favorit.tebalHalaman[0] = 268;
+    favorit.hargaBuku[0] = 99000;
+
+    //data buku kedua
+    favorit.judulBuku[1] = "Insecurity is My Middle Name";
+    favorit.pengarang[1] = "Alvi Syahrin";
+    favorit.penerbit[1] = "Kawah Media";
+    favorit.tebalHalaman[1] = 264;
+    favorit.hargaBuku[1] = 99000;
+
+    // data buku ketiga
+    favorit.judulBuku[2] = "Autumn in Paris";
+    favorit.pengarang[2] = "Ilana Tan";
+    favorit.penerbit[2] = "Gramedia Pustaka Utama";
+    favorit.tebalHalaman[2] = 260;
+    favorit.hargaBuku[2] = 79000;
+
+    // data buku keempat
+    favorit.judulBuku[3] = "The Star and I";
+    favorit.pengarang[3] = "Ilana Tan";
+    favorit.penerbit[3] = "Gramedia Pustaka Utama";
+    favorit.tebalHalaman[3] = 344;
+    favorit.hargaBuku[3] = 99000;
+
+    // data buku kelima
+    favorit.judulBuku[4] = "Teluk Alaska";
+    favorit.pengarang[4] = "Eka Aryani";
+    favorit.penerbit[4] = "Bumi Semesta Media";
+    favorit.tebalHalaman[4] = 408;
+    favorit.hargaBuku[4] = 99000;
+
+    // menampilkan seluruh informasi buku favorit
+    cout << "============ DAFTAR BUKU FAVORIT SAYA ============" << endl;
+    // perulangan for untuk menampilkan data masing-masing buku
+    for (int i=0; i < 5; i++) {
+        cout << "\n \tBuku ke-" << i+1 << endl;
+        cout << "\tJudul Buku    : " << favorit.judulBuku[i] << endl;
+        cout << "\tPengarang     : " << favorit.pengarang[i] << endl;
+        cout << "\tPenerbit      : " << favorit.penerbit[i] << endl;
+        cout << "\tTebal Halaman : " << favorit.tebalHalaman[i] << " halaman" << endl;
+        cout << "\tHarga Buku    : Rp " << favorit.hargaBuku[i] << endl;
+    }
+    // return sebagai kode bahwa program telah selesai dan berhasil
+    return 0;
+}
 
 ```
-
 #### Output:
+![Modul 5  Unguided 1 Output (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/14b4dbe3-8dc7-4ca2-a457-c9f0d828d6cc)
+![Modul 5  Unguided 1 Output (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/837fccf9-3914-4f2f-bcc6-01b751ccf0a8)
 
-
-Kode tersebut digunakan untuk 
-
-#### Penjelasan main program:
-
-
-#### Penjelasan input oleh user:
-
+Program tersebut sama seperti yang telah dijelaskan pada unguided 1. Pada deklarasi tipe data anggota struct, kita masukkan terlebih dahulu panjang dari array yang diinginkan. Program tersebut memiliki 5 sebagai panjang arraynya. Buatlah main program yang berisi deklarasi dari penggunaan struct. Selanjutnya isilah data sesuai anggota struct yang telah dibuat. Banyak data yang dimasukkan menyesuaikan [i] pada panjang arraynya. Karena 5 adalah panjang arraynya, maka data buku yang dimasukkan ada 5. Untuk menampilkan seluruh informasi dari seluruh data yang dimasukkan yaitu dengan menggunakan perulangan for (for loop) seperti pada `for (int i=0; i < 5; i++)`. 
 
 #### Full code Screenshot:
-
+![Modul 5  Unguided 1 Full SS (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/ebfc75c5-d0b4-4712-8d4b-793187798e47)
 
 
 ## Kesimpulan
- 
+Struct adalah salah satu tipe data di C++ yang memungkinkan kita untuk menggabungkan beberapa tipe data dengan banyak elemen dan objek yang kompleks. Isinya dapat berupa variabel dan fungsi sebagai anggotanya. Karakteristik utama struct yaitu dapat menggabungkan tipe data, merepresentasikan data kompleks, pengaksesan field, _struct bindings_, dan dapat meningkatkan kejelasan kode.  Penggunaan struct harus diakhiri dengan semikolon (;) setelah kurung kurawal pada definisi struct. Deklarasi struct mendefinisikan tipe data baru. Struct termasuk tipe data komposit dan tidak dapat menggunakan operasi relasional untuk perbandingannya secara langsung. 
 
 ## Referensi
-- [1] 
+- [1] Farrier, J., Data Structures and Algorithms with the C++ STL. Edisi Pertama. Birmingham : Packt Publishing Ltd, 2024.
+- [2] Guntara, R.G., Algoritma dan Pemrograman Dasar : Menggunakan Bahasa Pemrograman C++ dengan Contoh Kasus Aplikasi untuk Bisnis dan Manajemen. Edisi Pertama. Sulawesi Selatan : CV. Ruang Tentor, 2023.
+- [3] Nengsih, Y.G., et al., Konsep Algoritma dan Pemrograman : Mengenal Konsep Dasar dan Praktis dalam Bahasa Pascal dan C. Edisi Pertama. Bandung : INDIE PRESS, 2022.
+- [4] Putro, S.S. et al., Algoritma Pemrograman. Edisi Pertama. Malang : Media Nusa Creative (MNC Publishing), 2019.
+- [5] Satrio, E. dan Pakpahan, S., Pemrograman C++ untuk Pembelajar Mandiri. Jakarta : Penerbit CAHAYA INFORMATIKA, 2019.
+- [6] Siahaan, V. dan Sianipar, R.H., Buku Pintar Pemrograman C++. Sumatera Utara : Balige Publishing, 2020.
+- [7] Siahaan, V. dan Sianipar, R.H., Pemrograman C++. Sumatera Utara : Sparta Publisher, 2019.
+- [8] Siahaan, V. dan Sianipar, R.H., THREE COOKBOOKS IN ONE: Visual C++, Visual Basic, Visual C#. Sumatera Utara : Balige Publishing, 2020.
