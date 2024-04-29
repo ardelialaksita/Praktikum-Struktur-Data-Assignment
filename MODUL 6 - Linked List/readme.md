@@ -232,10 +232,16 @@ int main() {
 }
 
 ```
-Kode di atas digunakan untuk 
+Kode di atas digunakan untuk mengoperasikan suatu data menggunakan single linked list dimana terdapat opsi untuk menambah, menghapus, membersihkan, dan mengubah data pada suatu list. Pada main program harus terdapat init(); untuk menginisialisasi capsul nodenya. Selanjutnya, kita hanya perlu memanggil fungsi void yang diinginkan. Angka yang ada pada tanda kurung ( ) merupakan data yang akan ditambahkan, dihapus, dan diubah sesuai dengan posisinya. Return 0 digunakan sebagai tanda bahwa program telah selesai dan berhasil. Int merupakan deklarasi suatu variabel bahwa tipe data variabel tersebut adalah integer. 
+
+Insert data bisa dilakukan di depan list menggunakan `void insertDepan(int nilai)` dimana node baru akan ditambahkan pada head, sedangkan node head sebelumnya akanberpindah posisi menjadi data tengah. Insert data bisa juga dilakukan di belakang list menggunakan `void insertBelakang(int nilai)` dimana node baru akan ditambahkan pada tail, sedangkan node tail sebelumnya akan berpindah posisi menjadi data tengah. Insert data di tengah dapat menggunakan `void insertTengah(int data, int posisi)` dimana node baru akan ditambahkan pada tengah-tengah data sesuai dengan posisi yang dimasukkan. Pada Insert Tengah ini sedikit berbeda dengan Insert Depan dan Insert Belakang karena harus menentukan posisi mana yang ingin diubah menggunakan indeks [i].
+
+Hapus depan menggunakan kode `void hapusDepan()` bertujuan untuk menghapus data yang berada di posisi head, lalu data yang berada pada next posisi head akan dipindahkan menjadi posisi head. Hapus belakang menggunakan kode `void hapusBelakang()` bertujuan untuk menghapus data yang berada di posisi tail, lalu data yang berada pada previous posisi tail akan dipindahkan menjadi posisi tail. Hapus tengah menggunakan kode `void hapusTengah(int posisi)` akan menghapus data di tengah sesuai dengan posisi yang dimasukkan. Hapus seluruh list juga dapat dilakukan yaitu dengan menggunakan `void clearList()` dimana semua node akan dihapus sehingga list menjadi kosong.
+
+Ubah depan menggunakan kode `void ubahDepan(int data)` bertujuan untuk mengubah data pada posisi head sesuai dengan angka baru yang dimasukkan. Ubah belakang menggunakan kode `void ubahBelakang(int data)` bertujuan untuk mengubah data pada posisi tail sesuai dengan angka baru yang dimasukkan. Ubah tengah menggunakan kode `void ubahTengah(int data, int posisi)` bertujuan untuk mengubah data yang ada di posisi tengah sesuai dengan posisi yang dimasukkan. 
 
 #### Output Guided 1:
-
+![Modul 6  Guided 1 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/dc0e27f0-f13a-44a8-aba5-a0d4064e654f)
 
 ### 2. Double Linked List 
 
