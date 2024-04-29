@@ -295,6 +295,12 @@ Setelah data dimasukkan pada kode-kode di atas, buatlah kode untuk menampilkan d
 ![Modul 5  Unguided 1 Full SS (3)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/9d684310-313e-4590-9f7f-0efb1271b7fd)
 
 ### 2. Apa yang terjadi jika deklarasi variabel _struct_ yang dibuat pada tugas guided I berjenis _Array_. Bagaimana cara mengisi data dan menampilkannya?
+Jika deklarasi variabel _struct_ yang dibuat pada tugas guided I berjenis _Array_, maka data-data yang dimasukkan akan menyesuaikan posisi indeks[i] setiap elemen array terlebih dahulu. Variabel favorit dideklarasikan sebagai array dari struct buku pada program berikut. 
+
+Cara mengisi data dan menampilkannya yaitu dengan menggunakan perulangan for (loop for) sehingga apabila `i=0; i< jumlahBuku; i++`, maka program akan mencetak data menggunakan cout yang memanggil `favorit.judulBuku[i]`, `favorit.pengarang[i]`, `favorit.penerbit[i]`, `favorit.tebalHalaman[i]`, dan `favorit.hargaBuku[i]` dimana data telah dimasukkan sebelumnya dengan menyesuaikan indeks masing-masing elemen array. `[i]` artinya indeks, digunakan untuk mengetahui posisi buku ke berapa yang datanya sedang dimasukkan. Karena panjang arraynya adalah 5, maka i-nya terdiri atas 0-4. Berikut penjelasan singkatnya.
+
+Berikut kode programnya.
+
 ```C++
 
 ```
