@@ -1,8 +1,7 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-// PROGRAM SINGLE LINKED LIST CIRCULAR
+/// PROGRAM SINGLE LINKED LIST CIRCULAR
 
 // Deklarasi Struct Node
 struct Node {
@@ -19,9 +18,9 @@ void init() {
 
 // Pengecekan
 int isEmpty() {
-    if (head == NULL) {
+    if (head == NULL)
         return 1; // true
-    } else
+    else
         return 0; // false
 }
 
@@ -35,7 +34,7 @@ void buatNode(string data) {
 // Hitung List
 int hitungList() {
     bantu = head;
-    int jumlah = 0
+    int jumlah = 0;
 
     while (bantu != NULL) {
         jumlah++;
@@ -47,7 +46,7 @@ int hitungList() {
 
 // Tambah Depan
 void insertDepan(string data) {
-    // Buat Node Baru
+    // Buat Node baru
     buatNode(data);
 
     if (isEmpty() == 1) {
@@ -86,24 +85,25 @@ void insertBelakang(string data) {
 
 // Tambah Tengah
 void insertTengah(string data, int posisi) {
-    if (isEmpty() == 1) 
+    if (isEmpty() == 1) {
         head = baru;
         tail = head;
         baru->next = head;
-} else {
-    baru->data = data;
+    } else {
+        baru->data = data;
 
-    // transversing
-    int nomor = 1;
-    bantu = head;
+        // transversing
+        int nomor = 1;
+        bantu = head;
 
-    while (nomor < posisi - 1) {
-        bantu = bantu->next;
-        nomor++;
+        while (nomor < posisi -1) {
+            bantu = bantu->next;
+            nomor++;
+        }
+
+        baru->next = bantu->next;
+        bantu->next = baru;
     }
-
-    baru->next = bantu->next;
-    bantu->next = baru;
 }
 
 // Hapus Depan
@@ -162,7 +162,7 @@ void hapusBelakang() {
 // Hapus Tengah
 void hapusTengah(int posisi) {
     if (isEmpty() == 0) {
-        // transversing
+        // transvering
         int nomor = 1;
         bantu = head;
 
@@ -185,7 +185,7 @@ void clearList() {
         hapus = head->next;
 
         while (hapus != head) {
-            bantu = hapus->next;
+            bantu = hapus-> next;
             delete hapus;
             hapus = bantu;
         }
