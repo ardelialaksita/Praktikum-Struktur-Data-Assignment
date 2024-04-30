@@ -9,10 +9,26 @@
 5. [Referensi](#referensi)
 
 ## Dasar Teori
+Linked List artinya 'senarai berkait' yaitu struktur data yang berisi kumpulan data yang tersusun secara sekuensial, saling berkaitan dan bersambungan, dinamis, dan terbatas. Terdapat simpul dalam linked list atau yang biasa dikenal dengan _node_. Setiap node akan memiliki _field_ bertipe struct yang sama untuk digunakan sebagai pointer. Linked list dapat menjadi suboptimal, tapi hanya untuk beberapa kasus yang spesifik (diutamakan pada tipe data dan datasets yang sangat luas) [1]. Linked list bagus digunakan untuk menulis algoritma yang bekerja untuk seluruh koleksi linear sehingga tidak perlu diimplementasikan berulang kali untuk setiap tipe linear [3]. 
 
+Terdapat 4 _fields_ pada linked list yang didefinisikan dengan nama berikut:
+- Row : indeks dari row dimana elemen bukan 0 diposisikan [2].
+- Column : indeks dari kolom dimana elemen bukan 0 diposisikan [2].
+- Value : nilai dari elemen bukan 0 diposisikan pada indeks (row, column) [2].
+- Next node : menempatkan alamat atau _address_ dari node selanjutnya [2].
 
-### Penerapan atau Penggunaan Struct :
-- 
+Linked list terdiri atas jumlah nodes beserta nilainya dimana dihasilkan dari _runtime_ [3]. Linked list ada 2 yaitu :
+1) Single linked list : satu arah, hanya ada satu pointer yang menghubungkan setiap nodenya.
+2) Double linked list : dua arah, ada lebih dari 1 pointer yang menghubungkan setiap nodenya. Double linked List memiliki karakteristik yang bermanfaat dalamm situasi _multi-thread_ atau berkesinambungan, tetapi juga memerlukan kehati-hatian [1].
+
+### Jenis-jenis Linked List :
+- Linked List Circular
+
+Linked List Circular adalah linked list yang berguna untuk menyimpan data yang membutuhkan akses secara berulang. Node terakhirnya tidak memiliki value (NULL). Pada linked list circular, node tail terhubung dengan node head sehingga membutuhkan _dummy node_ bernama _current_. Operasi pada linked list circular yaitu deklarasi node, membuat dan menginisialisasi pointer head dan tail, pengecekan kondisi linked list, pembuatan node, penambahan node, pengubahan node, penghapusan node, dan menampilkan data linked list. 
+
+- Linked List Non Circular
+
+Linked List Non Circular adalah linked list yang tidak memiliki keterkaitan antara node head (node pertama) dan node tail (node terakhir) sehingga tidak saling terhubung. Operasinya yaitu ada deklarasi node, membuat dan menginisialisasi pointer head dan tail, pengecekan kondisi linked list, penambahan node, pengubahan node, penghapusan node, dan menampilkan data linked list.
 
 ## Guided 
 
@@ -232,10 +248,16 @@ int main() {
 }
 
 ```
-Kode di atas digunakan untuk 
+Kode di atas digunakan untuk mengoperasikan suatu data menggunakan single linked list dimana terdapat opsi untuk menambah, menghapus, membersihkan, dan mengubah data pada suatu list. Pada main program harus terdapat init(); untuk menginisialisasi capsul nodenya. Selanjutnya, kita hanya perlu memanggil fungsi void yang diinginkan. Angka yang ada pada tanda kurung ( ) merupakan data yang akan ditambahkan, dihapus, dan diubah sesuai dengan posisinya. Return 0 digunakan sebagai tanda bahwa program telah selesai dan berhasil. Int merupakan deklarasi suatu variabel bahwa tipe data variabel tersebut adalah integer. 
+
+Insert data bisa dilakukan di depan list menggunakan `void insertDepan(int nilai)` dimana node baru akan ditambahkan pada head, sedangkan node head sebelumnya akanberpindah posisi menjadi data tengah. Insert data bisa juga dilakukan di belakang list menggunakan `void insertBelakang(int nilai)` dimana node baru akan ditambahkan pada tail, sedangkan node tail sebelumnya akan berpindah posisi menjadi data tengah. Insert data di tengah dapat menggunakan `void insertTengah(int data, int posisi)` dimana node baru akan ditambahkan pada tengah-tengah data sesuai dengan posisi yang dimasukkan. Pada Insert Tengah ini sedikit berbeda dengan Insert Depan dan Insert Belakang karena harus menentukan posisi mana yang ingin diubah menggunakan indeks [i].
+
+Hapus depan menggunakan kode `void hapusDepan()` bertujuan untuk menghapus data yang berada di posisi head, lalu data yang berada pada next posisi head akan dipindahkan menjadi posisi head. Hapus belakang menggunakan kode `void hapusBelakang()` bertujuan untuk menghapus data yang berada di posisi tail, lalu data yang berada pada previous posisi tail akan dipindahkan menjadi posisi tail. Hapus tengah menggunakan kode `void hapusTengah(int posisi)` akan menghapus data di tengah sesuai dengan posisi yang dimasukkan. Hapus seluruh list juga dapat dilakukan yaitu dengan menggunakan `void clearList()` dimana semua node akan dihapus sehingga list menjadi kosong.
+
+Ubah depan menggunakan kode `void ubahDepan(int data)` bertujuan untuk mengubah data pada posisi head sesuai dengan angka baru yang dimasukkan. Ubah belakang menggunakan kode `void ubahBelakang(int data)` bertujuan untuk mengubah data pada posisi tail sesuai dengan angka baru yang dimasukkan. Ubah tengah menggunakan kode `void ubahTengah(int data, int posisi)` bertujuan untuk mengubah data yang ada di posisi tengah sesuai dengan posisi yang dimasukkan. 
 
 #### Output Guided 1:
-
+![Modul 6  Guided 1 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/dc0e27f0-f13a-44a8-aba5-a0d4064e654f)
 
 ### 2. Double Linked List 
 
@@ -377,10 +399,13 @@ int main() {
 }
 
 ```
-Kode tersebut digunakan untuk 
+Kode tersebut digunakan untuk menambah, menghapus, memperbarui, membersihkan, dan menampilkan data. Program tersebut menggunakan class node dan class DoublyLinkedList. Terdapat program menu juga yang memuat Add data, Delete data, Update Data, Clear Data, dan Display Data pada masing-masing casenya. Void push digunakan untuk menambahkan data (Add data) yang dipanggil pada case 1. Void pop digunakan untuk menghapus data (Delete data) yang dipanggil pada case 2. Void update digunakan untuk memperbarui data (update) yang dipanggil pada case 3. Void deleteAll digunakan untuk membersihkan atau menghapus seluruh isi list (Clear data) yang dipanggil pada case 4. Void display digunakan untuk menampilkan seluruh data saat ini (Display data) yang dipanggil pada case 5. Sedangkan case 6 digunakan apabila user ingin keluar (exit). Apabila pilihan yang dimasukkan tidak terdapat pada case 1,2,3,4,5, dan 6, maka program akan menjalankan default yaitu menampilkan "Invalid Choice". Terakhir, return 0 merupakan tanda bahwa program telah selesai dan berhasil.
+
+Pada output berikut, user memilih menu 1 untuk menambahkan data. Kemudian user menambahkan angka 1. Program akan menampilkan program menu lagi dan user diminta memilih menu kembali. User memilih 1 untuk Add data lagi yaitu angka 2. Proses ini berlangsung hingga angka 5 secara berurutan sehingga saat ini terdapat 5 angka dalam list. Selanjutnya, user memilih menu 5 untuk menampilkan seluruh data menggunakan (Display Data). 
 
 #### Output Guided 2:
-
+![Modul 6  Guided 2 Output (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e6a3fd75-b71d-4a0d-a2b0-68675ae08611)
+![Modul 6  Guided 2 Output (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/9d774885-6db2-4261-9378-59ebc2caceb6)
 
 ### 3. Linked List Circular
 
@@ -622,10 +647,10 @@ int main() {
 }
 
 ```
-Kode tersebut digunakan untuk 
+Kode tersebut digunakan untuk menambahkan data (insert) dan menghapus data (hapus). Program dapat melakukan insert data di depan, tengah, dan belakang. Program juga dapat menghapus data di depan, tengah, belakang, bahkan menghapus seluruh data sehingga list menjadi kosong. Data ditampilkan menggunakan fungsi void tampil( ). Pada main program, ditambahkan data ayam pada head data menggunakan insertDepan. Selanjutnya data ditampilkan. Lalu, ditambahkan bebek pada head lagi sehingga ayam berpindah posisi menjadi data belakang karena hanya terdapat 2 data yaitu depan dan belakang. Selanjutnya, ditambahkan data pada tail menggunakan insertBelakang yaitu "Cicak". Ditambahkan lagi "Domba" pada tail menggunakan insertBelakang sehingga posisi cicak berpindah posisi menjadi data tengah. Hasil saat ini yaitu "Bebek, Ayam, Cicak, Domba". Dilakukan hapus data bagian belakang sehingga domba hilang dan cicak menjadi tail. Lalu ditambahkan data pada posisi kedua menggunakan kode `insertTengah("Sapi", 2);`. Lalu, data pada posisi kedua dihapus menggunakan `hapusTengah(2);`. Return menjadi tanda bahwa program telah selesai dan berhasil. Hasil akhir datanya adalah **Ayam, Sapi, Cicak**. Berikut outputnya.
 
 #### Output Guided 3:
-
+![Modul 6  Guided 3 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/55db1b3d-d1bf-47fe-a06d-bd29351ad125)
 
 ## Unguided 
 Buatlah program menu Linked List Non Circular untuk menyimpan Nama dan NIM mahasiswa, dengan menggunakan _input_ dari _user_.
@@ -675,7 +700,9 @@ Kode tersebut digunakan untuk
 
 
 ## Kesimpulan
- 
+
 
 ## Referensi
-- [1] 
+- [1] Farrier, J., Data Structures and Algorithms with the C++ STL. Edisi Pertama. Birmingham : Packt Publishing Ltd, 2024.
+- [2] Mohanty, S. N. dan Tripathy, P. K., Data Structure and Algorithms Using C++. New York City : Wiley Publishing, 2021.
+- [3] Yang. F. dan Dong, Y., C++ Programming. Edisi Pertama.  Germany : De Gruyter, 2019.
