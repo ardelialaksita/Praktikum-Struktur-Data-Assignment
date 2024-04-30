@@ -11,7 +11,7 @@
 ## Dasar Teori
 Linked List artinya 'senarai berkait' yaitu struktur data yang berisi kumpulan data yang tersusun secara sekuensial, saling berkaitan dan bersambungan, dinamis, dan terbatas. Terdapat simpul dalam linked list atau yang biasa dikenal dengan _node_. Setiap node akan memiliki _field_ bertipe struct yang sama untuk digunakan sebagai pointer. Linked list dapat menjadi suboptimal, tapi hanya untuk beberapa kasus yang spesifik (diutamakan pada tipe data dan datasets yang sangat luas) [1]. Linked list bagus digunakan untuk menulis algoritma yang bekerja untuk seluruh koleksi linear sehingga tidak perlu diimplementasikan berulang kali untuk setiap tipe linear [3]. 
 
-Terdapat 4 _fields_ pada linked list yang didefinisikan dengan nama berikut.
+Terdapat 4 _fields_ pada linked list yang didefinisikan dengan nama berikut:
 - Row : indeks dari row dimana elemen bukan 0 diposisikan [2].
 - Column : indeks dari kolom dimana elemen bukan 0 diposisikan [2].
 - Value : nilai dari elemen bukan 0 diposisikan pada indeks (row, column) [2].
