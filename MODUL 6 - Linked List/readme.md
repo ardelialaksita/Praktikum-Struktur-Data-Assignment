@@ -9,10 +9,26 @@
 5. [Referensi](#referensi)
 
 ## Dasar Teori
+Linked List artinya 'senarai berkait' yaitu struktur data yang berisi kumpulan data yang tersusun secara sekuensial, saling berkaitan dan bersambungan, dinamis, dan terbatas. Terdapat simpul dalam linked list atau yang biasa dikenal dengan _node_. Setiap node akan memiliki _field_ bertipe struct yang sama untuk digunakan sebagai pointer. Linked list dapat menjadi suboptimal, tapi hanya untuk beberapa kasus yang spesifik (diutamakan pada tipe data dan datasets yang sangat luas) [1]. Linked list bagus digunakan untuk menulis algoritma yang bekerja untuk seluruh koleksi linear sehingga tidak perlu diimplementasikan berulang kali untuk setiap tipe linear [3]. 
 
+Terdapat 4 _fields_ pada linked list yang didefinisikan dengan nama berikut.
+- Row : indeks dari row dimana elemen bukan 0 diposisikan [2].
+- Column : indeks dari kolom dimana elemen bukan 0 diposisikan [2].
+- Value : nilai dari elemen bukan 0 diposisikan pada indeks (row, column) [2].
+- Next node : menempatkan alamat atau _address_ dari node selanjutnya [2].
 
-### Penerapan atau Penggunaan Struct :
-- 
+Linked list terdiri atas jumlah nodes beserta nilainya dimana dihasilkan dari _runtime_ [3]. Linked list ada 2 yaitu :
+1) Single linked list : satu arah, hanya ada satu pointer yang menghubungkan setiap nodenya.
+2) Double linked list : dua arah, ada lebih dari 1 pointer yang menghubungkan setiap nodenya. Double linked List memiliki karakteristik yang bermanfaat dalamm situasi _multi-thread_ atau berkesinambungan, tetapi juga memerlukan kehati-hatian [1].
+
+### Jenis-jenis Linked List :
+- Linked List Circular
+
+Linked List Circular adalah linked list yang berguna untuk menyimpan data yang membutuhkan akses secara berulang. Node terakhirnya tidak memiliki value (NULL). Pada linked list circular, node tail terhubung dengan node head sehingga membutuhkan _dummy node_ bernama _current_. Operasi pada linked list circular yaitu deklarasi node, membuat dan menginisialisasi pointer head dan tail, pengecekan kondisi linked list, pembuatan node, penambahan node, pengubahan node, penghapusan node, dan menampilkan data linked list. 
+
+- Linked List Non Circular
+
+Linked List Non Circular adalah linked list yang tidak memiliki keterkaitan antara node head (node pertama) dan node tail (node terakhir) sehingga tidak saling terhubung. Operasinya yaitu ada deklarasi node, membuat dan menginisialisasi pointer head dan tail, pengecekan kondisi linked list, penambahan node, pengubahan node, penghapusan node, dan menampilkan data linked list.
 
 ## Guided 
 
@@ -684,7 +700,9 @@ Kode tersebut digunakan untuk
 
 
 ## Kesimpulan
- 
+
 
 ## Referensi
-- [1] 
+- [1] Farrier, J., Data Structures and Algorithms with the C++ STL. Edisi Pertama. Birmingham : Packt Publishing Ltd, 2024.
+- [2] Mohanty, S. N. dan Tripathy, P. K., Data Structure and Algorithms Using C++. New York City : Wiley Publishing, 2021.
+- [3] Yang. F. dan Dong, Y., C++ Programming. Edisi Pertama.  Germany : De Gruyter, 2019.
