@@ -705,4 +705,8 @@ Kode tersebut digunakan untuk
 ## Referensi
 - [1] Farrier, J., Data Structures and Algorithms with the C++ STL. Edisi Pertama. Birmingham : Packt Publishing Ltd, 2024.
 - [2] Mohanty, S. N. dan Tripathy, P. K., Data Structure and Algorithms Using C++. New York City : Wiley Publishing, 2021.
+<<<<<<< HEAD
 - [3] Yang. F. dan Dong, Y., C++ Programming. Edisi Pertama.  Germany : De Gruyter, 2019.
+=======
+- [3] Yang. F. dan Dong, Y., C++ Programming. Edisi Pertama.  Germany : De Gruyter, 2019.
+>>>>>>> 7b6ff7b21a8aa31d6fb652efbb61d2b5b6fe5fa7
