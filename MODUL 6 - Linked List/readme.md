@@ -383,7 +383,7 @@ int main() {
 }
 
 ```
-Kode tersebut digunakan untuk 
+Kode tersebut digunakan untuk menambah, menghapus, memperbarui, membersihkan, dan menampilkan data. Program tersebut menggunakan class node dan class DoublyLinkedList. Terdapat program menu juga yang memuat Add data, Delete data, Update Data, Clear Data, dan Display Data pada masing-masing casenya. Void push digunakan untuk menambahkan data (Add data) yang dipanggil pada case 1. Void pop digunakan untuk menghapus data (Delete data) yang dipanggil pada case 2. Void update digunakan untuk memperbarui data (update) yang dipanggil pada case 3. Void deleteAll digunakan untuk membersihkan atau menghapus seluruh isi list (Clear data) yang dipanggil pada case 4. Void display digunakan untuk menampilkan seluruh data saat ini (Display data) yang dipanggil pada case 5. Sedangkan case 6 digunakan apabila user ingin keluar (exit). Apabila pilihan yang dimasukkan tidak terdapat pada case 1,2,3,4,5, dan 6, maka program akan menjalankan default yaitu menampilkan "Invalid Choice". Terakhir, return 0 merupakan tanda bahwa program telah selesai dan berhasil.
 
 #### Output Guided 2:
 
