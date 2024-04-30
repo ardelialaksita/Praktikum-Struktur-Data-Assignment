@@ -385,8 +385,11 @@ int main() {
 ```
 Kode tersebut digunakan untuk menambah, menghapus, memperbarui, membersihkan, dan menampilkan data. Program tersebut menggunakan class node dan class DoublyLinkedList. Terdapat program menu juga yang memuat Add data, Delete data, Update Data, Clear Data, dan Display Data pada masing-masing casenya. Void push digunakan untuk menambahkan data (Add data) yang dipanggil pada case 1. Void pop digunakan untuk menghapus data (Delete data) yang dipanggil pada case 2. Void update digunakan untuk memperbarui data (update) yang dipanggil pada case 3. Void deleteAll digunakan untuk membersihkan atau menghapus seluruh isi list (Clear data) yang dipanggil pada case 4. Void display digunakan untuk menampilkan seluruh data saat ini (Display data) yang dipanggil pada case 5. Sedangkan case 6 digunakan apabila user ingin keluar (exit). Apabila pilihan yang dimasukkan tidak terdapat pada case 1,2,3,4,5, dan 6, maka program akan menjalankan default yaitu menampilkan "Invalid Choice". Terakhir, return 0 merupakan tanda bahwa program telah selesai dan berhasil.
 
-#### Output Guided 2:
+Pada output berikut, user memilih menu 1 untuk menambahkan data. Kemudian user menambahkan angka 1. Program akan menampilkan program menu lagi dan user diminta memilih menu kembali. User memilih 1 untuk Add data lagi yaitu angka 2. Proses ini berlangsung hingga angka 5 secara berurutan sehingga saat ini terdapat 5 angka dalam list. Selanjutnya, user memilih menu 5 untuk menampilkan seluruh data menggunakan (Display Data). 
 
+#### Output Guided 2:
+![Modul 6  Guided 2 Output (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e6a3fd75-b71d-4a0d-a2b0-68675ae08611)
+![Modul 6  Guided 2 Output (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/9d774885-6db2-4261-9378-59ebc2caceb6)
 
 ### 3. Linked List Circular
 
@@ -628,10 +631,10 @@ int main() {
 }
 
 ```
-Kode tersebut digunakan untuk 
+Kode tersebut digunakan untuk menambahkan data (insert) dan menghapus data (hapus). Program dapat melakukan insert data di depan, tengah, dan belakang. Program juga dapat menghapus data di depan, tengah, belakang, bahkan menghapus seluruh data sehingga list menjadi kosong. Data ditampilkan menggunakan fungsi void tampil( ). Pada main program, ditambahkan data ayam pada head data menggunakan insertDepan. Selanjutnya data ditampilkan. Lalu, ditambahkan bebek pada head lagi sehingga ayam berpindah posisi menjadi data belakang karena hanya terdapat 2 data yaitu depan dan belakang. Selanjutnya, ditambahkan data pada tail menggunakan insertBelakang yaitu "Cicak". Ditambahkan lagi "Domba" pada tail menggunakan insertBelakang sehingga posisi cicak berpindah posisi menjadi data tengah. Hasil saat ini yaitu "Bebek, Ayam, Cicak, Domba". Dilakukan hapus data bagian belakang sehingga domba hilang dan cicak menjadi tail. Lalu ditambahkan data pada posisi kedua menggunakan kode `insertTengah("Sapi", 2);`. Lalu, data pada posisi kedua dihapus menggunakan `hapusTengah(2);`. Return menjadi tanda bahwa program telah selesai dan berhasil. Hasil akhir datanya adalah **Ayam, Sapi, Cicak**. Berikut outputnya.
 
 #### Output Guided 3:
-
+![Modul 6  Guided 3 Output](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/55db1b3d-d1bf-47fe-a06d-bd29351ad125)
 
 ## Unguided 
 Buatlah program menu Linked List Non Circular untuk menyimpan Nama dan NIM mahasiswa, dengan menggunakan _input_ dari _user_.
