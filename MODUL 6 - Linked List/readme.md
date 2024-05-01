@@ -1144,7 +1144,7 @@ User memilih opsi 4 untuk mengubah data pada bagian depan list (head). Data yang
 
 ![Modul 6  Unguided 1 Output (9)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/7e13cd3c-af16-477f-ada9-7747deba1f8a)
 
-User memilih opsi 5 untuk mengubah data pada bagian tengah list. Data yang berada di posisi 2.Data yang diubah yaitu ajwa dengan NIM 2311110050 menjadi afy dengan NIM 2311110070. Saat ini datanya masih ada 5, hanya ada perubahan pada posisi 2. Data saat ini yaitu sebagai berikut.
+User memilih opsi 5 untuk mengubah data pada bagian tengah list. Data yang berada di posisi 2. Data yang diubah yaitu ajwa dengan NIM 2311110050 menjadi afy dengan NIM 2311110070. Saat ini datanya masih ada 5, hanya ada perubahan pada posisi 2. Data saat ini yaitu sebagai berikut.
 
 ![Modul 6  Unguided 1 Output (10)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/084846a7-a470-41a1-a3ad-0d6f237001f3)
 
@@ -1618,17 +1618,52 @@ int main() {
 Penjelasan program sama seperti yang telah dijelaskan pada unguided 1. Pada unguided 2, user akan memasukkan beberapa nama menggunakan insert depan, insert tengah, dan insert belakang.
 
 #### Output dan Interpretasi Sesuai Data yang Ditambahkan:
+Data dengan nama Jawad dengan NIM 23300001 diinput menggunakan opsi 1 yaitu insert depan karena datanya ditambahkan pada depan list (head). 
 
+![Cuplikan layar 2024-05-02 000053](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/1463885e-c255-4ed3-838d-fa57a3c27501)
 
-#### Penjelasan main program:
+Data dengan nama Ardelia dengan NIM 2311110051 diinput menggunakan opsi 2 yaitu insert tengah pada posisi 2 karena datanya ditambahkan pada tengah list. Data tersebut bisa juga ditambahkan menggunakan insert belakang karena data yang berada di posisi Tail belum diinput sehingga semua data yang diinput menggunakan insert belakang akan otomatis sesuai dengan posisinya. Hal ini juga berlaku pada data-data berikutnya hingga posisi ke 9.
 
+![Cuplikan layar 2024-05-02 000106](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/75e53bc4-0564-4894-b17d-a6ad0ee4d997)
 
-#### Penjelasan input oleh user:
+Data dengan nama Farrel dengan NIM 23300003 diinput menggunakan opsi 2 yaitu insert tengah pada posisi 3 karena datanya ditambahkan pada tengah list (sebelum data belakang dimasukkan).
 
+![Cuplikan layar 2024-05-02 000203](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/74fb9637-9293-434b-83d9-f28fbd99f6ae)
+
+Data dengan nama Denis dengan NIM 23300005 diinput menggunakan opsi 2 yaitu insert tengah pada posisi 4 karena datanya ditambahkan pada tengah list (sebelum data belakang dimasukkan).
+
+![Cuplikan layar 2024-05-02 000216](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/57f3f845-d575-4ea7-83c1-f061b13dd616)
+
+Data dengan nama Anis dengan NIM 23300008 diinput menggunakan opsi 2 yaitu insert tengah pada posisi 5 karena datanya ditambahkan pada tengah list (sebelum data belakang dimasukkan).
+
+![Cuplikan layar 2024-05-02 000243](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/865028c2-9e7b-4ce6-9c0a-85926a2a1cd0)
+
+Data dengan nama Bowo dengan NIM 23300015 diinput menggunakan opsi 2 yaitu insert tengah pada posisi 6 karena datanya ditambahkan pada tengah list (sebelum data belakang dimasukkan).
+
+![Cuplikan layar 2024-05-02 000347](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/6bf61578-9e8f-4508-a62f-54873e2d3577)
+
+Data dengan nama Gahar dengan NIM 23300040 diinput menggunakan opsi 2 yaitu insert tengah pada posisi 7 karena datanya ditambahkan pada tengah list (sebelum data belakang dimasukkan).
+
+![Cuplikan layar 2024-05-02 000358](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/288cb771-a4ec-4b14-9dbb-6dd703358ca5)
+
+Data dengan nama Udin dengan NIM 23300048 diinput menggunakan opsi 2 yaitu insert tengah pada posisi 8 karena datanya ditambahkan pada tengah list (sebelum data belakang dimasukkan).
+
+![Cuplikan layar 2024-05-02 000411](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/351c8c94-6b2e-4085-a9cf-3e61dc7b8cdb)
+
+Data dengan nama Ucok dengan NIM 23300050 diinput menggunakan opsi 2 yaitu insert tengah pada posisi 9 karena datanya ditambahkan pada tengah list (sebelum data belakang dimasukkan).
+
+![Cuplikan layar 2024-05-02 000421](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/eacb0081-caa7-41f4-8fc9-e78cfdd71ef1)
+
+Data dengan nama Budi dengan NIM 23300099 diinput menggunakan opsi 3 yaitu insert belakang karena datanya ditambahkan pada belakang list (tail). Opsi insert belakang akan sangat membantu user apabila user tidak mengetahui posisi data saat ini ada berapa karena data yang ditambahkan akan langsung ditambahkan pada data paling akhir (tail).
+
+![Cuplikan layar 2024-05-02 000445](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/2b3d198a-de8c-4515-b48a-746e51def2f9)
+
+Berikut merupakan tampilan seluruh data nama dan NIM mahasiswa pada list yang telah diinput sebelumnya.
+
+![Cuplikan layar 2024-05-02 000456](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/b802c7de-0b25-4e36-9f86-c2be551f5585)
 
 #### Full code Screenshot:
-
-
+![Cuplikan layar 2024-05-02 000652](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/624b7277-e198-459f-9d61-53d7051333a8)
 
 ## Kesimpulan
 
@@ -1636,8 +1671,4 @@ Penjelasan program sama seperti yang telah dijelaskan pada unguided 1. Pada ungu
 ## Referensi
 - [1] Farrier, J., Data Structures and Algorithms with the C++ STL. Edisi Pertama. Birmingham : Packt Publishing Ltd, 2024.
 - [2] Mohanty, S. N. dan Tripathy, P. K., Data Structure and Algorithms Using C++. New York City : Wiley Publishing, 2021.
-<<<<<<< HEAD
 - [3] Yang. F. dan Dong, Y., C++ Programming. Edisi Pertama.  Germany : De Gruyter, 2019.
-=======
-- [3] Yang. F. dan Dong, Y., C++ Programming. Edisi Pertama.  Germany : De Gruyter, 2019.
->>>>>>> 7b6ff7b21a8aa31d6fb652efbb61d2b5b6fe5fa7
