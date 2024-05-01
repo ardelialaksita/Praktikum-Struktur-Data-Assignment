@@ -668,13 +668,17 @@ Buatlah program menu Linked List Non Circular untuk menyimpan Nama dan NIM mahas
 - Tampilan Operasi Ubah :
 - Tampilan Operasi Tampil Data :
 
-Kode tersebut digunakan untuk 
+Kode tersebut digunakan untuk menambah data, mengubah data, menghapus data, dan membersihkan atau menghapus seluruh isi data sehingga list menjadi kosong. Program kodenya adalah program menu dimana user akan diminta memasukkan pilihan yang diinginkan. Apabila user ingin memasukkan (insert) data baru, maka user bisa memilih pilihan 1-3 dimana pilihan 1 akan menambahkan data di depan list (head), pilihan 2 akan menambahkan data di tengah list, dan pilihan 3 akan menambahkan data di belakang list (tail). Apabila user ingin mengubah (modify / change) data yang ada dengan data baru, maka user bisa memilih pilihan 4-6 dimana pilihan 4 akan mengubah data di depan list (head), pilihan 5 akan mengubah data di tengah list, dan pilihan 6 akan mengubah data di belakang list (tail). Apabila user ingin menghapus (delete) data yang ada pada list, maka user bisa memiliki pilihan 7-10 dimana pilihan 7 akan menghapus data di depan list (head), pilihan 8 akan menghapus data di tengah list, pilihan 9 akan menghapus data di belakang list (tail), dan pilihan 10 akan menghapus seluruh isi data sehingga list menjadi kosong. Pada opsi 11, user dapat menampilkan seluruh data terbaru di dalam list. Apabila user ingin keluar dari program menu, maka user dapat memilih opsi 0 yaitu keluar. Pada insert data, modify data, dan delete data yang berkaitan dengan data tengah akan meminta user untuk memasukkan posisi data tengah yang ingin ditambah, diubah, atau dihapus sehingga penerapannya menyesuaikan posisi yang diinput oleh user. 
 
 #### Penjelasan main program:
- 
+Program tersebut berbentuk menu sehingga terdapat switch case pada main programnya. Tipe data pilihan adalah integer sehingga user harus menginputkan dalam bentuk numerik (angka). Tipe data nama adalah string karena terdapat lebih dari 1 karakter. Tipe data NIM adalah long long karena data yang diinputkan mencapai 10 digit. Sedangkan int position digunakan untuk menyesuaikan posisi pada insert, modify, dan delete data yang ada di tengah list.
+
+Program di dalam kode `do` yaitu berupa `cout` sebanyak 11 opsi menu yang ingin ditampilkan dan bisa dipilih oleh user. Terdapat pula ` cout << "Pilih menu yang Anda inginkan: ";` dan `cin >> pilihan;` yang digunakan untuk user memasukkan menu yang diinginkan.
+
+Pada switch case, masing-masing casenya menyesuaikan pilihan menu yang telah dibuat di dalam kode `do` sebelumnya. Case 1 akan menjalankan menu 1 yaitu insert data depan. Kemudian case 2 akan menjalankan menu 2 yaitu insert data tengah. Begitu juga case-case lainnya. Pada case 1-3 akan menampilkan **"Data berhasil ditambahkan"** dan **"Data yang berhasil ditambahkan : (Nama) dengan NIM (NIM)** apabila program telah berhasil menambahkan data baru. User hanya bisa memasukkan pilihan mulai dari 0 hingga 11. Apabila user memasukkan selain pilihan-pilihan tersebut, maka program akan mencetak **"Pilihan tidak valid. Silakan pilih opsi operasi yang sesuai."**
 
 #### Penjelasan input oleh user:
-
+Input oleh user akan dijelaskan lebih lanjut pada unguided 2 menggunakan data yang telah disediakan.
 
 #### Full code Screenshot:
 
