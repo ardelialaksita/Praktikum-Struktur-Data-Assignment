@@ -1067,32 +1067,6 @@ int main() {
 
 ```
 
-#### Output:
-- Tampilan Menu :
-
-- **Tampilan Operasi Tambah :**
-**a) Tambah Depan (insertHead)**
-![Modul 6  Unguided 1 Output (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/b8b64d3a-a181-4ed5-8476-ad3fb0a68b15)
-User memilih opsi 1 untuk menambahkan data pada bagian depan list (head). Data yang ditambahkan yaitu ara dengan NIM 2311110051. Saat ini masih terdapat 1 data mahasiswa beserta NIMnya.
-**b) Tambah Tengah (insertMiddle)**
-![Modul 6  Unguided 1 Output (3)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a292c58c-1cd9-4843-a19f-13950ffb3df5)
-User memilih opsi 2 untuk menambahkan data di tengah list. Data yang ditambahkan yaitu ajwa dengan NIM 2311110050 pada posisi 2. Saat ini ada 2 data mahasiswa beserta NIMnya.
-![Modul 6  Unguided 1 Output (4)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/7fd60ad6-5923-484c-987f-4e45717cddbf)
-User memilih opsi 2 lagi untuk menambahkan data di tengah list. Data yang ditambahkan yaitu aurel dengan NIM 2311110020 pada posisi 3. Saat ini ada 3 data mahasiswa beserta NIMnya.
-![Modul 6  Unguided 1 Output (5)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/736d9e57-750a-412c-9496-60bd2da2c43b)
-User memilih opsi 2 lagi untuk menambahkan data di tengah list. Data yang ditambahkan yaitu alin dengan NIM 2311110008 pada posisi 3 sehingga posisi aurel yang sebelumnya ada di posisi 3, sekarang berpindah menjadi posisi 4. Saat ini ada 4 data mahasiswa beserta NIMnya. 
-**c) Tambah Belakang (insertTail)**
-![Modul 6  Unguided 1 Output (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/fa6a2fbc-64af-40d5-af4f-32f6bee02bee)
-User memilih opsi 3 untuk menambahkan data di belakang list (tail). Data yang ditambahkan yaitu anggun dengan NIM 2311110022. Saat ini ada 5 data mahasiswa beserta NIMnya.
-
-**Tampilan List Saat ini setelah Operasi Tambah :**
-Berikut tampilan 5 data yang telah ditambahkan pada list.
-![Modul 6  Unguided 1 Output (6)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/378db0d5-6057-4a94-955d-91fab05ef7b2)
-
-- Tampilan Operasi Hapus :
-- Tampilan Operasi Ubah :
-- Tampilan Operasi Tampil Data :
-
 Kode tersebut digunakan untuk menambah data, mengubah data, menghapus data, dan membersihkan atau menghapus seluruh isi data sehingga list menjadi kosong. Program kodenya adalah program menu dimana user akan diminta memasukkan pilihan yang diinginkan. 
 
 - Apabila user ingin memasukkan (insert) data baru, maka user bisa memilih pilihan 1-3 dimana pilihan 1 akan menambahkan data di depan list (head), pilihan 2 akan menambahkan data di tengah list, dan pilihan 3 akan menambahkan data di belakang list (tail).
@@ -1111,10 +1085,120 @@ Program di dalam kode `do` yaitu berupa `cout` sebanyak 11 opsi menu yang ingin 
 Pada switch case, masing-masing casenya menyesuaikan pilihan menu yang telah dibuat di dalam kode `do` sebelumnya. Case 1 akan menjalankan menu 1 yaitu insert data depan. Kemudian case 2 akan menjalankan menu 2 yaitu insert data tengah. Begitu juga case-case lainnya. Pada case 1-3 akan menampilkan **"Data berhasil ditambahkan"** dan **"Data yang berhasil ditambahkan : (Nama) dengan NIM (NIM)** apabila program telah berhasil menambahkan data baru. User hanya bisa memasukkan pilihan mulai dari 0 hingga 11. Apabila user memasukkan selain pilihan-pilihan tersebut, maka program akan mencetak **"Pilihan tidak valid. Silakan pilih opsi operasi yang sesuai."**
 
 #### Penjelasan input oleh user:
-Input oleh user akan dijelaskan lebih lanjut pada unguided 2 menggunakan data yang telah disediakan.
+Penjelasan input oleh user akan dijelaskan lebih lanjut pada interpretasi output berikut.
+
+#### Output:
+
+**- Tampilan Menu :**
+Berikut tampilan output dari program menu. User akan diminta untuk memasukkan opsi pilihan 1 hingga 0 pada "Pilih menu yang anda inginkan: "
+
+![Modul 6  Unguided 1 Output (18)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/c78e9bf2-2e6d-40d3-bd19-20897be74983)
+
+**- Tampilan Operasi Tambah :**
+
+**a) Tambah Depan (insertHead)**
+![Modul 6  Unguided 1 Output (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/b8b64d3a-a181-4ed5-8476-ad3fb0a68b15)
+
+User memilih opsi 1 untuk menambahkan data pada bagian depan list (head). Data yang ditambahkan yaitu ara dengan NIM 2311110051. Saat ini masih terdapat 1 data mahasiswa beserta NIMnya.
+
+**b) Tambah Tengah (insertMiddle)**
+
+![Modul 6  Unguided 1 Output (3)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a292c58c-1cd9-4843-a19f-13950ffb3df5)
+
+User memilih opsi 2 untuk menambahkan data di tengah list. Data yang ditambahkan yaitu ajwa dengan NIM 2311110050 pada posisi 2. Saat ini ada 2 data mahasiswa beserta NIMnya.
+
+![Modul 6  Unguided 1 Output (4)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/7fd60ad6-5923-484c-987f-4e45717cddbf)
+
+User memilih opsi 2 lagi untuk menambahkan data di tengah list. Data yang ditambahkan yaitu aurel dengan NIM 2311110020 pada posisi 3. Saat ini ada 3 data mahasiswa beserta NIMnya.
+
+![Modul 6  Unguided 1 Output (5)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/736d9e57-750a-412c-9496-60bd2da2c43b)
+
+User memilih opsi 2 lagi untuk menambahkan data di tengah list. Data yang ditambahkan yaitu alin dengan NIM 2311110008 pada posisi 3 sehingga posisi aurel yang sebelumnya ada di posisi 3, sekarang berpindah menjadi posisi 4. Saat ini ada 4 data mahasiswa beserta NIMnya. 
+
+**c) Tambah Belakang (insertTail)**
+
+![Modul 6  Unguided 1 Output (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/fa6a2fbc-64af-40d5-af4f-32f6bee02bee)
+
+User memilih opsi 3 untuk menambahkan data di belakang list (tail). Data yang ditambahkan yaitu anggun dengan NIM 2311110022. Saat ini ada 5 data mahasiswa beserta NIMnya.
+
+**Tampilan List Saat ini setelah Operasi Tambah :**
+
+Berikut tampilan 5 data yang telah ditambahkan pada list.
+
+![Modul 6  Unguided 1 Output (6)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/378db0d5-6057-4a94-955d-91fab05ef7b2)
+
+**- Tampilan Operasi Ubah :**
+
+**a) Ubah Depan (modifyHead)**
+
+![Modul 6  Unguided 1 Output (7)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/60cfd54c-5446-4b72-ad68-a3206499055c)
+
+User memilih opsi 4 untuk mengubah data pada bagian depan list (head). Data yang diubah yaitu ara dengan NIM 2311110051 menjadi atha dengan NIM 2311110060. Saat ini datanya masih ada 5, hanya ada perubahan pada posisi 1 (head). Data saat ini yaitu sebagai berikut.
+
+![Modul 6  Unguided 1 Output (8)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/264623aa-28f8-4bb4-8e13-0996d66f2e2d)
+
+**b) Ubah Tengah (modifyMiddle)**
+
+![Modul 6  Unguided 1 Output (9)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/7e13cd3c-af16-477f-ada9-7747deba1f8a)
+
+User memilih opsi 5 untuk mengubah data pada bagian tengah list. Data yang berada di posisi 2.Data yang diubah yaitu ajwa dengan NIM 2311110050 menjadi afy dengan NIM 2311110070. Saat ini datanya masih ada 5, hanya ada perubahan pada posisi 2. Data saat ini yaitu sebagai berikut.
+
+![Modul 6  Unguided 1 Output (10)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/084846a7-a470-41a1-a3ad-0d6f237001f3)
+
+**c) Ubah Belakang (modifyTail)**
+
+![Modul 6  Unguided 1 Output (11)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/74c98dc8-b251-4c6c-8d79-ca9886c141de)
+
+User memilih opsi 6 untuk mengubah data pada bagian belakang list (tail). Data yang diubah yaitu anggun dengan NIM 2311110022 menjadi alya dengan NIM 2311110080. Saat ini datanya masih ada 5, hanya ada perubahan pada posisi 5 (tail). Data saat ini yaitu sebagai berikut.
+
+![Modul 6  Unguided 1 Output (12)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/febdb3eb-84a6-45d0-89c3-c6095ca216b1)
+
+**Tampilan List Saat ini setelah Operasi Hapus :**
+
+Berikut tampilan 5 data pada list saat ini.
+
+![Modul 6  Unguided 1 Output (12)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/febdb3eb-84a6-45d0-89c3-c6095ca216b1)
+
+**- Tampilan Operasi Hapus :**
+
+**a) Hapus Depan (deleteHead)**
+
+![Modul 6  Unguided 1 Output (13)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/41255d57-1ca0-4717-a4d2-bd8d34fdfad5)
+
+User memilih opsi 7 untuk menghapus data pada bagian depan list (head). Data yang dihapus yaitu atha dengan NIM 2311110060. Saat ini ada 4 data mahasiswa beserta NIMnya.
+
+**b) Hapus Belakang (deleteTail)**
+
+![Modul 6  Unguided 1 Output (14)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/127e7d83-8cb7-43e5-ba1f-85226dabf346)
+
+User memilih opsi 9 untuk menghapus data pada bagian belakang list (tail). Data yang dihapus yaitu alya dengan NIM 2311110080. Saat ini ada 3 data mahasiswa beserta NIMnya.
+
+**c) Hapus Tengah (deleteMiddle)**
+
+![Modul 6  Unguided 1 Output (14)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/127e7d83-8cb7-43e5-ba1f-85226dabf346)
+
+User memilih opsi 8 untuk menghapus data pada bagian tengah list. Data yang dihapus berada pada posisi 2. Data yang dihapus yaitu alin dengan NIM 2311110008. Saat ini ada 2 data mahasiswa beserta NIMnya.
+
+d) Hapus Seluruh Data (clearList)
+
+Pada hapus seluruh data, semua data yang ada pada list saat ini akan dihapus atau dibersihkan sehingga list menjadi kosong. Berikut output saat seluruh data telah dihapus.
+
+![Modul 6  Unguided 1 Output (16)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/86fcb4db-c31d-47fe-9743-ca2b0fff9d46)
+
+**- Tampilan Operasi Tampil Data :**
+
+Berikut tampilan 5 data yang telah ditambahkan pada list.
+
+![Modul 6  Unguided 1 Output (6)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/378db0d5-6057-4a94-955d-91fab05ef7b2)
+
+**- Tampilan Menu Keluar dari Program :**
+
+Berikut tampilan output apabila user memasukkan opsi 11 yaitu keluar dari program.
+
+![Modul 6  Unguided 1 Output (17)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/9b554be5-33ec-4ab6-b524-e4877b958027)
 
 #### Full code Screenshot:
-
+![Modul 6  Unguided 1 Full SS](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/15d5d3ed-3fc2-4641-a4a0-97e2d391cf9a)
 
 ### 2. Apa yang terjadi jika deklarasi variabel _struct_ yang dibuat pada tugas guided I berjenis _Array_. Bagaimana cara mengisi data dan menampilkannya?
 ```C++
