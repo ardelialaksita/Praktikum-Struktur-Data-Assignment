@@ -2083,9 +2083,78 @@ Penjelasan program di atas sama seperti yang telah dijelaskan pada unguided 1. P
 
 ![Output A](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/3817eb84-888e-4418-8aa0-4eaab75ec1c4)
 
+Data Wati dengan NIM 2330004 ditambah di antara Farrel dan Denis. Farrel berada pada posisi 3, sedangkan Denis berada pada posisi 4. Apabila data Wati ingin ditambahkan di antara Farrel dan Dennis maka Wati harus berada posisi 4. Jadi, user akan memasukkan opsi 2 yaitu insert data tengah dengan posisi 2 untuk data Wati dengan NIM 2330004. Berikut input user dan output yang dihasilkan.
+
+![Cuplikan layar 2024-05-02 003433](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/55b76ff9-5af6-4e23-8010-5e6876119907)
+![Cuplikan layar 2024-05-02 003449](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e0634737-b442-4467-beff-638a2715b328)
+
+![Output B](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/72d836aa-b529-4ea8-80ef-f3a03794c437)
+
+Data Denis saat ini berada pada posisi 5, maka user memasukkan opsi 8 untuk menghapus data tengah dengan posisi 5. Berikut input user dan output saat data Denis dengan NIM 23300005 telah dihapus.
+
+![Cuplikan layar 2024-05-02 003951](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e51b51e9-7574-47e1-92d9-4cb2e4611700)
+![Cuplikan layar 2024-05-02 004004](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/7eef71ca-7f99-430e-91d9-50c8d86ee55e)
+
+![Output C](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a5694761-c3cf-49f4-bea0-d1b1bbabed6c)
+
+Data Owi dengan NIM 2330000 ditambah pada depan list (head). Jadi, user memasukkan opsi 1 untuk insert data pada bagian depan list (head). Berikut input user dan output yang dihasilkan setelah data Owi dengan NIM 2330000 telah ditambahkan ke list.
+
+![Cuplikan layar 2024-05-02 004045](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/91020c54-adfe-46ba-81b2-f86ab5150d7b)
+![Cuplikan layar 2024-05-02 004101](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a4d1fc27-1e96-4b42-857c-7a0f3ab0effb)
+
+![Output D](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/3ddbce8a-f978-4569-b7f9-377c6c9342df)
+
+Data David dengan NIM 23300100 ditambah pada akhir list (tail). Jadi, user memasukkan opsi 3 untuk insert data pada bagian akhir list (tail). Berikut input user dan output yang dihasilkan setelah data David dengan NIM 2300100 telah ditambahkan ke list.
+
+![Cuplikan layar 2024-05-02 004111](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/76199d06-0195-4594-b406-f6ad66aa1065)
+![Cuplikan layar 2024-05-02 004121](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/0ae2a002-72a4-4254-80fd-9f4b4b6931f1)
+
+![Output E](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/05fb4d67-fba0-4535-b97b-807ecbf00a97)
+
+Data Udin dengan NIM 2300048 akan diubah menjadi Idin dengan NIM 23300045. Karena posisi Udin berada di data tengah tepatnya pada posisi 9, maka user memasukkan opsi menu 5 yaitu mengubah data pada tengah list. Berikut input user dan output yang dihasilkan setelah data Udin diubah menjadi Idin beserta NIMnya.
+
+![Cuplikan layar 2024-05-02 004132](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/6289578b-f355-473c-94a0-8868795aa84d)
+![Cuplikan layar 2024-05-02 004232](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/2e7132c1-f7f6-40b2-8439-3ed63d3eb84e)
+
+![Output F](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/8fb5cf88-959e-4f1a-9343-15631eb16d88)
+
+Data terakhir yaitu David dengan NIM 2300100 akan diubah menjadi Lucy dengan NIM 23300101. Jadi, user memasukkan opsi 6 untuk melakukan perubahan data pada akhir list (tail). Berikut input user dan output yang dihasilkan setelah data David diubah menjadi Lucy beserta NIMnya. 
+
+![Cuplikan layar 2024-05-02 004319](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/8c5ab51e-15a5-4068-a02e-500a34d455ac)
+![Cuplikan layar 2024-05-02 004515](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/62222016-5be7-44a2-bf19-0f588c1a9e36)!
+
+![Output G](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/651774bd-85a1-403e-af58-3c7ae624bcfb)
+
+Data awal saat ini yaitu Owi dengan NIM 2330000. User memasukkan opsi 7 untuk menghapus data pada depan list (head) sehingga data awal saat ini adalah Jawad dengan NIM 23300001. Posisi data di bawahnya juga naik menjadi 1 posisi sebelumnya. Berikut input user yang digunakan yaitu opsi menu 7.
+
+[Cuplikan layar 2024-05-02 004531](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/d08f4d38-cfdb-4610-b3f4-8378e682e225)
+
+![Output H](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/57fccaa1-d2f6-4d3d-8c5b-5c04113b79bd)
+
+Data awal saat ini adalah Owi dengan NIM 2330000 dan akan diubah menjadi Bagas dengan NIM 2330002. Jadi, user memasukkan menu 4 untuk mengubah data pada depan list (head). Berikut input user dan output yang dihasilkan setelah data Owi diubah menjadi Bagas beserta NIMnya.
+
+![Cuplikan layar 2024-05-02 004553](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/92a5aa9f-38ea-4008-8428-31d71899c88b)
+![Cuplikan layar 2024-05-02 004614](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/0b33532d-ccf8-4e4a-8aaa-924319a09d7c)
+
+![Output I](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a5a05475-0e53-4f5c-8144-3a330ccd0845)
+
+Data akhir pada list saat ini adalah Lucy dengan NIM 23300101. User perlu memasukkan opsi 9 untuk menghapus data pada belakang list (tail) sehingga datanya sekarang hanya ada 10 karena Lucy telah dihapus. Berikut merupakan input user dan output yang dihasilkan setelah Lucy dihapus.
+
+![Cuplikan layar 2024-05-02 004624](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/0e8c3d88-aeb4-4fda-8c5b-a6bd36de08a7)
+![Cuplikan layar 2024-05-02 004657](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/11d71b7d-85a7-4cd0-ab8e-9a5e03c80a49)
+
+![Output J](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/37b33966-8f02-4e80-8af3-22c0ddd94779)
+
+Data yang paling terbaru dan saat ini berada pada list yaitu sebagai berikut. Terdapat 10 nama Mahasiswa beserta NIM mereka pada list saat ini.
+
+![Cuplikan layar 2024-05-02 004705](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/fcca9e13-06c6-435f-a346-39e4dcff9433)
+
+#### Full code Screenshot:
+![Cuplikan layar 2024-05-02 004929](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/88cfdbb6-7efe-40e9-b229-26fd47804b54)
 
 
 ## Kesimpulan
+Linked List artinya 'senarai berkait' yaitu struktur data yang berisi kumpulan data yang tersusun secara sekuensial, saling berkaitan dan bersambungan, dinamis, dan terbatas. Linked list ada 2 yaitu Single linked list dimana senarainya hanya satu arah dan hanya ada satu pointer yang menghubungkan setiap nodenya, serta Double linked list dimana senarainya adalah dua arah dan ada lebih dari 1 pointer yang menghubungkan setiap nodenya. Ada Linked List Circular dimana node tail terhubung dengan node head. Ada pula Linked List Non Circular dimana node pertama (head) dan node terakhir (tail) tidak saling berhubungan.
 
 
 ## Referensi
