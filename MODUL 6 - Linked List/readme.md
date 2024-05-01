@@ -673,7 +673,7 @@ Kode tersebut digunakan untuk menambah data, mengubah data, menghapus data, dan 
 - Apabila user ingin memasukkan (insert) data baru, maka user bisa memilih pilihan 1-3 dimana pilihan 1 akan menambahkan data di depan list (head), pilihan 2 akan menambahkan data di tengah list, dan pilihan 3 akan menambahkan data di belakang list (tail).
 - Apabila user ingin mengubah (modify / change) data yang ada dengan data baru, maka user bisa memilih pilihan 4-6 dimana pilihan 4 akan mengubah data di depan list (head), pilihan 5 akan mengubah data di tengah list, dan pilihan 6 akan mengubah data di belakang list (tail).
 - Apabila user ingin menghapus (delete) data yang ada pada list, maka user bisa memiliki pilihan 7-10 dimana pilihan 7 akan menghapus data di depan list (head), pilihan 8 akan menghapus data di tengah list, pilihan 9 akan menghapus data di belakang list (tail), dan pilihan 10 akan menghapus seluruh isi data sehingga list menjadi kosong.
-- Pada opsi 11, user dapat menampilkan seluruh data terbaru di dalam list.
+- Pada opsi 11, user dapat menampilkan seluruh data yang ada di dalam list saat ini.
 - Apabila user ingin keluar dari program menu, maka user dapat memilih opsi 0 yaitu keluar.
  
 Pada insert data, modify data, dan delete data yang berkaitan dengan data tengah akan meminta user untuk memasukkan posisi data tengah yang ingin ditambah, diubah, atau dihapus sehingga penerapannya menyesuaikan posisi yang diinput oleh user. 
