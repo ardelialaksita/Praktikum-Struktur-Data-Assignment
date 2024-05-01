@@ -2164,4 +2164,8 @@ Linked List artinya 'senarai berkait' yaitu struktur data yang berisi kumpulan d
 ## Referensi
 - [1] Farrier, J., Data Structures and Algorithms with the C++ STL. Edisi Pertama. Birmingham : Packt Publishing Ltd, 2024.
 - [2] Mohanty, S. N. dan Tripathy, P. K., Data Structure and Algorithms Using C++. New York City : Wiley Publishing, 2021.
+<<<<<<< HEAD
 - [3] Yang. F. dan Dong, Y., C++ Programming. Edisi Pertama.  Germany : De Gruyter, 2019.
+=======
+- [3] Yang. F. dan Dong, Y., C++ Programming. Edisi Pertama.  Germany : De Gruyter, 2019.
+>>>>>>> 577cf9bcc59e390caf644cabcdbf2548aa89e8b4
