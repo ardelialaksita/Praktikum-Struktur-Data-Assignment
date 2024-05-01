@@ -2127,7 +2127,7 @@ Data terakhir yaitu David dengan NIM 2300100 akan diubah menjadi Lucy dengan NIM
 
 Data awal saat ini yaitu Owi dengan NIM 2330000. User memasukkan opsi 7 untuk menghapus data pada depan list (head) sehingga data awal saat ini adalah Jawad dengan NIM 23300001. Posisi data di bawahnya juga naik menjadi 1 posisi sebelumnya. Berikut input user yang digunakan yaitu opsi menu 7.
 
-[Cuplikan layar 2024-05-02 004531](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/d08f4d38-cfdb-4610-b3f4-8378e682e225)
+![Cuplikan layar 2024-05-02 004531](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/d08f4d38-cfdb-4610-b3f4-8378e682e225)
 
 ![Output H](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/57fccaa1-d2f6-4d3d-8c5b-5c04113b79bd)
 
@@ -2146,6 +2146,10 @@ Data akhir pada list saat ini adalah Lucy dengan NIM 23300101. User perlu memasu
 ![Output J](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/37b33966-8f02-4e80-8af3-22c0ddd94779)
 
 Data yang paling terbaru dan saat ini berada pada list yaitu sebagai berikut. Terdapat 10 nama Mahasiswa beserta NIM mereka pada list saat ini.
+
+![Cuplikan layar 2024-05-02 004657](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/11d71b7d-85a7-4cd0-ab8e-9a5e03c80a49)
+
+User memasukkan opsi 0 untuk keluar dari program.
 
 ![Cuplikan layar 2024-05-02 004705](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/fcca9e13-06c6-435f-a346-39e4dcff9433)
 
