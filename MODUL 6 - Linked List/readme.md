@@ -658,55 +658,1510 @@ Buatlah program menu Linked List Non Circular untuk menyimpan Nama dan NIM mahas
 ### 1. Buatlah menu untuk menambahkan, mengubah, menghapus, dan melihat Nama dan NIM mahasiswa. 
  
 ```C++
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+// PROGRAM LINKED LIST NON CIRCULAR MAHASISWA DAN NIM DENGAN INPUT OLEH USER
+
+// deklarasi struct untuk mahasiswa
+struct Mahasiswa {
+    string nama;
+    long long nim;
+    Mahasiswa* next;
+};
+
+// deklarasi head dan tail menggunakan pointer
+Mahasiswa* head = NULL;
+Mahasiswa* tail = NULL;
+Mahasiswa* baru; 
+Mahasiswa* help;
+Mahasiswa* hapus;
+
+// pengecekan jika list kosong
+bool isEmpty() {
+    if (head == NULL) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// membuat node baru
+void newNode (string nama, long long nim) {
+    baru = new Mahasiswa;
+    baru->nama = nama;
+    baru->nim = nim;
+    baru->next = NULL;
+}
+
+// menghitung list
+int countList() {
+    help = head;
+    int jumlah = 0;
+
+    while (help != NULL) {
+        jumlah++;
+        help = help->next;
+    }
+    return jumlah;
+}
+
+// fungsi tambah depan 
+void insertHead(string nama, long long nim) {
+
+    // membuat node baru
+    newNode(nama, nim);
+
+    if (isEmpty() == 1) {
+        head = baru;
+        tail = head;
+        baru->next = head;
+    } else {
+        while (tail->next != head) {
+            tail = tail->next;
+        }
+        baru->next = head;
+        head = baru;
+        tail->next = head;
+    }
+}
+
+// fungsi tambah tengah
+void insertMiddle(string nama, long long nim, int position) {
+    if (isEmpty() == 1) {
+        head = baru;
+        tail = head;
+        baru->next = head;
+    } else {
+        newNode(nama, nim);
+
+        // transversing
+        int nomor = 1;
+        help = head;
+
+        while (nomor < position -1) {
+            help = help->next;
+            nomor++;
+        }
+        baru->next = help->next;
+        help->next = baru;
+    }
+}
+
+// fungsi tambah belakang
+void insertTail(string nama, long long nim) {
+
+    // membuat node baru
+    newNode(nama, nim);
+
+    if (isEmpty() == 1) {
+        head = baru;
+        tail = head;
+        baru->next = head;
+    } else {
+        while (tail->next != head) {
+            tail = tail->next;
+        }
+        tail->next = baru;
+        baru->next = head;
+    }
+}
+
+// fungsi ubah data depan list
+void modifyHead(string newName, long long newNim) {
+    if (!isEmpty()) {
+        string nama = head->nama;
+        long long nim = head->nim;
+        head->nama = newName;
+        head->nim = newNim;
+        cout << "Data berhasil diubah" << endl;
+    } else {
+        cout << "Data mahasiswa tidak ditemukan." << endl;
+    } 
+}
+
+// fungsi ubah data tengah list
+void modifyMiddle(int position, string newName, long long newNim) {
+    if (!isEmpty()) {
+        Mahasiswa *temp = head;
+        string nama;
+        long long nim;
+        
+        for (int i = 1; i < position && temp != NULL; i++) {
+            nama = temp->nama;
+            nim = temp->nim;
+            temp = temp->next;
+        }
+        if (temp != NULL) {
+            nama = temp->nama;
+            nim = temp->nim;
+            temp->nama = newName;
+            temp->nim = newNim;
+            cout << "Data mahasiswa berhasil diubah." << endl;
+        } else {
+            cout << "Posisi tidak valid" << endl;
+        }
+    } else {
+        cout << "List masih kosong!" << endl;
+    }
+}
+
+// fungsi ubah data belakang list
+void modifyTail(string newName, long long newNim) {
+    if (!isEmpty()) {
+        Mahasiswa *temp = head;
+
+        // Mencapai node terakhir
+        while (temp->next != head) {
+            temp = temp->next;
+        }
+
+        // Mengubah data pada node terakhir
+        temp->nama = newName;
+        temp->nim = newNim;
+
+        cout << "Data mahasiswa berhasil diubah." << endl;
+    } else {
+        cout << "Data mahasiswa tidak ditemukan." << endl;
+    }
+}
+
+
+// fungsi hapus depan
+void deleteHead() {
+    if (isEmpty() == 0) {
+        hapus = head;
+        tail = head;
+
+        if (hapus->next == head) {
+            head = NULL;
+            tail = NULL;
+            delete hapus;
+        } else {
+            while (tail->next != hapus) {
+                tail = tail->next;
+            }
+
+            head = head->next;
+            tail->next = head;
+            hapus->next = NULL;
+            delete hapus;
+
+            cout << "Data mahasiswa berhasil dihapus." << endl;
+        }
+    } else {
+        cout << "List tersebut kosong!" << endl;
+    }
+}
+
+// fungsi hapus tengah
+void deleteMiddle(int posisi) {
+    if (isEmpty() == 0) {
+
+        // transvering
+        int nomor = 1;
+        help = head;
+
+        while (nomor < posisi - 1) {
+            help = help->next;
+            nomor++;
+        }
+
+        hapus = help->next;
+        help->next = hapus->next;
+        delete hapus;
+
+        cout << "Data mahasiswa berhasil dihapus." << endl;
+    } else {
+        cout << "List masih kosong!" << endl;
+    }
+}
+
+// fungsi hapus belakang
+void deleteTail() {
+    if (isEmpty() == 0) {
+        hapus = head;
+        tail = head;
+
+        if (hapus->next == head) {
+            head = NULL;
+            tail = NULL;
+            delete hapus;
+        } else {
+            while (hapus->next != head) {
+                hapus = hapus->next;
+            }
+
+            while (tail->next != hapus) {
+                tail = tail->next;
+            }
+
+            tail->next = head;
+            hapus->next = NULL;
+            delete hapus;
+
+            cout << "Data mahasiswa berhasil dihapus." << endl;
+        }
+    } else {
+        cout << "List masih kosong!" << endl;
+    }
+}
+
+// fungsi hapus seluruh isi list
+void clearList() {
+    if (head != NULL) {
+        hapus = head->next;
+
+        while (hapus != head) {
+            help = hapus-> next;
+            delete hapus;
+            hapus = help;
+        }
+
+        delete head;
+        head = NULL;
+    }
+
+    cout << "Proses menghapus selesai. Seluruh isi list berhasil dihapus. Saat ini tidak ada data pada list tersebut." << endl;
+}
+
+// menampilkan isi list
+void display() {
+    if (!isEmpty()) {
+        cout << "======================== DATA MAHASISWA ===========================" << endl;
+        cout << "|\tPosisi\t|\tNama\t\t|\tNIM\t\t|" << endl;
+        cout << "-------------------------------------------------------------------" << endl;
+
+        int position = 1;
+        Mahasiswa* current = head;
+        do {
+            cout << "|\t" << position << "\t|\t " << left << setw(15) << current->nama << "|\t" << setw(15) << current->nim << " |" << endl;
+            current = current->next;
+            position++; 
+        } while (current != head); 
+        cout << "-------------------------------------------------------------------" << endl; 
+    } else {
+        cout << "List tersebut kosong. Tidak ada data yang ditemukan di dalam list. Silakan masukkan data terlebih dahulu." << endl;
+    }
+}
+
+
+// main program
+int main() {
+    int pilihan;
+    string nama;
+    long long nim;
+    string newName;
+    long long newNim;
+    int position; 
+    do {
+        cout << "========== PROGRAM MENU LINKED LIST MAHASISWA DAN NIM ==========" << endl;
+        cout << "Selamat datang. Silakan pilih menu!" << endl;
+        cout << "----------------------------------------------------------------" << endl;
+        cout << "1. Tambahkan data baru pada list bagian depan" << endl;
+        cout << "2. Tambahkan data baru pada list bagian tengah" << endl;
+        cout << "3. Tambahkan data baru pada list bagian belakang" << endl;
+        cout << "4. Ubah data pada list bagian depan" << endl;
+        cout << "5. Ubah data pada list bagian tengah" << endl;
+        cout << "6. Ubah data pada list bagian belakang" << endl;
+        cout << "7. Hapus data pada list bagian depan" << endl;
+        cout << "8. Hapus data pada list bagian tengah" << endl;
+        cout << "9. Hapus data pada list bagian belakang" << endl;
+        cout << "10. Hapus seluruh data pada list" << endl;
+        cout << "11. Tampilkan isi list" << endl;
+        cout << "0. Keluar" << endl;
+        cout << "----------------------------------------------------------------" << endl;
+        cout << "Pilih menu yang Anda inginkan: ";
+        cin >> pilihan;
+
+        switch (pilihan) {
+            case 1:
+                cout << "Masukkan nama mahasiswa : ";
+                cin >> nama;
+                cout << "Masukkan NIM mahasiswa : ";
+                cin >> nim;
+                cin.ignore();
+                insertHead(nama, nim);
+                cout << "Data berhasil ditambahkan." << endl;
+                cout << "Data baru yang ditambahkan : " << nama << " dengan NIM " << nim << endl;
+                break;
+            case 2:
+                cout << "Masukkan nama mahasiswa : ";
+                cin >> nama;
+                cout << "Masukkan NIM mahasiswa : ";
+                cin >> nim;
+                cin.ignore();
+                cout << "Masukkan posisi : ";
+                cin >> position;
+                insertMiddle(nama, nim, position);
+                cout << "Data berhasil ditambahkan." << endl;
+                cout << "Data baru yang ditambahkan : " << nama << " dengan NIM " << nim << endl;
+                break;
+            case 3:
+                cout << "Masukkan nama mahasiswa : ";
+                cin >> nama;
+                cout << "Masukkan NIM mahasiswa : ";
+                cin >> nim;
+                cin.ignore();
+                insertTail(nama, nim);
+                cout << "Data berhasil ditambahkan." << endl;
+                cout << "Data baru yang ditambahkan : " << nama << " dengan NIM " << nim << endl;
+                break;
+            case 4:
+                cout << "Masukkan nama baru mahasiswa : ";
+                cin >> newName;
+                cout << "Masukkan NIM baru mahasiswa : ";
+                cin >> newNim;
+                modifyHead(newName, newNim);
+                break;
+            case 5:
+                cout << "Masukkan posisi mahasiswa yang ingin diubah : ";
+                cin >> position;
+                cout << "Masukkan nama baru mahasiswa : ";
+                cin >> newName;
+                cout << "Masukkan NIM baru mahasiswa : ";
+                cin >> newNim;
+                modifyMiddle(position, newName, newNim);
+                break;
+            case 6:
+                cout << "Masukkan nama baru mahasiswa : ";
+                cin >> newName;
+                cout << "Masukkan NIM baru mahasiswa : ";
+                cin >> newNim;
+                modifyTail(newName, newNim);
+                break;
+            case 7:
+                deleteHead();
+                break;
+            case 8:
+                cout << "Masukkan posisi data yang ingin dihapus : ";
+                cin >> position;
+                deleteMiddle(position);
+                break;
+            case 9:
+                deleteTail();
+                break;
+            case 10:
+                clearList();
+                break;
+            case 11:
+                display();
+                break;
+            case 0:
+                cout << "Program selesai. Terima kasih." << endl;
+                cout << "============================================================================" << endl;
+                cout << "Code by : Ardelia Rachma Laksita" << endl;
+                break;
+            default:
+                cout << "Pilihan tidak valid. Silakan pilih opsi operasi yang sesuai." << endl;
+                break;
+        } 
+        cout << "============================================================================" << endl;
+        cout << endl;
+    } while (pilihan != 0);
+
+    return 0;
+}
 
 ```
 
-#### Output:
-- Tampilan Menu :
-- Tampilan Operasi Tambah :
-- Tampilan Operasi Hapus :
-- Tampilan Operasi Ubah :
-- Tampilan Operasi Tampil Data :
+Kode tersebut digunakan untuk menambah data, mengubah data, menghapus data, dan membersihkan atau menghapus seluruh isi data sehingga list menjadi kosong. Program kodenya adalah program menu dimana user akan diminta memasukkan pilihan yang diinginkan. 
 
-Kode tersebut digunakan untuk 
-
-#### Penjelasan main program:
+- Apabila user ingin memasukkan (insert) data baru, maka user bisa memilih pilihan 1-3 dimana pilihan 1 akan menambahkan data di depan list (head), pilihan 2 akan menambahkan data di tengah list, dan pilihan 3 akan menambahkan data di belakang list (tail).
+- Apabila user ingin mengubah (modify / change) data yang ada dengan data baru, maka user bisa memilih pilihan 4-6 dimana pilihan 4 akan mengubah data di depan list (head), pilihan 5 akan mengubah data di tengah list, dan pilihan 6 akan mengubah data di belakang list (tail).
+- Apabila user ingin menghapus (delete) data yang ada pada list, maka user bisa memiliki pilihan 7-10 dimana pilihan 7 akan menghapus data di depan list (head), pilihan 8 akan menghapus data di tengah list, pilihan 9 akan menghapus data di belakang list (tail), dan pilihan 10 akan menghapus seluruh isi data sehingga list menjadi kosong.
+- Pada opsi 11, user dapat menampilkan seluruh data yang ada di dalam list saat ini.
+- Apabila user ingin keluar dari program menu, maka user dapat memilih opsi 0 yaitu keluar.
  
+Pada insert data, modify data, dan delete data yang berkaitan dengan data tengah akan meminta user untuk memasukkan posisi data tengah yang ingin ditambah, diubah, atau dihapus sehingga penerapannya menyesuaikan posisi yang diinput oleh user. 
+
+#### Penjelasan main program:
+Program tersebut berbentuk menu sehingga terdapat switch case pada main programnya. Tipe data pilihan adalah integer sehingga user harus menginputkan dalam bentuk numerik (angka). Tipe data nama adalah string karena terdapat lebih dari 1 karakter. Tipe data NIM adalah long long karena data yang diinputkan mencapai 10 digit. Sedangkan int position digunakan untuk menyesuaikan posisi pada insert, modify, dan delete data yang ada di tengah list.
+
+Program di dalam kode `do` yaitu berupa `cout` sebanyak 11 opsi menu yang ingin ditampilkan dan bisa dipilih oleh user. Terdapat pula ` cout << "Pilih menu yang Anda inginkan: ";` dan `cin >> pilihan;` yang digunakan untuk user memasukkan menu yang diinginkan.
+
+Pada switch case, masing-masing casenya menyesuaikan pilihan menu yang telah dibuat di dalam kode `do` sebelumnya. Case 1 akan menjalankan menu 1 yaitu insert data depan. Kemudian case 2 akan menjalankan menu 2 yaitu insert data tengah. Begitu juga case-case lainnya. Pada case 1-3 akan menampilkan **"Data berhasil ditambahkan"** dan **"Data yang berhasil ditambahkan : (Nama) dengan NIM (NIM)** apabila program telah berhasil menambahkan data baru. User hanya bisa memasukkan pilihan mulai dari 0 hingga 11. Apabila user memasukkan selain pilihan-pilihan tersebut, maka program akan mencetak **"Pilihan tidak valid. Silakan pilih opsi operasi yang sesuai."**
 
 #### Penjelasan input oleh user:
-
-
-#### Full code Screenshot:
-
-
-### 2. Apa yang terjadi jika deklarasi variabel _struct_ yang dibuat pada tugas guided I berjenis _Array_. Bagaimana cara mengisi data dan menampilkannya?
-```C++
-
-```
+Penjelasan input oleh user akan dijelaskan lebih lanjut pada interpretasi output berikut.
 
 #### Output:
 
+**- Tampilan Menu :**
 
-Kode tersebut digunakan untuk 
+Berikut tampilan output dari program menu. User akan diminta untuk memasukkan opsi pilihan 1 hingga 0 pada "Pilih menu yang anda inginkan: "
 
-#### Penjelasan main program:
+![Modul 6  Unguided 1 Output (18)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/c78e9bf2-2e6d-40d3-bd19-20897be74983)
+
+**- Tampilan Operasi Tambah :**
+
+**a) Tambah Depan (insertHead)**
+
+User memilih opsi 1 untuk menambahkan data pada bagian depan list (head). Data yang ditambahkan yaitu ara dengan NIM 2311110051. Saat ini masih terdapat 1 data mahasiswa beserta NIMnya.
+
+![Modul 6  Unguided 1 Output (1)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/b8b64d3a-a181-4ed5-8476-ad3fb0a68b15)
+
+**b) Tambah Tengah (insertMiddle)**
+
+User memilih opsi 2 untuk menambahkan data di tengah list. Data yang ditambahkan yaitu ajwa dengan NIM 2311110050 pada posisi 2. Saat ini ada 2 data mahasiswa beserta NIMnya.
+
+![Modul 6  Unguided 1 Output (3)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a292c58c-1cd9-4843-a19f-13950ffb3df5)
+
+User memilih opsi 2 lagi untuk menambahkan data di tengah list. Data yang ditambahkan yaitu aurel dengan NIM 2311110020 pada posisi 3. Saat ini ada 3 data mahasiswa beserta NIMnya.
+
+![Modul 6  Unguided 1 Output (4)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/7fd60ad6-5923-484c-987f-4e45717cddbf)
 
 
-#### Penjelasan input oleh user:
+User memilih opsi 2 lagi untuk menambahkan data di tengah list. Data yang ditambahkan yaitu alin dengan NIM 2311110008 pada posisi 3 sehingga posisi aurel yang sebelumnya ada di posisi 3, sekarang berpindah menjadi posisi 4. Saat ini ada 4 data mahasiswa beserta NIMnya. 
 
+![Modul 6  Unguided 1 Output (5)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/736d9e57-750a-412c-9496-60bd2da2c43b)
+
+**c) Tambah Belakang (insertTail)**
+
+User memilih opsi 3 untuk menambahkan data di belakang list (tail). Data yang ditambahkan yaitu anggun dengan NIM 2311110022. Saat ini ada 5 data mahasiswa beserta NIMnya.
+
+![Modul 6  Unguided 1 Output (2)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/fa6a2fbc-64af-40d5-af4f-32f6bee02bee)
+
+**Tampilan List Saat ini setelah Operasi Tambah :**
+
+Berikut tampilan 5 data yang telah ditambahkan pada list.
+
+![Modul 6  Unguided 1 Output (6)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/378db0d5-6057-4a94-955d-91fab05ef7b2)
+
+**- Tampilan Operasi Ubah :**
+
+**a) Ubah Depan (modifyHead)**
+
+![Modul 6  Unguided 1 Output (7)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/60cfd54c-5446-4b72-ad68-a3206499055c)
+
+User memilih opsi 4 untuk mengubah data pada bagian depan list (head). Data yang diubah yaitu ara dengan NIM 2311110051 menjadi atha dengan NIM 2311110060. Saat ini datanya masih ada 5, hanya ada perubahan pada posisi 1 (head). Data saat ini yaitu sebagai berikut.
+
+![Modul 6  Unguided 1 Output (8)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/264623aa-28f8-4bb4-8e13-0996d66f2e2d)
+
+**b) Ubah Tengah (modifyMiddle)**
+
+![Modul 6  Unguided 1 Output (9)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/7e13cd3c-af16-477f-ada9-7747deba1f8a)
+
+User memilih opsi 5 untuk mengubah data pada bagian tengah list. Data yang berada di posisi 2. Data yang diubah yaitu ajwa dengan NIM 2311110050 menjadi afy dengan NIM 2311110070. Saat ini datanya masih ada 5, hanya ada perubahan pada posisi 2. Data saat ini yaitu sebagai berikut.
+
+![Modul 6  Unguided 1 Output (10)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/084846a7-a470-41a1-a3ad-0d6f237001f3)
+
+**c) Ubah Belakang (modifyTail)**
+
+![Modul 6  Unguided 1 Output (11)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/74c98dc8-b251-4c6c-8d79-ca9886c141de)
+
+User memilih opsi 6 untuk mengubah data pada bagian belakang list (tail). Data yang diubah yaitu anggun dengan NIM 2311110022 menjadi alya dengan NIM 2311110080. Saat ini datanya masih ada 5, hanya ada perubahan pada posisi 5 (tail). Data saat ini yaitu sebagai berikut.
+
+![Modul 6  Unguided 1 Output (12)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/febdb3eb-84a6-45d0-89c3-c6095ca216b1)
+
+**Tampilan List Saat ini setelah Operasi Ubah :**
+
+Berikut tampilan 5 data pada list saat ini.
+
+![Modul 6  Unguided 1 Output (12)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/febdb3eb-84a6-45d0-89c3-c6095ca216b1)
+
+**- Tampilan Operasi Hapus :**
+
+**a) Hapus Depan (deleteHead)**
+
+User memilih opsi 7 untuk menghapus data pada bagian depan list (head). Data yang dihapus yaitu atha dengan NIM 2311110060. Saat ini ada 4 data mahasiswa beserta NIMnya.
+
+![Modul 6  Unguided 1 Output (13)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/41255d57-1ca0-4717-a4d2-bd8d34fdfad5)
+
+**b) Hapus Belakang (deleteTail)**
+
+User memilih opsi 9 untuk menghapus data pada bagian belakang list (tail). Data yang dihapus yaitu alya dengan NIM 2311110080. Saat ini ada 3 data mahasiswa beserta NIMnya.
+
+![Modul 6  Unguided 1 Output (14)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/127e7d83-8cb7-43e5-ba1f-85226dabf346)
+
+**c) Hapus Tengah (deleteMiddle)**
+
+User memilih opsi 8 untuk menghapus data pada bagian tengah list. Data yang dihapus berada pada posisi 2. Data yang dihapus yaitu alin dengan NIM 2311110008. Saat ini ada 2 data mahasiswa beserta NIMnya.
+
+![Modul 6  Unguided 1 Output (14)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/127e7d83-8cb7-43e5-ba1f-85226dabf346)
+
+**d) Hapus Seluruh Data (clearList)**
+
+Pada hapus seluruh data, semua data yang ada pada list saat ini akan dihapus atau dibersihkan sehingga list menjadi kosong. Berikut output saat seluruh data telah dihapus.
+
+![Modul 6  Unguided 1 Output (16)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/86fcb4db-c31d-47fe-9743-ca2b0fff9d46)
+
+**- Tampilan Operasi Tampil Data :**
+
+Berikut tampilan 5 data yang telah ditambahkan pada list.
+
+![Modul 6  Unguided 1 Output (6)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/378db0d5-6057-4a94-955d-91fab05ef7b2)
+
+**- Tampilan Menu Keluar dari Program :**
+
+Berikut tampilan output apabila user memasukkan opsi 11 yaitu keluar dari program.
+
+![Modul 6  Unguided 1 Output (17)](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/9b554be5-33ec-4ab6-b524-e4877b958027)
 
 #### Full code Screenshot:
+![Modul 6  Unguided 1 Full SS](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/15d5d3ed-3fc2-4641-a4a0-97e2d391cf9a)
 
+
+### 2. Setelah membuat menu tersebut, masukkan data sesuai urutan berikut, lalu  tampilkan data yang telah dimasukkan. (Gunakan insert depan, belakang atau tengah)
+![Modul 6  Output Unguided 2 Soal](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/402eb780-82ef-4b11-91d9-20ce8bd3b814)
+
+```C++
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+// PROGRAM LINKED LIST NON CIRCULAR MAHASISWA DAN NIM DENGAN INPUT OLEH USER
+
+// deklarasi struct untuk mahasiswa
+struct Mahasiswa {
+    string nama;
+    long long nim;
+    Mahasiswa* next;
+};
+
+// deklarasi head dan tail menggunakan pointer
+Mahasiswa* head = NULL;
+Mahasiswa* tail = NULL;
+Mahasiswa* baru; 
+Mahasiswa* help;
+Mahasiswa* hapus;
+
+// pengecekan jika list kosong
+bool isEmpty() {
+    if (head == NULL) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// membuat node baru
+void newNode (string nama, long long nim) {
+    baru = new Mahasiswa;
+    baru->nama = nama;
+    baru->nim = nim;
+    baru->next = NULL;
+}
+
+// menghitung list
+int countList() {
+    help = head;
+    int jumlah = 0;
+
+    while (help != NULL) {
+        jumlah++;
+        help = help->next;
+    }
+    return jumlah;
+}
+
+// fungsi tambah depan 
+void insertHead(string nama, long long nim) {
+
+    // membuat node baru
+    newNode(nama, nim);
+
+    if (isEmpty() == 1) {
+        head = baru;
+        tail = head;
+        baru->next = head;
+    } else {
+        while (tail->next != head) {
+            tail = tail->next;
+        }
+        baru->next = head;
+        head = baru;
+        tail->next = head;
+    }
+}
+
+// fungsi tambah tengah
+void insertMiddle(string nama, long long nim, int position) {
+    if (isEmpty() == 1) {
+        head = baru;
+        tail = head;
+        baru->next = head;
+    } else {
+        newNode(nama, nim);
+
+        // transversing
+        int nomor = 1;
+        help = head;
+
+        while (nomor < position -1) {
+            help = help->next;
+            nomor++;
+        }
+        baru->next = help->next;
+        help->next = baru;
+    }
+}
+
+// fungsi tambah belakang
+void insertTail(string nama, long long nim) {
+
+    // membuat node baru
+    newNode(nama, nim);
+
+    if (isEmpty() == 1) {
+        head = baru;
+        tail = head;
+        baru->next = head;
+    } else {
+        while (tail->next != head) {
+            tail = tail->next;
+        }
+        tail->next = baru;
+        baru->next = head;
+    }
+}
+
+// fungsi ubah data depan list
+void modifyHead(string newName, long long newNim) {
+    if (!isEmpty()) {
+        string nama = head->nama;
+        long long nim = head->nim;
+        head->nama = newName;
+        head->nim = newNim;
+        cout << "Data berhasil diubah" << endl;
+    } else {
+        cout << "Data mahasiswa tidak ditemukan." << endl;
+    } 
+}
+
+// fungsi ubah data tengah list
+void modifyMiddle(int position, string newName, long long newNim) {
+    if (!isEmpty()) {
+        Mahasiswa *temp = head;
+        string nama;
+        long long nim;
+        
+        for (int i = 1; i < position && temp != NULL; i++) {
+            nama = temp->nama;
+            nim = temp->nim;
+            temp = temp->next;
+        }
+        if (temp != NULL) {
+            nama = temp->nama;
+            nim = temp->nim;
+            temp->nama = newName;
+            temp->nim = newNim;
+            cout << "Data mahasiswa berhasil diubah." << endl;
+        } else {
+            cout << "Posisi tidak valid" << endl;
+        }
+    } else {
+        cout << "List masih kosong!" << endl;
+    }
+}
+
+// fungsi ubah data belakang list
+void modifyTail(string newName, long long newNim) {
+    if (!isEmpty()) {
+        Mahasiswa *temp = head;
+
+        // Mencapai node terakhir
+        while (temp->next != head) {
+            temp = temp->next;
+        }
+
+        // Mengubah data pada node terakhir
+        temp->nama = newName;
+        temp->nim = newNim;
+
+        cout << "Data mahasiswa berhasil diubah." << endl;
+    } else {
+        cout << "Data mahasiswa tidak ditemukan." << endl;
+    }
+}
+
+
+// fungsi hapus depan
+void deleteHead() {
+    if (isEmpty() == 0) {
+        hapus = head;
+        tail = head;
+
+        if (hapus->next == head) {
+            head = NULL;
+            tail = NULL;
+            delete hapus;
+        } else {
+            while (tail->next != hapus) {
+                tail = tail->next;
+            }
+
+            head = head->next;
+            tail->next = head;
+            hapus->next = NULL;
+            delete hapus;
+
+            cout << "Data mahasiswa berhasil dihapus." << endl;
+        }
+    } else {
+        cout << "List tersebut kosong!" << endl;
+    }
+}
+
+// fungsi hapus tengah
+void deleteMiddle(int posisi) {
+    if (isEmpty() == 0) {
+
+        // transvering
+        int nomor = 1;
+        help = head;
+
+        while (nomor < posisi - 1) {
+            help = help->next;
+            nomor++;
+        }
+
+        hapus = help->next;
+        help->next = hapus->next;
+        delete hapus;
+
+        cout << "Data mahasiswa berhasil dihapus." << endl;
+    } else {
+        cout << "List masih kosong!" << endl;
+    }
+}
+
+// fungsi hapus belakang
+void deleteTail() {
+    if (isEmpty() == 0) {
+        hapus = head;
+        tail = head;
+
+        if (hapus->next == head) {
+            head = NULL;
+            tail = NULL;
+            delete hapus;
+        } else {
+            while (hapus->next != head) {
+                hapus = hapus->next;
+            }
+
+            while (tail->next != hapus) {
+                tail = tail->next;
+            }
+
+            tail->next = head;
+            hapus->next = NULL;
+            delete hapus;
+
+            cout << "Data mahasiswa berhasil dihapus." << endl;
+        }
+    } else {
+        cout << "List masih kosong!" << endl;
+    }
+}
+
+// fungsi hapus seluruh isi list
+void clearList() {
+    if (head != NULL) {
+        hapus = head->next;
+
+        while (hapus != head) {
+            help = hapus-> next;
+            delete hapus;
+            hapus = help;
+        }
+
+        delete head;
+        head = NULL;
+    }
+
+    cout << "Proses menghapus selesai. Seluruh isi list berhasil dihapus. Saat ini tidak ada data pada list tersebut." << endl;
+}
+
+// menampilkan isi list
+void display() {
+    if (!isEmpty()) {
+        cout << "======================== DATA MAHASISWA ===========================" << endl;
+        cout << "|\tPosisi\t|\tNama\t\t|\tNIM\t\t|" << endl;
+        cout << "-------------------------------------------------------------------" << endl;
+
+        int position = 1;
+        Mahasiswa* current = head;
+        do {
+            cout << "|\t" << position << "\t|\t " << left << setw(15) << current->nama << "|\t" << setw(15) << current->nim << " |" << endl;
+            current = current->next;
+            position++; 
+        } while (current != head); 
+        cout << "-------------------------------------------------------------------" << endl; 
+    } else {
+        cout << "List tersebut kosong. Tidak ada data yang ditemukan di dalam list. Silakan masukkan data terlebih dahulu." << endl;
+    }
+}
+
+
+// main program
+int main() {
+    int pilihan;
+    string nama;
+    long long nim;
+    string newName;
+    long long newNim;
+    int position; 
+    do {
+        cout << "========== PROGRAM MENU LINKED LIST MAHASISWA DAN NIM ==========" << endl;
+        cout << "Selamat datang. Silakan pilih menu!" << endl;
+        cout << "----------------------------------------------------------------" << endl;
+        cout << "1. Tambahkan data baru pada list bagian depan" << endl;
+        cout << "2. Tambahkan data baru pada list bagian tengah" << endl;
+        cout << "3. Tambahkan data baru pada list bagian belakang" << endl;
+        cout << "4. Ubah data pada list bagian depan" << endl;
+        cout << "5. Ubah data pada list bagian tengah" << endl;
+        cout << "6. Ubah data pada list bagian belakang" << endl;
+        cout << "7. Hapus data pada list bagian depan" << endl;
+        cout << "8. Hapus data pada list bagian tengah" << endl;
+        cout << "9. Hapus data pada list bagian belakang" << endl;
+        cout << "10. Hapus seluruh data pada list" << endl;
+        cout << "11. Tampilkan isi list" << endl;
+        cout << "0. Keluar" << endl;
+        cout << "----------------------------------------------------------------" << endl;
+        cout << "Pilih menu yang Anda inginkan: ";
+        cin >> pilihan;
+
+        switch (pilihan) {
+            case 1:
+                cout << "Masukkan nama mahasiswa : ";
+                cin >> nama;
+                cout << "Masukkan NIM mahasiswa : ";
+                cin >> nim;
+                cin.ignore();
+                insertHead(nama, nim);
+                cout << "Data berhasil ditambahkan." << endl;
+                cout << "Data baru yang ditambahkan : " << nama << " dengan NIM " << nim << endl;
+                break;
+            case 2:
+                cout << "Masukkan nama mahasiswa : ";
+                cin >> nama;
+                cout << "Masukkan NIM mahasiswa : ";
+                cin >> nim;
+                cin.ignore();
+                cout << "Masukkan posisi : ";
+                cin >> position;
+                insertMiddle(nama, nim, position);
+                cout << "Data berhasil ditambahkan." << endl;
+                cout << "Data baru yang ditambahkan : " << nama << " dengan NIM " << nim << endl;
+                break;
+            case 3:
+                cout << "Masukkan nama mahasiswa : ";
+                cin >> nama;
+                cout << "Masukkan NIM mahasiswa : ";
+                cin >> nim;
+                cin.ignore();
+                insertTail(nama, nim);
+                cout << "Data berhasil ditambahkan." << endl;
+                cout << "Data baru yang ditambahkan : " << nama << " dengan NIM " << nim << endl;
+                break;
+            case 4:
+                cout << "Masukkan nama baru mahasiswa : ";
+                cin >> newName;
+                cout << "Masukkan NIM baru mahasiswa : ";
+                cin >> newNim;
+                modifyHead(newName, newNim);
+                break;
+            case 5:
+                cout << "Masukkan posisi mahasiswa yang ingin diubah : ";
+                cin >> position;
+                cout << "Masukkan nama baru mahasiswa : ";
+                cin >> newName;
+                cout << "Masukkan NIM baru mahasiswa : ";
+                cin >> newNim;
+                modifyMiddle(position, newName, newNim);
+                break;
+            case 6:
+                cout << "Masukkan nama baru mahasiswa : ";
+                cin >> newName;
+                cout << "Masukkan NIM baru mahasiswa : ";
+                cin >> newNim;
+                modifyTail(newName, newNim);
+                break;
+            case 7:
+                deleteHead();
+                break;
+            case 8:
+                cout << "Masukkan posisi data yang ingin dihapus : ";
+                cin >> position;
+                deleteMiddle(position);
+                break;
+            case 9:
+                deleteTail();
+                break;
+            case 10:
+                clearList();
+                break;
+            case 11:
+                display();
+                break;
+            case 0:
+                cout << "Program selesai. Terima kasih." << endl;
+                cout << "============================================================================" << endl;
+                cout << "Code by : Ardelia Rachma Laksita" << endl;
+                break;
+            default:
+                cout << "Pilihan tidak valid. Silakan pilih opsi operasi yang sesuai." << endl;
+                break;
+        } 
+        cout << "============================================================================" << endl;
+        cout << endl;
+    } while (pilihan != 0);
+
+    return 0;
+}
+
+```
+Penjelasan program di atas sama seperti yang telah dijelaskan pada unguided 1. Pada unguided 2, user akan memasukkan beberapa nama menggunakan insert depan, insert tengah, dan insert belakang.
+
+#### Output dan Interpretasi Sesuai Data yang Ditambahkan:
+Data dengan nama Jawad dengan NIM 23300001 diinput menggunakan opsi 1 yaitu insert depan karena datanya ditambahkan pada depan list (head). 
+
+![Cuplikan layar 2024-05-02 000053](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/1463885e-c255-4ed3-838d-fa57a3c27501)
+
+Data dengan nama Ardelia dengan NIM 2311110051 diinput menggunakan opsi 2 yaitu insert tengah pada posisi 2 karena datanya ditambahkan pada tengah list. Data tersebut bisa juga ditambahkan menggunakan insert belakang karena data yang berada di posisi Tail belum diinput sehingga semua data yang diinput menggunakan insert belakang akan otomatis sesuai dengan posisinya. Hal ini juga berlaku pada data-data berikutnya hingga posisi ke 9.
+
+![Cuplikan layar 2024-05-02 000106](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/75e53bc4-0564-4894-b17d-a6ad0ee4d997)
+
+Data dengan nama Farrel dengan NIM 23300003 diinput menggunakan opsi 2 yaitu insert tengah pada posisi 3 karena datanya ditambahkan pada tengah list (sebelum data belakang dimasukkan).
+
+![Cuplikan layar 2024-05-02 000203](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/74fb9637-9293-434b-83d9-f28fbd99f6ae)
+
+Data dengan nama Denis dengan NIM 23300005 diinput menggunakan opsi 2 yaitu insert tengah pada posisi 4 karena datanya ditambahkan pada tengah list (sebelum data belakang dimasukkan).
+
+![Cuplikan layar 2024-05-02 000216](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/57f3f845-d575-4ea7-83c1-f061b13dd616)
+
+Data dengan nama Anis dengan NIM 23300008 diinput menggunakan opsi 2 yaitu insert tengah pada posisi 5 karena datanya ditambahkan pada tengah list (sebelum data belakang dimasukkan).
+
+![Cuplikan layar 2024-05-02 000243](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/865028c2-9e7b-4ce6-9c0a-85926a2a1cd0)
+
+Data dengan nama Bowo dengan NIM 23300015 diinput menggunakan opsi 2 yaitu insert tengah pada posisi 6 karena datanya ditambahkan pada tengah list (sebelum data belakang dimasukkan).
+
+![Cuplikan layar 2024-05-02 000347](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/6bf61578-9e8f-4508-a62f-54873e2d3577)
+
+Data dengan nama Gahar dengan NIM 23300040 diinput menggunakan opsi 2 yaitu insert tengah pada posisi 7 karena datanya ditambahkan pada tengah list (sebelum data belakang dimasukkan).
+
+![Cuplikan layar 2024-05-02 000358](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/288cb771-a4ec-4b14-9dbb-6dd703358ca5)
+
+Data dengan nama Udin dengan NIM 23300048 diinput menggunakan opsi 2 yaitu insert tengah pada posisi 8 karena datanya ditambahkan pada tengah list (sebelum data belakang dimasukkan).
+
+![Cuplikan layar 2024-05-02 000411](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/351c8c94-6b2e-4085-a9cf-3e61dc7b8cdb)
+
+Data dengan nama Ucok dengan NIM 23300050 diinput menggunakan opsi 2 yaitu insert tengah pada posisi 9 karena datanya ditambahkan pada tengah list (sebelum data belakang dimasukkan).
+
+![Cuplikan layar 2024-05-02 000421](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/eacb0081-caa7-41f4-8fc9-e78cfdd71ef1)
+
+Data dengan nama Budi dengan NIM 23300099 diinput menggunakan opsi 3 yaitu insert belakang karena datanya ditambahkan pada belakang list (tail). Opsi insert belakang akan sangat membantu user apabila user tidak mengetahui posisi data saat ini ada berapa karena data yang ditambahkan akan langsung ditambahkan pada data paling akhir (tail).
+
+![Cuplikan layar 2024-05-02 000445](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/2b3d198a-de8c-4515-b48a-746e51def2f9)
+
+Berikut merupakan tampilan seluruh data nama dan NIM mahasiswa pada list yang telah diinput sebelumnya.
+
+![Cuplikan layar 2024-05-02 000456](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/b802c7de-0b25-4e36-9f86-c2be551f5585)
+
+#### Full code Screenshot:
+![Cuplikan layar 2024-05-02 000652](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/624b7277-e198-459f-9d61-53d7051333a8)
+
+
+### 3. Lakukan perintah berikut: 
+![Modul 6  Unguided 3 Output Soal](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/111ae1a8-8aed-4845-91bd-2fc92291ac8b)
+
+```C++
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+// PROGRAM LINKED LIST NON CIRCULAR MAHASISWA DAN NIM DENGAN INPUT OLEH USER
+
+// deklarasi struct untuk mahasiswa
+struct Mahasiswa {
+    string nama;
+    long long nim;
+    Mahasiswa* next;
+};
+
+// deklarasi head dan tail menggunakan pointer
+Mahasiswa* head = NULL;
+Mahasiswa* tail = NULL;
+Mahasiswa* baru; 
+Mahasiswa* help;
+Mahasiswa* hapus;
+
+// pengecekan jika list kosong
+bool isEmpty() {
+    if (head == NULL) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// membuat node baru
+void newNode (string nama, long long nim) {
+    baru = new Mahasiswa;
+    baru->nama = nama;
+    baru->nim = nim;
+    baru->next = NULL;
+}
+
+// menghitung list
+int countList() {
+    help = head;
+    int jumlah = 0;
+
+    while (help != NULL) {
+        jumlah++;
+        help = help->next;
+    }
+    return jumlah;
+}
+
+// fungsi tambah depan 
+void insertHead(string nama, long long nim) {
+
+    // membuat node baru
+    newNode(nama, nim);
+
+    if (isEmpty() == 1) {
+        head = baru;
+        tail = head;
+        baru->next = head;
+    } else {
+        while (tail->next != head) {
+            tail = tail->next;
+        }
+        baru->next = head;
+        head = baru;
+        tail->next = head;
+    }
+}
+
+// fungsi tambah tengah
+void insertMiddle(string nama, long long nim, int position) {
+    if (isEmpty() == 1) {
+        head = baru;
+        tail = head;
+        baru->next = head;
+    } else {
+        newNode(nama, nim);
+
+        // transversing
+        int nomor = 1;
+        help = head;
+
+        while (nomor < position -1) {
+            help = help->next;
+            nomor++;
+        }
+        baru->next = help->next;
+        help->next = baru;
+    }
+}
+
+// fungsi tambah belakang
+void insertTail(string nama, long long nim) {
+
+    // membuat node baru
+    newNode(nama, nim);
+
+    if (isEmpty() == 1) {
+        head = baru;
+        tail = head;
+        baru->next = head;
+    } else {
+        while (tail->next != head) {
+            tail = tail->next;
+        }
+        tail->next = baru;
+        baru->next = head;
+    }
+}
+
+// fungsi ubah data depan list
+void modifyHead(string newName, long long newNim) {
+    if (!isEmpty()) {
+        string nama = head->nama;
+        long long nim = head->nim;
+        head->nama = newName;
+        head->nim = newNim;
+        cout << "Data berhasil diubah" << endl;
+    } else {
+        cout << "Data mahasiswa tidak ditemukan." << endl;
+    } 
+}
+
+// fungsi ubah data tengah list
+void modifyMiddle(int position, string newName, long long newNim) {
+    if (!isEmpty()) {
+        Mahasiswa *temp = head;
+        string nama;
+        long long nim;
+        
+        for (int i = 1; i < position && temp != NULL; i++) {
+            nama = temp->nama;
+            nim = temp->nim;
+            temp = temp->next;
+        }
+        if (temp != NULL) {
+            nama = temp->nama;
+            nim = temp->nim;
+            temp->nama = newName;
+            temp->nim = newNim;
+            cout << "Data mahasiswa berhasil diubah." << endl;
+        } else {
+            cout << "Posisi tidak valid" << endl;
+        }
+    } else {
+        cout << "List masih kosong!" << endl;
+    }
+}
+
+// fungsi ubah data belakang list
+void modifyTail(string newName, long long newNim) {
+    if (!isEmpty()) {
+        Mahasiswa *temp = head;
+
+        // Mencapai node terakhir
+        while (temp->next != head) {
+            temp = temp->next;
+        }
+
+        // Mengubah data pada node terakhir
+        temp->nama = newName;
+        temp->nim = newNim;
+
+        cout << "Data mahasiswa berhasil diubah." << endl;
+    } else {
+        cout << "Data mahasiswa tidak ditemukan." << endl;
+    }
+}
+
+
+// fungsi hapus depan
+void deleteHead() {
+    if (isEmpty() == 0) {
+        hapus = head;
+        tail = head;
+
+        if (hapus->next == head) {
+            head = NULL;
+            tail = NULL;
+            delete hapus;
+        } else {
+            while (tail->next != hapus) {
+                tail = tail->next;
+            }
+
+            head = head->next;
+            tail->next = head;
+            hapus->next = NULL;
+            delete hapus;
+
+            cout << "Data mahasiswa berhasil dihapus." << endl;
+        }
+    } else {
+        cout << "List tersebut kosong!" << endl;
+    }
+}
+
+// fungsi hapus tengah
+void deleteMiddle(int posisi) {
+    if (isEmpty() == 0) {
+
+        // transvering
+        int nomor = 1;
+        help = head;
+
+        while (nomor < posisi - 1) {
+            help = help->next;
+            nomor++;
+        }
+
+        hapus = help->next;
+        help->next = hapus->next;
+        delete hapus;
+
+        cout << "Data mahasiswa berhasil dihapus." << endl;
+    } else {
+        cout << "List masih kosong!" << endl;
+    }
+}
+
+// fungsi hapus belakang
+void deleteTail() {
+    if (isEmpty() == 0) {
+        hapus = head;
+        tail = head;
+
+        if (hapus->next == head) {
+            head = NULL;
+            tail = NULL;
+            delete hapus;
+        } else {
+            while (hapus->next != head) {
+                hapus = hapus->next;
+            }
+
+            while (tail->next != hapus) {
+                tail = tail->next;
+            }
+
+            tail->next = head;
+            hapus->next = NULL;
+            delete hapus;
+
+            cout << "Data mahasiswa berhasil dihapus." << endl;
+        }
+    } else {
+        cout << "List masih kosong!" << endl;
+    }
+}
+
+// fungsi hapus seluruh isi list
+void clearList() {
+    if (head != NULL) {
+        hapus = head->next;
+
+        while (hapus != head) {
+            help = hapus-> next;
+            delete hapus;
+            hapus = help;
+        }
+
+        delete head;
+        head = NULL;
+    }
+
+    cout << "Proses menghapus selesai. Seluruh isi list berhasil dihapus. Saat ini tidak ada data pada list tersebut." << endl;
+}
+
+// menampilkan isi list
+void display() {
+    if (!isEmpty()) {
+        cout << "======================== DATA MAHASISWA ===========================" << endl;
+        cout << "|\tPosisi\t|\tNama\t\t|\tNIM\t\t|" << endl;
+        cout << "-------------------------------------------------------------------" << endl;
+
+        int position = 1;
+        Mahasiswa* current = head;
+        do {
+            cout << "|\t" << position << "\t|\t " << left << setw(15) << current->nama << "|\t" << setw(15) << current->nim << " |" << endl;
+            current = current->next;
+            position++; 
+        } while (current != head); 
+        cout << "-------------------------------------------------------------------" << endl; 
+    } else {
+        cout << "List tersebut kosong. Tidak ada data yang ditemukan di dalam list. Silakan masukkan data terlebih dahulu." << endl;
+    }
+}
+
+
+// main program
+int main() {
+    int pilihan;
+    string nama;
+    long long nim;
+    string newName;
+    long long newNim;
+    int position; 
+    do {
+        cout << "========== PROGRAM MENU LINKED LIST MAHASISWA DAN NIM ==========" << endl;
+        cout << "Selamat datang. Silakan pilih menu!" << endl;
+        cout << "----------------------------------------------------------------" << endl;
+        cout << "1. Tambahkan data baru pada list bagian depan" << endl;
+        cout << "2. Tambahkan data baru pada list bagian tengah" << endl;
+        cout << "3. Tambahkan data baru pada list bagian belakang" << endl;
+        cout << "4. Ubah data pada list bagian depan" << endl;
+        cout << "5. Ubah data pada list bagian tengah" << endl;
+        cout << "6. Ubah data pada list bagian belakang" << endl;
+        cout << "7. Hapus data pada list bagian depan" << endl;
+        cout << "8. Hapus data pada list bagian tengah" << endl;
+        cout << "9. Hapus data pada list bagian belakang" << endl;
+        cout << "10. Hapus seluruh data pada list" << endl;
+        cout << "11. Tampilkan isi list" << endl;
+        cout << "0. Keluar" << endl;
+        cout << "----------------------------------------------------------------" << endl;
+        cout << "Pilih menu yang Anda inginkan: ";
+        cin >> pilihan;
+
+        switch (pilihan) {
+            case 1:
+                cout << "Masukkan nama mahasiswa : ";
+                cin >> nama;
+                cout << "Masukkan NIM mahasiswa : ";
+                cin >> nim;
+                cin.ignore();
+                insertHead(nama, nim);
+                cout << "Data berhasil ditambahkan." << endl;
+                cout << "Data baru yang ditambahkan : " << nama << " dengan NIM " << nim << endl;
+                break;
+            case 2:
+                cout << "Masukkan nama mahasiswa : ";
+                cin >> nama;
+                cout << "Masukkan NIM mahasiswa : ";
+                cin >> nim;
+                cin.ignore();
+                cout << "Masukkan posisi : ";
+                cin >> position;
+                insertMiddle(nama, nim, position);
+                cout << "Data berhasil ditambahkan." << endl;
+                cout << "Data baru yang ditambahkan : " << nama << " dengan NIM " << nim << endl;
+                break;
+            case 3:
+                cout << "Masukkan nama mahasiswa : ";
+                cin >> nama;
+                cout << "Masukkan NIM mahasiswa : ";
+                cin >> nim;
+                cin.ignore();
+                insertTail(nama, nim);
+                cout << "Data berhasil ditambahkan." << endl;
+                cout << "Data baru yang ditambahkan : " << nama << " dengan NIM " << nim << endl;
+                break;
+            case 4:
+                cout << "Masukkan nama baru mahasiswa : ";
+                cin >> newName;
+                cout << "Masukkan NIM baru mahasiswa : ";
+                cin >> newNim;
+                modifyHead(newName, newNim);
+                break;
+            case 5:
+                cout << "Masukkan posisi mahasiswa yang ingin diubah : ";
+                cin >> position;
+                cout << "Masukkan nama baru mahasiswa : ";
+                cin >> newName;
+                cout << "Masukkan NIM baru mahasiswa : ";
+                cin >> newNim;
+                modifyMiddle(position, newName, newNim);
+                break;
+            case 6:
+                cout << "Masukkan nama baru mahasiswa : ";
+                cin >> newName;
+                cout << "Masukkan NIM baru mahasiswa : ";
+                cin >> newNim;
+                modifyTail(newName, newNim);
+                break;
+            case 7:
+                deleteHead();
+                break;
+            case 8:
+                cout << "Masukkan posisi data yang ingin dihapus : ";
+                cin >> position;
+                deleteMiddle(position);
+                break;
+            case 9:
+                deleteTail();
+                break;
+            case 10:
+                clearList();
+                break;
+            case 11:
+                display();
+                break;
+            case 0:
+                cout << "Program selesai. Terima kasih." << endl;
+                cout << "============================================================================" << endl;
+                cout << "Code by : Ardelia Rachma Laksita" << endl;
+                break;
+            default:
+                cout << "Pilihan tidak valid. Silakan pilih opsi operasi yang sesuai." << endl;
+                break;
+        } 
+        cout << "============================================================================" << endl;
+        cout << endl;
+    } while (pilihan != 0);
+
+    return 0;
+}
+
+```
+Penjelasan program di atas sama seperti yang telah dijelaskan pada unguided 1. Pada unguided 3, user akan melakukan perintah yang telah dijabarkan pada soal menggunakan program menu.
+
+![Output A](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/3817eb84-888e-4418-8aa0-4eaab75ec1c4)
+
+Data Wati dengan NIM 2330004 ditambah di antara Farrel dan Denis. Farrel berada pada posisi 3, sedangkan Denis berada pada posisi 4. Apabila data Wati ingin ditambahkan di antara Farrel dan Dennis maka Wati harus berada posisi 4. Jadi, user akan memasukkan opsi 2 yaitu insert data tengah dengan posisi 2 untuk data Wati dengan NIM 2330004. Berikut input user dan output yang dihasilkan.
+
+![Cuplikan layar 2024-05-02 003433](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/55b76ff9-5af6-4e23-8010-5e6876119907)
+![Cuplikan layar 2024-05-02 003449](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e0634737-b442-4467-beff-638a2715b328)
+
+![Output B](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/72d836aa-b529-4ea8-80ef-f3a03794c437)
+
+Data Denis saat ini berada pada posisi 5, maka user memasukkan opsi 8 untuk menghapus data tengah dengan posisi 5. Berikut input user dan output saat data Denis dengan NIM 23300005 telah dihapus.
+
+![Cuplikan layar 2024-05-02 003951](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e51b51e9-7574-47e1-92d9-4cb2e4611700)
+![Cuplikan layar 2024-05-02 004004](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/7eef71ca-7f99-430e-91d9-50c8d86ee55e)
+
+![Output C](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a5694761-c3cf-49f4-bea0-d1b1bbabed6c)
+
+Data Owi dengan NIM 2330000 ditambah pada depan list (head). Jadi, user memasukkan opsi 1 untuk insert data pada bagian depan list (head). Berikut input user dan output yang dihasilkan setelah data Owi dengan NIM 2330000 telah ditambahkan ke list.
+
+![Cuplikan layar 2024-05-02 004045](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/91020c54-adfe-46ba-81b2-f86ab5150d7b)
+![Cuplikan layar 2024-05-02 004101](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a4d1fc27-1e96-4b42-857c-7a0f3ab0effb)
+
+![Output D](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/3ddbce8a-f978-4569-b7f9-377c6c9342df)
+
+Data David dengan NIM 23300100 ditambah pada akhir list (tail). Jadi, user memasukkan opsi 3 untuk insert data pada bagian akhir list (tail). Berikut input user dan output yang dihasilkan setelah data David dengan NIM 2300100 telah ditambahkan ke list.
+
+![Cuplikan layar 2024-05-02 004111](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/76199d06-0195-4594-b406-f6ad66aa1065)
+![Cuplikan layar 2024-05-02 004121](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/0ae2a002-72a4-4254-80fd-9f4b4b6931f1)
+
+![Output E](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/05fb4d67-fba0-4535-b97b-807ecbf00a97)
+
+Data Udin dengan NIM 2300048 akan diubah menjadi Idin dengan NIM 23300045. Karena posisi Udin berada di data tengah tepatnya pada posisi 9, maka user memasukkan opsi menu 5 yaitu mengubah data pada tengah list. Berikut input user dan output yang dihasilkan setelah data Udin diubah menjadi Idin beserta NIMnya.
+
+![Cuplikan layar 2024-05-02 004132](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/6289578b-f355-473c-94a0-8868795aa84d)
+![Cuplikan layar 2024-05-02 004232](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/2e7132c1-f7f6-40b2-8439-3ed63d3eb84e)
+
+![Output F](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/8fb5cf88-959e-4f1a-9343-15631eb16d88)
+
+Data terakhir yaitu David dengan NIM 2300100 akan diubah menjadi Lucy dengan NIM 23300101. Jadi, user memasukkan opsi 6 untuk melakukan perubahan data pada akhir list (tail). Berikut input user dan output yang dihasilkan setelah data David diubah menjadi Lucy beserta NIMnya. 
+
+![Cuplikan layar 2024-05-02 004319](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/8c5ab51e-15a5-4068-a02e-500a34d455ac)
+![Cuplikan layar 2024-05-02 004515](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/62222016-5be7-44a2-bf19-0f588c1a9e36)!
+
+![Output G](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/651774bd-85a1-403e-af58-3c7ae624bcfb)
+
+Data awal saat ini yaitu Owi dengan NIM 2330000. User memasukkan opsi 7 untuk menghapus data pada depan list (head) sehingga data awal saat ini adalah Jawad dengan NIM 23300001. Posisi data di bawahnya juga naik menjadi 1 posisi sebelumnya. Berikut input user yang digunakan yaitu opsi menu 7.
+
+![Cuplikan layar 2024-05-02 004531](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/d08f4d38-cfdb-4610-b3f4-8378e682e225)
+
+![Output H](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/57fccaa1-d2f6-4d3d-8c5b-5c04113b79bd)
+
+Data awal saat ini adalah Owi dengan NIM 2330000 dan akan diubah menjadi Bagas dengan NIM 2330002. Jadi, user memasukkan menu 4 untuk mengubah data pada depan list (head). Berikut input user dan output yang dihasilkan setelah data Owi diubah menjadi Bagas beserta NIMnya.
+
+![Cuplikan layar 2024-05-02 004553](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/92a5aa9f-38ea-4008-8428-31d71899c88b)
+![Cuplikan layar 2024-05-02 004614](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/0b33532d-ccf8-4e4a-8aaa-924319a09d7c)
+
+![Output I](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a5a05475-0e53-4f5c-8144-3a330ccd0845)
+
+Data akhir pada list saat ini adalah Lucy dengan NIM 23300101. User perlu memasukkan opsi 9 untuk menghapus data pada belakang list (tail) sehingga datanya sekarang hanya ada 10 karena Lucy telah dihapus. Berikut merupakan input user dan output yang dihasilkan setelah Lucy dihapus.
+
+![Cuplikan layar 2024-05-02 004624](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/0e8c3d88-aeb4-4fda-8c5b-a6bd36de08a7)
+![Cuplikan layar 2024-05-02 004657](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/11d71b7d-85a7-4cd0-ab8e-9a5e03c80a49)
+
+![Output J](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/37b33966-8f02-4e80-8af3-22c0ddd94779)
+
+Data yang paling terbaru dan saat ini berada pada list yaitu sebagai berikut. Terdapat 10 nama Mahasiswa beserta NIM mereka pada list saat ini.
+
+![Cuplikan layar 2024-05-02 004657](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/11d71b7d-85a7-4cd0-ab8e-9a5e03c80a49)
+
+User memasukkan opsi 0 untuk keluar dari program.
+
+![Cuplikan layar 2024-05-02 004705](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/fcca9e13-06c6-435f-a346-39e4dcff9433)
+
+#### Full code Screenshot:
+![Cuplikan layar 2024-05-02 004929](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/88cfdbb6-7efe-40e9-b229-26fd47804b54)
 
 
 ## Kesimpulan
+Linked List artinya 'senarai berkait' yaitu struktur data yang berisi kumpulan data yang tersusun secara sekuensial, saling berkaitan dan bersambungan, dinamis, dan terbatas. Linked list ada 2 yaitu Single linked list dimana senarainya hanya satu arah dan hanya ada satu pointer yang menghubungkan setiap nodenya, serta Double linked list dimana senarainya adalah dua arah dan ada lebih dari 1 pointer yang menghubungkan setiap nodenya. Ada Linked List Circular dimana node tail terhubung dengan node head. Ada pula Linked List Non Circular dimana node pertama (head) dan node terakhir (tail) tidak saling berhubungan.
 
 
 ## Referensi
 - [1] Farrier, J., Data Structures and Algorithms with the C++ STL. Edisi Pertama. Birmingham : Packt Publishing Ltd, 2024.
 - [2] Mohanty, S. N. dan Tripathy, P. K., Data Structure and Algorithms Using C++. New York City : Wiley Publishing, 2021.
-<<<<<<< HEAD
 - [3] Yang. F. dan Dong, Y., C++ Programming. Edisi Pertama.  Germany : De Gruyter, 2019.
-=======
-- [3] Yang. F. dan Dong, Y., C++ Programming. Edisi Pertama.  Germany : De Gruyter, 2019.
->>>>>>> 7b6ff7b21a8aa31d6fb652efbb61d2b5b6fe5fa7

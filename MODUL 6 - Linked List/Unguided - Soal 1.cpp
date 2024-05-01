@@ -110,104 +110,64 @@ void insertTail(string nama, long long nim) {
 }
 
 // fungsi ubah data depan list
-void modifyHead() {
-    if (isEmpty()) {
-        cout << "List masih kosong." << endl;
-        return; 
-    }
-
-    long long searchNIM;
-    Mahasiswa* current = head;
-    Mahasiswa* prev = NULL;
-
-    while (current != NULL) {
-        if (current->nim != searchNIM) {
-            cout << "Masukkan nama baru mahasiswa : ";
-            string newNama;
-            getline(cin, newNama);
-            cout << "Masukkan NIM baru mahasiswa : ";
-            long long newNIM;
-            cin >> newNIM;
-            cin.ignore();
-
-            current->nama = newNama;
-            current->nim = newNIM;
-
-            return;
-        }
-        prev = current;
-        current = current->next;
-    }
-    cout << "Mahasiswa tidak ditemukan." << endl;
+void modifyHead(string newName, long long newNim) {
+    if (!isEmpty()) {
+        string nama = head->nama;
+        long long nim = head->nim;
+        head->nama = newName;
+        head->nim = newNim;
+        cout << "Data berhasil diubah" << endl;
+    } else {
+        cout << "Data mahasiswa tidak ditemukan." << endl;
+    } 
 }
 
 // fungsi ubah data tengah list
-void modifyMiddle(int position) {
-    if (isEmpty()) {
-        cout << "List masih kosong." << endl;
-        return;
+void modifyMiddle(int position, string newName, long long newNim) {
+    if (!isEmpty()) {
+        Mahasiswa *temp = head;
+        string nama;
+        long long nim;
+        
+        for (int i = 1; i < position && temp != NULL; i++) {
+            nama = temp->nama;
+            nim = temp->nim;
+            temp = temp->next;
+        }
+        if (temp != NULL) {
+            nama = temp->nama;
+            nim = temp->nim;
+            temp->nama = newName;
+            temp->nim = newNim;
+            cout << "Data mahasiswa berhasil diubah." << endl;
+        } else {
+            cout << "Posisi tidak valid" << endl;
+        }
+    } else {
+        cout << "List masih kosong!" << endl;
     }
-
-    cout << "Masukkan posisi data yang ingin diubah: ";
-    string newNama;
-    long long newNIM;
-
-    getline(cin, newNama);
-    cin >> newNIM;
-    cin.ignore();
-
-    Mahasiswa* current = head;
-    int count = 1;
-
-    while (current != NULL && count < position) {
-        current = current->next;
-        count++;
-    }
-
-    if (current == NULL) {
-        cout << "Posisi tidak valid." << endl;
-        return;
-    }
-    cout << "Masukkan nama baru mahasiswa : ";
-    cin >> current->nama;
-    cout << "Masukkan NIM baru mahasiswa : ";
-    cin >> current->nim;
 }
 
 // fungsi ubah data belakang list
-void modifyTail() {
-    if (isEmpty()) {
-        cout << "List masih kosong." << endl;
-        return; 
-    }
+void modifyTail(string newName, long long newNim) {
+    if (!isEmpty()) {
+        Mahasiswa *temp = head;
 
-    long long searchNIM;
-    Mahasiswa* current = head;
-    Mahasiswa* prev = NULL;
-
-    while (current != NULL) {
-        if (current->nim == searchNIM) {
-            if (current->next == NULL) {
-                cout << "Masukkan nama baru mahasiswa : ";
-                string newNama;
-                getline(cin, newNama);
-                cout << "Masukkan NIM baru mahasiswa : ";
-                long long newNIM;
-                cin >> newNIM;
-                cin.ignore();
-
-                current->nama = newNama;
-                current->nim = newNIM;
-            
-                cout << "Data mahasiswa berhasil diubah." << endl;
-                return;
-            }
+        // Mencapai node terakhir
+        while (temp->next != head) {
+            temp = temp->next;
         }
-        prev = current;
-        current = current->next;
+
+        // Mengubah data pada node terakhir
+        temp->nama = newName;
+        temp->nim = newNim;
+
+        cout << "Data mahasiswa berhasil diubah." << endl;
+    } else {
+        cout << "Data mahasiswa tidak ditemukan." << endl;
     }
-    cout << "Mahasiswa tidak ditemukan." << endl;
 }
+
 
 // fungsi hapus depan
 void deleteHead() {
@@ -228,6 +188,8 @@ void deleteHead() {
             tail->next = head;
             hapus->next = NULL;
             delete hapus;
+
+            cout << "Data mahasiswa berhasil dihapus." << endl;
         }
     } else {
         cout << "List tersebut kosong!" << endl;
@@ -250,6 +212,8 @@ void deleteMiddle(int posisi) {
         hapus = help->next;
         help->next = hapus->next;
         delete hapus;
+
+        cout << "Data mahasiswa berhasil dihapus." << endl;
     } else {
         cout << "List masih kosong!" << endl;
     }
@@ -277,6 +241,8 @@ void deleteTail() {
             tail->next = head;
             hapus->next = NULL;
             delete hapus;
+
+            cout << "Data mahasiswa berhasil dihapus." << endl;
         }
     } else {
         cout << "List masih kosong!" << endl;
@@ -303,16 +269,19 @@ void clearList() {
 
 // menampilkan isi list
 void display() {
-    if (isEmpty() == 0) {
-        cout << "======= DATA MAHASISWA =======" << endl;
-        cout << "NAMA\t\tNIM" << endl;
-        cout << "------------------------------" << endl;
+    if (!isEmpty()) {
+        cout << "======================== DATA MAHASISWA ===========================" << endl;
+        cout << "|\tPosisi\t|\tNama\t\t|\tNIM\t\t|" << endl;
+        cout << "-------------------------------------------------------------------" << endl;
 
+        int position = 1;
         Mahasiswa* current = head;
         do {
-            cout << setw(15) << left << current->nama << "\t" << current->nim << endl;
+            cout << "|\t" << position << "\t|\t " << left << setw(15) << current->nama << "|\t" << setw(15) << current->nim << " |" << endl;
             current = current->next;
-        } while (current != head);
+            position++; 
+        } while (current != head); 
+        cout << "-------------------------------------------------------------------" << endl; 
     } else {
         cout << "List tersebut kosong. Tidak ada data yang ditemukan di dalam list. Silakan masukkan data terlebih dahulu." << endl;
     }
@@ -324,6 +293,8 @@ int main() {
     int pilihan;
     string nama;
     long long nim;
+    string newName;
+    long long newNim;
     int position; 
     do {
         cout << "========== PROGRAM MENU LINKED LIST MAHASISWA DAN NIM ==========" << endl;
@@ -379,15 +350,27 @@ int main() {
                 cout << "Data baru yang ditambahkan : " << nama << " dengan NIM " << nim << endl;
                 break;
             case 4:
-                modifyHead();
+                cout << "Masukkan nama baru mahasiswa : ";
+                cin >> newName;
+                cout << "Masukkan NIM baru mahasiswa : ";
+                cin >> newNim;
+                modifyHead(newName, newNim);
                 break;
             case 5:
-                cout << "Masukkan posisi data yang ingin diubah: ";
+                cout << "Masukkan posisi mahasiswa yang ingin diubah : ";
                 cin >> position;
-                modifyMiddle(position);
+                cout << "Masukkan nama baru mahasiswa : ";
+                cin >> newName;
+                cout << "Masukkan NIM baru mahasiswa : ";
+                cin >> newNim;
+                modifyMiddle(position, newName, newNim);
                 break;
             case 6:
-                modifyTail();
+                cout << "Masukkan nama baru mahasiswa : ";
+                cin >> newName;
+                cout << "Masukkan NIM baru mahasiswa : ";
+                cin >> newNim;
+                modifyTail(newName, newNim);
                 break;
             case 7:
                 deleteHead();
@@ -408,6 +391,8 @@ int main() {
                 break;
             case 0:
                 cout << "Program selesai. Terima kasih." << endl;
+                cout << "============================================================================" << endl;
+                cout << "Code by : Ardelia Rachma Laksita" << endl;
                 break;
             default:
                 cout << "Pilihan tidak valid. Silakan pilih opsi operasi yang sesuai." << endl;
