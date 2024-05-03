@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul Stackt</h1>
+# <h1 align="center">Laporan Praktikum Modul Stack</h1>
 <p align="center">Ardelia Rachma Laksita</p>
 
 ## Table of Contents
