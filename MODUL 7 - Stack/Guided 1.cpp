@@ -37,7 +37,7 @@ void peekArrayBuku(int posisi) {
         cout << "Tidak ada data yang bisa dilihat" << endl;
     } else {
         int index = top;
-        for (int i = 1; i <= posisi; ) {
+        for (int i = 1; i <= posisi; i++) {
             index--;
         }
 
