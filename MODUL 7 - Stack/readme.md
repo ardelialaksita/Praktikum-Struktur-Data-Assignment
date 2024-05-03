@@ -169,4 +169,8 @@ Kode tersebut digunakan untuk
 
 
 ## Referensi
+<<<<<<< HEAD
 - [1] 
+=======
+- [1] 
+>>>>>>> 9668f13810965480e04623e96d1753f5e12884ad
