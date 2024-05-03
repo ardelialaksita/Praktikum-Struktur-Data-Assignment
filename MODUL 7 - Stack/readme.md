@@ -127,7 +127,7 @@ int main() {
 }
 
 ```
-Kode di atas digunakan untuk 
+Kode di atas digunakan untuk menampilkan data stack buku dimana isinya terdapat deretan atau tumpukan judul buku, posisi buku, pengecekan apakah data kosong atau tidak, pengecekan apakah data penuh atau tidak, banyak data pada stack (tumpukan) tersebut, serta jumlah data pada stack (tumpukan) tersebut setelah dihapus.
 
 
 #### Output Guided 1:
