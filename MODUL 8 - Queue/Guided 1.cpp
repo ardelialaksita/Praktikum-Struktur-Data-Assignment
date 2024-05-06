@@ -2,7 +2,7 @@
 
 using namespace std;
 
-cons inr maksimalQueue = 5
+const int maksimalQueue = 5
 int front = 0;
 int back = 0;
 
@@ -22,20 +22,22 @@ bool isEmpty() {
     } else {
         return false;
     }
+}
 
-    void enqueueAntrian(string data) {
-        if(isFull()) {
-            cout << "Antrian Penuh" << endl;
-        } else {
-            queueTeller[back] = data;
+void enqueueAntrian (string data) {
+    if (isFull()) {
+        cout << "Antrian Penuh" << endl;
+    } else {
+        if (isEmpty()) {
+            queueTeller[0] = data;
             front++;
             back++;
         } else {
             queueTeller[back] = data;
             back++;
-            }
         }
     }
+}
 
 void dequeueAntrian() {
     if (isEmpty()) {

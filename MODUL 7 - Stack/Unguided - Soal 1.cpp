@@ -117,8 +117,10 @@ class stack {
 
 int main() {
 
-    // deklarasi kata, hurufAwal, hurufAkhir, checkAgain, firstWord pada class stack dan lastWord pada class words
+    // deklarasi variabel kata untuk menyimpan kata yang diinput oleh user
     string kata;
+
+    // deklarasi hurufAwal, hurufAkhir, checkAgain, firstWord pada class stack dan lastWord pada class words
     char hurufAwal;
     char hurufAkhir;
     char checkAgain;   
@@ -130,50 +132,45 @@ int main() {
     // tampilkan head atau judul dari program 
     cout << "=== PALINDROME WORDS CHECK ===" << endl;
 
-    do {
-        // user dapat input kata untuk dicheck apakah palindrome atau tidak
-        cout << "Masukkan kata : ";
-        cin >> kata;
-        cout << endl;
+    // user menginput kata
+    cout << "Masukkan 1 kata: ";
+    cin >> kata;
+    cout << endl;
 
-        // perulangan for untuk menjalankan program push untuk menambahkan firstWord hingga lastWord
-        for (int i = 0; i < kata.length(); i++) {
-            firstWord.push(kata[i]);
-            lastWord.push(kata[i]);
-        }
-
-        // mengubah huruf yang dimasukkan menjadi huruf kecil semua menggunakan tolower
-        for (int i = 0; i < kata.length(); i++) {
-            firstWord.push(tolower(kata[i])); 
-            lastWord.push(tolower(kata[i]));
-        }
-
-        // perulangan for untuk menjalankan program pop untuk pengecekan firstWord dan lastWord
-        for (int i = 0; i < kata.length(); i++) {
-            hurufAwal = firstWord.pop();
-            hurufAkhir = lastWord.pop();
-
-            // if apabila huruf awal tidak sama dengan huruf akhir 
-            if (hurufAwal != hurufAkhir) {
-                cout << hurufAwal << " != " << hurufAkhir << endl;
-                palindrome = false;
-            }
-            // else apabila huruf awal sama dengan huruf akhir
-            else{
-                cout << hurufAwal << " = " << hurufAkhir << endl; 
-            }
-        }
-
-        // menampilkan hasil apakah kata yang diinput palindrome atau tidak
-        // tampilan kata yang termasuk palindrom
-        if (palindrome) {
-            cout << "Kata tersebut merupakan kata palindrome." << endl;
-        }
-        // tampilan kata yang tidak termasuk palindrome
-        else {
-            cout << "Kata tersebut bukan merupakan kata palindrome." << endl;
-        }
-        cout << endl;
+    // perulangan for untuk push firstWord dan lastWord
+    for (int i = 0; i < kata.length(); i++) {
+        firstWord.push(kata[i]);
+        lastWord.push(kata[i]);
     }
+
+    // ubah semua huruf menjadi huruf kecil semua menggunakan tolower
+    for (int i = 0; i < kata.length(); i++) {
+        firstWord.push(tolower(kata[i]));
+        lastWord.push(tolower(kata[i]));
+    }
+
+    // perulangan for untuk pop dan pengecekan palindrome
+    for (int i = 0; i < kata.length(); i++) {
+        char hurufAwal = firstWord.pop();
+        char hurufAkhir = lastWord.pop();
+
+        if (hurufAwal != hurufAkhir) {
+            cout << hurufAwal << " != " << hurufAkhir << endl;
+            palindrome = false;
+        } else {
+            cout << hurufAwal << " = " << hurufAkhir << endl; 
+        }
+    }
+
+    cout << endl;
+
+    // tampilkan hasil
+    if (palindrome) {
+        cout << "Kata tersebut merupakan kata palindrome." << endl;
+    } else {
+        cout << "Kata tersebut bukan merupakan kata palindrome." << endl;
+    }
+    cout << "==================================================" << endl;
+    cout << endl;
     return 0;
 }
