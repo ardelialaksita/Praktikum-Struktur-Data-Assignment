@@ -492,4 +492,8 @@ int main() {
 
 ## Referensi
 - [1] Nordeen, A., C++ Learn in 24 Hours. Edisi Pertama. Delaware : Guru99, 2022.
+<<<<<<< HEAD
 - [2] 
+=======
+- [1] 
+>>>>>>> b0b2b25de74025d66f35109fdaba451f72778fb6
