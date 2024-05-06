@@ -62,7 +62,7 @@ void changeArrayBuku(int posisi, string data) {
 }
 
 void destroyArrayBuku() {
-    for (int i = top; i > 0; i--) {
+    for (int i = top; i >= 0; i--) {
         arrayBuku[i] = "";
     }
     top = 0;

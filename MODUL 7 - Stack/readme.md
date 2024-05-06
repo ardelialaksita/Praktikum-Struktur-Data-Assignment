@@ -129,6 +129,14 @@ int main() {
 ```
 Kode di atas digunakan untuk menampilkan data stack buku dimana isinya terdapat deretan atau tumpukan judul buku, posisi buku, pengecekan apakah data kosong atau tidak, pengecekan apakah data penuh atau tidak, banyak data pada stack (tumpukan) tersebut, serta jumlah data pada stack (tumpukan) tersebut setelah dihapus.
 
+`string arrayBuku[5];
+int maksimal = 5, top = 0;`
+Kode tersebut artinya panjang array bukunya adalah 5 yaitu terdapat 5 buku pada array tersebut. Karena int maksimal adalah 5, maka banyak bukunya boleh kurang dari 5, namun tidak boleh lebih dari 5. 
+
+- Apabila stack (tumpukan) sudah penuh, maka kode `bool isFull()` akan membuat program menjalankan `return (top == maksimal);` karena telah mencapai jumlah maksimal buku yang bisa disimpan oleh array yaitu sebanyak 5.
+- Apabila stack (tumpukan) masih kosong, maka kode `bool isEmpty()` akan membuat program menjalankan `return (top == 0);` karena jumlahnya masih 0. Tidak ada buku sama sekali yang disimpan oleh array tersebut.
+- `void pushArrayBuku(string data)` merupakan fungsi void yang digunakan untuk menambahkan buku pada array. Program akan menampilkan "Data telah penuh" apabila data yang disimpan array sudah penuh. Apabila data masih belum penuh, maka program akan tetap menambahkan buku pada _top_ array menggunakan `arrayBuku[top] = data;` hingga `top++;`
+
 
 #### Output Guided 1:
 
