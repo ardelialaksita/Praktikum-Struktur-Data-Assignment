@@ -393,7 +393,7 @@ int main() {
 
 ```
 
-Kode tersebut digunakan untuk mengecek apakah suatu kata palindrome atau tidak. Apabila kata tersebut dibalik, maka akan menghasilkan urutan huuf yang sama seperti kata yang belum dibalik. 
+Kode tersebut digunakan untuk mengecek apakah suatu kata palindrome atau tidak. Apabila kata tersebut dibalik, maka akan menghasilkan urutan huruf yang sama seperti kata yang belum dibalik. Terdapat dua class pada program tersebut yaitu class deretHuruf dan class stack. Terdapat push yang digunakan untuk menambahkan data, serta terdapat pula pop yang digunakan untuk menghapus data. Pada bagian private masing-masing class harus terdapat deklarasi variabel. Tolower digunakan untuk mengkonversi semua huruf kapital menjadi kecil. 
 
 #### Output dan Penjelasan:
 ![Cuplikan layar 2024-05-06 200046](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/59f838f4-bae6-4a5d-9e80-6e47ae89b3b7)
