@@ -154,56 +154,241 @@ Kode tersebut artinya panjang array bukunya adalah 5 yaitu terdapat 5 buku pada 
 
 #### Penjelasan Main Program :
 ![Cuplikan layar 2024-05-06 190621](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/cecaa93a-6c14-482a-817d-0b89ab9ae3a7)
-- Pada main program, user menggunakan push array sebanyak 5 kali yaitu `pushArrayBuku("Kalkulus");`, `pushArrayBuku("Struktur Data");`, `pushArrayBuku("Matematika Diskrit");`, `pushArrayBuku("Dasar Multimedia");`, dan `pushArrayBuku("Inggris");` sehingga pada array tersebut terdapat 5 data buku yaitu Kalkulus, Struktur Data, Matematika Diskrit, Dasar Multimedia, dan Inggris. Data yang terbaru akan ditambahkan ke posisi depan. Berikut urutan posisi datanya.
 
-Posisi 1 : Inggris (top)
-Posisi 2 : Dasar Multimedia
-Posisi 3 : Matematika Diskrit
-Posisi 4 : Struktur Data
-Posisi 5 : Kalkulus
+Pada main program, user menggunakan push array sebanyak 5 kali yaitu `pushArrayBuku("Kalkulus");`, `pushArrayBuku("Struktur Data");`, `pushArrayBuku("Matematika Diskrit");`, `pushArrayBuku("Dasar Multimedia");`, dan `pushArrayBuku("Inggris");` sehingga pada array tersebut terdapat 5 data buku yaitu Kalkulus, Struktur Data, Matematika Diskrit, Dasar Multimedia, dan Inggris. Data yang terbaru akan ditambahkan ke posisi depan. Berikut urutan posisi datanya.
 
-- Selanjutnya, user mencetak array tersebut dengan cara memanggil fungsi `cetakArrayBuku();`.
+- Posisi 1 : Inggris (top)
+- Posisi 2 : Dasar Multimedia
+- Posisi 3 : Matematika Diskrit
+- Posisi 4 : Struktur Data
+- Posisi 5 : Kalkulus
+
+Selanjutnya, user mencetak array tersebut dengan cara memanggil fungsi `cetakArrayBuku();`.
 
 ![Cuplikan layar 2024-05-06 190637](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/9b4eb5d5-099f-4bca-90f0-a365c1c8508e)
-- Kode `cout << "Apakah data stack penuh? " << isFull() << endl;` dan `cout << "Apakah data stack kosong? " << isEmpty() << endl;` digunakan untuk mencetak pertanyaan **"Apakah data stack penuh? "** dan **"Apakah data stack kosong? "** pada output.
+
+Kode `cout << "Apakah data stack penuh? " << isFull() << endl;` dan `cout << "Apakah data stack kosong? " << isEmpty() << endl;` digunakan untuk mencetak pertanyaan **"Apakah data stack penuh? "** dan **"Apakah data stack kosong? "** pada output.
 
 ![Cuplikan layar 2024-05-06 190708](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/07c7ceec-c8a9-4f39-b052-73a9a48bf237)
-- `peekArrayBuku(2);` digunakan untuk melihat data pada posisi kedua. Data pada posisi kedua adalah buku dengan judul "Dasar Multimedia".
+
+`peekArrayBuku(2);` digunakan untuk melihat data pada posisi kedua. Data pada posisi kedua adalah buku dengan judul "Dasar Multimedia".
 
 ![Cuplikan layar 2024-05-06 190723](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/010dc67c-4b3d-40fd-aa06-f6c4799f1d60)
-- `popArrayBuku();` digunakan untuk menghapus data yang berada pada posisi top yaitu Inggris sehingga datanya sekarang tinggal 4. Berikut posisi bukunya.
 
-Posisi 1 : Dasar Multimedia (top)
-Posisi 2 : Matematika Diskrit
-Posisi 3 : Struktur Data
-Posisi 4 : Kalkulus
+`popArrayBuku();` digunakan untuk menghapus data yang berada pada posisi top yaitu Inggris sehingga datanya sekarang tinggal 4. Berikut posisi bukunya.
+
+- Posisi 1 : Dasar Multimedia (top)
+- Posisi 2 : Matematika Diskrit
+- Posisi 3 : Struktur Data
+- Posisi 4 : Kalkulus
 
 ![Cuplikan layar 2024-05-06 190731](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/bbaa7076-cb6a-45e6-809e-690642e19d29)
-- `changeArrayBuku(2, "Bahasa Jerman");` digunakan untuk mengubah data kedua menjadi buku berjudul "Bahasa Jerman". Pada posisi kedua diduduki oleh "Matematika Diskrit" sehingga posisi buku setelah data diubah yaitu sebagai berikut.
+`changeArrayBuku(2, "Bahasa Jerman");` digunakan untuk mengubah data kedua menjadi buku berjudul "Bahasa Jerman". Pada posisi kedua diduduki oleh "Matematika Diskrit" sehingga posisi buku setelah data diubah yaitu sebagai berikut.
 
-Posisi 1 : Dasar Multimedia (top)
-Posisi 2 : Bahasa Jerman
-Posisi 3 : Struktur Data
-Posisi 4 : Kalkulus
+- Posisi 1 : Dasar Multimedia (top)
+- Posisi 2 : Bahasa Jerman
+- Posisi 3 : Struktur Data
+- Posisi 4 : Kalkulus
 
-- `cetakArrayBuku();` digunakan untuk menampilkan isi data array tersebut
+`cetakArrayBuku();` digunakan untuk menampilkan isi data array tersebut
 
+`destroyArrayBuku();` digunakan untuk menghapus seluruh isi array sehingga array atau list tersebut menjadi kosong. 
+
+![Cuplikan layar 2024-05-06 194514](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/15116276-4861-4bf5-a168-a255b820fc86)
+
+`cout << "Jumlah data setelah dihapus: " << top << endl;` dan `cetakArrayBuku();` digunakan untuk mencetak jumlah data setelah dihapus yaitu 0.
 
 #### Output Guided 1:
-
+![Cuplikan layar 2024-05-06 194537](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/14da4c36-5b2e-4c66-ac9e-75e4d5ccb98d)
 
 ## Unguided 
 
 ### 1. Buatlah program untuk menentukan apakah kalimat tersebut yang diinputkan dalam program stack adalah palindrom/tidak. Palindrom kalimat yang dibaca dari depan dan belakang sama. Jelaskan bagaimana cara kerja programnya.
 
 ```C++
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+
+class deretHuruf {
+    public:
+    deretHuruf() {
+        head = NULL;
+        tail = NULL;
+        size = 0;
+    }
+
+    void push(char hurufAwal) {
+        node* temp = new node;
+        temp->words = hurufAwal;
+        temp->next = NULL;
+
+        if (size == 0) {
+            head = temp;
+            tail = temp;
+            head->prev = NULL;
+        }
+        else {
+            tail->next = temp;
+            temp->prev = tail;
+            tail = temp;
+        }
+        size++;
+    }
+
+    char pop() {
+        char words = head->words;
+        if (head == tail) {
+            delete head;
+        }
+        else {
+            node* temp = head;
+            head = head->next;
+            head->prev;
+            temp->next = NULL;
+            delete temp;
+        }
+        size--;
+        return words;
+    }
+    
+    private:
+    struct node {
+        char words;
+        node* next;
+        node* prev;
+    };
+
+    int size;
+    char words;
+    node* head;
+    node* tail;
+};
+
+class stack {
+    public:
+    stack() {
+        head = NULL;
+        tail = NULL;
+        size = 0;
+    }
+
+    void push (char hurufAwal) {
+        node* temp = new node;
+        temp->words = hurufAwal;
+        temp->next = NULL;
+
+        if (size == 0) {
+            head = temp;
+            tail = temp;
+            tail->prev = NULL;
+        }
+
+        else {
+            tail->next = temp;
+            temp->prev = tail;
+            tail = temp;
+        }
+        size++;
+    }
+
+    char pop() {
+        words = tail->words;
+        if (head == tail) {
+            delete head;  
+        }
+
+        else{
+            node* temp = tail;
+            tail = tail->prev;
+            tail->next = NULL;
+            temp->prev = NULL;
+            delete temp;
+        }
+        size--;
+        return words;
+    }
+
+    private:
+    struct node{
+        char words;
+        node* next;
+        node *prev;
+    };
+
+    int size;
+    char words;
+    node* head;
+    node* tail;
+};
+
+
+int main() {
+
+    // deklarasi kata, hurufAwal, hurufAkhir, checkAgain, firstWord pada class stack dan lastWord pada class words
+    string kata;
+    char hurufAwal;
+    char hurufAkhir;
+    char checkAgain;   
+    stack firstWord;
+    deretHuruf lastWord;
+    
+    // deklarasi palindrome
+    bool palindrome = true;
+    // tampilkan head atau judul dari program 
+    cout << "=== PALINDROME WORDS CHECK ===" << endl;
+
+    // user menginput kata
+    cout << "Masukkan 1 kata: ";
+    cin >> kata;
+    cout << endl;
+
+    // perulangan for untuk push firstWord dan lastWord 
+    for (int i = 0; i < kata.length(); i++) {
+        firstWord.push(tolower(kata[i]));
+        lastWord.push(tolower(kata[i]));
+    }
+
+    // perulangan for untuk pop dan pengecekan palindrome
+    for (int i = 0; i < kata.length(); i++) {
+        char hurufAwal = firstWord.pop();
+        char hurufAkhir = lastWord.pop();
+
+        if (hurufAwal != hurufAkhir) {
+            cout << hurufAwal << " != " << hurufAkhir << endl;
+            palindrome = false;
+        } else {
+            cout << hurufAwal << " = " << hurufAkhir << endl; 
+        }
+    }
+
+    cout << endl;
+
+    // tampilkan hasil
+    if (palindrome) {
+        cout << "Kata tersebut merupakan kata palindrome." << endl;
+        cout << "Semua huruf pada kata tersebut sama sehingga akan menghasilkan urutan huruf yang sama apabila kata dibalik." << endl;
+    } else {
+        cout << "Kata tersebut bukan merupakan kata palindrome." << endl;
+        cout << "Terdapat urutan huruf yang tidak sama sehingga apabila kata tersebut dibalik maka tidak akan menghasilkan bacaan yang sama." << endl;
+    }
+    cout << "================================================================================================================================" << endl;
+    cout << endl;
+    return 0;
+}
 
 ```
 
-#### Output:
-
-
 Kode tersebut digunakan untuk 
+
+#### Output dan Penjelasan:
+![Cuplikan layar 2024-05-06 200046](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/59f838f4-bae6-4a5d-9e80-6e47ae89b3b7)
+
+Pada output tersebut, kata yang diinput oleh user adalah **malam**. Selanjutnya, program melakukan pengecekan palindrom menggunakan `for (int i = 0; i < kata.length(); i++)`, `char hurufAwal = firstWord.pop();`, dan `char hurufAkhir = lastWord.pop();`. Karena saat huruf-huruf yang ada pada kata malam dibalik menghasilkan urutan yang sama, maka malam termasuk kata palindrome. 
+
+![Cuplikan layar 2024-05-06 200058](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/4bbfebf9-505a-48cd-b0ed-59538734f74b)
+Pada output tersebut, kata yang diinput oleh user adalah **pagi**. Selanjutnya, program melakukan pengecekan palindrom menggunakan `for (int i = 0; i < kata.length(); i++)`, `char hurufAwal = firstWord.pop();`, dan `char hurufAkhir = lastWord.pop();`. Karena saat huruf-huruf yang ada pada kata pagi dibalik tidak menghasilkan urutan yang sama yaitu igap, maka pagi bukan termasuk kata palindrome. 
 
 #### Penjelasan main program:
 
