@@ -3,7 +3,9 @@
 #include <cctype>
 using namespace std;
 
+// class deret huruf 
 class deretHuruf {
+    // bagian public dari class deretHuruf
     public:
     deretHuruf() {
         head = NULL;
@@ -11,6 +13,7 @@ class deretHuruf {
         size = 0;
     }
 
+    // menambahkan huruf
     void push(char hurufAwal) {
         node* temp = new node;
         temp->words = hurufAwal;
@@ -29,6 +32,7 @@ class deretHuruf {
         size++;
     }
 
+    // menghapus huruf
     char pop() {
         char words = head->words;
         if (head == tail) {
@@ -45,6 +49,7 @@ class deretHuruf {
         return words;
     }
     
+    // bagian private dari class deretHuruf berisi struct dari node
     private:
     struct node {
         char words;
@@ -52,13 +57,16 @@ class deretHuruf {
         node* prev;
     };
 
+    // deklarasi size, words, dhead, dan tail menggunakan pointer node dalam private class deretHuruf
     int size;
     char words;
     node* head;
     node* tail;
 };
 
+// class stack (tumpukan) huruf
 class stack {
+    // bagian public dari class stack
     public:
     stack() {
         head = NULL;
@@ -66,6 +74,7 @@ class stack {
         size = 0;
     }
 
+    // menambahkan huruf
     void push (char hurufAwal) {
         node* temp = new node;
         temp->words = hurufAwal;
@@ -85,6 +94,7 @@ class stack {
         size++;
     }
 
+    // menghapus huruf
     char pop() {
         words = tail->words;
         if (head == tail) {
@@ -102,6 +112,7 @@ class stack {
         return words;
     }
 
+    // bagian private dari class stack berisi struct
     private:
     struct node{
         char words;
@@ -109,6 +120,7 @@ class stack {
         node *prev;
     };
 
+    // deklarasi size, words, head, dan tail dalam private class stack
     int size;
     char words;
     node* head;
@@ -116,12 +128,11 @@ class stack {
 };
 
 
+// main program (program utama)
 int main() {
 
-    // deklarasi variabel kata untuk menyimpan kata yang diinput oleh user
+    // deklarasi kata, hurufAwal, hurufAkhir, checkAgain, firstWord pada class stack dan lastWord pada class words
     string kata;
-
-    // deklarasi hurufAwal, hurufAkhir, checkAgain, firstWord pada class stack dan lastWord pada class words
     char hurufAwal;
     char hurufAkhir;
     char checkAgain;   
@@ -138,13 +149,7 @@ int main() {
     cin >> kata;
     cout << endl;
 
-    // perulangan for untuk push firstWord dan lastWord
-    for (int i = 0; i < kata.length(); i++) {
-        firstWord.push(kata[i]);
-        lastWord.push(kata[i]);
-    }
-
-    // ubah semua huruf menjadi huruf kecil semua menggunakan tolower
+    // perulangan for untuk push firstWord dan lastWord 
     for (int i = 0; i < kata.length(); i++) {
         firstWord.push(tolower(kata[i]));
         lastWord.push(tolower(kata[i]));
@@ -168,12 +173,12 @@ int main() {
     // tampilkan hasil
     if (palindrome) {
         cout << "Kata tersebut merupakan kata palindrome." << endl;
-        cout << "Semua huruf pada kata tersebut akan menghasilkan urutan huruf yang sama apabila kata dibalik." << endl;
+        cout << "Semua huruf pada kata tersebut sama sehingga akan menghasilkan urutan huruf yang sama apabila kata dibalik." << endl;
     } else {
         cout << "Kata tersebut bukan merupakan kata palindrome." << endl;
-        cout << "Terdapat urutan huruf yang tidak sama apabila kata tersebut dibalik." << endl;
+        cout << "Terdapat urutan huruf yang tidak sama sehingga apabila kata tersebut dibalik maka tidak akan menghasilkan bacaan yang sama." << endl;
     }
-    cout << "=================================================================================================" << endl;
+    cout << "================================================================================================================================" << endl;
     cout << endl;
     return 0;
 }

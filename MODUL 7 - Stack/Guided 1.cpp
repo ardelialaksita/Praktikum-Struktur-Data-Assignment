@@ -70,7 +70,7 @@ void destroyArrayBuku() {
 
 void cetakArrayBuku() {
     if (isEmpty()) {
-        cout << "Tidak ada data yang 70 dicetak" << endl;
+        cout << "Tidak ada data yang dicetak" << endl;
     } else {
         for (int i = top - 1; i >= 0; i--) {
             cout << arrayBuku[i] << endl;
