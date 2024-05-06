@@ -167,10 +167,12 @@ int main() {
     // tampilkan hasil
     if (palindrome) {
         cout << "Kata tersebut merupakan kata palindrome." << endl;
+        cout << "Semua huruf pada kata tersebut akan menghasilkan urutan huruf yang sama apabila kata dibalik." << endl;
     } else {
         cout << "Kata tersebut bukan merupakan kata palindrome." << endl;
+        cout << "Terdapat urutan huruf yang tidak sama apabila kata tersebut dibalik." << endl;
     }
-    cout << "==================================================" << endl;
+    cout << "=================================================================================================" << endl;
     cout << endl;
     return 0;
 }
