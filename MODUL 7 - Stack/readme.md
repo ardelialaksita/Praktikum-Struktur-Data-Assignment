@@ -167,7 +167,7 @@ Selanjutnya, user mencetak array tersebut dengan cara memanggil fungsi `cetakArr
 
 ![Cuplikan layar 2024-05-06 190637](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/9b4eb5d5-099f-4bca-90f0-a365c1c8508e)
 
-Kode `cout << "Apakah data stack penuh? " << isFull() << endl;` dan `cout << "Apakah data stack kosong? " << isEmpty() << endl;` digunakan untuk mencetak pertanyaan **"Apakah data stack penuh? "** dan **"Apakah data stack kosong? "** pada output.
+Kode `cout << "Apakah data stack penuh? " << isFull() << endl;` dan `cout << "Apakah data stack kosong? " << isEmpty() << endl;` digunakan untuk mencetak pertanyaan **"Apakah data stack penuh? "** dan **"Apakah data stack kosong? "** pada output. 1 merupakan True yang artinya stack tersebut penuh. Sedangkan 0 merupakan False yang artinya stack tersebut tidak kosong.
 
 ![Cuplikan layar 2024-05-06 190708](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/07c7ceec-c8a9-4f39-b052-73a9a48bf237)
 
@@ -211,7 +211,9 @@ Kode `cout << "Apakah data stack penuh? " << isFull() << endl;` dan `cout << "Ap
 #include <cctype>
 using namespace std;
 
+// class deret huruf 
 class deretHuruf {
+    // bagian public dari class deretHuruf
     public:
     deretHuruf() {
         head = NULL;
@@ -219,6 +221,7 @@ class deretHuruf {
         size = 0;
     }
 
+    // menambahkan huruf
     void push(char hurufAwal) {
         node* temp = new node;
         temp->words = hurufAwal;
@@ -237,6 +240,7 @@ class deretHuruf {
         size++;
     }
 
+    // menghapus huruf
     char pop() {
         char words = head->words;
         if (head == tail) {
@@ -253,6 +257,7 @@ class deretHuruf {
         return words;
     }
     
+    // bagian private dari class deretHuruf berisi struct dari node
     private:
     struct node {
         char words;
@@ -260,13 +265,16 @@ class deretHuruf {
         node* prev;
     };
 
+    // deklarasi size, words, dhead, dan tail menggunakan pointer node dalam private class deretHuruf
     int size;
     char words;
     node* head;
     node* tail;
 };
 
+// class stack (tumpukan) huruf
 class stack {
+    // bagian public dari class stack
     public:
     stack() {
         head = NULL;
@@ -274,6 +282,7 @@ class stack {
         size = 0;
     }
 
+    // menambahkan huruf
     void push (char hurufAwal) {
         node* temp = new node;
         temp->words = hurufAwal;
@@ -293,6 +302,7 @@ class stack {
         size++;
     }
 
+    // menghapus huruf
     char pop() {
         words = tail->words;
         if (head == tail) {
@@ -310,6 +320,7 @@ class stack {
         return words;
     }
 
+    // bagian private dari class stack berisi struct
     private:
     struct node{
         char words;
@@ -317,6 +328,7 @@ class stack {
         node *prev;
     };
 
+    // deklarasi size, words, head, dan tail dalam private class stack
     int size;
     char words;
     node* head;
@@ -324,6 +336,7 @@ class stack {
 };
 
 
+// main program (program utama)
 int main() {
 
     // deklarasi kata, hurufAwal, hurufAkhir, checkAgain, firstWord pada class stack dan lastWord pada class words
@@ -380,21 +393,26 @@ int main() {
 
 ```
 
-Kode tersebut digunakan untuk 
+Kode tersebut digunakan untuk mengecek apakah suatu kata palindrome atau tidak. Apabila kata tersebut dibalik, maka akan menghasilkan urutan huuf yang sama seperti kata yang belum dibalik. 
 
 #### Output dan Penjelasan:
 ![Cuplikan layar 2024-05-06 200046](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/59f838f4-bae6-4a5d-9e80-6e47ae89b3b7)
 
-Pada output tersebut, kata yang diinput oleh user adalah **malam**. Selanjutnya, program melakukan pengecekan palindrom menggunakan `for (int i = 0; i < kata.length(); i++)`, `char hurufAwal = firstWord.pop();`, dan `char hurufAkhir = lastWord.pop();`. Karena saat huruf-huruf yang ada pada kata malam dibalik menghasilkan urutan yang sama, maka malam termasuk kata palindrome. 
+Pada output tersebut, kata yang diinput oleh user adalah **Malam**. Selanjutnya, program melakukan pengecekan palindrom menggunakan `for (int i = 0; i < kata.length(); i++)`, `char hurufAwal = firstWord.pop();`, dan `char hurufAkhir = lastWord.pop();`. Karena saat huruf-huruf yang ada pada kata malam dibalik menghasilkan urutan yang sama, maka malam termasuk kata palindrome. Huruf M pada awalan kata Malam yang awalnya menggunakan kapital telah diubah oleh program menjadi huruf kecil menggunakan tolower sehingga pengecekan palindromenya sudah dalam keadaan huruf kecil semua. 
 
 ![Cuplikan layar 2024-05-06 200058](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/4bbfebf9-505a-48cd-b0ed-59538734f74b)
-Pada output tersebut, kata yang diinput oleh user adalah **pagi**. Selanjutnya, program melakukan pengecekan palindrom menggunakan `for (int i = 0; i < kata.length(); i++)`, `char hurufAwal = firstWord.pop();`, dan `char hurufAkhir = lastWord.pop();`. Karena saat huruf-huruf yang ada pada kata pagi dibalik tidak menghasilkan urutan yang sama yaitu igap, maka pagi bukan termasuk kata palindrome. 
+Pada output tersebut, kata yang diinput oleh user adalah **Pagi**. Selanjutnya, program melakukan pengecekan palindrom menggunakan `for (int i = 0; i < kata.length(); i++)`, `char hurufAwal = firstWord.pop();`, dan `char hurufAkhir = lastWord.pop();`. Karena saat huruf-huruf yang ada pada kata pagi dibalik tidak menghasilkan urutan yang sama yaitu igap, maka pagi bukan termasuk kata palindrome. Huruf P pada awalan kata Pagi yang awalnya menggunakan kapital telah diubah oleh program menjadi huruf kecil menggunakan tolower sehingga pengecekan palindromenya sudah dalam keadaan huruf kecil semua. 
 
 #### Penjelasan main program:
-
+- Variabel-variabel yang digunakan dalam program harus dideklarasikan tipe datanya terlebih dahulu. Tipe data variabel kata adalah string karena terdapat lebih dari 1 karakter. Tipe data pada variabel hurufAwal dan hurufAkhir adalah char karena hanya memerlukan 1 karakter. hurufAwal merupakan urutan huruf dengan urutan mulai dari awal hingga akhir yang kemudian akan dipasangkan dengan hurufAkhir yang urutannya dimulai dari akhir menuju ke huruf awal. Huruf pertama diperiksa palindromnya dengan huruf terakhir. Apabila tidak sama, maka akan menghasilkan **hurufAwal != hurufAkhir**. Apabila sama, akan menghasilkan **hurufAwal = hurufAkhir**.
+- `bool palindrome = true;` merupakan deklarasi palindrome yaitu tipe data boolean dengan deklarasi true.
+- `cout << "=== PALINDROME WORDS CHECK ===" << endl;` digunakan untuk mencetak _head of the program_ atau judul program tersebut.
+- `cout << "Masukkan 1 kata: ";` dan `cin >> kata;` digunakan untuk memasukkan kata yang akan diinput oleh user.
+- Pada perulangan for yang berisi `firstWord.push(tolower(kata[i]));` dan `lastWord.push(tolower(kata[i]));` digunakan untuk menambahkan huruf awal hingga akhir dengan urutan yang sesuai dan urutan berkebalikan. Huruf yang masih dalam bentuk kapital akan diubah menjadi huruf kecil semua menggunakan tolower.
+- Pada perulangan for yang berisi `char hurufAwal = firstWord.pop();` dan `char hurufAkhir = lastWord.pop();` digunakan untuk mengecek apakah suatu kata palindrome atau tidak. Urutan huruf dari awal ke akhir akan diperiksa apakah sama seperti urutan huruf dari akhir ke awal atau tidak.
 
 #### Full code Screenshot:
-
+![Cuplikan layar 2024-05-06 200024](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/ebba2d06-d89a-4221-8a0c-1174b6344d67)
 
 
 ### 2. Buatlah program untuk melakukan pembalikan terhadap kalimat menggunakan stack dengan minimal 3 kata. Jelaskan output program dan source codenya beserta operasi/fungsi yang dibuat.
