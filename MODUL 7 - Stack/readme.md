@@ -1,5 +1,5 @@
 # <h1 align="center">Laporan Praktikum Modul Stack</h1>
-<p align="center">Ardelia Rachma Laksita</p>
+<p align="center">Ardelia Rachma Laksita - 2311110051</p>
 
 ## Table of Contents
 1. [Dasar Teori](#dasar-teori)
@@ -9,10 +9,19 @@
 5. [Referensi](#referensi)
 
 ## Dasar Teori
+Stack adalah struktur data yang mengoperasikan teknik berdasarkan LIFO (Last In First Out) []. 
 
+### Operasi pada Stack :
+- push : digunakan untuk menambahkan (push) suatu item ke dalam stack.
+- pop : digunakan untuk menghapus (pops) suatu item dari dalam stack.
+- peek : digunakan untuk mengembalikan _top item_ dari stack tanpa menghilangkannya.
+- isFull : digunakan untuk mengecek apakah stack penuh atau tidak.
+- isEmpty : digunakan untuk mengecek apakah stack kosong atau tidak. 
 
-### Penerapan atau Penggunaan Stack :
+### Implementasi Stack :
 
+Berikut merupakan implementasi pada stack.
+![Cuplikan layar 2024-05-06 143446](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/08dd1e3c-4280-46b8-a0a0-6355fb2fb481)
 
 ## Guided 
 
@@ -133,9 +142,12 @@ Kode di atas digunakan untuk menampilkan data stack buku dimana isinya terdapat 
 int maksimal = 5, top = 0;`
 Kode tersebut artinya panjang array bukunya adalah 5 yaitu terdapat 5 buku pada array tersebut. Karena int maksimal adalah 5, maka banyak bukunya boleh kurang dari 5, namun tidak boleh lebih dari 5. 
 
-- Apabila stack (tumpukan) sudah penuh, maka kode `bool isFull()` akan membuat program menjalankan `return (top == maksimal);` karena telah mencapai jumlah maksimal buku yang bisa disimpan oleh array yaitu sebanyak 5.
-- Apabila stack (tumpukan) masih kosong, maka kode `bool isEmpty()` akan membuat program menjalankan `return (top == 0);` karena jumlahnya masih 0. Tidak ada buku sama sekali yang disimpan oleh array tersebut.
-- `void pushArrayBuku(string data)` merupakan fungsi void yang digunakan untuk menambahkan buku pada array. Program akan menampilkan "Data telah penuh" apabila data yang disimpan array sudah penuh. Apabila data masih belum penuh, maka program akan tetap menambahkan buku pada _top_ array menggunakan `arrayBuku[top] = data;` hingga `top++;`
+- Apabila stack (tumpukan) sudah penuh, maka kode `bool isFull()` akan membuat program menjalankan `return (top == maksimal);` karena telah mencapai jumlah maksimal buku yang bisa disimpan oleh array yaitu sebanyak 5. Tipe data yang digunakan adalah boolean.
+- Apabila stack (tumpukan) masih kosong, maka kode `bool isEmpty()` akan membuat program menjalankan `return (top == 0);` karena jumlahnya masih 0. Tidak ada buku sama sekali yang disimpan oleh array tersebut. Tipe data yang digunakan adalah boolean.
+- `void pushArrayBuku(string data)` merupakan fungsi void yang digunakan untuk menambahkan buku pada array. Program akan menampilkan "Data telah penuh" apabila data yang disimpan array sudah penuh. Apabila data masih belum penuh, maka program akan tetap menambahkan buku pada _top_ array menggunakan `arrayBuku[top] = data;` hingga `top++;`. Tipe datanya adalah string.
+- `void popArrayBuku()` nerupakan fungsi void yang digunakan untuk menghapus data pada list atau array. Apabila tidak ada data pada array atau `if (isEmpty())`, maka program akan mencetak output "Tidak ada data yang dihapus menggunakan `cout << "Tidak ada data yang dihapus" << endl;`. Apabila terdapat data pada aray atau list tersebut, maka program akan menghapus salah satu datanya menggunakan `arrayBuku[top - 1] = "";` dan `top--;`. Array akan terus berkurang karena menggunakan indeks top--;
+- `void peekArrayBuku(int posisi)` merupakan fungsi void yang digunakan untuk melihat isi array buku berdasarkan posisinya. Jika tidak ada data pada array atau `if (isEmpty())`, maka program akan menjalankan `cout << "Tidak ada data yang bisa dilihat" << endl;` dan mencetak output "Tidak ada data yang bisa dilihat". Jika terdapat data pada array tersebut, maka program akan menjalankan perulangan for yaitu `for (int i = 1; i <= posisi; i++)` dan `cout << "Posisi ke " << posisi << " adalah " << arrayBuku[index] << endl;` untuk mencetak **"Posisi ke (posisi buku) adalah (nama buku)"**.
+- 
 
 
 #### Output Guided 1:
@@ -177,8 +189,5 @@ Kode tersebut digunakan untuk
 
 
 ## Referensi
-<<<<<<< HEAD
+- [1] Nordeen, A., C++ Learn in 24 Hours. Edisi Pertama. Delaware : Guru99, 2022.
 - [1] 
-=======
-- [1] 
->>>>>>> 9668f13810965480e04623e96d1753f5e12884ad
