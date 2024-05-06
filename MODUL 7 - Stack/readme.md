@@ -481,10 +481,10 @@ int main() {
 
 ```
 #### Output:
-
+![Cuplikan layar 2024-05-07 061133](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/6195777f-2c13-42d2-9c23-10a5d0372a6b)
 
 #### Full code Screenshot:
-
+![Cuplikan layar 2024-05-07 061152](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/64fa8c28-674c-450a-99b0-1f1295fc818a)
 
 
 ## Kesimpulan
@@ -492,8 +492,4 @@ int main() {
 
 ## Referensi
 - [1] Nordeen, A., C++ Learn in 24 Hours. Edisi Pertama. Delaware : Guru99, 2022.
-<<<<<<< HEAD
 - [2] 
-=======
-- [1] 
->>>>>>> b0b2b25de74025d66f35109fdaba451f72778fb6
