@@ -21,6 +21,7 @@ Stack adalah struktur data yang mengoperasikan teknik berdasarkan LIFO (Last In 
 ### Implementasi Stack :
 
 Berikut merupakan implementasi pada stack.
+
 ![Cuplikan layar 2024-05-06 143446](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/08dd1e3c-4280-46b8-a0a0-6355fb2fb481)
 
 ## Guided 
@@ -183,6 +184,7 @@ Kode `cout << "Apakah data stack penuh? " << isFull() << endl;` dan `cout << "Ap
 - Posisi 4 : Kalkulus
 
 ![Cuplikan layar 2024-05-06 190731](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/bbaa7076-cb6a-45e6-809e-690642e19d29)
+
 `changeArrayBuku(2, "Bahasa Jerman");` digunakan untuk mengubah data kedua menjadi buku berjudul "Bahasa Jerman". Pada posisi kedua diduduki oleh "Matematika Diskrit" sehingga posisi buku setelah data diubah yaitu sebagai berikut.
 
 - Posisi 1 : Dasar Multimedia (top)
@@ -429,7 +431,7 @@ struct Stack {
     int top;
 } huruf;
 
-// tambahkan karakter ke dalam stack
+// tambahkan huruf ke dalam stack
 void push(char x) {
     if (huruf.top == 30) {
         cout << "Stack sudah penuh";
@@ -483,12 +485,30 @@ int main() {
 #### Output:
 ![Cuplikan layar 2024-05-07 061133](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/6195777f-2c13-42d2-9c23-10a5d0372a6b)
 
+Kode tersebut digunakan untuk melakukan pembalikan terhadap kalimat menggunakan stack dengan minimal 3 kata. Pertama-tama buatlah struct dari tumpukan (stack) yang berisi deklarasi panjang maksimal kata atau isi dan deklarasi tipe data top. 
+
+- `char isi[30];` artinya maksimal jumlah kata yang dapat diinput atau diproses oleh program adalah 30 kata. Kata yang dimasukkan dapat 3 atau lebih. Tipe datanya adalah char. Sedangkan "isi" merupakan variabelnya. 
+- `int top;` merupakan deklarasi dari data top dimana tipenya adalah integer.
+- Kode yang berada di dalam fungsi `void push(char x)` digunakan untuk menambahkan huruf ke dalam stack. Apabila stack sudah penuh atau mencapai 30, maka program akan menjalankan `if (huruf.top == 30)` dan `cout << "Stack sudah penuh";` serta mencetak "Stack sudah penuh". Program _else_-nya yaitu `return huruf.isi[++huruf.top] = x;` dimana jika stack belum mencapai batas maksimal yaitu 30, maka hurufnya akan tetap ditambah.
+- Kode yang berada di dalam fungsi `char pop()` digunakan untuk menghapus huruf di dalam stack. Apabila stack sudah kosong, maka program akan menjalankan `if (huruf.top == 0)` dan `cout << "Stack sudah kosong";` serta mencetak "Stack sudah kosong". Program _else_-nya yaitu `return huruf.isi[huruf.top--];` dimana jika stack belum kosong, maka hurufnya akan tetap dapat dihapus sesuai urutannya.
+
+#### Penjelasan Main Program:
+- `char kalimat[30];` adalah deklarasi variabel kalimat yaitu maksimal jumlah katanya sebanyak 30. Tipe datanya adalah character.
+- `huruf.top = 0;` adalah deklarasi data top atau awal pada stack dimulai dari 0.
+- ` cout << "=== PROGRAM MEMBALIK KALIMAT (REVERSE SENTENCES) ===" << endl;` akan menampilkan _head of the program_ atau judul dari program tersebut yaitu **reverse sentences**.
+- `cout << "Masukkan kalimat: ";` dan `cin.getline(kalimat, sizeof(kalimat));` merupakan kode untuk user menginput kalimat (boleh lebih dari 3 kata).
+- `cout << "Kalimat asli: " << kalimat;` digunakan untuk menampilkan kalimat yang telah diinput oleh user.
+- Perulangan for `for (int i = 0; kalimat[i] != '\0'; i++)` digunakan untuk memasukkan huruf ke dalam stack dengan cara memanggil `push(kalimat[i])`.
+- `cout << "\nKalimat setelah dibalik: ";` digunakan untuk menampilkan kalimat yang telah dibalik seluruh hurufnya. Kemudian, untuk menampilkannya yaitu dengan memanggil fungsi pop pada `while (huruf.top > 0)` dan `cout << pop();`.
+- `return 0;` merupakan kode bahwa program telah sukses dan berhasil.
+
+
 #### Full code Screenshot:
 ![Cuplikan layar 2024-05-07 061152](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/64fa8c28-674c-450a-99b0-1f1295fc818a)
 
 
 ## Kesimpulan
-
+Stack yang dikenal dengan tumpukan merupakan ...
 
 ## Referensi
 - [1] Nordeen, A., C++ Learn in 24 Hours. Edisi Pertama. Delaware : Guru99, 2022.
