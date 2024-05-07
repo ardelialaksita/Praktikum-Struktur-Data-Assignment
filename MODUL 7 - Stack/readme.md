@@ -490,8 +490,6 @@ int main() {
 }
 
 ```
-#### Output:
-![Cuplikan layar 2024-05-07 061133](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/6195777f-2c13-42d2-9c23-10a5d0372a6b)
 
 Kode tersebut digunakan untuk melakukan pembalikan terhadap kalimat menggunakan stack dengan minimal 3 kata. Pertama-tama buatlah struct dari tumpukan (stack) yang berisi deklarasi panjang maksimal kata atau isi dan deklarasi tipe data top. 
 
@@ -510,10 +508,15 @@ Kode tersebut digunakan untuk melakukan pembalikan terhadap kalimat menggunakan 
 - `cout << "\nKalimat setelah dibalik: ";` digunakan untuk menampilkan kalimat yang telah dibalik seluruh hurufnya. Kemudian, untuk menampilkannya yaitu dengan memanggil fungsi pop pada `while (huruf.top > 0)` dan `cout << pop();`.
 - `return 0;` merupakan kode bahwa program telah sukses dan berhasil.
 
+#### Output:
+![Cuplikan layar 2024-05-07 061133](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/6195777f-2c13-42d2-9c23-10a5d0372a6b)
+
+Penjelasan Output :
+
+Pada output tersebut, user menginputkan kalimat Kampus Telkom Purwokerto dimana huruf K, T, dan P adalah kapital. Kemudian, program membalikkan urutan huruf masing-masing kata pada kalimat tersebut dari belakang ke depan. Jadi, Kampus menjadi supmaK, Telkom menjadi mokleT, dan Purwokerto menjadi otrekowruP. Kemudian, huruf K pada Kampus yang awalnya di depan berubah menjadi di urutan paling belakang. Huruf o pada Purwokerto yang awalnya berada pada urutan paling belakang berubah menjadi di urutan paling depan. Kata yang telah dibalik yaitu otrekowruP mokleT supmaK. Huruf kapital tetap kapital, sedangkan huruf kecil tetap huruf kecil. Hanya posisi atau urutan hurufnya yang dibalik.
 
 #### Full code Screenshot:
 ![Cuplikan layar 2024-05-07 061152](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/64fa8c28-674c-450a-99b0-1f1295fc818a)
-
 
 ## Kesimpulan
 Stack yang dikenal dengan tumpukan merupakan struktur data yang mengoperasikan teknik berdasarkan LIFO (Last In First Out). Data yang terakhir dimasukkan akan keluar paling pertama. Pada stack, user dapat menambahkan, menghapus, mengosongkan stack, bahkan melihat nilai atau elemen pada posisi tertentu dalam tumpukan tanpa menghapusnya. Pada stack, kita juga dapat mengecek apakah suatu stack penuh atau kosong.
