@@ -9,20 +9,28 @@
 5. [Referensi](#referensi)
 
 ## Dasar Teori
-Stack adalah struktur data yang mengoperasikan teknik berdasarkan LIFO (Last In First Out) []. 
+Stack adalah struktur data yang mengoperasikan teknik berdasarkan LIFO (Last In First Out) [2]. LIFO mengandung arti bahwa elemen yang dimasukkan terakhir akan keluar terlebih dahulu dan FILO berarti elemen yang dimasukkan terlebih dahulu akan keluar terakhir [1].
+
+Stack mengikuti urutan tertentu berdasarkan operasi yang dilakukan. Pada stack, user bisa menambahkan data, menghapus data, serta mengecek apakah stack tersebut ada isinya (penuh) atau kosong. 
 
 ### Operasi pada Stack :
 - push : digunakan untuk menambahkan (push) suatu item ke dalam stack.
 - pop : digunakan untuk menghapus (pops) suatu item dari dalam stack.
 - peek : digunakan untuk mengembalikan _top item_ dari stack tanpa menghilangkannya.
 - isFull : digunakan untuk mengecek apakah stack penuh atau tidak.
-- isEmpty : digunakan untuk mengecek apakah stack kosong atau tidak. 
+- isEmpty : digunakan untuk mengecek apakah stack kosong atau tidak.
+- size : digunakan untuk mengembalikan elemen dalam stack.
+- clear : digunakan untuk menghapus seluruh elemen dalam satck sehingga stack kosong.
+- search : digunakan untuk mencari suatu elemen tertentu dalam stack.
+- top : digunakan untuk melihat elemen teratas dalam stack tanpa menghapusnya.
 
 ### Implementasi Stack :
 
 Berikut merupakan implementasi pada stack.
 
 ![Cuplikan layar 2024-05-06 143446](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/08dd1e3c-4280-46b8-a0a0-6355fb2fb481)
+
+Karakteristik khas dari stack adalah penggunaan aturan LIFO (Last In, First Out) [3]. Data yang terakhir dimasukkan ke dalam stack akan menjadi data pertama yang diambil atau dikeluarkan. Konsep ini mirip dengan tumpukan buku, di mana buku yang terakhir diletakkan di atas tumpukan harus diambil terlebih dahulu sebelum bisa mengakses buku yang berada di bagian bawah tumpukan [3].
 
 ## Guided 
 
@@ -508,8 +516,9 @@ Kode tersebut digunakan untuk melakukan pembalikan terhadap kalimat menggunakan 
 
 
 ## Kesimpulan
-Stack yang dikenal dengan tumpukan merupakan ...
+Stack yang dikenal dengan tumpukan merupakan struktur data yang mengoperasikan teknik berdasarkan LIFO (Last In First Out). Data yang terakhir dimasukkan akan keluar paling pertama. Pada stack, user dapat menambahkan, menghapus, mengosongkan stack, bahkan melihat nilai atau elemen pada posisi tertentu dalam tumpukan tanpa menghapusnya. Pada stack, kita juga dapat mengecek apakah suatu stack penuh atau kosong.
 
 ## Referensi
-- [1] Nordeen, A., C++ Learn in 24 Hours. Edisi Pertama. Delaware : Guru99, 2022.
-- [2] 
+- [1] Harendra, "Stack Data Structure," geeksforgeeks.org. [Online]. Tersedia : https://www.geeksforgeeks.org/stack-data-structure/ [Diakses 5 Mei 2024].
+- [2] Nordeen, A., C++ Learn in 24 Hours. Edisi Pertama. Delaware : Guru99, 2022
+- [3] Universitas Bakrie, “Kenalan dengan Pengertian Stack dalam Pemrograman,” bakrie.ac.id. [Online]. Tersedia : https://bakrie.ac.id/articles/552-kenalan-dengan-pengertian-stack-dalam-pemrograman.html [Diakses 4 Mei 2024].
