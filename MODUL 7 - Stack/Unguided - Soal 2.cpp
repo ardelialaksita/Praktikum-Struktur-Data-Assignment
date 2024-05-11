@@ -9,7 +9,7 @@ struct Stack {
     int top;
 } huruf;
 
-// tambahkan karakter ke dalam stack
+// tambahkan huruf ke dalam stack
 void push(char x) {
     if (huruf.top == 30) {
         cout << "Stack sudah penuh";
