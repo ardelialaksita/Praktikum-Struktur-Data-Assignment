@@ -9,7 +9,17 @@
 5. [Referensi](#referensi)
 
 ## Dasar Teori
+Queue adalah salah satu struktur data yang menerapkan prinsip FIFO (First In First Out) dimana elemen yang pertama masuk ke antrian akan menjadi elemen pertama yang keluar antrian. Dalam prinsip FIFO, Queue dapat membantu mengatur urutan data dan mempertahankan prioritas saat memproses elemen-elemen di dalamnya [].
 
+### Fungsi atau Kegunaan Queue:
+- Simulasi antrian : yaitu untuk membuat model antrian dari kegiatan sehari-hari, misalnya antrian pelanggan di kasir supermarket.
+- Buffering : yaitu untuk menyangga data sementara, misalnya untuk menampung data yang dikirimkan ke jaringan secara bertahap.
+- BFS (Breadth-First Search) : yaitu untuk pencarian BFS pada algoritma struktur data, misalnya pada graph dan tree.
+
+### Karakteristik Queue:
+Karakteristik FIFO (First In First Out) yaitu menerapkan algoritma berikut.
+- Elemen ditambahkan pada ujung belakang (back / rear) antrian. 
+- Elemen dihapus dari ujung depan (front) antrian.
 
 ### Operasi pada Queue:
 - 
