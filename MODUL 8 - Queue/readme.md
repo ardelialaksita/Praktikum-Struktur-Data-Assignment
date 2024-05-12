@@ -44,7 +44,7 @@ Karakteristik FIFO (First In First Out) yaitu menerapkan algoritma berikut.
 ### Implementasi Queue :
 Queue diimplementasikan sebagai _adapter class_ dan biasanya didasarkan pada kontainer yang mendasarinya [3]. Adapter bukan kontainer kelas-pertama (_first class_) karena tidak menyediakan implementasi struktur data aktual dimana i dalamnya elemen-elemen dapat disimpan dan karena adaptor tidak mendukung iterator [8]. Berikut merupakan implementasi pada queue.
 
-
+![queue implementation](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e0626a7e-ce15-4bca-9e58-e2e23471ff85)
 
 Source: Sitasi [4] Daftar Pustaka
 
