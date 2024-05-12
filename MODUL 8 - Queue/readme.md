@@ -21,13 +21,20 @@ Karakteristik FIFO (First In First Out) yaitu menerapkan algoritma berikut.
 - Elemen ditambahkan pada ujung belakang (back / rear) antrian. 
 - Elemen dihapus dari ujung depan (front) antrian.
 
+### Jenis-jenis Queue:
+- Queue Linear : implementasi queue yang menggunakan struktur data linear, seperti array atau linked list [5]. Ketika queue penuh, maka tidak bisa menampung elemen baru meskipun masih ada ruang kosong. Ini karena queue linear memiliki batasan ukuran tetap.
+- Queue Circular : implementasi queue yang menggunakan struktur data linear dengan pemanfaatan siklus [5]. Ketika queue penuh, maka elemen-elemen baru masih dapat ditambahkan ke front.
+- Priority Queue : implementasi queue dimana setiap elemen memiliki prioritas tertentu [5]. Implementasinya menggunakan struktur data seperti head untuk memastikan elemen-elemen terurut secara tetap [5].
+
 ### Operasi pada Queue:
 - **Enqueue (menambahkan elemen ke dalam queue)** : elemen baru ditambahkan di posisi belakang queue (rear). Penunjuk rear maju ke posisi berikutnya untuk menunjuk elemen baru.
 - **Dequeue (menghapus elemen dari queue)** : elemen yang dihapus berada di posisi depan queue (front). Penunjuk front maju ke posisi berikutnya untuk menunjuk elemen selanjutnya. Elemen yang dihapus tidak masuk lagi dalam queue.
 - **Front (mendapatkan elemen pertama dalam queue)** : operasi ini akan membantu kita melihat elemen pertama (yang akan dikeluarkan) dari queue tanpa mengubah dan menghapus struktur queue.
 - **Rear (mendapatkan elemen terakhir dalam queue)** : operasi ini akan membantu kita melihat elemen terakhir (yang telah ditambahkan) pada queue tanpa mengubah dan menghapus struktur queue. 
 - **Size (mendapatkan jumlah atau ukuran elemen dalam queue)** : digunakan untuk mengetahui berapa banyak elemen yang saat ini berada di dalam queue tanpa mengubah struktur atau menghapus elemen dari queue itu sendiri.
-- **IsEmpty (mengecek apakah queue kosong)** : apabila queue memiliki elemen di dalamnya, maka IsEmpty akan mengembalikan nilai false yang artinya queue tidak kosong. Begitupun sebaliknya, apabila queue tidak memiliki elemen sama sekali, maka IsEmpty akan mengembalikan nilai True yang artinya queue kosong.
+- **IsFull (mengecek apakah queue penuh)** : apabila queue mencapai batas elemen maksimal, maka IsFull akan mengembalikan nilai true yang artinya queue dalam keadaan penuh. Begitu pun sebaliknya, apabila queue belum mencapai batas maksimal, maka IsFull akan mengambalikan nilai false yang artinya queue belum penuh dan user masih bisa menambahkan data lagi ke dalam queue tersebut.
+- **IsEmpty (mengecek apakah queue kosong)** : apabila queue memiliki elemen di dalamnya, maka IsEmpty akan mengembalikan nilai false yang artinya queue tidak kosong. Begitu pun sebaliknya, apabila queue tidak memiliki elemen sama sekali, maka IsEmpty akan mengembalikan nilai True yang artinya queue kosong.
+- **Peek (mengambil data dari queue)** : digunakan untuk mengambil data dari queue tanpa mengubah atau menghapus struktur dari queue.
 
 ### Implementasi Queue :
 
