@@ -9,12 +9,17 @@
 5. [Referensi](#referensi)
 
 ## Dasar Teori
-Queue adalah salah satu struktur data yang menerapkan prinsip FIFO (First In First Out) dimana elemen yang pertama masuk ke antrian akan menjadi elemen pertama yang keluar antrian. Dalam prinsip FIFO, Queue dapat membantu mengatur urutan data dan mempertahankan prioritas saat memproses elemen-elemen di dalamnya [5].
+Queue adalah salah satu struktur data yang menerapkan prinsip FIFO (First In First Out) dimana elemen yang pertama masuk ke antrian akan menjadi elemen pertama yang keluar antrian. Dalam prinsip FIFO, Queue dapat membantu mengatur urutan data dan mempertahankan prioritas saat memproses elemen-elemen di dalamnya [5]. 
+
+Queue menggunakan objek yang terdiri atas deque atau list (_sequential container class_) sebagai kontainer yang mendasarinya dan menyediakan sekumpulan fungsi anggota tertentu untuk mengakses elemen-elemennya [1]. Queue harus terdiri atas queue element, head pointer, dan tail pointer sebagai _data members_ [2]. Queue berguna untuk simulator yang berbasis waktu simulasi peristiwa dengan prioritasnya, _real-time games_, _searching_, _routing_, dan _compression_ [7]. 
 
 ### Fungsi atau Kegunaan Queue:
 - Simulasi antrian : yaitu untuk membuat model antrian dari kegiatan sehari-hari, misalnya antrian pelanggan di kasir supermarket.
 - Buffering : yaitu untuk menyangga data sementara, misalnya untuk menampung data yang dikirimkan ke jaringan secara bertahap.
 - BFS (Breadth-First Search) : yaitu untuk pencarian BFS pada algoritma struktur data, misalnya pada graph dan tree.
+- Synchronization: yaitu digunakan dalam aplikasi dimana data ditransfer secara _asynchronus_ di antara 2 proses [6].
+- Call Center Systems : yaitu digunakan untuk menampung panggilan masuk dan menyelesaikannya secara satu per satu [6].
+- CPU Scheduling : yaitu digunakan untuk menangani interupssi dalam sistem waktu nyata dan ideal untuk penjadwalan disk dan CPU [6].
 
 ### Karakteristik Queue:
 Karakteristik FIFO (First In First Out) yaitu menerapkan algoritma berikut.
@@ -37,12 +42,13 @@ Karakteristik FIFO (First In First Out) yaitu menerapkan algoritma berikut.
 - **Peek (mengambil data dari queue)** : digunakan untuk mengambil data dari queue tanpa mengubah atau menghapus struktur dari queue.
 
 ### Implementasi Queue :
-
-Berikut merupakan implementasi pada queue.
-
+Queue diimplementasikan sebagai _adapter class_ dan biasanya didasarkan pada kontainer yang mendasarinya [3]. Adapter bukan kontainer kelas-pertama (_first class_) karena tidak menyediakan implementasi struktur data aktual dimana i dalamnya elemen-elemen dapat disimpan dan karena adaptor tidak mendukung iterator [8]. Berikut merupakan implementasi pada queue.
 
 
-(penjelasan)
+
+Source: Sitasi [4] Daftar Pustaka
+
+Elemen yang ditambahkan paling akhir akan dihapus terlebih dahulu [4]. Implementasi queue pada C++ dapat dilakukan menggunakan STL (Standard Template Library) yang menyediakan kelas queue dalam header file <queue> [5]. Implementasi queue dapat dilakukan menggunakan array maupun linked list.
 
 ## Guided 
 
