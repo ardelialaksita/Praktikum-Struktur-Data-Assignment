@@ -22,9 +22,9 @@ Karakteristik FIFO (First In First Out) yaitu menerapkan algoritma berikut.
 - Elemen dihapus dari ujung depan (front) antrian.
 
 ### Jenis-jenis Queue:
-- Queue Linear : implementasi queue yang menggunakan struktur data linear, seperti array atau linked list [5]. Ketika queue penuh, maka tidak bisa menampung elemen baru meskipun masih ada ruang kosong. Ini karena queue linear memiliki batasan ukuran tetap.
-- Queue Circular : implementasi queue yang menggunakan struktur data linear dengan pemanfaatan siklus [5]. Ketika queue penuh, maka elemen-elemen baru masih dapat ditambahkan ke front.
-- Priority Queue : implementasi queue dimana setiap elemen memiliki prioritas tertentu [5]. Implementasinya menggunakan struktur data seperti head untuk memastikan elemen-elemen terurut secara tetap [5].
+- **Queue Linear** : implementasi queue yang menggunakan struktur data linear, seperti array atau linked list [5]. Ketika queue penuh, maka tidak bisa menampung elemen baru meskipun masih ada ruang kosong. Ini karena queue linear memiliki batasan ukuran tetap.
+- **Queue Circular** : implementasi queue yang menggunakan struktur data linear dengan pemanfaatan siklus [5]. Ketika queue penuh, maka elemen-elemen baru masih dapat ditambahkan ke front.
+- **Priority Queue** : implementasi queue dimana setiap elemen memiliki prioritas tertentu [5]. Implementasinya menggunakan struktur data seperti head untuk memastikan elemen-elemen terurut secara tetap [5].
 
 ### Operasi pada Queue:
 - **Enqueue (menambahkan elemen ke dalam queue)** : elemen baru ditambahkan di posisi belakang queue (rear). Penunjuk rear maju ke posisi berikutnya untuk menunjuk elemen baru.
