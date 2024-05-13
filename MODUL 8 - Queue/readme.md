@@ -220,24 +220,316 @@ Kode `cout << "Apakah data stack penuh? " << isFull() << endl;` dan `cout << "Ap
 ### 1. Ubahlah penerapan konsep queue pada bagian guided dari array menjadi linked list.
 
 ```C++
+#include <iostream>
+using namespace std;
+
+// struct Node
+struct Node {
+    // deklarasi data
+    string data;
+    Node *next;
+};
+
+// class Queue
+class Queue {
+// bagian public dari class Queue
+public :
+    Queue() {
+        // deklarasi size, data front, dan data back
+        size = 0;
+        front = NULL;
+        back = NULL;
+    }
+
+    // mengecek apakah data antrian penuh atau tidak
+    bool isFull() {
+        return false;
+    }
+
+    // mengecek apakah antrian kosong atau tidak
+    bool isEmpty() {
+        return size == 0;
+    }
+
+    // tambahkan data ke dalam antrian
+    void enqueueAntrian(string data) {
+        Node* baru = new Node();
+        baru->data = data;
+        baru->next = NULL;
+
+        // apabila antrian kosong, maka front dan back dimulai dari node baru
+        if (isEmpty()) {
+            front = baru;
+            back = baru;
+        // apabila antrian tidak kosong, maka dimulai dari node sebelumnya (back)
+        } else {
+            back->next = baru;
+            back = baru;
+        }
+
+        size++;
+    }
+
+    // hapus data dalam antrian (otomatis menghapus front)
+    void dequeueAntrian() {
+        if (isEmpty()) {
+            cout << "Antrian Kosong" << endl;
+        } else {
+            Node* temp = front;
+            front = front->next;
+            delete temp;
+            size--;
+        }
+    }
+
+    // lihat jumlah data dalam antrian
+    int countQueue() {
+        return size;
+    }
+
+    // hapus seluruh data dalam antrian (kosongkan antrian)
+    void clearQueue() {
+        while (!isEmpty()) {
+            dequeueAntrian();
+        }
+    }
+
+    // lihat data antrian teller 
+    void viewQueue() {
+        cout << "Data antrian teller: " << endl;
+        Node* current = front;
+        for (int i = 0; i < size; i++) {
+            cout << i + 1 << "." << current->data << endl;
+            current = current->next;
+        }
+    }
+
+    ~Queue() {
+        clearQueue();
+    }
+
+// bagian private dari class Queue
+private:
+    // deklarasi data front, back, dan size
+    Node* front;
+    Node* back;
+    int size;
+};
+
+// main program (program utama)
+int main() {
+    // deklarasi queueTeller dengan menggunakan fungsi di dalam class queue
+    Queue queueTeller;
+    // tambahkan data ke antrian
+    queueTeller.enqueueAntrian("Andi");
+    queueTeller.enqueueAntrian("Maya");
+    // lihat data di dalam antrian saat ini
+    queueTeller.viewQueue();
+    // tampilkan jumlah atau banyak data dalam antrian saat ini
+    cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;
+    cout << endl;
+    // hapus data dalam antrian (otomatis hapus data front)
+    queueTeller.dequeueAntrian();
+    // lihat data di dalam antrian saat ini
+    queueTeller.viewQueue();
+    // tampilkan jumlah atau banyak data dalam antrian saat ini
+    cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;
+    cout << endl;
+    // kosongkan atau bersihkan seluruh data antrian 
+    queueTeller.clearQueue();
+    // lihat data di dalam antrian saat ini
+    queueTeller.viewQueue();
+    // tampilkan jumlah atau banyak data dalam antrian saat ini
+    cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;
+    cout << endl;
+
+    return 0;
+}
 
 ```
 
-Kode tersebut digunakan untuk 
+Kode tersebut merupakan perubahan dari guided 1 dari array menjadi linked list. Pada array, tidak diperlukan class sehingga pada main program bisa langsung menggunakan `enqueueAntrian("Andi")`. Sedangkan pada linked list dimana terdapat class Queue, program harus menggunakan variabel yang kemudian memanggil fungsi-fungsi di dalam kelas, misalnya `queueTeller.enqueueAntrian("Andi");`. `queueTeller` merupakan variabelnya, sedangkan `enqueueAntrian` merupakan fungsi yang digunakan dengan cara memanggil fungsi tersebut dari kelas. Sebelum menggunakan fungsi-fungsi di dalam class Queue, queueTeller harus dideklarasikan dulu dengan class yang akan digunakan sehingga deklarasinya adalah `Queue queueTeller;`. 
 
-#### Output dan Penjelasan:
+Di dalam bagian dari private class Queue terdapat deklarasi data front, back, dan size.
 
+Di dalam bagian dari public class Queue terdapat kode-kode berikut.
+- `bool isFull()` digunakan untuk mengecek apakah antrian penuh atau tidak.
+- `bool isEmpty()` digunakan untuk mengecek apakah antrian kosong atau tidak.
+- `void enqueueAntrian(string data)` digunakan untuk menambahkan antrian baru.
+- `void dequeueAntrian()` digunakan untuk menghapus antrian. Antrian yang dihapus yaitu data front (depan).
+- `int countQueue()` digunakan untuk menghitung jumlah seluruh data yang saat ini ada di dalam antrian.
+- `void clearQueue()` digunakan untuk menghapus seluruh data di dalam antrian sehingga antrian menjadi kosong.
+- ` void viewQueue()` digunakan untuk melihat data yang saat ini berada di dalam antrian.
 
-#### Penjelasan main program:
-- Variabel-variabel yang digunakan dalam program harus dideklarasikan tipe datanya terlebih dahulu. Tipe data variabel kata adalah string karena terdapat lebih dari 1 karakter. 
+#### Output:
+![Cuplikan layar 2024-05-13 111423](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/cf414028-539f-4b87-a537-06bcefff6678)
+
+#### Penjelasan Output dan Main Program:
+
+![Cuplikan layar 2024-05-13 111448](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a30fb9c5-fc59-4998-90af-04f309c25389)
+
+`queueTeller.enqueueAntrian("Andi");` dan `queueTeller.enqueueAntrian("Maya");` akan menambahkan nama Andi dan Maya di dalam antrian. Andi pada antrian pertama, sedangkan Maya pada antrian kedua. Selanjutnya, data saat ini ditampilkan dengan `queueTeller.viewQueue();`. ` cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;` akan menampilkan banyaknya data dalam antrian saat ini yaitu 2.
+
+![Cuplikan layar 2024-05-13 111510](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/8b1f6e1b-e5b3-465c-a43e-2300de878c0d)
+
+`queueTeller.dequeueAntrian();` akan menghapus data front di dalam antrian tersebut yaitu "Andi" sehingga di dalam antrian saat ini hanya tersisa "Maya". Selanjutnya, data saat ini ditampilkan dengan `queueTeller.viewQueue();`. ` cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;` akan menampilkan banyaknya data dalam antrian saat ini yaitu 1.
+
+![Cuplikan layar 2024-05-13 111521](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/be67853a-ee3a-4d1c-b133-d56c6b563031)
+
+`queueTeller.clearQueue();` akan menghapus seluruh data di dalam antrian sehingga antrian menjadi kosong. Selanjutnya, data saat ini ditampilkan dengan `queueTeller.viewQueue();`. Tidak ada antrian sama sekali saat ini sehingga Data antrian teller kosong. ` cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;` akan menampilkan banyaknya data dalam antrian saat ini yaitu 0.
 
 #### Full code Screenshot:
-
+![Cuplikan layar 2024-05-13 111354](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e3749dd4-8e96-4213-b357-c132f3e34fea)
 
 
 ### 2. Dari nomor 1 buatlah konsep antri dengan atribut Nama mahasiswa dan NIM Mahasiswa.
 
 ```C++
+#include <iostream>
+#include <string>
+using namespace std;
+
+// struct Node
+struct Node {
+    // deklarasi Nama dan Nim
+    string Nama;
+    string Nim;
+    Node *next;
+};
+
+// class Queue
+class Queue {
+// bagian public dari class Queue
+public:
+    Queue() {
+        // deklarasi size, data front dan data back
+        size = 0;
+        front = NULL;
+        back = NULL;
+    }
+
+    // mengecek apakah antrian penuh atau tidak
+    bool isFull() {
+        return false;
+    }
+
+    // mengecek apakah antrian kosong atau tidak
+    bool isEmpty() {
+    return size == 0;
+    }
+
+    // tambahkan data ke dalam antrian 
+    void enqueueAntrian(string Nama, string Nim) {
+        Node* baru = new Node();
+        baru->Nama = Nama;
+        baru->Nim = Nim;
+        baru->next = NULL;
+
+        // apabila antrian kosong, maka front dan back dimulai dari node baru
+        if (isEmpty()) {
+            front = baru;
+            back = baru;
+        // apabila antrian tidak kosong, maka dimulai dari node sebelumnya (back)
+        } else {
+            back->next = baru;
+            back = baru;
+        }
+
+        size++;
+    }
+
+    // hapus data dalam antrian (otomatis menghapus front)
+    void dequeueAntrian() {
+        if (isEmpty()) {
+            cout << "Antrian Kosong" << endl;
+        } else {
+            Node* temp = front;
+            front = front->next;
+            delete temp;
+            size--;
+        }
+    }
+
+    // lihat jumlah data dalam antrian 
+    int countQueue() {
+        return size;
+    }
+
+    // hapus seluruh data dalam antrian (kosongkan antrian)
+    void clearQueue() {
+        while (!isEmpty()) {
+            dequeueAntrian();
+        }
+    }
+
+    // lihat data antrian teller dengan atribut nama dan NIM mahasiswa
+    void viewQueue() {
+        cout << "Data antrian teller: " << endl;
+        Node* current = front;
+        for (int i = 0; i < size; i++) {
+            cout << i + 1 << ". Nama: " << current->Nama << " (Nim: " << current->Nim << ")" << endl;
+            current = current->next;
+        }
+    }
+
+    ~Queue() {
+        clearQueue();
+    }
+
+// bagian private dari class Queue
+private:
+    // deklarasi data front, back, dan size
+    Node* front;
+    Node* back;
+    int size;
+};
+
+// main program (program utama)
+int main() {
+    // deklarasi class Queue serta tipe data Nama dan Nim
+    Queue queueTeller;
+    string Nama, Nim;
+
+    // user input nama dan NIM mahasiswa pertama
+    cout << "Masukkan Nama mahasiswa: ";
+    cin >> Nama;
+    cout << "Masukkan NIM mahasiswa: ";
+    cin >> Nim;
+    // panggil fungsi untuk menambahkan data ke dalam antrian
+    queueTeller.enqueueAntrian(Nama, Nim);
+
+    // user input nama dan NIM mahasiswa kedua
+    cout << "Masukkan Nama mahasiswa: ";
+    cin >> Nama;
+    cout << "Masukkan NIM mahasiswa: ";
+    cin >> Nim;
+    // panggil fungsi untuk menambahkan data ke dalam antrian
+    queueTeller.enqueueAntrian(Nama, Nim);
+
+    // lihat data di dalam antrian saat ini
+    queueTeller.viewQueue();
+    // tampilkan jumlah atau banyak data dalam antrian saat ini
+    cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;
+    cout << endl;
+
+    // hapus antrian (data yang dihapus adalah front)
+    queueTeller.dequeueAntrian();
+    // lihat data di dalam antrian saat ini (setelah data front sebelumnya dihapus)
+    queueTeller.viewQueue();
+    // tampilkan jumlah atau banyak data dalam antrian saat ini 
+    cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;
+    cout << endl;
+
+    // bersihkan atau hapus seluruh antrian sehingga antrian kosong
+    queueTeller.clearQueue();
+    // lihat data di dalam antrian saat ini (setelah semua antrian dihapus)
+    queueTeller.viewQueue();
+    // tampilkan jumlah atau banyak data dalam antrian saat ini
+    cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;
+    cout << endl;
+
+    return 0;
+}
 
 ```
 
