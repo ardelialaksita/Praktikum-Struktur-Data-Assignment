@@ -534,7 +534,7 @@ Terakhir, user mengosongkan list menggunakan clearQueue sehingga seluruh antrian
 ![Cuplikan layar 2024-05-13 120326](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/6e22024f-e4f1-487d-827d-dd1eea4ebc38)
 
 ## Kesimpulan
-
+Kesimpulan yang dapat diambil dari praktikum modul Queue yaitu data yang paling awal dimasukkan akan dihapus paling awal saat user melakukan dequeue antrian. Hal ini karena Queue menerapkan FIFO (First In Firt Out). Konsep yang diterapkan adalah FIFO (First In First Out). Elemen ditambahkan pada ujung belakang (back / rear) antrian. Elemen dihapus dari ujung depan (front) antrian. Dalam Queue kita dapat menambahkan (enqueue), menghapus (dequeue), menghitung (count), mengosongkan (clear), dan menampilkan (view) data antrian. Queue dapat membantu mengatur urutan data dan mempertahankan prioritas saat memproses elemen-elemen di dalamnya. Queue harus terdiri atas queue element, head pointer, dan tail pointer sebagai _data members_.
 
 ## Referensi
 - [1] 
