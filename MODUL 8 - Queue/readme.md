@@ -537,4 +537,11 @@ Terakhir, user mengosongkan list menggunakan clearQueue sehingga seluruh antrian
 Kesimpulan yang dapat diambil dari praktikum modul Queue yaitu data yang paling awal dimasukkan akan dihapus paling awal saat user melakukan dequeue antrian. Hal ini karena Queue menerapkan FIFO (First In Firt Out). Konsep yang diterapkan adalah FIFO (First In First Out). Elemen ditambahkan pada ujung belakang (back / rear) antrian. Elemen dihapus dari ujung depan (front) antrian. Dalam Queue kita dapat menambahkan (enqueue), menghapus (dequeue), menghitung (count), mengosongkan (clear), dan menampilkan (view) data antrian. Queue dapat membantu mengatur urutan data dan mempertahankan prioritas saat memproses elemen-elemen di dalamnya. Queue harus terdiri atas queue element, head pointer, dan tail pointer sebagai _data members_.
 
 ## Referensi
-- [1] 
+- [1] Aditya, "Queue in C++ Standard Template Library (STL)," geeksforgeeks.org, 22 April 2023. [Online]. Tersedia : https://www.geeksforgeeks.org/queue-cpp-stl/ [Diakses: 12 Mei 2024].
+- [2] F. Yang dan Y. Dong, C++ Programming. Edisi Pertama.  Germany : De Gruyter, 2019.
+- [3] J. Farrier, Data Structures and Algorithms with the C++ STL. Edisi Pertama. Birmingham : Packt Publishing Ltd, 2024.
+- [4] R. Pathak, "Queue C++  STL," PreBytes Blog, 20 Juli 2022. [Online]. Tersedia : https://www.prepbytes.com/blog/queues/queue-c-stl/ [Diakses: 12 Mei 2024].
+- [5] R. Pratama, “Queue: Pengealan, Implementasi, Operasi Dasar, dan Aplikasi,” Medium, 25 Mei 2023. [Online]. Tersedia : https://medium.com/@furatamarizuki/queue-pengenalan-implementasi-operasi-dasar-dan-aplikasi-c5eed7e871a3 [Diakses: 11 Mei 2024].
+- [6] Simplilearn, "Queue in C++ Function: Syntax, Types and Advantages," Simplilearn, 2 Maret 2023. [Online]. Tersedia : https://www.simplilearn.com/tutorials/cpp-tutorial/queue-in-cpp [Diakses: 12 Mei 2024].
+- [7] S.N. Mohanty dan P. K. Tripathy, Data Structure and Algorithms Using C++. New York City : Wiley Publishing, 2021.
+- [8] V.  Siahaan dan R.H. Sianipar, THREE COOKBOOKS IN ONE: Visual C++, Visual Basic, Visual C#. Sumatera Utara : Balige Publishing, 2020. 
