@@ -523,9 +523,5 @@ Stack yang dikenal dengan tumpukan merupakan struktur data yang mengoperasikan t
 
 ## Referensi
 - [1] Harendra, "Stack Data Structure," geeksforgeeks.org. [Online]. Tersedia : https://www.geeksforgeeks.org/stack-data-structure/ [Diakses 5 Mei 2024].
-- [2] Nordeen, A., C++ Learn in 24 Hours. Edisi Pertama. Delaware : Guru99, 2022
-<<<<<<< HEAD
+- [2] Nordeen, A., C++ Learn in 24 Hours. Edisi Pertama. Delaware : Guru99, 2022.
 - [3] Universitas Bakrie, “Kenalan dengan Pengertian Stack dalam Pemrograman,” bakrie.ac.id. [Online]. Tersedia : https://bakrie.ac.id/articles/552-kenalan-dengan-pengertian-stack-dalam-pemrograman.html [Diakses 4 Mei 2024].
-=======
-- [3] Universitas Bakrie, “Kenalan dengan Pengertian Stack dalam Pemrograman,” bakrie.ac.id. [Online]. Tersedia : https://bakrie.ac.id/articles/552-kenalan-dengan-pengertian-stack-dalam-pemrograman.html [Diakses 4 Mei 2024].
->>>>>>> 071bf0cc07dfca325096b9341180c71dd3f49126

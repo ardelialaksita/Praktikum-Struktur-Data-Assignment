@@ -1,5 +1,5 @@
-# <h1 align="center">Laporan Praktikum Modul Stack</h1>
-<p align="center">Ardelia Rachma Laksita - 2311110051</p>
+# <h1 align="center">Laporan Praktikum Modul Queue</h1>
+<p align="center">2311110051 - Ardelia Rachma Laksita</p>
 
 ## Table of Contents
 1. [Dasar Teori](#dasar-teori)
@@ -9,143 +9,147 @@
 5. [Referensi](#referensi)
 
 ## Dasar Teori
-Stack adalah struktur data yang mengoperasikan teknik berdasarkan LIFO (Last In First Out) [2]. LIFO mengandung arti bahwa elemen yang dimasukkan terakhir akan keluar terlebih dahulu dan FILO berarti elemen yang dimasukkan terlebih dahulu akan keluar terakhir [1].
+Queue adalah salah satu struktur data yang menerapkan prinsip FIFO (First In First Out) dimana elemen yang pertama masuk ke antrian akan menjadi elemen pertama yang keluar antrian. Dalam prinsip FIFO, Queue dapat membantu mengatur urutan data dan mempertahankan prioritas saat memproses elemen-elemen di dalamnya [5]. 
 
-Stack mengikuti urutan tertentu berdasarkan operasi yang dilakukan. Pada stack, user bisa menambahkan data, menghapus data, serta mengecek apakah stack tersebut ada isinya (penuh) atau kosong. 
+Queue menggunakan objek yang terdiri atas deque atau list (_sequential container class_) sebagai kontainer yang mendasarinya dan menyediakan sekumpulan fungsi anggota tertentu untuk mengakses elemen-elemennya [1]. Queue harus terdiri atas queue element, head pointer, dan tail pointer sebagai _data members_ [2]. Queue berguna untuk simulator yang berbasis waktu simulasi peristiwa dengan prioritasnya, _real-time games_, _searching_, _routing_, dan _compression_ [7]. 
 
-### Operasi pada Stack :
-- push : digunakan untuk menambahkan (push) suatu item ke dalam stack.
-- pop : digunakan untuk menghapus (pops) suatu item dari dalam stack.
-- peek : digunakan untuk mengembalikan _top item_ dari stack tanpa menghilangkannya.
-- isFull : digunakan untuk mengecek apakah stack penuh atau tidak.
-- isEmpty : digunakan untuk mengecek apakah stack kosong atau tidak.
-- size : digunakan untuk mengembalikan elemen dalam stack.
-- clear : digunakan untuk menghapus seluruh elemen dalam satck sehingga stack kosong.
-- search : digunakan untuk mencari suatu elemen tertentu dalam stack.
-- top : digunakan untuk melihat elemen teratas dalam stack tanpa menghapusnya.
+### Fungsi atau Kegunaan Queue:
+- Simulasi antrian : yaitu untuk membuat model antrian dari kegiatan sehari-hari, misalnya antrian pelanggan di kasir supermarket.
+- Buffering : yaitu untuk menyangga data sementara, misalnya untuk menampung data yang dikirimkan ke jaringan secara bertahap.
+- BFS (Breadth-First Search) : yaitu untuk pencarian BFS pada algoritma struktur data, misalnya pada graph dan tree.
+- Synchronization: yaitu digunakan dalam aplikasi dimana data ditransfer secara _asynchronus_ di antara 2 proses [6].
+- Call Center Systems : yaitu digunakan untuk menampung panggilan masuk dan menyelesaikannya secara satu per satu [6].
+- CPU Scheduling : yaitu digunakan untuk menangani interupssi dalam sistem waktu nyata dan ideal untuk penjadwalan disk dan CPU [6].
 
-### Implementasi Stack :
+### Karakteristik Queue:
+Karakteristik FIFO (First In First Out) yaitu menerapkan algoritma berikut.
+- Elemen ditambahkan pada ujung belakang (back / rear) antrian. 
+- Elemen dihapus dari ujung depan (front) antrian.
 
-Berikut merupakan implementasi pada stack.
+### Jenis-jenis Queue:
+- **Queue Linear** : implementasi queue yang menggunakan struktur data linear, seperti array atau linked list [5]. Ketika queue penuh, maka tidak bisa menampung elemen baru meskipun masih ada ruang kosong. Ini karena queue linear memiliki batasan ukuran tetap.
+- **Queue Circular** : implementasi queue yang menggunakan struktur data linear dengan pemanfaatan siklus [5]. Ketika queue penuh, maka elemen-elemen baru masih dapat ditambahkan ke front.
+- **Priority Queue** : implementasi queue dimana setiap elemen memiliki prioritas tertentu [5]. Implementasinya menggunakan struktur data seperti head untuk memastikan elemen-elemen terurut secara tetap [5].
 
-![Cuplikan layar 2024-05-06 143446](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/08dd1e3c-4280-46b8-a0a0-6355fb2fb481)
+### Operasi pada Queue:
+- **Enqueue (menambahkan elemen ke dalam queue)** : elemen baru ditambahkan di posisi belakang queue (rear). Penunjuk rear maju ke posisi berikutnya untuk menunjuk elemen baru.
+- **Dequeue (menghapus elemen dari queue)** : elemen yang dihapus berada di posisi depan queue (front). Penunjuk front maju ke posisi berikutnya untuk menunjuk elemen selanjutnya. Elemen yang dihapus tidak masuk lagi dalam queue.
+- **Front (mendapatkan elemen pertama dalam queue)** : operasi ini akan membantu kita melihat elemen pertama (yang akan dikeluarkan) dari queue tanpa mengubah dan menghapus struktur queue.
+- **Rear (mendapatkan elemen terakhir dalam queue)** : operasi ini akan membantu kita melihat elemen terakhir (yang telah ditambahkan) pada queue tanpa mengubah dan menghapus struktur queue. 
+- **Size (mendapatkan jumlah atau ukuran elemen dalam queue)** : digunakan untuk mengetahui berapa banyak elemen yang saat ini berada di dalam queue tanpa mengubah struktur atau menghapus elemen dari queue itu sendiri.
+- **IsFull (mengecek apakah queue penuh)** : apabila queue mencapai batas elemen maksimal, maka IsFull akan mengembalikan nilai true yang artinya queue dalam keadaan penuh. Begitu pun sebaliknya, apabila queue belum mencapai batas maksimal, maka IsFull akan mengambalikan nilai false yang artinya queue belum penuh dan user masih bisa menambahkan data lagi ke dalam queue tersebut.
+- **IsEmpty (mengecek apakah queue kosong)** : apabila queue memiliki elemen di dalamnya, maka IsEmpty akan mengembalikan nilai false yang artinya queue tidak kosong. Begitu pun sebaliknya, apabila queue tidak memiliki elemen sama sekali, maka IsEmpty akan mengembalikan nilai True yang artinya queue kosong.
+- **Peek (mengambil data dari queue)** : digunakan untuk mengambil data dari queue tanpa mengubah atau menghapus struktur dari queue.
 
-Karakteristik khas dari stack adalah penggunaan aturan LIFO (Last In, First Out) [3]. Data yang terakhir dimasukkan ke dalam stack akan menjadi data pertama yang diambil atau dikeluarkan. Konsep ini mirip dengan tumpukan buku, di mana buku yang terakhir diletakkan di atas tumpukan harus diambil terlebih dahulu sebelum bisa mengakses buku yang berada di bagian bawah tumpukan [3].
+### Implementasi Queue :
+Queue diimplementasikan sebagai _adapter class_ dan biasanya didasarkan pada kontainer yang mendasarinya [3]. Adapter bukan kontainer kelas-pertama (_first class_) karena tidak menyediakan implementasi struktur data aktual dimana i dalamnya elemen-elemen dapat disimpan dan karena adaptor tidak mendukung iterator [8]. Berikut merupakan implementasi pada queue.
+
+![queue implementation](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e0626a7e-ce15-4bca-9e58-e2e23471ff85)
+
+**Source: Sitasi [4] Daftar Pustaka**
+
+Elemen yang ditambahkan paling akhir akan dihapus terlebih dahulu [4]. Implementasi queue pada C++ dapat dilakukan menggunakan STL (Standard Template Library) yang menyediakan kelas queue dalam header file <queue> [5]. Implementasi queue dapat dilakukan menggunakan array maupun linked list.
 
 ## Guided 
 
-### 1. Data Stack Buku
+### 1. Program Antrian
 
 ```C++
 #include <iostream>
+
 using namespace std;
 
-string arrayBuku[5];
-int maksimal = 5, top = 0;
+const int maksimalQueue = 5
+int front = 0;
+int back = 0;
+
+string queueTeller[5];
 
 bool isFull() {
-    return (top == maksimal);
+    if (back == maksimalQueue) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
-bool isEmpty(){
-    return (top == 0);
+bool isEmpty() {
+    if (back == 0) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
-void pushArrayBuku(string data) {
+void enqueueAntrian (string data) {
     if (isFull()) {
-        cout << "Data telah penuh" << endl;
-    }
-
-    else {
-        arrayBuku[top] = data;
-        top++;
-    }
-}
-
-void popArrayBuku() {
-    if (isEmpty()) {
-        cout << "Tidak ada data yang dihapus" << endl;
+        cout << "Antrian Penuh" << endl;
     } else {
-        arrayBuku[top - 1] = "";
-        top--;
-    }
-}
-
-void peekArrayBuku(int posisi) {
-    if (isEmpty()) {
-        cout << "Tidak ada data yang bisa dilihat" << endl;
-    } else {
-        int index = top;
-        for (int i = 1; i <= posisi; i++) {
-            index--;
+        if (isEmpty()) {
+            queueTeller[0] = data;
+            front++;
+            back++;
+        } else {
+            queueTeller[back] = data;
+            back++;
         }
-
-        cout << "Posisi ke " << posisi << " adalah " << arrayBuku[index] << endl;
     }
 }
 
-int countStack() {
-    return top;
-}
-
-void changeArrayBuku(int posisi, string data) {
-    if (posisi > top) {
-        cout << "Posisi melebihi data yang ada" << endl;
-    } else {
-        int index = top;
-        for (int i = 1; i <= posisi; i++) {
-            index--;
-        }
-        arrayBuku[index] = data;
-    }
-}
-
-void destroyArrayBuku() {
-    for (int i = top; i > 0; i--) {
-        arrayBuku[i] = "";
-    }
-    top = 0;
-}
-
-void cetakArrayBuku() {
+void dequeueAntrian() {
     if (isEmpty()) {
-        cout << "Tidak ada data yang dicetak" << endl;
+        cout << "Antrian Kosong" << endl;
     } else {
-        for (int i = top - 1; i >= 0; i--) {
-            cout << arrayBuku[i] << endl;
+        for (int i = 0; i < back; i++) {
+            queueTeller[i] = queueTeller[i+1];
+        }
+        back--;
+    }
+}
+
+int countQueue() {
+    return back;
+}
+
+void clearQueue() {
+    if (isEmpty()) {
+        cout << "Antrian kosong" << endl;
+    } else {
+        for (int i = 0; i < back; i++) {
+            queueTeller[i] = "";
+        }
+        back = 0;
+        front = 0;
+    }
+}
+
+void viewQueue() {
+    cout << "Data antrian teller: " << endl;
+    for (int i = 0; i < maksimalQueue; i++) {
+        if (queueTeller[i] != "") {
+            cout << i+1 << ". " << queueTeller[i] << endl;
+        } else {
+            cout << i + 1 << ". (kosong)" << endl;
         }
     }
 }
 
 int main() {
-    pushArrayBuku("Kalkulus");
-    pushArrayBuku("Struktur Data");
-    pushArrayBuku("Matematika Diskrit");
-    pushArrayBuku("Dasar Multimedia");
-    pushArrayBuku("Inggris");
-
-    cetakArrayBuku();
-    cout << "\n";
-
-    cout << "Apakah data stack penuh? " << isFull() << endl;
-    cout << "Apakah data stack kosong? " << isEmpty() << endl;
-
-    peekArrayBuku(2);
-    popArrayBuku();
-
-    cout << "Banyaknya Data = " << countStack() << endl;
-    changeArrayBuku(2, "Bahasa Jerman");
-    cetakArrayBuku();
-
-    cout << "\n";
-    destroyArrayBuku();
-    cout << "Jumlah data setelah dihapus: " << top << endl;
-    cetakArrayBuku();
+    enqueueAntrian("Andi");
+    enqueueAntrian("Maya");
+    viewQueue();
+    cout << "Jumlah antrian = " << countQueue() << endl;
+    dequeueAntrian();
+    viewQueue();
+    cout << "Jumlah antrian = " << countQueue() << endl;
+    clearQueue();
+    viewQueue();
+    cout << "Jumlah antrian = " << countQueue() << endl;
     return 0;
 }
 
 ```
-Kode di atas digunakan untuk menampilkan data stack buku dimana isinya terdapat deretan atau tumpukan judul buku, posisi buku, pengecekan apakah data kosong atau tidak, pengecekan apakah data penuh atau tidak, banyak data pada stack (tumpukan) tersebut, serta jumlah data pada stack (tumpukan) tersebut setelah dihapus.
+Kode di atas digunakan untuk 
 
 `string arrayBuku[5];
 int maksimal = 5, top = 0;`
@@ -162,7 +166,7 @@ Kode tersebut artinya panjang array bukunya adalah 5 yaitu terdapat 5 buku pada 
 - `void cetakArrayBuku() ` digunakan untuk menampilkan isi list atau array tersebut yang terdiri atas data-data buku. Jika tidak ada buku pada array, maka outputnya adalah **"Tidak ada data yang dicetak"**.
 
 #### Penjelasan Main Program :
-![Cuplikan layar 2024-05-06 190621](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/cecaa93a-6c14-482a-817d-0b89ab9ae3a7)
+
 
 Pada main program, user menggunakan push array sebanyak 5 kali yaitu `pushArrayBuku("Kalkulus");`, `pushArrayBuku("Struktur Data");`, `pushArrayBuku("Matematika Diskrit");`, `pushArrayBuku("Dasar Multimedia");`, dan `pushArrayBuku("Inggris");` sehingga pada array tersebut terdapat 5 data buku yaitu Kalkulus, Struktur Data, Matematika Diskrit, Dasar Multimedia, dan Inggris. Data yang terbaru akan ditambahkan ke posisi depan. Berikut urutan posisi datanya.
 
@@ -213,277 +217,315 @@ Kode `cout << "Apakah data stack penuh? " << isFull() << endl;` dan `cout << "Ap
 
 ## Unguided 
 
-### 1. Buatlah program untuk menentukan apakah kalimat tersebut yang diinputkan dalam program stack adalah palindrom/tidak. Palindrom kalimat yang dibaca dari depan dan belakang sama. Jelaskan bagaimana cara kerja programnya.
+### 1. Ubahlah penerapan konsep queue pada bagian guided dari array menjadi linked list.
+
+```C++
+#include <iostream>
+using namespace std;
+
+// struct Node
+struct Node {
+    // deklarasi data
+    string data;
+    Node *next;
+};
+
+// class Queue
+class Queue {
+// bagian public dari class Queue
+public :
+    Queue() {
+        // deklarasi size, data front, dan data back
+        size = 0;
+        front = NULL;
+        back = NULL;
+    }
+
+    // mengecek apakah data antrian penuh atau tidak
+    bool isFull() {
+        return false;
+    }
+
+    // mengecek apakah antrian kosong atau tidak
+    bool isEmpty() {
+        return size == 0;
+    }
+
+    // tambahkan data ke dalam antrian
+    void enqueueAntrian(string data) {
+        Node* baru = new Node();
+        baru->data = data;
+        baru->next = NULL;
+
+        // apabila antrian kosong, maka front dan back dimulai dari node baru
+        if (isEmpty()) {
+            front = baru;
+            back = baru;
+        // apabila antrian tidak kosong, maka dimulai dari node sebelumnya (back)
+        } else {
+            back->next = baru;
+            back = baru;
+        }
+
+        size++;
+    }
+
+    // hapus data dalam antrian (otomatis menghapus front)
+    void dequeueAntrian() {
+        if (isEmpty()) {
+            cout << "Antrian Kosong" << endl;
+        } else {
+            Node* temp = front;
+            front = front->next;
+            delete temp;
+            size--;
+        }
+    }
+
+    // lihat jumlah data dalam antrian
+    int countQueue() {
+        return size;
+    }
+
+    // hapus seluruh data dalam antrian (kosongkan antrian)
+    void clearQueue() {
+        while (!isEmpty()) {
+            dequeueAntrian();
+        }
+    }
+
+    // lihat data antrian teller 
+    void viewQueue() {
+        cout << "Data antrian teller: " << endl;
+        Node* current = front;
+        for (int i = 0; i < size; i++) {
+            cout << i + 1 << "." << current->data << endl;
+            current = current->next;
+        }
+    }
+
+    ~Queue() {
+        clearQueue();
+    }
+
+// bagian private dari class Queue
+private:
+    // deklarasi data front, back, dan size
+    Node* front;
+    Node* back;
+    int size;
+};
+
+// main program (program utama)
+int main() {
+    // deklarasi queueTeller dengan menggunakan fungsi di dalam class queue
+    Queue queueTeller;
+    // tambahkan data ke antrian
+    queueTeller.enqueueAntrian("Andi");
+    queueTeller.enqueueAntrian("Maya");
+    // lihat data di dalam antrian saat ini
+    queueTeller.viewQueue();
+    // tampilkan jumlah atau banyak data dalam antrian saat ini
+    cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;
+    cout << endl;
+    // hapus data dalam antrian (otomatis hapus data front)
+    queueTeller.dequeueAntrian();
+    // lihat data di dalam antrian saat ini
+    queueTeller.viewQueue();
+    // tampilkan jumlah atau banyak data dalam antrian saat ini
+    cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;
+    cout << endl;
+    // kosongkan atau bersihkan seluruh data antrian 
+    queueTeller.clearQueue();
+    // lihat data di dalam antrian saat ini
+    queueTeller.viewQueue();
+    // tampilkan jumlah atau banyak data dalam antrian saat ini
+    cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;
+    cout << endl;
+
+    return 0;
+}
+
+```
+
+Kode tersebut merupakan perubahan dari guided 1 dari array menjadi linked list. Pada array, tidak diperlukan class sehingga pada main program bisa langsung menggunakan `enqueueAntrian("Andi")`. Sedangkan pada linked list dimana terdapat class Queue, program harus menggunakan variabel yang kemudian memanggil fungsi-fungsi di dalam kelas, misalnya `queueTeller.enqueueAntrian("Andi");`. `queueTeller` merupakan variabelnya, sedangkan `enqueueAntrian` merupakan fungsi yang digunakan dengan cara memanggil fungsi tersebut dari kelas. Sebelum menggunakan fungsi-fungsi di dalam class Queue, queueTeller harus dideklarasikan dulu dengan class yang akan digunakan sehingga deklarasinya adalah `Queue queueTeller;`. 
+
+Di dalam bagian dari private class Queue terdapat deklarasi data front, back, dan size.
+
+Di dalam bagian dari public class Queue terdapat kode-kode berikut.
+- `bool isFull()` digunakan untuk mengecek apakah antrian penuh atau tidak.
+- `bool isEmpty()` digunakan untuk mengecek apakah antrian kosong atau tidak.
+- `void enqueueAntrian(string data)` digunakan untuk menambahkan antrian baru.
+- `void dequeueAntrian()` digunakan untuk menghapus antrian. Antrian yang dihapus yaitu data front (depan).
+- `int countQueue()` digunakan untuk menghitung jumlah seluruh data yang saat ini ada di dalam antrian.
+- `void clearQueue()` digunakan untuk menghapus seluruh data di dalam antrian sehingga antrian menjadi kosong.
+- `void viewQueue()` digunakan untuk melihat data yang saat ini berada di dalam antrian.
+
+#### Output:
+![Cuplikan layar 2024-05-13 111423](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/cf414028-539f-4b87-a537-06bcefff6678)
+
+#### Penjelasan Output dan Main Program:
+
+![Cuplikan layar 2024-05-13 111448](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a30fb9c5-fc59-4998-90af-04f309c25389)
+
+`queueTeller.enqueueAntrian("Andi");` dan `queueTeller.enqueueAntrian("Maya");` akan menambahkan nama Andi dan Maya di dalam antrian. Andi pada antrian pertama, sedangkan Maya pada antrian kedua. Selanjutnya, data saat ini ditampilkan dengan `queueTeller.viewQueue();`. ` cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;` akan menampilkan banyaknya data dalam antrian saat ini yaitu 2.
+
+![Cuplikan layar 2024-05-13 111510](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/8b1f6e1b-e5b3-465c-a43e-2300de878c0d)
+
+`queueTeller.dequeueAntrian();` akan menghapus data front di dalam antrian tersebut yaitu "Andi" sehingga di dalam antrian saat ini hanya tersisa "Maya". Selanjutnya, data saat ini ditampilkan dengan `queueTeller.viewQueue();`. ` cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;` akan menampilkan banyaknya data dalam antrian saat ini yaitu 1.
+
+![Cuplikan layar 2024-05-13 111521](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/be67853a-ee3a-4d1c-b133-d56c6b563031)
+
+`queueTeller.clearQueue();` akan menghapus seluruh data di dalam antrian sehingga antrian menjadi kosong. Selanjutnya, data saat ini ditampilkan dengan `queueTeller.viewQueue();`. Tidak ada antrian sama sekali saat ini sehingga Data antrian teller kosong. ` cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;` akan menampilkan banyaknya data dalam antrian saat ini yaitu 0.
+
+#### Full code Screenshot:
+![Cuplikan layar 2024-05-13 111354](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e3749dd4-8e96-4213-b357-c132f3e34fea)
+
+
+### 2. Dari nomor 1 buatlah konsep antri dengan atribut Nama mahasiswa dan NIM Mahasiswa.
 
 ```C++
 #include <iostream>
 #include <string>
-#include <cctype>
 using namespace std;
 
-// class deret huruf 
-class deretHuruf {
-    // bagian public dari class deretHuruf
-    public:
-    deretHuruf() {
-        head = NULL;
-        tail = NULL;
-        size = 0;
-    }
-
-    // menambahkan huruf
-    void push(char hurufAwal) {
-        node* temp = new node;
-        temp->words = hurufAwal;
-        temp->next = NULL;
-
-        if (size == 0) {
-            head = temp;
-            tail = temp;
-            head->prev = NULL;
-        }
-        else {
-            tail->next = temp;
-            temp->prev = tail;
-            tail = temp;
-        }
-        size++;
-    }
-
-    // menghapus huruf
-    char pop() {
-        char words = head->words;
-        if (head == tail) {
-            delete head;
-        }
-        else {
-            node* temp = head;
-            head = head->next;
-            head->prev;
-            temp->next = NULL;
-            delete temp;
-        }
-        size--;
-        return words;
-    }
-    
-    // bagian private dari class deretHuruf berisi struct dari node
-    private:
-    struct node {
-        char words;
-        node* next;
-        node* prev;
-    };
-
-    // deklarasi size, words, dhead, dan tail menggunakan pointer node dalam private class deretHuruf
-    int size;
-    char words;
-    node* head;
-    node* tail;
+// struct Node
+struct Node {
+    // deklarasi Nama dan Nim
+    string Nama;
+    string Nim;
+    Node *next;
 };
 
-// class stack (tumpukan) huruf
-class stack {
-    // bagian public dari class stack
-    public:
-    stack() {
-        head = NULL;
-        tail = NULL;
+// class Queue
+class Queue {
+// bagian public dari class Queue
+public:
+    Queue() {
+        // deklarasi size, data front dan data back
         size = 0;
+        front = NULL;
+        back = NULL;
     }
 
-    // menambahkan huruf
-    void push (char hurufAwal) {
-        node* temp = new node;
-        temp->words = hurufAwal;
-        temp->next = NULL;
-
-        if (size == 0) {
-            head = temp;
-            tail = temp;
-            tail->prev = NULL;
-        }
-
-        else {
-            tail->next = temp;
-            temp->prev = tail;
-            tail = temp;
-        }
-        size++;
+    // mengecek apakah antrian penuh atau tidak
+    bool isFull() {
+        return false;
     }
 
-    // menghapus huruf
-    char pop() {
-        words = tail->words;
-        if (head == tail) {
-            delete head;  
-        }
-
-        else{
-            node* temp = tail;
-            tail = tail->prev;
-            tail->next = NULL;
-            temp->prev = NULL;
-            delete temp;
-        }
-        size--;
-        return words;
+    // mengecek apakah antrian kosong atau tidak
+    bool isEmpty() {
+    return size == 0;
     }
 
-    // bagian private dari class stack berisi struct
-    private:
-    struct node{
-        char words;
-        node* next;
-        node *prev;
-    };
+    // tambahkan data ke dalam antrian 
+    void enqueueAntrian(string Nama, string Nim) {
+        Node* baru = new Node();
+        baru->Nama = Nama;
+        baru->Nim = Nim;
+        baru->next = NULL;
 
-    // deklarasi size, words, head, dan tail dalam private class stack
-    int size;
-    char words;
-    node* head;
-    node* tail;
-};
-
-
-// main program (program utama)
-int main() {
-
-    // deklarasi kata, hurufAwal, hurufAkhir, checkAgain, firstWord pada class stack dan lastWord pada class words
-    string kata;
-    char hurufAwal;
-    char hurufAkhir;
-    char checkAgain;   
-    stack firstWord;
-    deretHuruf lastWord;
-    
-    // deklarasi palindrome
-    bool palindrome = true;
-    // tampilkan head atau judul dari program 
-    cout << "=== PALINDROME WORDS CHECK ===" << endl;
-
-    // user menginput kata
-    cout << "Masukkan 1 kata: ";
-    cin >> kata;
-    cout << endl;
-
-    // perulangan for untuk push firstWord dan lastWord 
-    for (int i = 0; i < kata.length(); i++) {
-        firstWord.push(tolower(kata[i]));
-        lastWord.push(tolower(kata[i]));
-    }
-
-    // perulangan for untuk pop dan pengecekan palindrome
-    for (int i = 0; i < kata.length(); i++) {
-        char hurufAwal = firstWord.pop();
-        char hurufAkhir = lastWord.pop();
-
-        if (hurufAwal != hurufAkhir) {
-            cout << hurufAwal << " != " << hurufAkhir << endl;
-            palindrome = false;
+        // apabila antrian kosong, maka front dan back dimulai dari node baru
+        if (isEmpty()) {
+            front = baru;
+            back = baru;
+        // apabila antrian tidak kosong, maka dimulai dari node sebelumnya (back)
         } else {
-            cout << hurufAwal << " = " << hurufAkhir << endl; 
+            back->next = baru;
+            back = baru;
+        }
+
+        size++;
+    }
+
+    // hapus data dalam antrian (otomatis menghapus front)
+    void dequeueAntrian() {
+        if (isEmpty()) {
+            cout << "Antrian Kosong" << endl;
+        } else {
+            Node* temp = front;
+            front = front->next;
+            delete temp;
+            size--;
         }
     }
 
-    cout << endl;
-
-    // tampilkan hasil
-    if (palindrome) {
-        cout << "Kata tersebut merupakan kata palindrome." << endl;
-        cout << "Semua huruf pada kata tersebut sama sehingga akan menghasilkan urutan huruf yang sama apabila kata dibalik." << endl;
-    } else {
-        cout << "Kata tersebut bukan merupakan kata palindrome." << endl;
-        cout << "Terdapat urutan huruf yang tidak sama sehingga apabila kata tersebut dibalik maka tidak akan menghasilkan bacaan yang sama." << endl;
+    // lihat jumlah data dalam antrian 
+    int countQueue() {
+        return size;
     }
-    cout << "================================================================================================================================" << endl;
-    cout << endl;
-    return 0;
-}
 
-```
-
-Kode tersebut digunakan untuk mengecek apakah suatu kata palindrome atau tidak. Apabila kata tersebut dibalik, maka akan menghasilkan urutan huruf yang sama seperti kata yang belum dibalik. Terdapat dua class pada program tersebut yaitu class deretHuruf dan class stack. Terdapat push yang digunakan untuk menambahkan data, serta terdapat pula pop yang digunakan untuk menghapus data. Pada bagian private masing-masing class harus terdapat deklarasi variabel. Tolower digunakan untuk mengkonversi semua huruf kapital menjadi kecil. 
-
-#### Output dan Penjelasan:
-![Cuplikan layar 2024-05-06 200046](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/59f838f4-bae6-4a5d-9e80-6e47ae89b3b7)
-
-Pada output tersebut, kata yang diinput oleh user adalah **Malam**. Selanjutnya, program melakukan pengecekan palindrom menggunakan `for (int i = 0; i < kata.length(); i++)`, `char hurufAwal = firstWord.pop();`, dan `char hurufAkhir = lastWord.pop();`. Karena saat huruf-huruf yang ada pada kata malam dibalik menghasilkan urutan yang sama, maka malam termasuk kata palindrome. Huruf M pada awalan kata Malam yang awalnya menggunakan kapital telah diubah oleh program menjadi huruf kecil menggunakan tolower sehingga pengecekan palindromenya sudah dalam keadaan huruf kecil semua. 
-
-![Cuplikan layar 2024-05-06 200058](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/4bbfebf9-505a-48cd-b0ed-59538734f74b)
-Pada output tersebut, kata yang diinput oleh user adalah **Pagi**. Selanjutnya, program melakukan pengecekan palindrom menggunakan `for (int i = 0; i < kata.length(); i++)`, `char hurufAwal = firstWord.pop();`, dan `char hurufAkhir = lastWord.pop();`. Karena saat huruf-huruf yang ada pada kata pagi dibalik tidak menghasilkan urutan yang sama yaitu igap, maka pagi bukan termasuk kata palindrome. Huruf P pada awalan kata Pagi yang awalnya menggunakan kapital telah diubah oleh program menjadi huruf kecil menggunakan tolower sehingga pengecekan palindromenya sudah dalam keadaan huruf kecil semua. 
-
-#### Penjelasan main program:
-- Variabel-variabel yang digunakan dalam program harus dideklarasikan tipe datanya terlebih dahulu. Tipe data variabel kata adalah string karena terdapat lebih dari 1 karakter. Tipe data pada variabel hurufAwal dan hurufAkhir adalah char karena hanya memerlukan 1 karakter. hurufAwal merupakan urutan huruf dengan urutan mulai dari awal hingga akhir yang kemudian akan dipasangkan dengan hurufAkhir yang urutannya dimulai dari akhir menuju ke huruf awal. Huruf pertama diperiksa palindromnya dengan huruf terakhir. Apabila tidak sama, maka akan menghasilkan **hurufAwal != hurufAkhir**. Apabila sama, akan menghasilkan **hurufAwal = hurufAkhir**.
-- `bool palindrome = true;` merupakan deklarasi palindrome yaitu tipe data boolean dengan deklarasi true.
-- `cout << "=== PALINDROME WORDS CHECK ===" << endl;` digunakan untuk mencetak _head of the program_ atau judul program tersebut.
-- `cout << "Masukkan 1 kata: ";` dan `cin >> kata;` digunakan untuk memasukkan kata yang akan diinput oleh user.
-- Pada perulangan for yang berisi `firstWord.push(tolower(kata[i]));` dan `lastWord.push(tolower(kata[i]));` digunakan untuk menambahkan huruf awal hingga akhir dengan urutan yang sesuai dan urutan berkebalikan. Huruf yang masih dalam bentuk kapital akan diubah menjadi huruf kecil semua menggunakan tolower.
-- Pada perulangan for yang berisi `char hurufAwal = firstWord.pop();` dan `char hurufAkhir = lastWord.pop();` digunakan untuk mengecek apakah suatu kata palindrome atau tidak. Urutan huruf dari awal ke akhir akan diperiksa apakah sama seperti urutan huruf dari akhir ke awal atau tidak.
-
-#### Full code Screenshot:
-![Cuplikan layar 2024-05-06 200024](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/ebba2d06-d89a-4221-8a0c-1174b6344d67)
-
-
-### 2. Buatlah program untuk melakukan pembalikan terhadap kalimat menggunakan stack dengan minimal 3 kata. Jelaskan output program dan source codenya beserta operasi/fungsi yang dibuat.
-
-```C++
-#include <iostream>
-#include <windows.h>
-
-using namespace std;
-
-// deklarasi stack yang menyimpan karakter
-struct Stack {
-    char isi[30];
-    int top;
-} huruf;
-
-// tambahkan huruf ke dalam stack
-void push(char x) {
-    if (huruf.top == 30) {
-        cout << "Stack sudah penuh";
-        return;
+    // hapus seluruh data dalam antrian (kosongkan antrian)
+    void clearQueue() {
+        while (!isEmpty()) {
+            dequeueAntrian();
+        }
     }
-    huruf.isi[++huruf.top] = x;
-}
 
-// keluarkan huruf dari stack
-char pop() {
-    if (huruf.top == 0) {
-        cout << "Stack sudah kosong";
-        return ' ';
+    // lihat data antrian teller dengan atribut nama dan NIM mahasiswa
+    void viewQueue() {
+        cout << "Data antrian teller: " << endl;
+        Node* current = front;
+        for (int i = 0; i < size; i++) {
+            cout << i + 1 << ". Nama: " << current->Nama << " (Nim: " << current->Nim << ")" << endl;
+            current = current->next;
+        }
     }
-    return huruf.isi[huruf.top--];
-}
+
+    ~Queue() {
+        clearQueue();
+    }
+
+// bagian private dari class Queue
+private:
+    // deklarasi data front, back, dan size
+    Node* front;
+    Node* back;
+    int size;
+};
 
 // main program (program utama)
 int main() {
-    char kalimat[30];
-    huruf.top = 0;
+    // deklarasi class Queue serta tipe data Nama dan Nim
+    Queue queueTeller;
+    string Nama, Nim;
 
-    // head of the program (judul program)
-    cout << "=== PROGRAM MEMBALIK KALIMAT (REVERSE SENTENCES) ===" << endl;
-    
-    // user input kalimat (boleh lebih dari 3 kata)
-    cout << "Masukkan kalimat: ";
-    cin.getline(kalimat, sizeof(kalimat));
+    // user input nama dan NIM mahasiswa pertama
+    cout << "Masukkan Nama mahasiswa: ";
+    cin >> Nama;
+    cout << "Masukkan NIM mahasiswa: ";
+    cin >> Nim;
+    // panggil fungsi untuk menambahkan data ke dalam antrian
+    queueTeller.enqueueAntrian(Nama, Nim);
 
-    // program menampilkan kalimat asli yang diinput user
-    cout << "Kalimat asli: " << kalimat;
+    // user input nama dan NIM mahasiswa kedua
+    cout << "Masukkan Nama mahasiswa: ";
+    cin >> Nama;
+    cout << "Masukkan NIM mahasiswa: ";
+    cin >> Nim;
+    // panggil fungsi untuk menambahkan data ke dalam antrian
+    queueTeller.enqueueAntrian(Nama, Nim);
 
-    // setiap huruf dimasukkan ke dalam stack dengan memanggil fungsi push
-    for (int i = 0; kalimat[i] != '\0'; i++) {
-        push(kalimat[i]);
-    }
+    // lihat data di dalam antrian saat ini
+    queueTeller.viewQueue();
+    // tampilkan jumlah atau banyak data dalam antrian saat ini
+    cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;
+    cout << endl;
 
-    // program menampilkan kalimat yang telah dibalik
-    cout << "\nKalimat setelah dibalik: ";
+    // hapus antrian (data yang dihapus adalah front)
+    queueTeller.dequeueAntrian();
+    // lihat data di dalam antrian saat ini (setelah data front sebelumnya dihapus)
+    queueTeller.viewQueue();
+    // tampilkan jumlah atau banyak data dalam antrian saat ini 
+    cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;
+    cout << endl;
 
-    // balik kalimat dengan mengeluarkan seluruh huruf dari stack dengan memanggil fungsi pop
-    while (huruf.top > 0) {
-        cout << pop();
-    }
+    // bersihkan atau hapus seluruh antrian sehingga antrian kosong
+    queueTeller.clearQueue();
+    // lihat data di dalam antrian saat ini (setelah semua antrian dihapus)
+    queueTeller.viewQueue();
+    // tampilkan jumlah atau banyak data dalam antrian saat ini
+    cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;
     cout << endl;
 
     return 0;
@@ -491,37 +533,22 @@ int main() {
 
 ```
 
-Kode tersebut digunakan untuk melakukan pembalikan terhadap kalimat menggunakan stack dengan minimal 3 kata. Pertama-tama buatlah struct dari tumpukan (stack) yang berisi deklarasi panjang maksimal kata atau isi dan deklarasi tipe data top. 
-
-- `char isi[30];` artinya maksimal jumlah kata yang dapat diinput atau diproses oleh program adalah 30 kata. Kata yang dimasukkan dapat 3 atau lebih. Tipe datanya adalah char. Sedangkan "isi" merupakan variabelnya. 
-- `int top;` merupakan deklarasi dari data top dimana tipenya adalah integer.
-- Kode yang berada di dalam fungsi `void push(char x)` digunakan untuk menambahkan huruf ke dalam stack. Apabila stack sudah penuh atau mencapai 30, maka program akan menjalankan `if (huruf.top == 30)` dan `cout << "Stack sudah penuh";` serta mencetak "Stack sudah penuh". Program _else_-nya yaitu `return huruf.isi[++huruf.top] = x;` dimana jika stack belum mencapai batas maksimal yaitu 30, maka hurufnya akan tetap ditambah.
-- Kode yang berada di dalam fungsi `char pop()` digunakan untuk menghapus huruf di dalam stack. Apabila stack sudah kosong, maka program akan menjalankan `if (huruf.top == 0)` dan `cout << "Stack sudah kosong";` serta mencetak "Stack sudah kosong". Program _else_-nya yaitu `return huruf.isi[huruf.top--];` dimana jika stack belum kosong, maka hurufnya akan tetap dapat dihapus sesuai urutannya.
+Kode tersebut digunakan untuk  
 
 #### Penjelasan Main Program:
-- `char kalimat[30];` adalah deklarasi variabel kalimat yaitu maksimal jumlah katanya sebanyak 30. Tipe datanya adalah character.
-- `huruf.top = 0;` adalah deklarasi data top atau awal pada stack dimulai dari 0.
-- ` cout << "=== PROGRAM MEMBALIK KALIMAT (REVERSE SENTENCES) ===" << endl;` akan menampilkan _head of the program_ atau judul dari program tersebut yaitu **reverse sentences**.
-- `cout << "Masukkan kalimat: ";` dan `cin.getline(kalimat, sizeof(kalimat));` merupakan kode untuk user menginput kalimat (boleh lebih dari 3 kata).
-- `cout << "Kalimat asli: " << kalimat;` digunakan untuk menampilkan kalimat yang telah diinput oleh user.
-- Perulangan for `for (int i = 0; kalimat[i] != '\0'; i++)` digunakan untuk memasukkan huruf ke dalam stack dengan cara memanggil `push(kalimat[i])`.
-- `cout << "\nKalimat setelah dibalik: ";` digunakan untuk menampilkan kalimat yang telah dibalik seluruh hurufnya. Kemudian, untuk menampilkannya yaitu dengan memanggil fungsi pop pada `while (huruf.top > 0)` dan `cout << pop();`.
-- `return 0;` merupakan kode bahwa program telah sukses dan berhasil.
+
 
 #### Output:
-![Cuplikan layar 2024-05-07 061133](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/6195777f-2c13-42d2-9c23-10a5d0372a6b)
+
 
 Penjelasan Output :
 
-Pada output tersebut, user menginputkan kalimat Kampus Telkom Purwokerto dimana huruf K, T, dan P adalah kapital. Kemudian, program membalikkan urutan huruf masing-masing kata pada kalimat tersebut dari belakang ke depan. Jadi, Kampus menjadi supmaK, Telkom menjadi mokleT, dan Purwokerto menjadi otrekowruP. Kemudian, huruf K pada Kampus yang awalnya di depan berubah menjadi di urutan paling belakang. Huruf o pada Purwokerto yang awalnya berada pada urutan paling belakang berubah menjadi di urutan paling depan. Kata yang telah dibalik yaitu otrekowruP mokleT supmaK. Huruf kapital tetap kapital, sedangkan huruf kecil tetap huruf kecil. Hanya posisi atau urutan hurufnya yang dibalik.
 
 #### Full code Screenshot:
-![Cuplikan layar 2024-05-07 061152](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/64fa8c28-674c-450a-99b0-1f1295fc818a)
+
 
 ## Kesimpulan
-Stack yang dikenal dengan tumpukan merupakan struktur data yang mengoperasikan teknik berdasarkan LIFO (Last In First Out). Data yang terakhir dimasukkan akan keluar paling pertama. Pada stack, user dapat menambahkan, menghapus, mengosongkan stack, bahkan melihat nilai atau elemen pada posisi tertentu dalam tumpukan tanpa menghapusnya. Pada stack, kita juga dapat mengecek apakah suatu stack penuh atau kosong.
+
 
 ## Referensi
-- [1] Harendra, "Stack Data Structure," geeksforgeeks.org. [Online]. Tersedia : https://www.geeksforgeeks.org/stack-data-structure/ [Diakses 5 Mei 2024].
-- [2] Nordeen, A., C++ Learn in 24 Hours. Edisi Pertama. Delaware : Guru99, 2022
-- [3] Universitas Bakrie, “Kenalan dengan Pengertian Stack dalam Pemrograman,” bakrie.ac.id. [Online]. Tersedia : https://bakrie.ac.id/articles/552-kenalan-dengan-pengertian-stack-dalam-pemrograman.html [Diakses 4 Mei 2024].
+- [1] 
