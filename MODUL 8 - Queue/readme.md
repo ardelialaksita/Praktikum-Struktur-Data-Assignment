@@ -359,7 +359,7 @@ Di dalam bagian dari public class Queue terdapat kode-kode berikut.
 - `void dequeueAntrian()` digunakan untuk menghapus antrian. Antrian yang dihapus yaitu data front (depan).
 - `int countQueue()` digunakan untuk menghitung jumlah seluruh data yang saat ini ada di dalam antrian.
 - `void clearQueue()` digunakan untuk menghapus seluruh data di dalam antrian sehingga antrian menjadi kosong.
-- ` void viewQueue()` digunakan untuk melihat data yang saat ini berada di dalam antrian.
+- `void viewQueue()` digunakan untuk melihat data yang saat ini berada di dalam antrian.
 
 #### Output:
 ![Cuplikan layar 2024-05-13 111423](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/cf414028-539f-4b87-a537-06bcefff6678)
