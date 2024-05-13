@@ -168,7 +168,7 @@ Fungsi untuk menambahkan, menghapus, menghitung, mengosongkan, dan menampilkan d
 - `clearQueue();` digunakan untuk menghapus seluruh antrian sehingga antrian menjadi kosong. Data saat ini (setelah dikosongkan) akan ditampilkan dengan `queueTeller.viewQueue();`. Karena data saat ini sudah kosong, maka Data antrian teller kosong. `cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;` akan menampilkan banyaknya data dalam antrian saat ini yaitu 0. 
 
 #### Output Guided 1:
-
+![Cuplikan layar 2024-05-13 132931](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/d84c90e1-efaf-4d8a-8bd1-85ff3238552e)
 
 
 ## Unguided 
