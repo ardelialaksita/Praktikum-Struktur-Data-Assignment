@@ -149,71 +149,27 @@ int main() {
 }
 
 ```
-Kode di atas digunakan untuk 
+Kode di atas digunakan untuk menambahkan, menghapus, menghitung, mengosongkan, dan menampilkan data antrian menggunakan Queue. Konsep yang diterapkan adalah FIFO (First In First Out). Elemen ditambahkan pada ujung belakang (back / rear) antrian. Elemen dihapus dari ujung depan (front) antrian. Pertama-tama, deklarasikan terlebih dahulu variabel yang diperlukan yaitu `const int maksimalQueue = 5`, `int front = 0;`, `int back = 0;`, dan `string queueTeller[5];`. `string queueTeller[5];` artinya banyak antrian maksimal yang dapat ditampung oleh queue tersebut adalah 5. Antrian akan didefinisikan penuh apabila telah mencapai jumlah maksimal yaitu 5. Berikut penjelasan kode lainnya:
 
-`string arrayBuku[5];
-int maksimal = 5, top = 0;`
-Kode tersebut artinya panjang array bukunya adalah 5 yaitu terdapat 5 buku pada array tersebut. Karena int maksimal adalah 5, maka banyak bukunya boleh kurang dari 5, namun tidak boleh lebih dari 5. 
+Pengecekan apakah antrian dalam keadaan penuh atau kosong:
+- `bool isFull()` digunakan untuk mengecek apakah antrian penuh atau tidak.
+- `bool isEmpty()` digunakan untuk mengecek apakah antrian kosong atau tidak.
 
-- Apabila stack (tumpukan) sudah penuh, maka kode `bool isFull()` akan membuat program menjalankan `return (top == maksimal);` karena telah mencapai jumlah maksimal buku yang bisa disimpan oleh array yaitu sebanyak 5. Tipe data yang digunakan adalah boolean.
-- Apabila stack (tumpukan) masih kosong, maka kode `bool isEmpty()` akan membuat program menjalankan `return (top == 0);` karena jumlahnya masih 0. Tidak ada buku sama sekali yang disimpan oleh array tersebut. Tipe data yang digunakan adalah boolean.
-- `void pushArrayBuku(string data)` merupakan fungsi void yang digunakan untuk menambahkan buku pada array. Program akan menampilkan "Data telah penuh" apabila data yang disimpan array sudah penuh. Apabila data masih belum penuh, maka program akan tetap menambahkan buku pada _top_ array menggunakan `arrayBuku[top] = data;` hingga `top++;`. Tipe datanya adalah string.
-- `void popArrayBuku()` nerupakan fungsi void yang digunakan untuk menghapus data pada list atau array. Apabila tidak ada data pada array atau `if (isEmpty())`, maka program akan mencetak output "Tidak ada data yang dihapus menggunakan `cout << "Tidak ada data yang dihapus" << endl;`. Apabila terdapat data pada aray atau list tersebut, maka program akan menghapus salah satu datanya menggunakan `arrayBuku[top - 1] = "";` dan `top--;`. Array akan terus berkurang karena menggunakan indeks top--;
-- `void peekArrayBuku(int posisi)` merupakan fungsi void yang digunakan untuk melihat isi array buku berdasarkan posisinya. Jika tidak ada data pada array atau `if (isEmpty())`, maka program akan menjalankan `cout << "Tidak ada data yang bisa dilihat" << endl;` dan mencetak output "Tidak ada data yang bisa dilihat". Jika terdapat data pada array tersebut, maka program akan menjalankan perulangan for yaitu `for (int i = 1; i <= posisi; i++)` dan `cout << "Posisi ke " << posisi << " adalah " << arrayBuku[index] << endl;` untuk mencetak **"Posisi ke (posisi buku) adalah (nama buku)"**.
-- `int countStack()` digunakan untuk menghitung banyaknya data pada stack.
-- `void changeArrayBuku(int posisi, string data)` digunakan untuk mengubah isi array buku memasukkan posisinya terlebih dahulu. Apabila posisinya melebihi data maksimal yang ada, maka program akan menjalankan `cout << "Posisi melebihi data yang ada" << endl;` dan mencetak **"Posisi melebihi data yang ada"**.
-- `void destroyArrayBuku()` digunakan untuk menghapus seluruh isi array sehingga list buku menjadi kosong.
-- `void cetakArrayBuku() ` digunakan untuk menampilkan isi list atau array tersebut yang terdiri atas data-data buku. Jika tidak ada buku pada array, maka outputnya adalah **"Tidak ada data yang dicetak"**.
+Fungsi untuk menambahkan, menghapus, menghitung, mengosongkan, dan menampilkan data dalam antrian:
+- `void enqueueAntrian(string data)` digunakan untuk menambahkan antrian baru.
+- `void dequeueAntrian()` digunakan untuk menghapus antrian. Antrian yang dihapus yaitu data front (depan).
+- `int countQueue()` digunakan untuk menghitung jumlah seluruh data yang saat ini ada di dalam antrian.
+- `void clearQueue()` digunakan untuk menghapus seluruh data di dalam antrian sehingga antrian menjadi kosong.
+- `void viewQueue()` digunakan untuk melihat data yang saat ini berada di dalam antrian.
 
 #### Penjelasan Main Program :
-
-
-Pada main program, user menggunakan push array sebanyak 5 kali yaitu `pushArrayBuku("Kalkulus");`, `pushArrayBuku("Struktur Data");`, `pushArrayBuku("Matematika Diskrit");`, `pushArrayBuku("Dasar Multimedia");`, dan `pushArrayBuku("Inggris");` sehingga pada array tersebut terdapat 5 data buku yaitu Kalkulus, Struktur Data, Matematika Diskrit, Dasar Multimedia, dan Inggris. Data yang terbaru akan ditambahkan ke posisi depan. Berikut urutan posisi datanya.
-
-- Posisi 1 : Inggris (top)
-- Posisi 2 : Dasar Multimedia
-- Posisi 3 : Matematika Diskrit
-- Posisi 4 : Struktur Data
-- Posisi 5 : Kalkulus
-
-Selanjutnya, user mencetak array tersebut dengan cara memanggil fungsi `cetakArrayBuku();`.
-
-![Cuplikan layar 2024-05-06 190637](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/9b4eb5d5-099f-4bca-90f0-a365c1c8508e)
-
-Kode `cout << "Apakah data stack penuh? " << isFull() << endl;` dan `cout << "Apakah data stack kosong? " << isEmpty() << endl;` digunakan untuk mencetak pertanyaan **"Apakah data stack penuh? "** dan **"Apakah data stack kosong? "** pada output. 1 merupakan True yang artinya stack tersebut penuh. Sedangkan 0 merupakan False yang artinya stack tersebut tidak kosong.
-
-![Cuplikan layar 2024-05-06 190708](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/07c7ceec-c8a9-4f39-b052-73a9a48bf237)
-
-`peekArrayBuku(2);` digunakan untuk melihat data pada posisi kedua. Data pada posisi kedua adalah buku dengan judul "Dasar Multimedia".
-
-![Cuplikan layar 2024-05-06 190723](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/010dc67c-4b3d-40fd-aa06-f6c4799f1d60)
-
-`popArrayBuku();` digunakan untuk menghapus data yang berada pada posisi top yaitu Inggris sehingga datanya sekarang tinggal 4. Berikut posisi bukunya.
-
-- Posisi 1 : Dasar Multimedia (top)
-- Posisi 2 : Matematika Diskrit
-- Posisi 3 : Struktur Data
-- Posisi 4 : Kalkulus
-
-![Cuplikan layar 2024-05-06 190731](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/bbaa7076-cb6a-45e6-809e-690642e19d29)
-
-`changeArrayBuku(2, "Bahasa Jerman");` digunakan untuk mengubah data kedua menjadi buku berjudul "Bahasa Jerman". Pada posisi kedua diduduki oleh "Matematika Diskrit" sehingga posisi buku setelah data diubah yaitu sebagai berikut.
-
-- Posisi 1 : Dasar Multimedia (top)
-- Posisi 2 : Bahasa Jerman
-- Posisi 3 : Struktur Data
-- Posisi 4 : Kalkulus
-
-`cetakArrayBuku();` digunakan untuk menampilkan isi data array tersebut
-
-`destroyArrayBuku();` digunakan untuk menghapus seluruh isi array sehingga array atau list tersebut menjadi kosong. 
-
-![Cuplikan layar 2024-05-06 194514](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/15116276-4861-4bf5-a168-a255b820fc86)
-
-`cout << "Jumlah data setelah dihapus: " << top << endl;` dan `cetakArrayBuku();` digunakan untuk mencetak jumlah data setelah dihapus yaitu 0.
+- `enqueueAntrian("Andi");` dan `enqueueAntrian("Maya");` digunakan untuk menambahkan data ke dalam antrian. Data saat ini ditampilkan dengan `queueTeller.viewQueue();`. `cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;` akan menampilkan banyaknya data dalam antrian saat ini yaitu 2. Terdapat data Andi pada antrian 1 dan data Maya pada antrian 2.
+- `dequeueAntrian();` digunakan untuk menghapus data di dalam antrian, khususnya yaitu data front karena menerapkan FIFO. Data saat ini (setelah dihapus) akan ditampilkan dengan `queueTeller.viewQueue();`. `cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;` akan menampilkan banyaknya data dalam antrian saat ini yaitu 1. Data saat ini tersisa Maya karena Andi telah dihapus.
+- `clearQueue();` digunakan untuk menghapus seluruh antrian sehingga antrian menjadi kosong. Data saat ini (setelah dikosongkan) akan ditampilkan dengan `queueTeller.viewQueue();`. Karena data saat ini sudah kosong, maka Data antrian teller kosong. `cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;` akan menampilkan banyaknya data dalam antrian saat ini yaitu 0. 
 
 #### Output Guided 1:
-![Cuplikan layar 2024-05-06 194537](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/14da4c36-5b2e-4c66-ac9e-75e4d5ccb98d)
+
+
 
 ## Unguided 
 
@@ -368,15 +324,15 @@ Di dalam bagian dari public class Queue terdapat kode-kode berikut.
 
 ![Cuplikan layar 2024-05-13 111448](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a30fb9c5-fc59-4998-90af-04f309c25389)
 
-`queueTeller.enqueueAntrian("Andi");` dan `queueTeller.enqueueAntrian("Maya");` akan menambahkan nama Andi dan Maya di dalam antrian. Andi pada antrian pertama, sedangkan Maya pada antrian kedua. Selanjutnya, data saat ini ditampilkan dengan `queueTeller.viewQueue();`. ` cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;` akan menampilkan banyaknya data dalam antrian saat ini yaitu 2.
+`queueTeller.enqueueAntrian("Andi");` dan `queueTeller.enqueueAntrian("Maya");` akan menambahkan nama Andi dan Maya di dalam antrian. Andi pada antrian pertama, sedangkan Maya pada antrian kedua. Selanjutnya, data saat ini ditampilkan dengan `queueTeller.viewQueue();`. `cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;` akan menampilkan banyaknya data dalam antrian saat ini yaitu 2.
 
 ![Cuplikan layar 2024-05-13 111510](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/8b1f6e1b-e5b3-465c-a43e-2300de878c0d)
 
-`queueTeller.dequeueAntrian();` akan menghapus data front di dalam antrian tersebut yaitu "Andi" sehingga di dalam antrian saat ini hanya tersisa "Maya". Selanjutnya, data saat ini ditampilkan dengan `queueTeller.viewQueue();`. ` cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;` akan menampilkan banyaknya data dalam antrian saat ini yaitu 1.
+`queueTeller.dequeueAntrian();` akan menghapus data front di dalam antrian tersebut yaitu "Andi" sehingga di dalam antrian saat ini hanya tersisa "Maya". Selanjutnya, data saat ini ditampilkan dengan `queueTeller.viewQueue();`. `cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;` akan menampilkan banyaknya data dalam antrian saat ini yaitu 1.
 
 ![Cuplikan layar 2024-05-13 111521](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/be67853a-ee3a-4d1c-b133-d56c6b563031)
 
-`queueTeller.clearQueue();` akan menghapus seluruh data di dalam antrian sehingga antrian menjadi kosong. Selanjutnya, data saat ini ditampilkan dengan `queueTeller.viewQueue();`. Tidak ada antrian sama sekali saat ini sehingga Data antrian teller kosong. ` cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;` akan menampilkan banyaknya data dalam antrian saat ini yaitu 0.
+`queueTeller.clearQueue();` akan menghapus seluruh data di dalam antrian sehingga antrian menjadi kosong. Selanjutnya, data saat ini ditampilkan dengan `queueTeller.viewQueue();`. Tidak ada antrian sama sekali saat ini sehingga Data antrian teller kosong. `cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;` akan menampilkan banyaknya data dalam antrian saat ini yaitu 0.
 
 #### Full code Screenshot:
 ![Cuplikan layar 2024-05-13 111354](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e3749dd4-8e96-4213-b357-c132f3e34fea)
@@ -533,26 +489,52 @@ int main() {
 
 ```
 
-Kode tersebut digunakan untuk  
+Kode tersebut digunakan untuk menambahkan, menghapus, menghitung, mengosongkan, dan menampilkan data antrian dengan atribut nama dan NIM mahasiswa. Program tersebut hampir sama seperti pada unguided 1. Yang membedakan adalah pada main program dimana user perlu menginputkan nama dan NIM mahasiswa melalui terminal setelah kode dijalankan. Berikut penjelasan kodenya:
+
+Di dalam bagian dari private class Queue terdapat deklarasi data front, back, dan size.
+
+Di dalam bagian dari public class Queue terdapat kode-kode berikut.
+- `bool isFull()` digunakan untuk mengecek apakah antrian penuh atau tidak.
+- `bool isEmpty()` digunakan untuk mengecek apakah antrian kosong atau tidak.
+- `void enqueueAntrian(string data)` digunakan untuk menambahkan antrian baru.
+- `void dequeueAntrian()` digunakan untuk menghapus antrian. Antrian yang dihapus yaitu data front (depan).
+- `int countQueue()` digunakan untuk menghitung jumlah seluruh data yang saat ini ada di dalam antrian.
+- `void clearQueue()` digunakan untuk menghapus seluruh data di dalam antrian sehingga antrian menjadi kosong.
+- `void viewQueue()` digunakan untuk melihat data yang saat ini berada di dalam antrian.
 
 #### Penjelasan Main Program:
-
+- `cout << "Masukkan Nama mahasiswa: ";` akan meminta user untuk memasukkan nama mahasiswa.
+- `cin >> Nama;` akan menampilkan nama yang telah diinput oleh user.
+- `cout << "Masukkan NIM mahasiswa: ";` akan meminta user untuk memasukkan nim mahasiswa.
+- `cin >> Nim;` akan menampilkan nim yang telah diinput oleh user.
+- `queueTeller.enqueueAntrian(Nama, Nim);` akan memanggil fungsi enqueueAntrian di dalam class Queue untuk menambahkan data nama dan  nim yang telah diinput oleh user.
+- Selanjutnya, data saat ini ditampilkan dengan `queueTeller.viewQueue();`.
+- `cout << "Jumlah antrian = " << queueTeller.countQueue() << endl;` akan menampilkan banyaknya data dalam antrian.
 
 #### Output:
+![Cuplikan layar 2024-05-13 120354](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/3f258bba-3add-4fdd-8aaa-1de8bd9fba7c)
 
+**Penjelasan Output :**
 
-Penjelasan Output :
+![Cuplikan layar 2024-05-13 120416](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/48bbf23e-ad43-44da-a99b-0e837bcd5367)
 
+User memasukkan nama dan nim mahasiswa yang pertama yaitu Aliana dengan NIM 231111008. Kemudian, user memasukkan nama dan nim mahasiswa yang kedua yaitu Ardelia dengan NIM 2311110051. Kemudian, data ditampilkan sehingga menghasilkan output sebagai berikut.
+
+![Cuplikan layar 2024-05-13 120427](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/da356168-e5eb-487d-9b1b-bdeb1e04b5b5)
+
+Selanjutnya, program akan menjalankan dequeue sehingga menghapus data front pada antrian tersebut. Data yang dihapus yaitu Aliana dengan NIM 2311110008. Saat ini, hanya ada 1 antrian yaitu Ardelia dengan NIM 2311110051 yang naik menjadi posisi 1. Berikut tampilan outputnya.
+
+![Cuplikan layar 2024-05-13 120456](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/b1a1117c-29ce-4f07-9092-5fb84f3ca4b9)
+
+Terakhir, user mengosongkan list menggunakan clearQueue sehingga seluruh antrian dihapus. Saat ini tidak ada antrian sama sekali sehingga jumlah data antriannya adalah 0. Berikut output yang dihasilkan.
+
+![Cuplikan layar 2024-05-13 120510](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a129db29-b4d2-4d2b-94db-1244fe7309c5)
 
 #### Full code Screenshot:
-
+![Cuplikan layar 2024-05-13 120326](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/6e22024f-e4f1-487d-827d-dd1eea4ebc38)
 
 ## Kesimpulan
 
 
 ## Referensi
-<<<<<<< HEAD
 - [1] 
-=======
-- [1] 
->>>>>>> 5a99e121d9a0636d6931034997a590c271a8f01f
