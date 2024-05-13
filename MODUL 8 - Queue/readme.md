@@ -551,4 +551,8 @@ Penjelasan Output :
 
 
 ## Referensi
+<<<<<<< HEAD
 - [1] 
+=======
+- [1] 
+>>>>>>> 5a99e121d9a0636d6931034997a590c271a8f01f
