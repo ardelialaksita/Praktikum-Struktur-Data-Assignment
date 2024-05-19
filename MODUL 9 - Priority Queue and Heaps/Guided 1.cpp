@@ -85,29 +85,29 @@ int main() {
     insert(13);
     insert(7);
 
-    cout << "Priority Queue : ";
+    cout << "Priority Queue: ";
     for (int i = 0; i <= heapSize; ++i) {
         cout << H[i] << " " ;
     }
     cout << "\n";
 
-    cout << "Node with maximum priority : " << extractMax() << "\n";
+    cout << "Node with maximum priority: " << extractMax() << "\n";
 
-    cout << "Priority queue after extracting maximum : ";
+    cout << "Priority queue after extracting maximum: ";
     for (int i = 0;i <= heapSize; ++ i) {
         cout << H[i] << " ";
     }
     cout << "\n";
 
     changePriority(2, 49);
-    cout << "Priority queue after priority change : ";
+    cout << "Priority queue after priority change: ";
     for (int i = 0; i <= heapSize; ++i) {
         cout << H[i] << " ";
     }
     cout << "\n";
 
     remove(3);
-    cout << "Priority queue after removing the element : ";
+    cout << "Priority queue after removing the element: ";
     for (int i = 0; i <= heapSize; ++i) {
         cout << H[i] << " ";
     }
