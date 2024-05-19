@@ -6,7 +6,7 @@ struct buku {
     string judulBuku[5]; // deklarasi tipe data judulBuku dan banyak datanya
     string pengarang[5]; // deklarasi tipe data pengarang dan banyak datanya
     string penerbit[5]; // deklarasi tipe data penerbit dan banyak datanya
-    int tebalHalaman[5]; // deklarasi tipe data tebalHalaman dan banyak datanya
+    int tebalHalaman[5]; // deklarasi tipe data tebal Halaman dan banyak datanya
     int hargaBuku[5]; // deklarasi tipe data hargaBuku dan banyak datanya
 };
 

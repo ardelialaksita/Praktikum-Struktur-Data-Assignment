@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int maksimalQueue = 5
+const int maksimalQueue = 5;
 int front = 0;
 int back = 0;
 
@@ -24,7 +24,7 @@ bool isEmpty() {
     }
 }
 
-void enqueueAntrian (string data) {
+void enqueueAntrian(string data) {
     if (isFull()) {
         cout << "Antrian Penuh" << endl;
     } else {
@@ -41,10 +41,10 @@ void enqueueAntrian (string data) {
 
 void dequeueAntrian() {
     if (isEmpty()) {
-        cout << "Antrian Kosong" << endl;
+        cout << "Antrian kosong" << endl;
     } else {
         for (int i = 0; i < back; i++) {
-            queueTeller[i] = queueTeller[i+1];
+            queueTeller[i] = queueTeller[i + 1];
         }
         back--;
     }
@@ -56,21 +56,20 @@ int countQueue() {
 
 void clearQueue() {
     if (isEmpty()) {
-        cout << "Antrian kosong" << endl;
+        cout  << "Antrian masih kosong" << endl;
     } else {
-        for (int i = 0; i < back; i++) {
+        for  (int i = 0 ; i < back ; i++ )
             queueTeller[i] = "";
-        }
-        back = 0;
-        front = 0;
     }
+    back = 0;
+    front = 0;
 }
 
 void viewQueue() {
     cout << "Data antrian teller: " << endl;
     for (int i = 0; i < maksimalQueue; i++) {
         if (queueTeller[i] != "") {
-            cout << i+1 << ". " << queueTeller[i] << endl;
+            cout << i + 1 << ". " << queueTeller[i] << endl;
         } else {
             cout << i + 1 << ". (kosong)" << endl;
         }
