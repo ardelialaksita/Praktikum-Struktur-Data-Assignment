@@ -371,7 +371,7 @@ int main() {
 Kode tersebut digunakan untuk mendapatkan parent node, left child node, right child node, melakukan operasi shift up dan shift down, memasukkan atau menambahkan elemen baru, mengekstrak elemen maksimum, mengubah prioritas elemen, mendapatkan elemen maksimum, serta menghapus elemen dari heap menggunakan input user. Program tersebut hampir sama seperti Guided 1. Yang membedakan adalah program ini menggunakan input user karena heapnya telah dikonstruksi secara manual berdasarkan user. Pada Guided 1, semua elemen dan indeks yang ingin ditambah (insert), diubah (change), dihapus (remove), dan lain-lain langsung dimasukkan dalam program sehingga user tidak melakukan input pada output. Sedangkan pada unguided 1, user perlu memasukkan size elemen, elemen-elemen, dan input-inut lain sesuai dengan operasi yang diminta. 
 
 #### Penjelasan Kode:
-Berikut kode-kode dan fungsi yang terdapat pada program tersebut (sama seperti guided 1):
+Berikut kode-kode dan fungsi yang terdapat pada program tersebut:
 - `int H[50];` dan `int heapSize = -1;` merupakan deklarasi ukuran maksimal queue tersebut dan heapSizenya.
 - `int parent(int i)` digunakan untuk mendapatkan parent node.
 - `int leftChild(int i)` digunakan untuk mendapatkan leftChild node dari indeks i.
