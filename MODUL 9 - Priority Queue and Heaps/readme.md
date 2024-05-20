@@ -9,7 +9,7 @@
 5. [Referensi](#referensi)
 
 ## Dasar Teori
-## Priorty Queue
+## Priority Queue
 Priority Queue adalah struktur data khusus yang memungkinkan kita menyimpan elemen-elemen dengan nilai prioritas tertentu [10]. Konsep dari Priority Queue mirip dengan Queue biasa. Yang membedakan adalah pada Priority Queue terdapat nilai prioritas elemen yang akan menentukan urutan elemen saat diambil. Dalam priority queue, setiap item di queue memiliki prioritas dimana elemen dengan prioritas yang lebih tinggi akan dikeluarkan (dequeue) terlebih dahulu sebelum elemen yang memiliki prioritas lebih rendah [3]. 
 
 Priority Queue menggunakan key-value untuk mengurutkan elemen atau item tanpa menggunakan queue [3]. Urutan dari elemen-elemen akan diabaikan di dalam operasi stack atau queue [2]. Sebuah priority queue memungkinkan untuk memperpanjang konsep dari queue melalui _setting_ atau aturan dari sebuah prioritas elemen di queue [8]. Priority queue merupakan jenis queue dimana elemennya dihapus berdasarkan urutan prioritas [12]. Elemen dengan prioritas tertinggi akan diambil atau diekstrak terlebih dahulu tanpa harus memindahkan elemen-elemen lainnya. Urutannya juga tidak selalu sama, melainkan berdasarkan priority value saat itu. Prioritas dapat ditentukan menggunakan aturan yang telah ditetapkan sebelumnya atau dengan membandingkan nilai-nilai elemen [11].
@@ -437,7 +437,19 @@ Pada output tersebut, elemen yang dihapus berada pada index ke-1 yaitu 7 sehingg
 
 
 ## Kesimpulan
-Kesimpulan yang dapat diambil dari praktikum modul Priority Queue and Heap adalah ...
+Kesimpulan yang dapat diambil dari praktikum modul Priority Queue and Heap adalah Priority Queue menjadi struktur data khusus yang memungkinkan kita menyimpan elemen-elemen dengan nilai prioritas tertentu. Elemen dengan nilai prioritas tertinggi akan diambil terlebih dahulu, bukan elemen yang paling lama berada dalam antrian. Implementasi Priority Queue dapat menggunakan struktur data seperti heap untuk memastikan elemen-elemen tetap terurut secara tepat. Saat mengekstrak elemen dengan nilai maksimum atau prioritas paling tinggi, elemen-elemen lainnya tidak perlu dipindahkan. 
 
 ## Referensi
-- 
+- [1] A.A. Puntambekar, Data Structures. Edisi Pertama. Washington : Amazon Digital Services, 2020.
+- [2] A.M. Jagtap dan A.S. Mali, Data Structures Using C. Edisi Pertama. Florida (US) : CRC Press, 2021.
+- [3] A. Subero, Codeless Data Structures and Algorithms: Learn DSA Without Writing a Single Line of Code . Edisi Pertama. Moruga (US) : Apress Publisher, 2020.
+- [4] D. Malhotra dan N. Malhotra, Data Structures and Program Design Using C++. Edisi Pertama. Virginia (US) : Mercury Learning and Information, 2019.
+- [5] F. Yang dan Y. Dong, C++ Programming. Edisi Pertama.  Germany : De Gruyter, 2019.
+- [6] J. Farrier, Data Structures and Algorithms with the C++ STL. Edisi Pertama. Birmingham : Packt Publishing Ltd, 2024.
+- [7] M. Jaludi, "Data Structures: Heaps," Medium, 15 September 2019. [Online]. Tersedia : https://medium.com/swlh/data-structures-heaps-b039868a521b [Diakses : 19 Mei 2024].
+- [8] M. Jamro, C# Data Structures and Algorithm. Edisi Pertama. Birmingham (Inggris) : Packt Publishing, 2024.
+- [9] P.V. Weert dan M. Gregoire, C++17 Standard Library Quick Reference. Edisi Pertama. Moruga (US) : Apress Publisher, 2019.
+- [10] R. Pratama, "Priority Queue: Konsep dan Penggunaan dalam Algoritma," Medium, 22 Juli 2023. [Online]. Tersedia : 
+https://medium.com/@furatamarizuki/priority-queue-konsep-dan-penggunaan-dalam-algoritma-f4c1cd117ba [Diakses: 19 Mei 2024].
+- [11] R. Pratama, “Queue: Pengealan, Implementasi, Operasi Dasar, dan Aplikasi,” Medium, 25 Mei 2023. [Online]. Tersedia : https://medium.com/@furatamarizuki/queue-pengenalan-implementasi-operasi-dasar-dan-aplikasi-c5eed7e871a3 [Diakses: 19 Mei 2024].
+- [12] S.N. Mohanty dan P. K. Tripathy, Data Structure and Algorithms Using C++. New York City : Wiley Publishing, 2021.
