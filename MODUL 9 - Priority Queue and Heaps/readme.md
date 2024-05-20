@@ -199,7 +199,7 @@ Berikut fungsi-fungsi yang terdapat pada program tersebut:
 
 ## Unguided 
 
-### 1. Modifikasi guided diatas yang mana heap dikonstruksi secara manual berdasarkan user.
+### 1. Modifikasi guided di atas yang mana heap dikonstruksi secara manual berdasarkan user.
 **Kode Program**
 ```C++
 #include <iostream>
