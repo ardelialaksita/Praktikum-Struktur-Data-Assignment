@@ -2,13 +2,15 @@
 #include<iostream>
 using namespace std;
 
+// PROGRAM REKURSIF LANGSUNG MENCARI FAKTORIAL BILANGAN BULAT POSITIF
+
 // fungsi faktorial dengan n sebagai bilangan yang dicari faktorialnya
 int faktorial(int n) {
-    // jika n lebih dari 1
+    // jika n lebih besar dari 1
     if(n > 1)
         // lakukan return dikali dengan bilangan n - 1
         return n * faktorial(n - 1);
-    // jika n tidak lebih dari 1
+    // jika n tidak lebih besar dari 1
     else
         // lakukan return 1
         return 1;
