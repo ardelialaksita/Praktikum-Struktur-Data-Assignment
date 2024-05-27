@@ -84,7 +84,7 @@ Kode di atas digunakan
 
 
 #### Output Guided 1:
-
+![output guided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/acd6b576-dda4-4d08-8b57-31afac2e1191)
 
 ### 2. Program Rekursif Tidak Langsung
 **Kode Program**
@@ -131,14 +131,52 @@ Kode di atas digunakan untuk
 #### Penjelasan Main Program:
 
 #### Output Guided 2:
-
+![output guided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/acd6b576-dda4-4d08-8b57-31afac2e1191)
 
 
 ## Unguided 
 
-### 1. Modifikasi guided di atas yang mana heap dikonstruksi secara manual berdasarkan user.
+### 1. Buatlah sebuah program Rekursif Langsung (Direct Recursion) yang menghitung nilai faktorial dari sebuah inputan bilangan bulat positif!
 **Kode Program**
 ```C++
+// import library
+#include<iostream>
+using namespace std;
+
+// PROGRAM REKURSIF LANGSUNG MENCARI FAKTORIAL BILANGAN BULAT POSITIF
+
+// fungsi faktorial dengan n sebagai bilangan yang dicari faktorialnya
+int faktorial(int n) {
+    // jika n lebih besar dari 1
+    if(n > 1)
+        // lakukan return dikali dengan bilangan n - 1
+        return n * faktorial(n - 1);
+    // jika n tidak lebih besar dari 1
+    else
+        // lakukan return 1
+        return 1;
+}
+
+// main program (program utama)
+int main() {
+    // deklarasi n
+    int n;
+
+    // user input bilangan bulat positif
+    cout << "Masukkan bilangan bulat positif: ";
+    cin >> n;
+
+    // tampilkan output jika user input n kurang dari 0
+    if (n < 0) {
+        cout << "Input tidak valid. Harap masukkan bilangan bulat positif." << endl;
+    } 
+    // tampilkan output jika user input n lebih dari 0
+    else {
+        cout << "Faktorial dari " << n << " adalah: " << faktorial(n) << endl;
+    }
+    // return code
+    return 0;
+}
 
 ```
 
@@ -152,13 +190,91 @@ Berikut kode-kode dan fungsi yang terdapat pada program tersebut:
 
 
 #### Output:
+![output unguided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/45f5f770-f386-42a2-a3a9-f38c3fb52a53)
+
+**Penjelasan Output:**
+Pada output tersebut, user memasukkan bilangan 5 untuk dicari faktorialnya. Kemudian, program menjalankan iterasi fungsi rekursif dengan cara n = 5 dikali dengan n-1 dikali dengan n-2 dikali dengan n - 3 dikali dengan n - 4 hingga 1. Karena n-4 = 1, maka iterasi dihentikan dan ditemukan faktorial dari 5 adalah 120. 
+
+#### Full code Screenshot:
+![full ss unguided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/d3b4dc4e-fe71-45bb-9636-a53dee537026)
+
+### 2. Buatlah versi program Rekursif Tidak Langsung (Indirect Recursion) dari soal nomor 1 diatas!
+**Kode Program**
+```C++
+// import library
+#include<iostream>
+using namespace std;
+
+// PROGRAM REKURSIF TIDAK LANGSUNG MENCARI FAKTORIAL BILANGAN BULAT POSITIF
+
+// fungsi faktorialB yang masih kosong
+int faktorialB(int n);
+
+// fungsi faktorialA dengan n sebagai bilangan yang dicari faktorialnya
+int faktorialA(int n) {
+    // jika n lebih dari 1
+    if(n > 1)
+        // lakukan return dengan memanggil fungsi faktorialB
+        return n * faktorialB(n - 1);
+    // jika n tidak lebih dari 1
+    else
+        // lakukan return 1
+        return 1;
+}
+
+// fungsi faktorialB dengan n sebagai bilangan yang dicari faktorialnya
+int faktorialB(int n) {
+    // jika n lebih dari 1
+    if(n > 1)
+        // lakukan return dengan memanggil fungsi faktorialA
+        return n * faktorialA(n - 1);
+    // jika n tidak lebih dari 1
+    else
+        // lakukan return 1
+        return 1;
+}
+
+// main program (program utama)
+int main() {
+    // deklarasi n
+    int n;
+
+    // user input bilangan bulat positif
+    cout << "Masukkan bilangan bulat positif: ";
+    cin >> n;
+
+    // tampilkan output jika user input n kurang dari 0
+    if (n < 0) {
+        cout << "Input tidak valid. Harap masukkan bilangan bulat positif." << endl;
+    } 
+    // tampilkan output jika user input n lebih dari 0
+    else {
+        cout << "Faktorial dari " << n << " adalah: " << faktorialB(n) << endl;
+    }
+    // return code
+    return 0;
+}
+
+```
+
+Kode tersebut digunakan untuk 
+
+#### Penjelasan Kode:
+Berikut kode-kode dan fungsi yang terdapat pada program tersebut:
 
 
-**Penjelasan Output :**
+#### Penjelasan Main Program:
+
+
+#### Output:
+![output unguided 2](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a717b8dd-437f-4a43-b33b-ba646dc06b37)
+
+**Penjelasan Output:**
+Sama seperti yang telah dijelaskan pada output unguided 1. Pada output tersebut, user memasukkan bilangan 5 untuk dicari faktorialnya. Kemudian, program menjalankan iterasi fungsi rekursif dengan cara n = 5 dikali dengan n-1 dikali dengan n-2 dikali dengan n - 3 dikali dengan n - 4 hingga 1. Karena n-4 = 1, maka iterasi dihentikan dan ditemukan faktorial dari 5 adalah 120. 
 
 
 #### Full code Screenshot:
-
+![full ss unguided 2](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/abc92386-93a1-42db-9bf3-7a436f84b822)
 
 
 ## Kesimpulan
