@@ -2,7 +2,7 @@
 #include<iostream>
 using namespace std;
 
-// fungsi faktorial dengan a sebagai bilangan yang dicari faktorialnya
+// fungsi faktorial dengan n sebagai bilangan yang dicari faktorialnya
 int faktorial(int n) {
     // jika n lebih dari 1
     if(n > 1)
