@@ -77,11 +77,10 @@ int main() {
     return 0;
 }
 ```
-Kode di atas digunakan 
-
+Kode di atas digunakan untuk menampilkan bilangan sebanyak n yang diisi dalam fungsi `countdown(n)`. Angka yang ditampilkan semakin lama semakin kecil karena countdown. Dapat dikatakan pula bahwa urutan angkanya secara menurun. n pada program tersebut ada 5 dimana akan dimulai dari 5 hingga 0 karena n == 0 pada `if (n == 0)`. `void countdown(int n)` merupakan fungsi yang akan dipanggil pada main program untuk menampilkan angka countdown.
 
 #### Penjelasan Main Program:
-
+`cout << "Rekursif langsung: ";` digunakan untuk menampilkan **'Rekursif langsung:'**. Kemudian, untuk menampilkan bilangan countdown yang diiterasikan dengan rekursif langsung yaitu dengan memanggil fungsi void countdown menggunakan kode `countdown(5);`. n-nya adalah 5. `cout << endl;` digunakan untuk mencetak baris baru.
 
 #### Output Guided 1:
 ![output guided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/acd6b576-dda4-4d08-8b57-31afac2e1191)
@@ -126,7 +125,9 @@ int main() {
 }
 
 ```
-Kode di atas digunakan untuk 
+Kode di atas hampir sama seperti guided 1. Yang membedakan adalah pada guided 1 menggunakan rekursif langsung dimana rekursifnya langsung dipanggil dan cukup apabila hanya menggunakan 1 fungsi void. Sedangkan pada guided 2 memerlukan beberapa fungsi karena rekursifnya dilakukan dengan tidak langsung. 
+
+`functionB` pada line awal sengaja dikosongkan karena akan dipanggil pada fungsi `functionA`. 
 
 #### Penjelasan Main Program:
 
