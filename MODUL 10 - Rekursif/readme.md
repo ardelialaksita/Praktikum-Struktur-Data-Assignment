@@ -180,11 +180,7 @@ int main() {
 
 ```
 
-Kode tersebut digunakan untuk 
-
-#### Penjelasan Kode:
-Berikut kode-kode dan fungsi yang terdapat pada program tersebut:
-
+Kode tersebut digunakan untuk mencari faktorial dari suatu bilangan bulat. Bilangan bulat yang dicari disimbolkan dengan n. `int faktorial(int n)` merupakan fungsi yang akan dipanggil untuk menjalankan proses faktorial. Apabila n > 1, maka program akan terus melakukan iterasi perkalian dari bilangan faktorial hingga mencapai n - 1 = 1. 
 
 #### Penjelasan Main Program:
 
