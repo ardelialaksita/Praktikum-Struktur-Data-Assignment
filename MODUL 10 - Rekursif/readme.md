@@ -127,12 +127,12 @@ int main() {
 ```
 Kode di atas hampir sama seperti guided 1. Yang membedakan adalah pada guided 1 menggunakan rekursif langsung dimana rekursifnya langsung dipanggil dan cukup apabila hanya menggunakan 1 fungsi void. Sedangkan pada guided 2 memerlukan beberapa fungsi karena rekursifnya dilakukan dengan tidak langsung. 
 
-`functionB` pada line awal sengaja dikosongkan karena akan dipanggil pada fungsi `functionA`. 
+`functionB()` pada line awal sengaja dikosongkan karena akan dipanggil pada fungsi `functionA()`. Apabila `functionB()` diisi sejak awal, maka program tidak akan berjalan dan menghasilkan error karena pemanggilannya double. Jadi, `functionB` di awal harus dikosongkan, kemudian fungsi `functionB()` selanjutnya baru diisi sehingga tidak menyebabkan error.
+
+Pada `void functionA` akan menjalankan `functionB(n - 1);` apabila n-nya lebih besar dari 0. Pada `void functionB` akan menjalankan `functionB(n / 2);` apabila n-nya lebih besar dari 0.
 
 #### Penjelasan Main Program:
-
-#### Output Guided 2:
-![output guided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/acd6b576-dda4-4d08-8b57-31afac2e1191)
+`int num = 3;` merupakan deklarasi yang mengandung jumlah isi dari num. `cout << "Rekursif tidak langsung: ";` digunakan untuk menampilkan **'Rekursif tidak langsung:'**. Kemudian, untuk menampilkannya yaitu dengan memanggil fungsi void `functionA()` menggunakan kode `functionA(num)`. `return 0;` merupakan kode untuk menandakan bahwa program telah selesai dan berhasil.
 
 
 ## Unguided 
@@ -184,7 +184,11 @@ int main() {
 Kode tersebut digunakan untuk mencari faktorial dari suatu bilangan bulat. Bilangan bulat yang dicari disimbolkan dengan n. `int faktorial(int n)` merupakan fungsi yang akan dipanggil untuk menjalankan proses faktorial. Apabila n > 1, maka program akan terus melakukan iterasi perkalian dari bilangan faktorial hingga mencapai n - 1 = 1. 
 
 #### Penjelasan Main Program:
-
+- `int n;` merupakan deklarasi yang digunakan untuk merepresentasikan bilangan bulat yang ingin dicari faktorialnya.
+- `cout << "Masukkan bilangan bulat positif: ";` dan `cin >> n;` akan meminta user untuk memasukkan bilangan yang ingin dicari faktorialnya.
+- `if (n < 0)` yang berisi `cout << "Input tidak valid. Harap masukkan bilangan bulat positif." << endl;` artinya apabila n kurang dari 0, maka program akan mencetak "Input tidak valid. Harap masukkan bilangan bulat positif" karena program hanya akan menjalankn apabila n-nya lebih besar dari 0.
+- Apabila n lebih besar dari 0, maka program akan menjalankan `cout << "Faktorial dari " << n << " adalah: " << faktorial(n) << endl;` dan menampilkan **"Faktorial dari ... (bilangan n) adalah: .... (faktorial bilangan tersebut)"**.
+- `return 0;` merupakan kode yang menandakan bahwa program telah selesai dan berhasil. 
 
 #### Output:
 ![output unguided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/45f5f770-f386-42a2-a3a9-f38c3fb52a53)
