@@ -13,7 +13,7 @@
 Rekursif adalah suatu proses dari sebuah fungsi yang dapat memanggil dirinya sendiri secara berulang-ulang [1]. Beberapa kasus yang menggunakan fungsi rekursif akan jauh lebih mudah, cepat, dan efisien. Hanya membutuhkan _space_ memori yang cukup banyak karena iterasinya yang harus dipanggil secara terus menerus. Fungsi rekursif akan terus menjalankan iterasi hingga suatu kondisi yang ditetapkan pada fungsi tersebut terpenuhi. 
 
 ### Tujuan Rekursif:
-Tujuan rekursif adalah untuk melakukan pengulangan, atau looping seperti for dan while, namun dengan cara yang berbeda [4].
+Tujuan rekursif adalah untuk melakukan pengulangan, atau looping seperti for dan while, namun dengan cara yang berbeda [3].
 
 ### Kelebihan dan Kekurangan Rekursif:
 **Kelebihan:** Mempermudah penyelesaian suatu kasus sehingga menjadi lebih cepat, efektif, dan efisien.
@@ -34,15 +34,15 @@ Yaitu digunakan untuk menghitung bintang beserta langkah-langkahnya pada suatu i
 
 ![implementasi bintang](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a9d1b068-0d6d-4e11-b737-671311f03f13)
 
-**_Source : Sitasi 3_**
+**_Source : Sitasi 2_**
 
 **Permutasi String** 
 
-Yaitu digunakan untuk membantuk mempersingkat waktu pencarian permutasi. Permutasi yang tidak dilakukan dengan fungsi rekursi akan membutuhkan waktu yang banyak dan cukup melelahkan. Berikut pohon rekursi permutasi string [3].
+Yaitu digunakan untuk membantuk mempersingkat waktu pencarian permutasi. Permutasi yang tidak dilakukan dengan fungsi rekursi akan membutuhkan waktu yang banyak dan cukup melelahkan. Berikut pohon rekursi permutasi string [2].
 
 ![implementasi permutasi](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/6448162c-7d04-4e74-bc26-718e199c1368)
 
-**_Source : Sitasi 3_**
+**_Source : Sitasi 2_**
 
 
 ## Guided 
@@ -183,6 +183,8 @@ int main() {
 
 Kode tersebut digunakan untuk mencari faktorial dari suatu bilangan bulat. Bilangan bulat yang dicari disimbolkan dengan n. `int faktorial(int n)` merupakan fungsi yang akan dipanggil untuk menjalankan proses faktorial. Apabila n > 1, maka program akan terus melakukan iterasi perkalian dari bilangan faktorial hingga mencapai n - 1 = 1. 
 
+Apabila n lebih besar dari 1, maka program akan menjalankan return n dikali dengam faktorial (n - 1). Sedangkan apabil n tidak lebih besat dari 1, maka akan menjalankan return 1. 
+
 #### Penjelasan Main Program:
 - `int n;` merupakan deklarasi yang digunakan untuk merepresentasikan bilangan bulat yang ingin dicari faktorialnya.
 - `cout << "Masukkan bilangan bulat positif: ";` dan `cin >> n;` akan meminta user untuk memasukkan bilangan yang ingin dicari faktorialnya.
@@ -258,14 +260,19 @@ int main() {
 
 ```
 
-Kode tersebut digunakan untuk 
+Kode tersebut digunakan untuk mencari faktorial dari suatu bilangan bulat. Program tersebut hampir sama seperti unguided 1. Yang membedakan adalah pada unguided 1 menggunakan rekursif langsung dimana cukup hanya menggunakan 1 fungsi. Sedangkan pada unguided 2 menggunakan rekursif tidak langsung dimana tidak cukup apabila hanya menggunakan 1 fungsi. 
 
-#### Penjelasan Kode:
-Berikut kode-kode dan fungsi yang terdapat pada program tersebut:
+`int faktorialB(int n);` tidak memiliki isi atau dapat dikatakan bahwa hanya digunakan untuk mendeklarasikan. Fungsi tersebut akan dipanggil pada fungsi `faktorialA()` yang berisi program untuk mencari faktorialnya. Iterasi akan terus dilakukan hingga kondisi fungsinya terpenuhi. Karena n-nya adalah 5, maka iterasi n-1 yang berjalan akan berhenti saat n - 1 = 1. 
 
+Apabila n lebih besar dari 1, maka akan menjalankan `return n * faktorialA(n - 1);`. Sedangkan apabila n tidak lebih besar dari 1, maka program akan menjalankan return 0. 
+
+`faktorialB()` merupakan fungsi yang digunakan untuk membantu `faktorialA()` yang berisi program untuk menghitung faktorial. Oleh karena itu, faktorialB dipaggil di dalam fungsi faktorialA. Selanjutnya, baru kita isi fungsi faktorialB yang memanggil fungsi faktorialA. 
 
 #### Penjelasan Main Program:
-
+- `int n;` merupakan deklarasi yang digunakan untuk merepresentasikan bilangan bulat yang ingin dicari faktorialnya.
+- `cout << "Masukkan bilangan bulat positif: ";` dan `cin >> n;` akan meminta user untuk memasukkan bilangan yang ingin dicari faktorialnya.
+- `if (n < 0)` yang berisi `cout << "Input tidak valid. Harap masukkan bilangan bulat positif." << endl;` artinya apabila n kurang dari 0, maka program akan mencetak "Input tidak valid. Harap masukkan bilangan bulat positif" karena program hanya akan menjalankn apabila n-nya lebih besar dari 0.
+- `cout << "Faktorial dari " << n << " adalah: " << faktorialB(n) << endl;` digunakan untuk menampilkan faktorial dari bilangan yang diinput. 
 
 #### Output:
 ![output unguided 2](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a717b8dd-437f-4a43-b33b-ba646dc06b37)
@@ -282,7 +289,6 @@ Sama seperti yang telah dijelaskan pada output unguided 1. Pada output tersebut,
 Kesimpulan yang dapat diambil dari praktikum modul Rekursif adalah rekursif merupakan fungsi yang dapat memanggildirinya sendiri. Implementasinya dalam beberapa kasus juga sangat membantu efisiensi dan efektivitas waktu sehingga tidak memerlukan banyak memori. Hal tersebut menjadi kelebihan dari rekursif. Sedangkan kekurangan dari rekursif adalah memerlukan memori yang cukup banyak karena melakukan iterasi secara berulang hingga suatu fungsi tersebut terpenuhi. 
 
 ## Referensi
-- [1]A. A. Youztima, “Fungsi Rekursif Dengan C++,” Medium, Jan. 02, 2023. Available: https://medium.com/@anggaalhusaini/fungsi-rekursif-dengan-c-433c9250c73d. [Accessed: May 25, 2024]
-- [2]A. E. Putra et al., Dasar Pemrograman Logika Dengan C++, Pertama. SIEGA Publisher, 2024. Available: https://www.google.co.id/books/edition/Dasar_Pemrograman_Logika_Dengan_C++/SdsFEQAAQBAJ?hl=id&gbpv=0. [Accessed: May 27, 2024]
-- [3]M. F. Rizky, “Programming: Mengapa Pendekatan Rekursif Penting,” Medium, Mar. 11, 2024. Available: https://medium.com/@fathurwithyou/programming-mengapa-pendekatan-rekursif-penting-f348649b1bd4. [Accessed: May 27, 2024]
-- [4]W. Hartanto, “Implementasi Algoritma Rekursif dengan Bahasa Pemrograman Python,” BINUS UNIVERSITY BANDUNG - Kampus Teknologi Kreatif, Dec. 04, 2019. Available: https://binus.ac.id/bandung/2019/12/implementasi-algoritma-rekursif-dengan-bahasa-pemrograman-python/. [Accessed: May 26, 2024]
+- [1] A. A. Youztima, “Fungsi Rekursif Dengan C++,” Medium, Jan. 02, 2023. Available: https://medium.com/@anggaalhusaini/fungsi-rekursif-dengan-c-433c9250c73d. [Accessed: May 25, 2024]
+- [2] M. F. Rizky, “Programming: Mengapa Pendekatan Rekursif Penting,” Medium, Mar. 11, 2024. Available: https://medium.com/@fathurwithyou/programming-mengapa-pendekatan-rekursif-penting-f348649b1bd4. [Accessed: May 27, 2024]
+- [3] W. Hartanto, “Implementasi Algoritma Rekursif dengan Bahasa Pemrograman Python,” BINUS UNIVERSITY BANDUNG - Kampus Teknologi Kreatif, Dec. 04, 2019. Available: https://binus.ac.id/bandung/2019/12/implementasi-algoritma-rekursif-dengan-bahasa-pemrograman-python/. [Accessed: May 26, 2024]
