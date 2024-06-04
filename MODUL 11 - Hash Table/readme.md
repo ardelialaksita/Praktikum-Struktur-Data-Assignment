@@ -23,7 +23,7 @@
 
 ## Guided 
 
-### 1. 
+### Guided 1
 **Kode Program**
 ```C++
 #include <iostream>
@@ -164,7 +164,7 @@ Kode di atas digunakan untuk untuk menyisipkan, mencari, menghapus, dan menampil
 #### Output Guided 1:
 
 
-### 2. 
+### Guided 2 
 **Kode Program**
 ```C++
 #include <iostream>
@@ -268,7 +268,7 @@ int main() {
 }
 
 ```
-Kode di atas digunakan untuk 
+Kode di atas digunakan untuk merepresentasikan setiap node pada hash table dimana terdapat nama dan nomor telepon karyawan. 
 
 #### Penjelasan Main Program:
 
