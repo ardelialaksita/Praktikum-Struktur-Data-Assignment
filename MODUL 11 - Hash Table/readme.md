@@ -162,6 +162,7 @@ Kode di atas digunakan untuk untuk menyisipkan, mencari, menghapus, dan menampil
 - `return 0;` artinya program telah sukses dan berhasil.
 
 #### Output Guided 1:
+![output guided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/ed9ef8c4-e098-4ee6-802d-9e6f8caf5825)
 
 
 ### Guided 2 
@@ -482,14 +483,54 @@ Kode tersebut digunakan untuk menambahkan, menghapus, dan mencari data NIM dan n
 - `optionMenu()` digunakan untuk memanggil prorgam menu dan meminta user memasukkan option menggunakan `cin >> option;`.
 - Pada `switch (option)` terdapat beberapa case. Case 1 akan menambahkan data mahasiswa berisi NIM dan nilai. Case 2 akan menghapus data mahasiswa meggunakan NIM yang dimasukkan. Case 3 akan melakukan pencarian (searching) data mahasiswa berdasarkan NIM. Case 4 akan melakukan pencarian (searching) data mahasiswa berdasarkan rentang nilai (80-90). Case 5 akan menampilkan seluruh data menggunakan traverse. Case 6 merupakan menu keluar dari program (selesai). Apabila pilihan yang dimasukkan selain 1, 2, 3, 4, 5, 6, maka akan menampilkan "Pilihan yang Anda masukkan tidak valid".
 
-#### Output:
+#### Output dan Penjelasan:
 
+![1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/ee684700-9d03-4c35-b075-bfeb79c3c3dd)
 
-**Penjelasan Output:**
+Pada output tersebut, user memasukkan opsi 1 untuk menambahkan data mahasiswa yaitu NIM 23110051 dengan nilai 95. Saat ini ada 1 data dalam hash table.
 
+![2](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/9647a9dd-7d58-4033-89e9-9ca645f0bcf9)
+
+Pada output tersebut, user memasukkan opsi 1 untuk menambahkan data mahasiswa yaitu NIM 23110097 dengan nilai 85. Saat ini ada 2 data dalam hash table.
+
+![3](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/4b3ede7b-4cb1-4eec-968c-afaa306f4fcb)
+
+Pada output tersebut, user memasukkan opsi 1 untuk menambahkan data mahasiswa yaitu NIM 23110092 dengan nilai 90. Saat ini ada 3 data dalam hash table.
+
+![4](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/60110842-a67b-42dc-836a-179a7db83c2b)
+
+Pada output tersebut, user memasukkan opsi 1 untuk menambahkan data mahasiswa yaitu NIM 23110077 dengan nilai 89. Saat ini ada 4 data dalam hash table.
+
+![5](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/d99a641a-dbe5-4b66-aef6-7c43d702fab4)
+
+Pada output tersebut, user memasukkan opsi 5 sehingga program menampilkan seluruh data yang ada dalam hash table saat ini setelah 4 data ditambahkan.
+
+![6](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/2e5f01e2-260d-42c9-88dc-237faf1c93ec)
+
+Pada output tersebut, user memasukkan opsi 2 untuk menghapus data mahasiswa dengan NIM 23110097 sehingga data tersebut beserta nilainya dihapus. NIM 23110097 dengan nilai 85 dihapus
+
+![7](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/69060f09-b301-4f50-ba0b-c017e770308d)
+
+Pada output tersebut, user memasukkan opsi 5 untuk menampilkan data seluruh mahasiswa saat ini setelah NIM 23110097 dihapus. Terdapat 3 data pada hash table saat ini. 
+
+![8](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/dd2b15a1-f37d-44ac-a987-ea1dc5e75ab6)
+
+Pada output tersebut, user memasukkan opsi 3 untuk mencari data mahasiswa berdasarkan NIM. NIM yang ingin dicari adalah 23110051 sehingga program menampilkan nilai mahasiswa tersebut yaitu 95.
+
+![9](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/0c9a3520-3226-4c24-8a7b-2d137259e812)
+
+Pada output tersebut, user memasukkan opsi 4 sehingga program menampilkan nilai-nilai mahasiswa beserta NIM mereka yang memiliki nilai pada rentang 80-90. NIM 23110051 tidak ditampilkan karena nilainya di luar rentang 80-90.
+
+![10](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/8d1ec8f7-4264-4580-9732-f0626f1d42c8)
+
+Pada output tersebut, user memasukkan opsi 5 untuk menampilkan seluruh data mahasiswa yang ada pada hash table saat ini.
+
+![11](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/75736496-17b7-4287-9061-d71f54e49218)
+
+Pada output tersebut, user memasukkan opsi 6 untuk keluar dari program sehingga tidak menampilkan opsi menu lagi dan program berhenti.
 
 #### Full code Screenshot:
-
+![full ss](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/aebf1a36-21c4-48be-ae8f-be7d258599c3)
 
 
 ## Kesimpulan
