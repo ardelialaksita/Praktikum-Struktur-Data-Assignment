@@ -147,9 +147,19 @@ int main() {
 ```
 Kode di atas digunakan untuk untuk menyisipkan, mencari, menghapus, dan menampilkan elemen-elemen dalam tabel hash. Terdapat beberapa fungsi sebagai bentuk implementasinya, antara lain sebagai berikut.
 
+- `int hash_func(int key)` merupakan fungsi hash sederhana yang digunakan untuk menghitung indeks untuk kunci yang diberikan dengan cara mengambil sisa bagi kunci tersebut dengan ukuran maksimum tabel hash (MAX_SIZE).
+- `struct Node` merupakan struct merepresentasikan setiap elemen dalam tabel hash. Setiap node menyimpan key, value, dan pointer next yang menunjuk ke node berikutnya. Hash tablemembutuhkan parameter key untuk operasi kuncinya.
+- `class HashTable` merupakan class yang menjadi bentuk implementasi dari hash table sederhana. Private classnya menyimpan deklaras `Node** table;`. Public classnya berisi perulangan for `for (int i = 0; i < MAX_SIZE; i++) ` yang akan menginisialisasi tabel dengan ukuran MAX_SIZE dan membersihkan memori yang digunakan oleh tabel hash dengan menghapus setiap node yang ada.
+- `void insert(int key, int value)` digunakan untuk menambahkan elemen baru ke dalam hash table. ` if (current->key == key)` artinya jika saat ini sudah ada key, maka nilai akan diperbarui. `current = current->next;` artinya, apabila belum ada elemen key, maka node baru akan ditambahkan di awal list sesuai indeksnya.
+- `int get(int key)` digunakan untuk mendapatkan suatu nilai berdasarkan key. Apabila node saat ini sama dengan key, maka akan menjalankan `return current->value;` yaitu mengembalikan nilai. Sedangkan apabila key belum didapatkan, maka akan menjalankan `return -1`.
+- `void remove(int key)` digunakan untuk menghapus elemen berdasarkan key.
+- `void traverse()` digunakan untuk mencetak semua elemen dalam hash table.
 
 #### Penjelasan Main Program:
-
+- `ht.insert(1, 10);`, `ht.insert(2, 20);`, dan `ht.insert(3, 30);` akan menambahkan elemen ke dalam hash table. Key pertama adalah 10, key kedua adalah 20, dan key ketiga adalah 30. `cout << "Get key 1: " << ht.get(1) << endl;` dan `cout << "Get key 4: " << ht.get(4) << endl;` akan mencetak key yang ingin didapatkan atau dicari menggunakan get. Get key 1 adalah 10 karena key 1 adalah 10. Sedangkan Get key 4 adalah -1 karena tidak ada key 4 sehingga menjalankan return -1.
+- `ht.remove(4);` digunakan untuk menghapus key 4 sehingga -1 dihapus dan hanya ada key 1 hingga 3.
+- `ht.traverse();` digunakan untuk menampilkan isi hash table.
+- `return 0;` artinya program telah sukses dan berhasil.
 
 #### Output Guided 1:
 
