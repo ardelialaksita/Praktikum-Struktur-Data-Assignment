@@ -594,10 +594,12 @@ Pada output tersebut, user memasukkan opsi 6 dan memasukkan nilai node 15 sehing
 
 Jika dilihat dari output 11 dan 12, node yang ditampilkan terletak pada akhir subtrees sehingga tidak ada child node lagi di dalamnya. Sedangkan pada output 13, user memasukkan 10 sebagai parents nodenya dan program menampilkan 5 pada left dan 15 pada right sebagai child nodenya. Dengan demikian, dapat disimpulkan bahwa child node yang ditampilkan hanya dilihat dari parents node yang diinputkan, bukan seluruh child node di dalam child node berikutnya.
 
+#### Output 14:
 ![14](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a969a6b4-6dff-433a-bf85-04594e5ededb)
 
 Pada output tersebut, user memasukkan opsi 7 dan nilai node yang dimasukkan adalah sehingga didapatkan descendants of node 5 adalah 2 dan 7.
 
+#### Output 15:
 ![15](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e0010063-7ce0-445a-85cc-f3347ffb8570)
 
 Pada output tersebut, user memasukkan opsi 8 sehingga keluar dari program.
