@@ -516,7 +516,16 @@ Kode tersebut merupakan program menu yang digunakan untuk menambahkan node root,
 - `void tampilkanDescendants(TNode* node)` digunakan untuk menampilkan descendants dari suatu node.
 
 #### Penjelasan Main Program:
--
+Pada main program terdapat deklarasi `TNode* root = NULL;`, `int pilihan, value, parentValue;` dan `char child;`. Program juga mencetak pilihan-pilihan program menu. Selanjutnya, program akan meminta user memasukkan 1 opsi sesuai pilihan yang diinginkan. Berikut penjelasan case-casenya:
+- `case 1:` artinya apabila user memasukkan 1, program akan meminta user untuk menambahkan nilai pada root node.
+- `case 2:` artinya apabila user memasukkan 2, program akan meminta user untuk menambahkan nilai child node dari suatu nilai parents yang ditentukan oleh user juga.
+- `case 3:` artinya apabila user memasukkan 3, program akan mengunjungi dan menampilkan node secara pre-order dimana dimulai dari node root, dilanjutkan ke subtrees kiri, dan terakhir ke subtrees kanan.
+- `case 4:` artinya apabila user memasukkan 4, program akan mengunjungi dan menampilkan node secara in-order dimana dimulai dari node subtrees kiri, dilanjutkan ke root, dan terakhir ke subtrees kanan.
+- `case 5:` artinya apabila user memasukkan 5, program akan mengunjungi dan menampilkan node secara post-order dimana dimulai dari node subtrees kiri, dilanjutkan ke subtrees kanan, dan terakhir ke root.
+- `case 6:` artinya apabila user memasukkan 6, program akan menampilkan child node beserta letak left dan rightnya dari parents node yang diinputkan oleh user.
+- `case 7:` artinya apabila user memasukkan 7, program akan menampilkan descendants node dari parents node yang diinputkan oleh user.
+- `case 8:` artinya apabila user memasukkan 8, program akan berhenti karena 8 merupakan opsi untuk keluar dari program menu tersebut.
+- `default` artinya apabila user memasukkan nilai selain 1 hingga 8, maka program akan mencetak "Opsi yang Anda pilih tidak valid! Silakan masukkan opsi lain." karena opsi pilihannya hanya 1 hingga 8.
 
 #### Output dan Penjelasan:
 
