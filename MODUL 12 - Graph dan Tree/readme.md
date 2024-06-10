@@ -489,10 +489,17 @@ int main() {
 
 ```
 
-Kode tersebut digunakan untuk 
+Kode tersebut merupakan program menu yang digunakan untuk menambahkan node root, parents, dan anak berdasarkan node parents. Kode tersebut juga dapat digunakan untuk menampilkan pre-order, in-order, post-order, node anak da suatu node parents, dan descendants dari suatu node. Node root merupakan node teratas. Selanjutnya, root dapat menjadi node parents apabila ditambah dengan node anak pada left dan right nodenya. Node yang berperan sebagai node anak dari node root tersebut juga dapat menjadi sebuah subtree dengan menambah node anak lagi pada sisi left dan rightnya. Penjelasan lebih detail akan dipaparkan pada output dan penjelasan. 
 
 #### Penjelasan Kode:
--
+- `struct TNode` dan constructor di dalamnya digunakan untuk menyimpan deklarasi-deklarasi.
+- `void preOrder(TNode *node)` digunakan untuk melihat node dari root, dilanjutkan ke subtree kiri, dan terakhir ke subtree kanan.
+- `void inOrder(TNode *node)` digunakan untuk melihat node dari subtree kiri, dilanjutkan ke root, dan terakhir ke subtree kanan.
+- `void postOrder(TNode *node)` digunakan untuk melihat node dari subtree kiri, dilanjutkan ke subtree kanan, dan terakhir ke root.
+- `TNode* search(TNode* root, int value)` digunakan untuk mencari suatu node.
+- `void addNode(TNode* &root, int parentValue, int value, char child)` digunakan untuk menambah suatu node berdasarkan nilai parentsnya dan letak left atu rightnya.
+- `void tampilkanChildren(TNode* node)` digunakan untuk menampilkan child dari suatu node parent.
+- `void tampilkanDescendants(TNode* node)` digunakan untuk menampilkan descendants dari suatu node.
 
 #### Penjelasan Main Program:
 -
