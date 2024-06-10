@@ -338,18 +338,18 @@ void postOrder(TNode *node) {
 }
 
 // melakukan pencarian pada suatu node berdasarkan nilai
-TNode* search(TNode* root, int value) {
+TNode* search_Ardelia_2311110051(TNode* root, int value) {
     if (root == NULL || root->data == value) {
         return root;
     }
-    TNode* leftSearch = search(root->left, value);
+    TNode* leftSearch = search_Ardelia_2311110051(root->left, value);
     if (leftSearch != NULL) return leftSearch;
-    return search(root->right, value);
+    return search_Ardelia_2311110051(root->right, value);
 }
 
 // menambahkan node
 void addNode(TNode* &root, int parentValue, int value, char child) {
-    TNode* parent = search(root, parentValue);
+    TNode* parent = search_Ardelia_2311110051(root, parentValue);
     if (parent == NULL) {
         cout << "Parent node not found!" << endl;
         return;
@@ -481,13 +481,13 @@ int main() {
             case 6:
                 cout << "Masukkan nilai node: ";
                 cin >> value;
-                tampilkanChildren(search(root, value));
+                tampilkanChildren(search_Ardelia_2311110051(root, value));
                 break;
             // case 7 menampilkan node descendants berdasarkan nilai node yang dimasukkan
             case 7:
                 cout << "Masukkan nilai node: ";
                 cin >> value;
-                tampilkanDescendants(search(root, value));
+                tampilkanDescendants(search_Ardelia_2311110051(root, value));
                 break;
             // case 8 keluar dari prorgam
             case 8:
@@ -529,9 +529,81 @@ Pada main program terdapat deklarasi `TNode* root = NULL;`, `int pilihan, value,
 
 #### Output dan Penjelasan:
 
+#### Output 1:
+![1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/386cd822-851e-4f75-a974-f9ff17623823)
+
+Pada output tersebut, user memasukkan opsi 1 dan menambahkan nilai pada node root yaitu 10. Dengan demikian, terdapat 1 node di dalam pohon tersebut yaitu 10.
+
+#### Output 2:
+![2](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/b4813498-8b0f-48f4-940b-9fe9fe19dabd)
+
+Pada output tersebut, user memasukkan opsi 2. User memasukkan 10 sebagai parents nodenya. Selanjutnya, 5 ditambahkan pada sisi kiri (left / L) dari parents node tersebut. Saat ini, terdapat 2 node. Sisi kanan (right / R) parents node 10 masih kosong (NULL).
+
+#### Output 3:
+![3](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/cfd4727e-72bc-446c-ac8b-f5f2f2051f59)
+
+Pada output tersebut, user memasukkan opsi 2. User memasukkan 10 sebagai parents nodenya. Selanjutnya, 15 ditambahkan pada sisi kanan (right / R) dari parents node tersebut. Saat ini, terdapat 3 node. Sisi kanan (right / R) parents node 10 yang awalnya kosong (NULL), saat ini sudah terisi.
+
+#### Output 4:
+![4](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/cabadbe0-0dd4-4363-a463-661034143ff8)
+
+Pada output tersebut, user memasukkan opsi 2. User memasukkan 5 sebagai parents nodenya. Saat ini, 5 tidak hanya sebagai child node, melainkan juga parents node karena user menambahkan child node. Selanjutnya, 2 ditambahkan pada sisi kiri (left / L) dari parents node tersebut. Saat ini, terdapat 4 node. Sisi kanan (right / R) parents node 5 masih kosong (NULL).
+
+#### Output 5:
+![5](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/72f0d7ea-7665-474b-bd12-301b8385ff65)
+
+Pada output tersebut, user memasukkan opsi 2. User memasukkan 5 sebagai parents nodenya. Saat ini, 5 tidak hanya sebagai child node, melainkan juga parents node karena user menambahkan child node. Selanjutnya, 7 ditambahkan pada sisi kanan (right / R) dari parents node tersebut. Saat ini, terdapat 5 node. Sisi kanan (right / R) parents node 5 yang awalnya kosong (NULL), saat ini sudah terisi.
+
+#### Output 6:
+![6](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/60878579-4ea0-4500-9739-7687bc0abf5b)
+
+Pada output tersebut, user memasukkan opsi 2. User memasukkan 15 sebagai parents nodenya. Saat ini, 15 tidak hanya sebagai child node, melainkan juga parents node karena user menambahkan child node. Selanjutnya, 11 ditambahkan pada sisi kiri (left / L) dari parents node tersebut. Saat ini, terdapat 6 node. Sisi kanan (right / R) parents node 15 masih kosong (NULL).
+
+#### Output 7:
+![7](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/2d314e71-21f2-4801-9702-0027b8bbccb8)
+
+Pada output tersebut, user memasukkan opsi 2. User memasukkan 15 sebagai parents nodenya. Saat ini, 15 tidak hanya sebagai child node, melainkan juga parents node karena user menambahkan child node. Selanjutnya, 13 ditambahkan pada sisi kanan (right / R) dari parents node tersebut. Saat ini, terdapat 7 node. Sisi kanan (right / R) parents node 15 yang awalnya kosong (NULL), saat ini sudah terisi.
+
+#### Output 8:
+![8](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/19391374-9ade-42ca-84ca-86cd21097bdd)
+
+Pada output tersebut, user memasukkan opsi 3 sehingga program menampilkan isi pohon secara pre-order traversal yaitu dari node root, subtrees kiri, dan terakhir subtrees kanan. Outputnya adalah 10, 5, 2, 7, 15, 11, 13.
+
+#### Output 9:
+![9](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/75373bfd-dc0a-4f7e-9135-7c9c99f8d877)
+
+Pada output tersebut, user memasukkan opsi 4 sehingga program menampilkan isi pohon secara in-order traversal yaitu dari node subtrees kiri, root, dan terakhir subtrees kanan. Outputnya adalah 2, 5, 7, 10, 11, 15, 13.
+
+#### Output 10:
+![10](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/c25df1b3-d3dd-4be3-9c65-df9e05807913)
+
+Pada output tersebut, user memasukkan opsi 5 sehingga program menampilkan isi pohon secara post-order traversal yaitu dari node root, subtrees kiri, dan terakhir subtrees kanan. Outputnya adalah 10, 5, 2, 7, 15, 11, 13.
+
+#### Output 11:
+![11](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/f5f4046c-1d1b-4197-b55b-fc91364f424e)
+
+Pada output tersebut, user memasukkan opsi 6 dan memasukkan nilai node 5 sehingga program menampilkan child node dari 5 yaitu 2 pada left dan 7 pada right.
+
+#### Output 12:
+![12](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/9c0aa2e9-c93c-41d8-922d-88243db52304)
+
+Pada output tersebut, user memasukkan opsi 6 dan memasukkan nilai node 15 sehingga program menampilkan child node dari 5 yaitu 11 pada left dan 13 pada right.
+
+#### Output 13:
+![13](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/706b7961-c8dd-4157-9ed7-5d3d95431dce)
+
+Jika dilihat dari output 11 dan 12, node yang ditampilkan terletak pada akhir subtrees sehingga tidak ada child node lagi di dalamnya. Sedangkan pada output 13, user memasukkan 10 sebagai parents nodenya dan program menampilkan 5 pada left dan 15 pada right sebagai child nodenya. Dengan demikian, dapat disimpulkan bahwa child node yang ditampilkan hanya dilihat dari parents node yang diinputkan, bukan seluruh child node di dalam child node berikutnya.
+
+![14](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/a969a6b4-6dff-433a-bf85-04594e5ededb)
+
+Pada output tersebut, user memasukkan opsi 7 dan nilai node yang dimasukkan adalah sehingga didapatkan descendants of node 5 adalah 2 dan 7.
+
+![15](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/e0010063-7ce0-445a-85cc-f3347ffb8570)
+
+Pada output tersebut, user memasukkan opsi 8 sehingga keluar dari program.
 
 #### Full code Screenshot:
-
+![full ss unguided 2](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/1c26b641-8cd4-4f1a-a12d-fd5d47e8f4b9)
 
 
 ## Kesimpulan
