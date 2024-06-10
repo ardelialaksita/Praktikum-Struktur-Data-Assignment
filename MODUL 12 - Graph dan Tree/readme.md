@@ -62,7 +62,7 @@ Kode di atas digunakan untuk untuk
 - 
 
 #### Output Guided 1:
-
+![output guided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/64f59476-7943-4182-849f-997acd4f2039)
 
 ### Guided 2 
 **Kode Program**
@@ -165,12 +165,16 @@ int main() {
 ```
 Kode di atas digunakan untuk 
 
+#### Output Guided 2:
+![output guided 2](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/fecb802c-b270-4e15-b4f2-bf6767cabd51)
+
+
 ## Unguided 
 *Cantumkan NIM pada salah satu variabel di dalam program.
 Contoh : int nama_22102003;
 
 ### 1. Buatlah program graph dengan menggunakan inputan user untuk menghitung jarak dari sebuah kota ke kota lainnya.
-
+![soal unguided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/76570b22-3c2b-47f5-bc50-0e0e7b40f065)
 
 **Kode Program**
 ```C++
