@@ -105,7 +105,7 @@ void postOrder(TNode *node) {
 }
 
 int main() {
-    TNode *zero = new TNode(0);\
+    TNode *zero = new TNode(0);
     // 0
     // /\
     // NULL NULL
@@ -160,7 +160,24 @@ int main() {
 }
 
 ```
-Kode di atas digunakan untuk 
+Kode di atas digunakan untuk menampilkan suatu pohon (tree) menggunakan traversal yaitu pre-order, in-order, dan post-order. Terdapat node root, subtrees kiri, dan subtrees kanan. Pointer kiri dan kanan disimpan di dalam struct TNode dimana `TNode *left;` merupakan pointer ke kiri, sedangkan `TNode *right` merupakan poiter ke kanan. `TNode(int value)` merupakan constructor yang berisi deklarasi dari data, left, dan right. 
+
+#### Penjelasan Traversal:
+- **Pre-Order Traversal** akan melihat node dari root, dilanjutkan ke subtrees kiri (left), dan terakhir ke subtrees kanan (right).
+- **In-Order Traversal** akan melihat node dari subtrees kiri (left), dilanjutkan ke root, dan terakhir ke subtrees kanan (right).
+- **Post-Order Traversal** akan melihat node dari subtrees kiri (left), dilanjutkan ke subtrees kanan (right), dan terakhir ke root.
+
+#### Penjelasan Main Program:
+- `TNode *zero = 0` artinya membuat node root atau parents dengan nilai child nodenya adalah NULL.
+- `TNode *one = new TNode(1);`, `TNode *five = new TNode(5);`, `TNode *seven = new TNode(7);`, `TNode *eight = new TNode(8);`, dan `TNode *nine = new TNode(9);` digunakan untuk menambahkan node baru yaitu 1, 5, 7, 8, dan 9. Selanjutnya adalah tahap penyusunan pohon (tree).
+- `seven->left = one;` artinya menambahkan 1 sebagai child node pada sisi kiri dari parents node 7.
+- `seven->right = nine;` artinya menambahkan 9 sebagai child node pada sisi kanan dari parents node 7.
+- `one->left = zero;` artinya menambahkan 0 sebagai child node pada sisi kiri dari parents node 1.
+- `one->right = five;` artinya menambahkan 5 sebagai child node pada sisi kanan dari parents node 1.
+- `nine->left = eight;` artinya menambahkan 8 sebagai child node pada sisi kiri dari parents node 8. Sedangkan sisi kanannya tidak memiliki nilai (NULL).
+- `preOrder(seven);` digunakan untuk memanggil fungsi preOrder dengan nilai node 7 sehingga program menampilkan root, subtrees kiri, dan subtrees kanan dari root node 7. Outputnya adalah 7, 1, 0, 5, 9, 8.
+- `inOrder(seven);` digunakan untuk memanggil fungsi inOrder dengan nilai node 7 sehingga program menampilkan subtrees kiri, root, dan subtrees kanan dari root node 7. Outputnya adalah 0, 1, 5, 7, 9, 8.
+- `postOrder(seven);` digunakan untuk memanggil fungsi postOrder dengan nilai node 7 sehingga program menampilkan subtrees kiri, subtrees kanan, dan root dari root node 7. Outputnya adalah 0, 5, 1, 8, 9, 7.
 
 #### Output Guided 2:
 ![output guided 2](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/fecb802c-b270-4e15-b4f2-bf6767cabd51)
