@@ -45,18 +45,18 @@ void postOrder(TNode *node) {
 }
 
 // melakukan pencarian pada suatu node berdasarkan nilai
-TNode* search(TNode* root, int value) {
+TNode* search_Ardelia_2311110051(TNode* root, int value) {
     if (root == NULL || root->data == value) {
         return root;
     }
-    TNode* leftSearch = search(root->left, value);
+    TNode* leftSearch = search_Ardelia_2311110051(root->left, value);
     if (leftSearch != NULL) return leftSearch;
-    return search(root->right, value);
+    return search_Ardelia_2311110051(root->right, value);
 }
 
 // menambahkan node
 void addNode(TNode* &root, int parentValue, int value, char child) {
-    TNode* parent = search(root, parentValue);
+    TNode* parent = search_Ardelia_2311110051(root, parentValue);
     if (parent == NULL) {
         cout << "Parent node not found!" << endl;
         return;
@@ -188,13 +188,13 @@ int main() {
             case 6:
                 cout << "Masukkan nilai node: ";
                 cin >> value;
-                tampilkanChildren(search(root, value));
+                tampilkanChildren(search_Ardelia_2311110051(root, value));
                 break;
             // case 7 menampilkan node descendants berdasarkan nilai node yang dimasukkan
             case 7:
                 cout << "Masukkan nilai node: ";
                 cin >> value;
-                tampilkanDescendants(search(root, value));
+                tampilkanDescendants(search_Ardelia_2311110051(root, value));
                 break;
             // case 8 keluar dari prorgam
             case 8:
