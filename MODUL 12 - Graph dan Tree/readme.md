@@ -211,7 +211,6 @@ void tampilkanGraph(const Graph& Ardelia_2311110051) {
     }
 }
 
-
 // main program (program utama)
 int main() {
     // variable Ardelia_2311110051 akan memanggil kode program di dalam Graph
