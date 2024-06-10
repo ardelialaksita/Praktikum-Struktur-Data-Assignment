@@ -176,7 +176,7 @@ Kode di atas digunakan untuk menampilkan suatu pohon (tree) menggunakan traversa
 - `one->right = five;` artinya menambahkan 5 sebagai child node pada sisi kanan dari parents node 1.
 - `nine->left = eight;` artinya menambahkan 8 sebagai child node pada sisi kiri dari parents node 8. Sedangkan sisi kanannya tidak memiliki nilai (NULL).
 - `preOrder(seven);` digunakan untuk memanggil fungsi preOrder dengan nilai node 7 sehingga program menampilkan root, subtrees kiri, dan subtrees kanan dari root node 7. Outputnya adalah 7, 1, 0, 5, 9, 8.
-- `inOrder(seven);` digunakan untuk memanggil fungsi inOrder dengan nilai node 7 sehingga program menampilkan subtrees kiri, root, dan subtrees kanan dari root node 7. Outputnya adalah 0, 1, 5, 7, 9, 8.
+- `inOrder(seven);` digunakan untuk memanggil fungsi inOrder dengan nilai node 7 sehingga program menampilkan subtrees kiri, root, dan subtrees kanan dari root node 7. Outputnya adalah 0, 1, 5, 7, 8, 9.
 - `postOrder(seven);` digunakan untuk memanggil fungsi postOrder dengan nilai node 7 sehingga program menampilkan subtrees kiri, subtrees kanan, dan root dari root node 7. Outputnya adalah 0, 5, 1, 8, 9, 7.
 
 #### Output Guided 2:
