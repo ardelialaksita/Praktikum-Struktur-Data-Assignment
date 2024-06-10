@@ -250,23 +250,242 @@ int main() {
 
 ```
 
-Kode tersebut digunakan untuk 
+Kode tersebut digunakan untuk menghitung jarak dari sebuah kota ke kota lainnya. Jarak terkecilnya dilihat melalui bobot yang paling kecil antar kota. Simpul sebagai nama dari sebuah kota. Kemudian, user akan diminta memasukkan nama dan bobot antar kota tersebut karena program ini menggunakan input user. 
 
 #### Penjelasan Kode:
--
+- `struct Graph` menyimpan deklarasi dari simpul, jumlah simpul, dan bobot antar simpul.
+- `void tampilkanGraph(const Graph& Ardelia_2311110051)` merupakan fungsi yang akan dipanggil untuk menampilkan seluruh graph beserta bobotnya.
+- `cout << Ardelia_2311110051.simpul[i] << "\t";` di dalam perulangan for digunakan untuk menampilkan simpul sesuai jumlah yang telah diinputkan untuk user memasukkan nama dan bobot antar simpulnya.
 
 #### Penjelasan Main Program:
--
+- `Graph Ardelia_2311110051;` artinya variable Ardelia_2311110051 akan memanggil kode-kode program yang ada di dalam Graph.
+- `cout << "Silakan masukan jumlah simpul : ";` dan `cin >> Ardelia_2311110051.jumlahSimpul;` meminta user untuk memasukkan jumlah simpul.
+- `cout << "Silakan masukan nama simpul" << endl;` dan perulangan `for (int i = 0; i < Ardelia_2311110051.jumlahSimpul; ++i)` meminta user untuk memasukkan nama simpul sebanyak jumlah yang telah diinputkan sebelumnya.
+- `cout << "Silakan masukkan bobot antar simpul" << endl;` dan perulangan `for (int i = 0; i < Ardelia_2311110051.jumlahSimpul; ++i)` meminta user memasukkan bobot antar simpul.
+- `tampilkanGraph(Ardelia_2311110051);` memanggil fungsi tampilkanGraph untuk menampilkan seluruh simpul beserta bobotnya.
+- `return 0;` sebagai kode bahwa program telah selesai dan berhasil.
 
 #### Output dan Penjelasan:
+![output unguided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/ddc37b42-06a6-427c-9447-92079bc9e31f)
 
+Pada output di atas, user memasukkan jumlah simpulnya ada 2 sehingga program akan meminta user memasukkan 2 nama simpul. User memasukkan BALI sebagai nama dari simpul 1 dan PALU sebagai nama dari simpul 2. Selanjutnya, program meminta user memasukkan bobot antar simpul sesuai yang ditampilkan program. User memasukkan 0,3,4, dan 0 seperti output di atas. Terakhir, program menampilkan graph yang berisi nama dan bobot antar simpul.
 
 #### Full code Screenshot:
+![full ss unguided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/6af4635f-0c60-4ada-b1af-57c587b6bd28)
 
 
 ### 2. Modifikasi guided tree diatas dengan program menu menggunakan input data tree dari user dan berikan fungsi tambahan untuk menampilkan node child dan descendant dari node yang diinput kan!
 **Kode Program**
 ```C++
+#include <iostream>
+#include <queue>
+#include <unordered_map>
+using namespace std;
+
+// menyimpan deklarasi dalam struct TNode
+struct TNode {
+    int data;
+    TNode *left;
+    TNode *right;
+
+    // constructor
+    TNode(int value) {
+        data = value;
+        left = NULL;
+        right = NULL;
+    }
+};
+
+// melihat node dari root, subtree kiri, dan terakhir ke subtree kanan
+void preOrder(TNode *node) {
+    if (node != NULL) {
+        cout << node->data << " ";
+        preOrder(node->left);
+        preOrder(node->right);
+    }
+}
+
+// melihat node dari subtree kiri, root, dan terakhir ke subtree kanan
+void inOrder(TNode *node) {
+    if (node != NULL) {
+        inOrder(node->left);
+        cout << node->data << " ";
+        inOrder(node->right);
+    }
+}
+
+// melihat node dari subtree kiri, subtree kanan, dan terakhir ke root
+void postOrder(TNode *node) {
+    if (node != NULL) {
+        postOrder(node->left);
+        postOrder(node->right);
+        cout << node->data << " ";
+    }
+}
+
+// melakukan pencarian pada suatu node berdasarkan nilai
+TNode* search(TNode* root, int value) {
+    if (root == NULL || root->data == value) {
+        return root;
+    }
+    TNode* leftSearch = search(root->left, value);
+    if (leftSearch != NULL) return leftSearch;
+    return search(root->right, value);
+}
+
+// menambahkan node
+void addNode(TNode* &root, int parentValue, int value, char child) {
+    TNode* parent = search(root, parentValue);
+    if (parent == NULL) {
+        cout << "Parent node not found!" << endl;
+        return;
+    }
+    if (child == 'L') {
+        if (parent->left == NULL) {
+            parent->left = new TNode(value);
+        } else {
+            cout << "Left child already exists!" << endl;
+        }
+    } else if (child == 'R') {
+        if (parent->right == NULL) {
+            parent->right = new TNode(value);
+        } else {
+            cout << "Right child already exists!" << endl;
+        }
+    } else {
+        cout << "Invalid child type!" << endl;
+    }
+}
+
+// tampilkan child dari node
+void tampilkanChildren(TNode* node) {
+    if (node == NULL) {
+        cout << "Node not found!" << endl;
+        return;
+    }
+    cout << "Children of node " << node->data << ": ";
+    if (node->left != NULL) {
+        cout << node->left->data << " (Left) ";
+    }
+    if (node->right != NULL) {
+        cout << node->right->data << " (Right) ";
+    }
+    if (node->left == NULL && node->right == NULL) {
+        cout << "None";
+    }
+    cout << endl;
+}
+
+// tampilkan descendants dari node
+void tampilkanDescendants(TNode* node) {
+    if (node == NULL) {
+        cout << "Node not found!" << endl;
+        return;
+    }
+    cout << "Descendants of node " << node->data << ": ";
+    queue<TNode*> qvalue;
+    qvalue.push(node);
+    bool first = true;
+    while (!qvalue.empty()) {
+        TNode* current = qvalue.front();
+        qvalue.pop();
+        if (!first) {
+            cout << current->data << " ";
+        }
+        if (current->left != NULL) {
+            qvalue.push(current->left);
+        }
+        if (current->right != NULL) {
+            qvalue.push(current->right);
+        }
+        first = false;
+    }
+    cout << endl;
+}
+
+// main program (program utama)
+int main() {
+    TNode* root = NULL;
+    int pilihan, value, parentValue;
+    char child;
+
+    // tampilkan opsi yang dapat dipilih pada program menu
+    while (true) {
+        cout << "Menu:" << endl;
+        cout << "1. Tambah node root" << endl;
+        cout << "2. Tambah node anak" << endl;
+        cout << "3. Pre-order traversal" << endl;
+        cout << "4. In-order traversal" << endl;
+        cout << "5. Post-order traversal" << endl;
+        cout << "6. Tampilkan child dari node" << endl;
+        cout << "7. Tampilkan descendant dari node" << endl;
+        cout << "8. Keluar" << endl;
+        cout << "Opsi mana yang ingin Anda pilih? : ";
+        cin >> pilihan;
+
+        // jalankan case sesuai opsi yang dipilih (1-8)
+        switch (pilihan) {
+            // case 1 menambahkan nilai root
+            case 1:
+                if (root != NULL) {
+                    cout << "Root already exists!" << endl;
+                } else {
+                    cout << "Masukkan nilai untuk root: ";
+                    cin >> value;
+                    root = new TNode(value);
+                }
+                break;
+            // case 2 memasukkan nilai anak sesuai dengan node parent
+            case 2:
+                cout << "Masukkan nilai parent: ";
+                cin >> parentValue;
+                cout << "Masukkan nilai anak: ";
+                cin >> value;
+                cout << "L (left) atau R (right): ";
+                cin >> child;
+                addNode(root, parentValue, value, child);
+                break;
+            // case 3 menampilkan pre-order traversal
+            case 3:
+                cout << "Pre-order traversal: ";
+                preOrder(root);
+                cout << endl;
+                break;
+            // case 4 menampilkan in-order traversal
+            case 4:
+                cout << "In-order traversal: ";
+                inOrder(root);
+                cout << endl;
+                break;
+            // case 5 menampilkan post-order traversal
+            case 5:
+                cout << "Post-order traversal: ";
+                postOrder(root);
+                cout << endl;
+                break;
+            // case 6 menampilkan node children berdasarkan nilai node yang dimasukkan
+            case 6:
+                cout << "Masukkan nilai node: ";
+                cin >> value;
+                tampilkanChildren(search(root, value));
+                break;
+            // case 7 menampilkan node descendants berdasarkan nilai node yang dimasukkan
+            case 7:
+                cout << "Masukkan nilai node: ";
+                cin >> value;
+                tampilkanDescendants(search(root, value));
+                break;
+            // case 8 keluar dari prorgam
+            case 8:
+                return 0;
+            // tampilan apabila user memasukkan opsi selain 1 hingga 8
+            default:
+                cout << "Opsi yang Anda pilih tidak valid! Silakan masukkan opsi lain." << endl;
+        }
+    }
+    cout << endl;
+    return 0;
+}
 
 ```
 
