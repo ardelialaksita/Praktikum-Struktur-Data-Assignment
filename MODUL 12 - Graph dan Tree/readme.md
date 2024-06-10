@@ -56,7 +56,7 @@ int main() {
 }
 
 ```
-Kode di atas digunakan untuk untuk menampilkan bobot atau jarak antar kota (simpul) dalam bentuk graf yang mudah dibaca. `string simpul[7]` berisi nama-nama kota (simpul) dalam graf tersebut. `int busur[7][7]` digunakan untuk menyimpan bobot atau jarak antar kota dimana kotanya dilihat melalui `simpul[i]` ke kota `simpul[j]`. 0 menandakan bahwa jarak antar kedua kota tidak berkaitan. `void tampilGraph()` digunakan untuk menampilkan graf yang terdiri atas kota beserta bobot (jarak)nya. Pada main program, hanya terdapat `tampilGraph()` yang digunakan untuk memanggil fungsi tampilGraph() sehingga graf kota dan jarak antar kota ditampilkan. `return 0;` artinya program tersebut telah selesai dan berhasil.
+Kode di atas digunakan untuk untuk menampilkan bobot atau jarak antar kota (simpul) dalam bentuk graf yang mudah dibaca. `string simpul[7]` berisi nama-nama kota (simpul) dalam graf tersebut. `int busur[7][7]` digunakan untuk menyimpan bobot atau jarak antar kota dimana kotanya dilihat melalui `simpul[i]` ke kota `simpul[j]`. `if(busur[baris][kolom] !=0 )` akan menampilkan nama kota yang dituju beserta jaraknya. 0 menandakan bahwa jarak antar kedua kota tidak berkaitan. `void tampilGraph()` digunakan untuk menampilkan graf yang terdiri atas kota beserta bobot (jarak)nya. Pada main program, hanya terdapat `tampilGraph()` yang digunakan untuk memanggil fungsi tampilGraph() sehingga graf kota dan jarak antar kota ditampilkan. `return 0;` artinya program tersebut telah selesai dan berhasil.
 
 #### Output Guided 1:
 ![output guided 1](https://github.com/ardelialaksita/Praktikum-Struktur-Data-Assignment/assets/157208713/64f59476-7943-4182-849f-997acd4f2039)
