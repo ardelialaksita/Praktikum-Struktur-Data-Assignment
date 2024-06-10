@@ -5,9 +5,7 @@ using namespace std;
 
 // PROGRAM SORTING MENGGUNAKAN BUBBLE SORT
 
-int data[n] = {5,1,4,2,8};
-
-void bubblesort() {
+int bubblesort() {
     int temp;
     int i;
     int j;
@@ -15,10 +13,22 @@ void bubblesort() {
 
     for (i = 0; i < n; i++) {
         if(i > j) {
-            
+            i = j;
+            i++;
+            break;
         }
         else {
             return;
         }
     }
+}
+
+// main program
+int main() {
+    int data[n] = {5,1,4,2,8};
+
+    cout << "List setelah dilakukan bubble sorting: " << endl;
+    bubblesort();
+
+    return 0;
 }
